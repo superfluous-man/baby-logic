@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 9 符號化 | Baby Logic</title>
+<meta name="author" content="Lǐ Èrgǒu">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.2"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.6/header-attrs.js"></script><script src="libs/jquery-3.5.1/jquery-3.5.1.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.5.3/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.5.3/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.2.4/tabs.js"></script><script src="libs/bs3compat-0.2.4/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="manifest" href="/img/site.webmanifest">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript">
+
+    // open external links in new tabs  Xi Hui
+
+    (function() {
+      var links = document.getElementsByTagName('a');
+      for (var i = 0; i < links.length; i++) {
+        if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+          links[i].target = '_blank';
+        }
+      }
+    })();
+
+
+
+    </script><script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/mark.min.js"></script><!-- CSS --><link rel="stylesheet" href="zlogic.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Baby Logic</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li><a class="" href="%E5%85%A8%E6%9B%B8%E7%B7%92%E8%AB%96.html"><span class="header-section-number">1</span> 全書緒論</a></li>
+<li><a class="" href="prechap.html"><span class="header-section-number">2</span> 預備章節</a></li>
+<li class="book-part">I 命題邏輯</li>
+<li><a class="" href="chap-truth-table.html"><span class="header-section-number">3</span> 聯結詞與真值表</a></li>
+<li><a class="" href="relativism.html"><span class="header-section-number">4</span> Relativism</a></li>
+<li><a class="" href="religion.html"><span class="header-section-number">5</span> Religion and Ethics</a></li>
+<li><a class="" href="egoism.html"><span class="header-section-number">6</span> Egoism</a></li>
+<li><a class="" href="social-contract-theory.html"><span class="header-section-number">7</span> Social Contract Theory</a></li>
+<li><a class="" href="utilitarianism.html"><span class="header-section-number">8</span> Utilitarianism</a></li>
+<li class="book-part">II 謂詞邏輯</li>
+<li><a class="active" href="chap-fol-symbol.html"><span class="header-section-number">9</span> 符號化</a></li>
+<li><a class="" href="theory-in-practice.html"><span class="header-section-number">10</span> Theory in Practice</a></li>
+<li><a class="" href="euthanasia.html"><span class="header-section-number">11</span> Euthanasia</a></li>
+<li><a class="" href="liberty-and-its-limits.html"><span class="header-section-number">12</span> Liberty and its Limits</a></li>
+<li><a class="" href="crime-and-punishment.html"><span class="header-section-number">13</span> Crime and Punishment</a></li>
+<li><a class="" href="animals-and-ethics.html"><span class="header-section-number">14</span> Animals and Ethics</a></li>
+<li class="book-part">III 歸納推理</li>
+<li><a class="" href="%E5%82%B3%E7%B5%B1%E6%AD%B8%E7%B4%8D%E6%8E%A8%E7%90%86.html"><span class="header-section-number">15</span> 傳統歸納推理</a></li>
+<li><a class="" href="%E7%8F%BE%E4%BB%A3%E6%AD%B8%E7%B4%8D%E6%8E%A8%E7%90%86.html"><span class="header-section-number">16</span> 現代歸納推理</a></li>
+<li><a class="" href="%E7%A7%91%E5%AD%B8%E6%8E%A8%E7%90%86.html"><span class="header-section-number">17</span> 科學推理</a></li>
+<li class="book-part">IV 語言與邏輯</li>
+<li><a class="" href="%E8%AA%9E%E5%A2%83.html"><span class="header-section-number">18</span> 語境</a></li>
+<li><a class="" href="chap-yanyu.html"><span class="header-section-number">19</span> 言語行爲</a></li>
+<li><a class="" href="chap-yushe.html"><span class="header-section-number">20</span> 預設</a></li>
+<li><a class="" href="chap-yyyz.html"><span class="header-section-number">21</span> 語用原則</a></li>
+<li class="book-part">V 邏輯方法</li>
+<li><a class="" href="chap-defi.html"><span class="header-section-number">22</span> 定義</a></li>
+<li><a class="" href="chap-argu.html"><span class="header-section-number">23</span> 論證與反駁</a></li>
+<li><a class="" href="chap-fallacy.html"><span class="header-section-number">24</span> 謬誤</a></li>
+<li><a class="" href="chap-law.html"><span class="header-section-number">25</span> 邏輯思維基本原則</a></li>
+<li class="book-part">VI 附錄</li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/superfluous-man/baby-logic">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="chap-fol-symbol" class="section level1" number="9">
+<h1>
+<span class="header-section-number">9</span> 符號化<a class="anchor" aria-label="anchor" href="#chap-fol-symbol"><i class="fas fa-link"></i></a>
+</h1>
+<div class="centerpic">
+<div class="inline-figure"><img src="img/king-audacity.jpg" alt="illustration" style="width:55.0%"></div>
+<div class="centercap">
+<p><a href="https://www.flickr.com/photos/22711505@N05/" target="_blank">Ron Cogswell</a></p>
+</div>
+</div>
+<div class="epigraph">
+<p>Two things fill the mind with ever-increasing wonder and awe, the more often and the more intensely the mind of thought is drawn to them: the starry heavens above me and the moral law within me.<br><br>
+—Immanuel Kant, Critique of Practical Reason</p>
+</div>
+<p><strong><em>So far our discussion</em></strong> of ethical theory has revealed many different aspects of ethics. Each of the theories we have considered is, we might say, partly right and partly wrong about the nature of ethics. Each is partly right, since it captures some important feature of ethics, but partly wrong in that it chooses the wrong feature as the foundation for the rest. According to relativism, for example, the defining feature of ethics is its connection with culturally transmitted rules organizing our social lives. Resting the whole weight of ethics on this feature, however, leads to all of the problems we encountered in our investigation of relativism. The same holds for all of the other views we have considered, as can be seen in the following table.</p>
+<p><br></p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="left">theory</th>
+<th align="left">what it emphasizes</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">Relativism</td>
+<td align="left">ethical rules as cultural norms</td>
+</tr>
+<tr class="even">
+<td align="left">Divine Command Theory</td>
+<td align="left">authoritative character of ethical rules</td>
+</tr>
+<tr class="odd">
+<td align="left">Natural Law Theory</td>
+<td align="left">connection of ethics to human well-being</td>
+</tr>
+<tr class="even">
+<td align="left">Egoism</td>
+<td align="left">individuals always make their own decisions</td>
+</tr>
+<tr class="odd">
+<td align="left">Social Contract Theory</td>
+<td align="left">legitimate rules grounded in rational choice</td>
+</tr>
+<tr class="even">
+<td align="left">Utilitarianism</td>
+<td align="left">ethics require impartial consideration of interests</td>
+</tr>
+</tbody>
+</table></div>
+<p><br></p>
+<p><strong><em>So each theory</em></strong> we have considered implies a judgment about what is really important about ethical decision-making. The final theory we shall consider, Kantian ethics, also makes such a judgment. For Kant, what is distinctive about ethics is contained in the concept of duty. Kantian ethics uses this concept as the foundation of ethics. As we shall see, there are some compelling reasons behind this approach to ethics, although, as we might suspect, some challenging consequences as well.</p>
+<p><strong><em>We are all familiar</em></strong> with the word “duty.” A duty is something we simply ought to do, whether we want to or not. For example, if we have a duty to pay taxes, it really makes no difference if we can think of better things to do with the money, we simply have to get our tax forms in by the due date. (In fact the word “due” comes from the same root as the word “duty” both of which refer to what we owe, to our obligations.) Duty is an inherently normative concept and is thus likely to have some connection with ethics. But what exactly is the nature of that connection? Immanuel Kant (1724-1804) was a German philosopher who developed his approach to ethics as an attempt to answer this question. A more generic term for the ethics he developed is “deontological ethics” which literally means “the ethics of duty,” but since that is an awkward term, we’ll stick with calling it Kantian ethics in honor of its founder.</p>
+<p><strong><em>Kant’s big question</em></strong> is this: what is the basis of the duties we may feel towards each other, ourselves and society? Is it based on the feelings of commitment we may have towards each other – feelings of solidarity, sympathy, or affection? Or is there a rational basis for our duties – can we become convinced that we have them and then act on them by thinking things through? Or are they based merely on fear of authority, the desire for self-preservation and getting what we need and want in a hostile and competitive world? Are we “pushed” to do certain things and avoid others by culture, God, human nature? Or are we “pulled” by what we want as individuals and groups? Or is there something else that can get us to do what it is that ethics claims we should or shouldn’t do? Kant’s answer, as we will see is that duties result from our ability to push ourselves by recognizing the binding and non-negotiable character of moral law. We are not moved by external forces, nor encouraged by inner desires when we act morally, instead we act <em>autonomously</em>. We’ll see what this means in more detail in a moment.</p>
+<div id="what-do-we-owe-one-another" class="section level2" number="9.1">
+<h2>
+<span class="header-section-number">9.1</span> What do we owe one another?<a class="anchor" aria-label="anchor" href="#what-do-we-owe-one-another"><i class="fas fa-link"></i></a>
+</h2>
+<div class="epigraph">
+<p>In the kingdom of ends everything has either a price or a dignity. What has a price can be replaced by something else as its equivalent; what on the other hand is raised above all price and therefore admits of no equivalent has a dignity.<br><br>
+—Immanuel Kant, Groundwork of the Metaphysics of Morals</p>
+</div>
+<p><strong><em>Philosophy is the art</em></strong> of making distinctions. If this is true of the work of any philosopher it is definitely true of Kant. The first and most important distinction to keep in mind as we start to explore Kantian ethics is that between the “conditional” and the “unconditional.” This distinction applies to claims about what is true or false (knowledge claims) as well as to claims about what is right and wrong (moral claims). As an example of something that is unconditionally true, consider the following claim from elementary geometry, “For every right triangle with legs labeled a, b and the hypotenuse labeled c, the sum of the square of the legs a and b is exactly equal to the square of the hypotenuse c.” It does not matter what the triangle is made of, whether it is drawn in a book, encoded in a computer program, sketched in dirt on the surface of the moon. This relation between the sides of a right triangle holds unconditionally. On the other hand, most of the (non-mathematical) claims that we make are at best conditionally true. For example, even though it is true that water boils at 100 degrees Celsius, this might not have been the case if the laws of physics and chemistry were different and it all depends on atmospheric pressure which is why high up in the mountains where there is less air pressure water boils at a lower temperature than at sea level. Likewise, that I was born to my particular parents on the day I was born is contingent, something that might not have been the case, and so it is only conditionally true that my birthday is when it is.</p>
+<p><strong><em>The same distinction applies</em></strong> when we are talking about right and wrong. Some things are only conditionally right or wrong. It is, for example, wrong to drive on the right side of the road in England, since the accepted, and legally binding, norm is to drive on the left side of the road. But this clearly might not have been the case and in many other places in the world, one is expected to drive on the right. What about things that are unconditionally right or wrong? Are there any such things? Well in Kant’s view unless we recognize that there are some things that are unconditionally right and unconditionally wrong we have failed to grasp the point of ethics. In fact, Kant’s ethics is an extended defense of the claim that there are such things as unconditional duties, things that we simply either should do, or should avoid doing, no matter what. We will see what Kant’s defense of this fairly strong claim looks like in a moment. Before we get there, let us take a look at what this claim implies about ethics.</p>
+<div id="implications" class="section level3 unnumbered">
+<h3>Implications<a class="anchor" aria-label="anchor" href="#implications"><i class="fas fa-link"></i></a>
+</h3>
+<p><strong><em>So, then, what are</em></strong> the implications of the claim that there are such things as unconditional duties? First of all, this fits in very well with some basic moral intuitions that many people share, namely that some things are just plain wrong. There are some things that we should just simply never do, no matter what the benefits of doing them may be. For example, many people would agree that things like murder, rape, torture and slavery are simply wrong. (Remember that we are not committed to the truth of this claim just yet, since we still need to examine Kant’s argument that this there really are unconditional duties.) Furthermore, if it in fact the case that such things should never be done, then this would enable us to flesh out the concept of “rights.” Rights are nothing but standards of treatment we are entitled to unconditionally. My right not to be tortured continues to hold, or should continue to hold according to Kantian ethics, no matter what might be gained for society as a whole by torturing me. If Kant is correct, then, and only then does the concept of rights really mean something.</p>
+<p><strong><em>This position is clearly</em></strong> at odds with utilitarianism, according to which nothing should ever be ruled out as a possible course of action since it may be the best way of attaining the greater good. Utilitarians have to leave open the possibility of murder, rape, torture or slavery as avenues to getting the best for the most. This is the fundamental conflict between utilitarians and Kantians. This conflict, however, extends far beyond the question of rights. For Kantians ethics is not concerned with trying to attain the greater good for the simple reason that it is not concerned with attaining what is good. Ethics, in Kant’s view is about doing what is right and not what is good. It might be nice if the people who did the right thing habitually were also rewarded with happiness for their efforts, but there is no guarantee that this will happen. Basing ethics on the contingent outcomes of our actions is sacrificing the truly ethical side of our actions for things that are utterly undependable.</p>
+<p><strong><em>This goes back</em></strong> to one of the problems with utilitarianism mentioned in the last chapter, the problem of predicting the outcomes of our actions. Since according to utilitarianism, ethics requires choosing whatever leads to the best overall outcome, it assumes that the consequences or our actions are at least roughly predictable. But, as Kant points out, what happens in the world is contingent – dependent on many things that are simply out of our control. So basing ethics on the contingent effects of our present choices seems hopelessly unreliable as a source of ethical guidance. By placing the ethical value of actions out in the world this value gets lost in the shuffle.</p>
+</div>
+<div id="persons-and-things" class="section level3 unnumbered">
+<h3>Persons and things<a class="anchor" aria-label="anchor" href="#persons-and-things"><i class="fas fa-link"></i></a>
+</h3>
+<p><strong><em>A second important distinction</em></strong> that follows from Kant’s claim that there are such things as strict duties is the distinction between persons and things. Both persons and things have value, but the value each has is completely different. Things are valuable in that they are useful for our plans, they are means to an end. Their value is not inherent in them but in the other things of value that we get by means of them. As a result, the value of one thing can be compared to the value of another – an idea reflected in the fact that we give a price to things thus showing how their value compares with the value of other things. Finally, the value of things can be used up. In the end, when a things ceases to be useful to us or even becomes a burden to us, we get rid of it or trade it for another thing. Persons on the other hand, have an entirely different sort of value. Their value is intrinsic or inherent and not dependent on their use for our projects – that is, as log as we are treating them like persons and not like things to be used. Instead of having a price, a person has an inherent dignity, a moral worth that transcends what good they may do to us. Thus, the primary way we treat other persons should be respect. They are worthy of respect simply in recognition of their intrinsic value.</p>
+<p><strong><em>Now all of this</em></strong> may sound completely idealistic and may seem to have little connection with the real ways in which we relate to each other. In Kant’s view that just shows how little our behavior really corresponds to the standards of morality. The fact that we often fail to treat other people persons with inherent moral dignity has nothing at all to do with whether we should treat them like that. In fact, this basic distinction between persons and things follows directly from the idea that there are some things that are just plain wrong. What this really means is that there can never be an excuse for doing certain kinds of things to people. The ideal of moral treatment and the idea that there are real moral standards that just should not be violated are two sides of the same coin.</p>
+</div>
+</div>
+<div id="rights-and-the-ideal-of-respect" class="section level2" number="9.2">
+<h2>
+<span class="header-section-number">9.2</span> Rights and the ideal of respect<a class="anchor" aria-label="anchor" href="#rights-and-the-ideal-of-respect"><i class="fas fa-link"></i></a>
+</h2>
+<p><strong><em>Kant’s claim</em></strong> that we should have absolute unconditional respect for persons will doubtless attract skeptical responses. Isn’t respect something that has to be earned? Isn’t respect conditional and can’t we lose respect for others if they show by their actions that they are not worthy of respect? This is a tricky issue, but Kant would have to answer no to these questions. Respect is something that is owed unconditionally to all rational agents. There are two reasons why Kant takes this position. First, if respect is conditional – if each of us will only grant respect to those who prove themselves worthy of respect – respect would never get off of the ground. I would be waiting for others to begin respecting me while they are all waiting for me to begin respecting them. The only way to ever get respectful relations going is for someone to start respecting others with no strings attached. The second reason why Kant refuses to accept that respect is something that can be lost, comes from his recognition of the limitations inherent in our knowledge of each other. If I deem someone else not worthy of continued respect, I am essentially downgrading their status to that of a thing, something beneath me that I can dispose of or use at will. But who am I to make such a decision? How can I possibly claim to put myself in a position to be able to judge someone else like this? Perhaps God knows that the person I refuse to respect is not really worthy of being respected, but lacking such an absolute perspective on things, how could I ever decide that another person is really not worthy of respect? The only way I can do this is by assuming that I am somehow above the person I condemn. But that is an unjustified (and in fact immoral) assumption to make.</p>
+<p><strong><em>As a result of these difficulties</em></strong> with turning respect into something conditional, we have no choice but to understand it as something unconditional. The moral point of view simply demands that we recognize certain absolute limits on the way we interact with others, including our willingness to judge the value of others. We must not put ourselves above other people, no matter how unworthy of respect they seem to be. But then, this should not seem to unusual, since it is exactly what it means to have rights. Rights are claims that we make about what sort of treatment we are each entitled to. And rights, if they are really rights, have to be unconditional, universal and inalienable. They have to be unconditional because, if they were not, they would be dependent on someone else’s judgment about whether or not each of us deserves rights. But the whole point of insisting in rights is that nobody can be absolutely trusted to make such decisions. Historically, the concept of rights arose in the late 18th century, the era of the American and French revolutions. In those days absolute monarchs had the power to decide whether or not someone else was worthy of respect. But, as the colonists in what was to become the United States and the revolutionaries in France were very much aware, granting that sort of power to anyone undermines the security of everyone. So the “Bill of Rights” and the “Declaration of the Rights of Human Beings,” both insisted on the absolute non-negotiable character of rights. In addition, there is ultimately no way of containing rights to one group of people – even though it took us Americans almost another 200 years to grant full political rights to women and non-whites, the idea of rights really only makes sense if it applies to all rational adults. Finally, rights, if they are to remain rights and not become something much weaker, must be inalienable – incapable of being taken away. If they could be taken away, whoever is entrusted to taking some people’s rights away would then be elevated an almost godlike stature above those whose rights are being taken away.</p>
+<div id="conflicting-duties" class="section level3 unnumbered">
+<h3>Conflicting duties<a class="anchor" aria-label="anchor" href="#conflicting-duties"><i class="fas fa-link"></i></a>
+</h3>
+<p><strong><em>Kant’s position on ethics</em></strong> is thus quite a bit more demanding than the other views we have considered. It insists on the absolutely binding character of moral rules. For some critics of Kantian ethics, this makes it seem too rigid to deal with real life situations that seem to defy clear definition in terms of right and wrong. The most obvious, and most frequently voiced, objection to Kant’s insistence on the unconditional character of duties is that it seems to prevent us from being able to deal with cases where duties come into conflict with each other. For example, if someone shows up at your door and demands to know if your brother there, you are obligated to tell the truth, even if your brother is there hiding from this person and you suspect that he or she intends to harm your brother. It seems like our duty to help protect someone from harm and our duty to tell the truth come into conflict here. Most of us, naturally, would probably say that Kant is wrong in his insistence that we should tell the truth in this case, on the grounds that this lie is a good lie.</p>
+<p><strong><em>But is there really</em></strong> such a thing as a “good lie?” According to utilitarians the answer is obvious – as long a lying leads to a better outcome than telling the truth would have, the lie is good. Good lies are those with good consequences and bad lies are those with bad consequences. Of course, all of the problems with basing the rightness or wrongness of a decision on its consequences come rushing back in. How long do wait have to wait for consequences to unfold before we can decide whether it was worth it to lie or not? How do we measure the consequences of telling a lie in a way that is not subjectively biased towards our own interests? How can we compare the results of a real lie with what would have happened if we told the truth?</p>
+<p><strong><em>In Kant’s view,</em></strong> these problems demonstrate the utter arbitrariness of utilitarian approaches to ethics. But then what do we do when duties conflict? Well, Kant’s answer is, that we have to try our hardest to fulfill all of our duties simultaneously, because we cannot rely on the usual utilitarian excuses to get us out of our moral commitments. So in the case of the person looking for your brother, you have to both tell the truth and protect your brother. Our duties cannot be overridden by what we think may or may not happen if we violate them. All of this assumes that we really have such unconditional duties. Thus we need to consider, at long last, Kant’s argument that we really have such duties.</p>
+</div>
+</div>
+<div id="the-categorical-imperative" class="section level2" number="9.3">
+<h2>
+<span class="header-section-number">9.3</span> The Categorical Imperative<a class="anchor" aria-label="anchor" href="#the-categorical-imperative"><i class="fas fa-link"></i></a>
+</h2>
+<p><strong><em>So how is Kant</em></strong> going to try to defend the claim that we have strict, unconditional duties to each other? Earlier we considered the basic distinction between conditional and unconditional claims. Conditional claims are claims about what is right or true that may or may not hold. It all depends on circumstances. Unconditional claims must hold no matter what else is the case. It is, for example, unconditionally true that, say <span class="math inline">\(2 + 2 = 4\)</span>. That is, it does not matter what else is true, as long as we understand what it means to say that <span class="math inline">\(2 + 2 = 4\)</span> we will see that it is true. But how do we show this? We prove it in one of two ways. First of all we could establish that it is true by reasoning validly from true premises about basic arithmetic and the definitions of numbers to show that it must be the case – that is we can build a sound argument with <span class="math inline">\(2 + 2 = 4\)</span> as the conclusion. On the other hand we could use a method known as “indirect proof,” and show that <span class="math inline">\(2 + 2 = 4\)</span> must be true because denying its truth leads us to a contradiction. This is less obscure than it sounds. If I can show that it makes no sense – that it entails a contradiction – to say that <span class="math inline">\(2 +2 \neq 4\)</span> then it must be true that <span class="math inline">\(2 + 2 = 4\)</span>. Kant realized that the same line of thinking applies to unconditional claims in ethics. If we have any unconditional duties, this can be shown by showing that denying these duties makes no sense at all, that it leads to a contradiction to do so. His basic argument in defense of unconditional duties is thus:</p>
+<div class="center">
+<div class="argument">
+<p>If an action is to be morally acceptable its goal must make sense.<br>
+But some actions have goals that contradict themselves.<br><br>
+So such actions are unconditionally wrong and we have strict duties not to do them.</p>
+</div>
+</div>
+<p><strong><em>This argument is</em></strong> an extremely general argument. In fact we might consider it to be a kind of template for moral arguments in general, an argument schema that is to be turned into a moral argument be substituting particular actions for the general claims. Here is an example that shows why we have an unconditional duty not to steal:</p>
+<div class="center">
+<div class="argument">
+<p>If stealing is to be moral its goal must make sense.<br>
+When I steal something, I do so in order to take possession of it.<br>
+But stealing undermines private property, since if everyone stole, there would be no such thing as private property.<br>
+Thus stealing has a contradictory goal – it both assumes and undermines the possession of private property.<br><br>
+So stealing is unconditionally wrong and we have a strict duty not to steal.</p>
+</div>
+</div>
+<p><strong><em>The same general argument</em></strong> can be used to show that other things are immoral as well. Another example is lying. Why is it that lying is wrong? Is it because of the harm that lies cause as utilitarians might claim? Is it wrong to lie just because people lie are at risk of getting caught. Neither of these reasons come close, in Kant’s view, to accounting for the moral status of lying. In his view, the following argument shows just why lying is wrong:</p>
+<div class="center">
+<div class="argument">
+<p>If lying is to be moral its goal must make sense.<br>
+When I lie, I do so in the hope that others will believe my lie.<br>
+But lying undermines communication, since if everyone lied, there could be no reliable communication.<br>
+Thus lying has a contradictory goal – it both assumes and undermines reliable communication.<br><br>
+So lying is unconditionally wrong and we have a strict duty not to lie.</p>
+</div>
+</div>
+<p>Likewise with murder. Murder is wrong, not because it causes pain (as utilitarians might argue), or because God commands us not to murder (as Divine Command Theory argues), but because the idea that murder could be acceptable contains an inner contradiction. The argument that it does runs like so:</p>
+<div class="center">
+<div class="argument">
+<p>If murder is to be moral its goal must make sense.When I murder someone, I do so in the hope that my life will be better without that person around.<br>
+But murder undermines the possibility of having a good life, since if everyone murdered, nobody could live a happy and secure life.<br>
+Thus murder has a contradictory goal – it both assumes and undermines the possibility of living a stable and secure life.<br><br>
+So murder is unconditionally wrong and we have a strict duty not to murder.</p>
+</div>
+</div>
+<p><strong><em>In all of these cases,</em></strong> the result is the same. Immoral action has ultimately irrational motives, motives that assume and undermine one and the same thing. Thus the only way to act immorally is presume a kind of double standard – “There is one set of standards that I expect everyone else to follow, but another set for me.”</p>
+<p><strong><em>The argument for Kantian ethics</em></strong> is the most abstract of all of the arguments we have considered. And perhaps it seems to be stretching the limits of what reason alone can do as a method for grasping just what is wrong with immoral or unethical actions. Nevertheless, it seems to be at least a plausible argument, or set of arguments, since it seems to capture some important features of morality. First, morality does in fact seem to require consistency. If there is such a thing as morality, it would have to be the same for everyone, otherwise it would be nothing but an arbitrary set of rules lacking any ultimate basis. Second, Kant’s argument makes it clear how morality can be universal, without being the kind of thing that one group can simply impose on other groups. To grasp the content of morality requires only thinking things through carefully enough to see that what I am doing either makes sense or fails to make sense when considered as something practiced universally. We certainly expect that every rational adult can grasp the fact that lying and stealing and murder just should not be done. Kant’s theory shows us why we might be justified in having such expectations and in hold people responsible for seeing that “you just shouldn’t do those kinds of things.” His theory certainly seems to impose some strict demands on us as moral agents, but then again, who said being good was easy?</p>
+</div>
+<div id="slideshow-summary-8" class="section level2" number="9.4">
+<h2>
+<span class="header-section-number">9.4</span> Slideshow Summary<a class="anchor" aria-label="anchor" href="#slideshow-summary-8"><i class="fas fa-link"></i></a>
+</h2>
+<div class="slideshow">
+<iframe src="https://gwmatthews.github.io/ethics-slideshows/09-phl210-slides.html" width="100%">
+</iframe>
+</div>
+<div class="slideshow-buttons">
+<div>
+<p><a href="https://gwmatthews.github.io/ethics-slideshows/pdf/09-phl210-slides.pdf">download</a></p>
+</div>
+<div>
+<p><a href="https://gwmatthews.github.io/ethics-slideshows/pdf/09-phl210-handout.pdf">print</a></p>
+</div>
+<div>
+<p><a href="https://gwmatthews.github.io/ethics-slideshows/09-phl210-slides.html" target="_blank">new tab</a></p>
+</div>
+</div>
+</div>
+<div id="further-exploration-7" class="section level2 unnumbered">
+<h2>Further exploration<a class="anchor" aria-label="anchor" href="#further-exploration-7"><i class="fas fa-link"></i></a>
+</h2>
+<br><br><hr>
+<p><strong>Editorial comments</strong></p>
+<p>If you have a GitHub account and want to make any editorial suggestions, please do so here.</p>
+<script src="https://utteranc.es/client.js" repo="gwmatthews/ethics" issue-term="title" theme="github-light" crossorigin="anonymous" async>
+</script>
+</div>
+</div>
+
+
+<script>
+const toggleButton = document.getElementsByClassName("show-more-text");
+var i;
+//const link = document.createElement('a');
+
+
+for (i = 0; i < toggleButton.length; i++) {
+    toggleButton[i].addEventListener("click", function() {
+    this.classList.toggle("more-text-active");
+    let content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+      this.innerHTML = '<i class="fa fa-plus-square-o" ></i>';
+     } else {
+      content.style.display = "block";
+      this.innerHTML = '<i class="fa fa-minus-square-o" ></i>';
+    }
+  });
+}
+</script><div class="chapter-nav">
+<div class="prev"><a href="utilitarianism.html"><span class="header-section-number">8</span> Utilitarianism</a></div>
+<div class="next"><a href="theory-in-practice.html"><span class="header-section-number">10</span> Theory in Practice</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#chap-fol-symbol"><span class="header-section-number">9</span> 符號化</a></li>
+<li>
+<a class="nav-link" href="#what-do-we-owe-one-another"><span class="header-section-number">9.1</span> What do we owe one another?</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#implications">Implications</a></li>
+<li><a class="nav-link" href="#persons-and-things">Persons and things</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#rights-and-the-ideal-of-respect"><span class="header-section-number">9.2</span> Rights and the ideal of respect</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#conflicting-duties">Conflicting duties</a></li></ul>
+</li>
+<li><a class="nav-link" href="#the-categorical-imperative"><span class="header-section-number">9.3</span> The Categorical Imperative</a></li>
+<li><a class="nav-link" href="#slideshow-summary-8"><span class="header-section-number">9.4</span> Slideshow Summary</a></li>
+<li><a class="nav-link" href="#further-exploration-7">Further exploration</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/superfluous-man/baby-logic/blob/master/p02ch01.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/superfluous-man/baby-logic/edit/master/p02ch01.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Baby Logic</strong>" was written by Lǐ Èrgǒu. </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+</html>

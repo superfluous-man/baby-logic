@@ -1,27 +1,54 @@
 ---
 knit: "bookdown::render_book"
-title: "R for Data Science (2e)"
-author: "Hadley Wickham and Garrett Grolemund"
-description: "This book will teach you how to do data science with R: You'll learn how to get your data into R, get it into the most useful structure, transform it, visualise it and model it. In this book, you will find a practicum of skills for data science. Just as a chemist learns how to clean test tubes and stock a lab, you'll learn how to clean data and draw plots---and many other things besides. These are the skills that allow data science to happen, and here you will find the best practices for doing each of these things with R. You'll learn how to use the grammar of graphics, literate programming, and reproducible research to save time. You'll also learn how to manage cognitive resources to facilitate discoveries when wrangling, visualising, and exploring data."
-url: 'https\://r4ds.had.co.nz/'
-github-repo: hadley/r4ds
-twitter-handle: hadley
-cover-image: cover.png
+title: "Baby Logic"
+author: "Lǐ Èrgǒu"
+description: "Baby Logic Textbooks"
+url: 'https\://duoyu.ren/baby-logic/'
+github-repo: superfluous-man/baby-logic
+cover-image: img/cover.png
 site: bookdown::bookdown_site
 documentclass: book
 ---
 
 # Welcome {-} 
 
-<a href="http://amzn.to/2aHLAQ1"><img src="cover.png" width="250" height="375" alt="Buy from amazon" class="cover" /></a> This is the website for the work-in-progress 2nd edition of __"R for Data Science"__. This book will teach you how to do data science with R: You'll learn how to get your data into R, get it into the most useful structure, transform it, visualise it and model it. In this book, you will find a practicum of skills for data science. Just as a chemist learns how to clean test tubes and stock a lab, you'll learn how to clean data and draw plots---and many other things besides. These are the skills that allow data science to happen, and here you will find the best practices for doing each of these things with R. You'll learn how to use the grammar of graphics, literate programming, and reproducible research to save time. You'll also learn how to manage cognitive resources to facilitate discoveries when wrangling, visualising, and exploring data. 
+<a href="https://duoyu.ren/"><img src="img/cover.png" width="250" height="375" alt="Back to Homepage" class="cover" /></a> 「邏輯」有很多種，「邏輯學」也有很多種。不同的人學習邏輯學有不同的目的。本筆記中的「邏輯學」知識主要服務於語言、思維的分析，不追求邏輯學在其他領域的功能。
 
-This website is (and will always be) __free to use__, and is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivs 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/us/) License.  If you'd like a __physical copy__ of the book, you can order it from [amazon](http://amzn.to/2aHLAQ1); it was published by O'Reilly in January 2017. If you'd like to __give back__
-please make a donation to [Kākāpō Recovery](https://www.doc.govt.nz/kakapo-donate): the [kākāpō](https://www.youtube.com/watch?v=9T1vfsHYiKY) (which appears on the cover of R4DS) is a critically endangered native NZ parrot; there are only 213 left.
+本筆記大致列出邏輯基礎學習階段的主要材料，主要參考（chāoxí ）以下課本攢集而成：
 
-Please note that R4DS uses a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this book, you agree to abide by its terms.
+{{% freeboxforbib title="主要參考文獻" %}}
+1. 徐明, 2008. **符号逻辑讲义[M]**.武汉:武汉大学出版社.
+2. 胡龙彪,黄华新, 2006. **逻辑学教程[M]**.杭州:浙江大学出版社.
+3. 黄华新,张则幸, 2011. **逻辑学导论（第二版）[M]**.杭州:浙江大学出版社.
+4. 安德鲁·辛普森, 2005. **离散数学导学[M]**.冯速,译.北京:机械工业出版社.
+5. Tidman P, Kahane H, 2002. **Logic and Philosophy: A Modern Introduction[M]**. Ninth. Boston: Cengage Learning.
+6. Smith N J J, 2012. **Logic: The Laws of Truth[M]**. New Jersey: Princeton University Press.
+7. Copi I M, Cohen C, Rodych V, 2018. **Introduction to Logic[M]**. New York: Routledge.
+8. Bergmann M, Moor J, Nelson J, 2014. **The Logic Book[M]**. Sixth. New York: McGraw‑Hill.
+{{% /freeboxforbib %}}
+
+
+其中，直接取自《符号逻辑讲义》的材料最多，取自《逻辑学导论》較多，素樸集合論、表列演算則直接取自完全開源的 [Open Logic Project](https://builds.openlogicproject.org/) 項目源碼。
+
+
 
 ## Acknowledgements {-}
 
-R4DS is a collaborative effort and many people have contributed fixes and improvements via pull request: adi pradhan ([\@adidoit](https://github.com/adidoit)), Andrea Gilardi ([\@agila5](https://github.com/agila5)), Ajay Deonarine ([\@ajay-d](https://github.com/ajay-d)), [\@AlanFeder](https://github.com/AlanFeder), pete ([\@alonzi](https://github.com/alonzi)), Alex ([\@ALShum](https://github.com/ALShum)), Andrew Landgraf ([\@andland](https://github.com/andland)), [\@andrewmacfarland](https://github.com/andrewmacfarland), Michael Henry ([\@aviast](https://github.com/aviast)), Mara Averick ([\@batpigandme](https://github.com/batpigandme)), Brent Brewington ([\@bbrewington](https://github.com/bbrewington)), Bill Behrman ([\@behrman](https://github.com/behrman)), Ben Herbertson ([\@benherbertson](https://github.com/benherbertson)), Ben Marwick ([\@benmarwick](https://github.com/benmarwick)), Ben Steinberg ([\@bensteinberg](https://github.com/bensteinberg)), Brandon Greenwell ([\@bgreenwell](https://github.com/bgreenwell)), Brett Klamer ([\@bklamer](https://github.com/bklamer)), Christian Mongeau ([\@chrMongeau](https://github.com/chrMongeau)), Cooper Morris ([\@coopermor](https://github.com/coopermor)), Colin Gillespie ([\@csgillespie](https://github.com/csgillespie)), Rademeyer Vermaak ([\@csrvermaak](https://github.com/csrvermaak)), Abhinav Singh ([\@curious-abhinav](https://github.com/curious-abhinav)), Curtis Alexander ([\@curtisalexander](https://github.com/curtisalexander)), Christian G. Warden ([\@cwarden](https://github.com/cwarden)), Kenny Darrell ([\@darrkj](https://github.com/darrkj)), David Rubinger ([\@davidrubinger](https://github.com/davidrubinger)), David Clark ([\@DDClark](https://github.com/DDClark)), Derwin McGeary ([\@derwinmcgeary](https://github.com/derwinmcgeary)), Daniel Gromer ([\@dgromer](https://github.com/dgromer)), [\@djbirke](https://github.com/djbirke), Devin Pastoor ([\@dpastoor](https://github.com/dpastoor)), Julian During ([\@duju211](https://github.com/duju211)), Dylan Cashman ([\@dylancashman](https://github.com/dylancashman)), Dirk Eddelbuettel ([\@eddelbuettel](https://github.com/eddelbuettel)), Edwin Thoen ([\@EdwinTh](https://github.com/EdwinTh)), Ahmed El-Gabbas ([\@elgabbas](https://github.com/elgabbas)), Eric Watt ([\@ericwatt](https://github.com/ericwatt)), Erik Erhardt ([\@erikerhardt](https://github.com/erikerhardt)), Etienne B. Racine ([\@etiennebr](https://github.com/etiennebr)), Everett Robinson ([\@evjrob](https://github.com/evjrob)), Flemming Villalona ([\@flemingspace](https://github.com/flemingspace)), Floris Vanderhaeghe ([\@florisvdh](https://github.com/florisvdh)), Garrick Aden-Buie ([\@gadenbuie](https://github.com/gadenbuie)), Garrett Grolemund ([\@garrettgman](https://github.com/garrettgman)), Josh Goldberg ([\@GoldbergData](https://github.com/GoldbergData)), bahadir cankardes ([\@gridgrad](https://github.com/gridgrad)), Gustav W Delius ([\@gustavdelius](https://github.com/gustavdelius)), Hadley Wickham ([\@hadley](https://github.com/hadley)), Hao Chen ([\@hao-trivago](https://github.com/hao-trivago)), Harris McGehee ([\@harrismcgehee](https://github.com/harrismcgehee)), Hengni Cai ([\@hengnicai](https://github.com/hengnicai)), Ian Sealy ([\@iansealy](https://github.com/iansealy)), Ian Lyttle ([\@ijlyttle](https://github.com/ijlyttle)), Ivan Krukov ([\@ivan-krukov](https://github.com/ivan-krukov)), Jacob Kaplan ([\@jacobkap](https://github.com/jacobkap)), Jazz Weisman ([\@jazzlw](https://github.com/jazzlw)), John D. Storey ([\@jdstorey](https://github.com/jdstorey)), Jeff Boichuk ([\@jeffboichuk](https://github.com/jeffboichuk)), Gregory Jefferis ([\@jefferis](https://github.com/jefferis)), 蒋雨蒙 ([\@JeldorPKU](https://github.com/JeldorPKU)), Jennifer (Jenny) Bryan ([\@jennybc](https://github.com/jennybc)), Jen Ren ([\@jenren](https://github.com/jenren)), Jeroen Janssens ([\@jeroenjanssens](https://github.com/jeroenjanssens)), Jim Hester ([\@jimhester](https://github.com/jimhester)), JJ Chen ([\@jjchern](https://github.com/jjchern)), Joanne Jang ([\@joannejang](https://github.com/joannejang)), John Sears ([\@johnsears](https://github.com/johnsears)), [\@jonathanflint](https://github.com/jonathanflint), Jon Calder ([\@jonmcalder](https://github.com/jonmcalder)), Jonathan Page ([\@jonpage](https://github.com/jonpage)), Justinas Petuchovas ([\@jpetuchovas](https://github.com/jpetuchovas)), Jose Roberto Ayala Solares ([\@jroberayalas](https://github.com/jroberayalas)), Julia Stewart Lowndes ([\@jules32](https://github.com/jules32)), Sonja ([\@kaetschap](https://github.com/kaetschap)), Kara Woo ([\@karawoo](https://github.com/karawoo)), Katrin Leinweber ([\@katrinleinweber](https://github.com/katrinleinweber)), Karandeep Singh ([\@kdpsingh](https://github.com/kdpsingh)), Kyle Humphrey ([\@khumph](https://github.com/khumph)), Kirill Sevastyanenko ([\@kirillseva](https://github.com/kirillseva)), [\@koalabearski](https://github.com/koalabearski), Kirill Müller ([\@krlmlr](https://github.com/krlmlr)), Noah Landesberg ([\@landesbergn](https://github.com/landesbergn)), [\@lindbrook](https://github.com/lindbrook), Mauro Lepore ([\@maurolepore](https://github.com/maurolepore)), Mark Beveridge ([\@mbeveridge](https://github.com/mbeveridge)), Matt Herman ([\@mfherman](https://github.com/mfherman)), Mine Cetinkaya-Rundel ([\@mine-cetinkaya-rundel](https://github.com/mine-cetinkaya-rundel)), Matthew Hendrickson ([\@mjhendrickson](https://github.com/mjhendrickson)), [\@MJMarshall](https://github.com/MJMarshall), Mustafa Ascha ([\@mustafaascha](https://github.com/mustafaascha)), Nelson Areal ([\@nareal](https://github.com/nareal)), Nate Olson ([\@nate-d-olson](https://github.com/nate-d-olson)), Nathanael ([\@nateaff](https://github.com/nateaff)), Nick Clark ([\@nickclark1000](https://github.com/nickclark1000)), [\@nickelas](https://github.com/nickelas), Nirmal Patel ([\@nirmalpatel](https://github.com/nirmalpatel)), Nina Munkholt Jakobsen ([\@nmjakobsen](https://github.com/nmjakobsen)), Jakub Nowosad ([\@Nowosad](https://github.com/Nowosad)), Peter Hurford ([\@peterhurford](https://github.com/peterhurford)), Patrick Kennedy ([\@pkq](https://github.com/pkq)), Radu Grosu ([\@radugrosu](https://github.com/radugrosu)), Ranae Dietzel ([\@Ranae](https://github.com/Ranae)), Robin Gertenbach ([\@rgertenbach](https://github.com/rgertenbach)), Richard Zijdeman ([\@rlzijdeman](https://github.com/rlzijdeman)), Robin ([\@Robinlovelace](https://github.com/Robinlovelace)), Emily Robinson ([\@robinsones](https://github.com/robinsones)), Rohan Alexander ([\@RohanAlexander](https://github.com/RohanAlexander)), Romero Morais ([\@RomeroBarata](https://github.com/RomeroBarata)), Albert Y. Kim ([\@rudeboybert](https://github.com/rudeboybert)), Saghir ([\@saghirb](https://github.com/saghirb)), Jonas ([\@sauercrowd](https://github.com/sauercrowd)), Robert Schuessler ([\@schuess](https://github.com/schuess)), Seamus McKinsey ([\@seamus-mckinsey](https://github.com/seamus-mckinsey)), [\@seanpwilliams](https://github.com/seanpwilliams), Luke Smith ([\@seasmith](https://github.com/seasmith)), Matthew Sedaghatfar ([\@sedaghatfar](https://github.com/sedaghatfar)), Sebastian Kraus ([\@sekR4](https://github.com/sekR4)), Sam Firke ([\@sfirke](https://github.com/sfirke)), Shannon Ellis ([\@ShanEllis](https://github.com/ShanEllis)), [\@shoili](https://github.com/shoili), S'busiso Mkhondwane ([\@sibusiso16](https://github.com/sibusiso16)), [\@spirgel](https://github.com/spirgel), Steven M. Mortimer ([\@StevenMMortimer](https://github.com/StevenMMortimer)), Stéphane Guillou ([\@stragu](https://github.com/stragu)), Sergiusz Bleja ([\@svenski](https://github.com/svenski)), Tal Galili ([\@talgalili](https://github.com/talgalili)), Tim Waterhouse ([\@timwaterhouse](https://github.com/timwaterhouse)), TJ Mahr ([\@tjmahr](https://github.com/tjmahr)), Thomas Klebel ([\@tklebel](https://github.com/tklebel)), Tom Prior ([\@tomjamesprior](https://github.com/tomjamesprior)), Terence Teo ([\@tteo](https://github.com/tteo)), Will Beasley ([\@wibeasley](https://github.com/wibeasley)), [\@yahwes](https://github.com/yahwes), Yihui Xie ([\@yihui](https://github.com/yihui)), Yiming (Paul) Li ([\@yimingli](https://github.com/yimingli)), Hiroaki Yutani ([\@yutannihilation](https://github.com/yutannihilation)), [\@zeal626](https://github.com/zeal626), Azza Ahmed ([\@zo0z](https://github.com/zo0z))
 
-R4DS is hosted by <https://www.netlify.com> as part of their support of open source software and communities.
+
+
+<br>
+  <br>
+  <hr>
+
+**Editorial comments**
+
+If you have a GitHub account and want to make any editorial suggestions, please do so here.
+
+<script src="https://utteranc.es/client.js"
+        repo="gwmatthews/ethics"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
