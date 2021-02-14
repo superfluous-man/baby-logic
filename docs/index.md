@@ -3,7 +3,7 @@ knit: "bookdown::render_book"
 title: "Baby Logic"
 author: "Lǐ Èrgǒu"
 description: "Baby Logic Textbooks"
-url: 'https\://duoyu.ren/baby-logic/'
+url: 'https\://duoyu.ren/'
 github-repo: superfluous-man/baby-logic
 cover-image: img/cover.png
 site: bookdown::bookdown_site
