@@ -10,6 +10,8 @@ div.argument {
   margin-left:auto;
   margin-right: auto;
   box-shadow: 2px 2px 8px gray;
+      text-align:justify;
+    text-justify:auto;
 }
 
 @media (max-width: 700px){
@@ -87,6 +89,8 @@ div.epigraph {
   border-left: 5px solid #ccc;
   border-radius: 15px;
   padding: 9px 14px;
+      text-align:justify;
+    text-justify:auto;
 }
 
 .color-theme-2 .argument {
@@ -325,6 +329,8 @@ img[alt="Philosophical Ethics book cover"]{
   margin-top: 10px;
   padding: 10px;
   overflow: hidden;
+      text-align:justify;
+    text-justify:auto;
 }
 
 .pullquote .pull-right{
@@ -344,3 +350,1836 @@ img[alt="Philosophical Ethics book cover"]{
   padding-bottom: 0;
 }
 }
+
+
+/* Here is your custom css styles. */
+
+ol li::marker {
+  content: counter(list-item, upper-latin) "）";
+  font-family: "SYHei Bold", sans-serif;
+}
+
+
+ul {
+    list-style-image: url(https://cdn.bitdegree.org/learn/list-style-image-marker-1.png?426d93cd);
+}
+
+
+
+strong { /** markdown中 **粗體** 之例 **/
+    font-family: "SYHei Bold", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+b {/** markdown中混用html <b>僞粗體</b> 之例,只用於中英文引文之內 **/
+    font-style: normal;
+    font-weight: normal;
+}
+bb { /** markdown中部分shortcode內粗體<bb></bb> 與<strong>樣式同一 **/
+    font-family: "SYHei Bold", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: #0E6251;
+}
+
+red {
+    color: #e53245;
+}
+
+tt { /** 文字下加三角形強調 **/
+    font-family: "SYHei Bold", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: #0E6251;
+    text-emphasis: triangle #D55;
+    text-emphasis-position: under left;
+}
+
+/*嘗試自定義「便捷」下劃線樣式 _**text**_ */
+strong>em,
+em>strong,
+b>i,
+i>b {
+    font-style: normal;
+    font-weight: normal;
+    border-bottom: 1px solid;
+}
+
+
+ /* 「便捷」下劃線樣 */
+z {
+    font-style:normal;
+    font-weight:normal;
+    border-bottom: 1.5px solid gray;
+}
+ /* 「便捷」下劃線樣式接續下劃線左斷開 */
+zl {
+    font-style:normal;
+    font-weight:normal;
+    border-bottom: 1.5px solid gray;
+    margin-left: 1.5px;
+}
+ /* 「便捷」下劃線樣式接續下劃線左右皆斷開 */
+zr {
+    font-style:normal;
+    font-weight:normal;
+    border-bottom: 1.5px solid gray;
+    margin-left: 1.5px;
+    margin-right: 1.5px;
+}
+
+
+ /* 插圖下沈fr爲圖在右邊fl爲左邊   */
+fr {
+      margin-left: 9px;
+      margin-top: 0px;
+      margin-bottom: -7px;
+      width: 40%;
+      height: auto;
+      float: right;
+}
+
+fl {
+      margin-right: 9px;
+      margin-top: 0px;
+      margin-bottom: -7px;
+      width: 40%;
+      height: auto;
+      float: left;
+}
+
+ /* 圓形插圖下沈 Round Image Right */
+.rir {
+        display: inline-block;
+        position: relative;
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 50%;
+    float: right;
+    margin-left: 8px;
+    margin-top: 9px;
+    margin-bottom: -9px;
+}
+
+ /* 圓形插圖下沈 Round Image Left */
+.ril {
+        display: inline-block;
+        position: relative;
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 50%;
+    float: left;
+    margin-right: 8px;
+    margin-top: 9px;
+    margin-bottom: -9px;
+}
+
+ /*  方形插圖引文作者 Round Image 可配合 chqq 使用 */
+.rip {
+        display: inline-block;
+        float: left;
+        margin-right: 0px;
+        margin-left: 1em;
+        margin-top: 0.8em;
+        margin-bottom: 0em;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        vertical-align:middle;
+text-align: center;
+-moz-box-shadow: 1px 1px 3px #222;
+-webkit-box-shadow: 1px 1px 3px #222;
+box-shadow: 1px 1px 3px #222;
+        border: 1px solid #222c42;
+}
+
+riptitle {
+        display: inline-block;
+        float: left;
+        position: relative;
+        margin-right: 0px;
+        margin-left: -3.2em;
+        margin-top: 4.2em;
+        margin-bottom: 0em;
+        font-size: .66em;
+        font-weight: normal
+        /* font-family: "SYSong SemiBold", "Helvetica Neue", "Helvetica", "Arial", "Web Ming CP", "Noto Serif TC", "Special Elite", "GNUTypewriterStandard", sans-serif; */
+}
+
+ /*  圆形插圖文字環繞效果 */
+.curve {
+  width: 100px; height: 1000px;
+  float: left;
+  margin-right:0.2rem;
+  border-radius: 50%;
+  -webkit-shape-outside:circle();
+  shape-outside:circle();
+}
+
+chqq {
+     font-family: "SYHei Regular", sans-serif;
+	font-size: 1.1rem;
+	/* color: #222c42; */
+	max-width: 700px;
+	/* line-height: 1.7; */
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 3.9em;
+    margin-right: 2em;
+    text-align: justify;
+    text-justify: inter-ideograph;
+}
+/* //enq {
+//        font-family: "Special Elite", "GNUTypewriterStandard", "Noto Serif", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+//	font-size: 1.2rem;
+//	color: #222c42;
+//	max-width: 700px;
+//	line-height: 1.4;
+//    display: block;
+//    margin-top: 1em;
+//    margin-bottom: 1em;
+//    margin-left: 3.9em;
+//    margin-right: 2em;
+//    text-align: justify;
+//    text-justify: inter-ideograph;
+//} */
+
+/* 圓形插圖引文作者 Round Image 可配合 chqq 使用 */
+.ripp {
+        display: inline-block;
+        float: left;
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-top: 0em;
+        margin-bottom: 0em;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 1px solid #1b5fa0;
+        vertical-align:middle;
+text-align: center;
+-moz-box-shadow: 1px 1px 3px #222;
+-webkit-box-shadow: 1px 1px 3px #222;
+box-shadow: 1px 1px 3px #222;
+}
+
+
+/* enq新樣式 paragraph */
+enq {
+        font-family: "Special Elite", "GNUTypewriterStandard", "Noto Serif", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	/* font-size: 1.2rem;
+	//color: #222c42;
+	//max-width: 700px;
+	//line-height: 1.4; */
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+   /*  //margin-left: 2em;
+    //margin-right: 2em;
+    //text-align: justify;
+    //text-justify: inter-ideograph; */
+
+    margin-left: .5em;
+    margin-right: .5em;
+    padding: .1em 0.3em 0em .5em;
+    border-left: .22em solid #84c578;
+   /* background: #E7F2FA;
+   // border-radius: $border-radius; */
+    font-size: 1.1rem;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.7rem;
+    text-align:justify;
+    text-justify:auto;
+    :first-child { margin-top: 0; }
+    :last-child { margin-bottom: 0; }
+}
+
+/* enqp 新樣式 poem */
+
+enqp {
+        font-family: "Special Elite", "GNUTypewriterStandard", "Noto Serif", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      /* font-weight: 100;  */
+	font-size: 1.1rem;
+	color: #222c42;
+        display: flex;
+	justify-content: center;
+	max-width: 700px;
+	line-height: 1.7;
+	margin: 0;
+  margin-bottom: .7em;
+  padding: 1.2em .5em .5em .5em;
+	 /*  padding: .5rem;     */
+}
+
+enqp:before,
+enqp:after {
+	position: relative;
+	color: #222c42;
+	font-size: 5rem;
+	width: 2.5rem;
+	height: 2.5rem;
+}
+
+enqp:before {
+	content: '';
+	left: -.5rem;
+	top: -1.5rem;
+}
+
+enqp:after {
+	content: '';
+	right: -.2rem;
+	top: -1.5rem;
+}
+
+cite {
+	font-family: "Special Elite", "GNUTypewriterStandard", "Noto Serif", "Open Sans", sans-serif;
+         font-style: normal;
+        display: block;
+        text-align: right;
+	/* max-width: 700px;
+        //font-size: 1.2rem;
+        //line-height: 1.7rem;  */
+	position: relative;
+        margin-top: 0.5em;
+        margin-bottom: 0em;
+        margin-right: 0em;
+	/* color: #222c42;  */
+}
+cite:before {
+	content: '——';
+}
+
+citeen {/* 爲 quoen 新增樣式  */
+	font-family: "Special Elite", "GNUTypewriterStandard", "Noto Serif", "Open Sans", sans-serif;
+        font-size: 1.1rem;
+        line-height: 1.7rem;
+        display: block;
+        text-align: right;
+	/* max-width: 700px;  */
+	position: relative;
+        margin-top: 0.5em;
+        margin-bottom: 0em;
+        margin-right: 0em;
+	color: #222c42;
+}
+citeen:before {
+	content: '——';
+}
+
+/* chq 中文段落引用新樣式 paragraph */
+chq {
+        font-family: "SYHei Regular", sans-serif;
+	/* font-size: 1.2rem;
+	//color: #222c42;
+	//max-width: 700px;
+	//line-height: 1.7;  */
+    display: block;
+   /*  //margin-top: 1em;  */
+    margin-bottom: 1em;
+   /*  //margin-left: 2em;
+    //margin-right: 2em;
+    //text-align: justify;
+    //text-justify: inter-ideograph; */
+
+    margin-left: .5em;
+    margin-right: .5em;
+    padding: .1em 0.3em 0em .5em;
+    border-left: .22em solid #84c578;
+   /*  //background: #E7F2FA;
+    // border-radius: $border-radius;
+    //font-size: 1rem;
+    //line-height: 2rem;  */
+    text-align:justify;
+    text-justify:auto;
+    :first-child { margin-top: 0; }
+    :last-child { margin-bottom: 0; }
+}
+
+/*  漢語七言詩歌 poem */
+
+.poem {
+    display: block;
+    margin-top: -0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+    text-justify:center;
+    :first-child { margin-top: 0; }
+    :last-child { margin-bottom: 0; }
+}
+
+qiyan {
+        font-family: "SYHei Regular", sans-serif;
+	max-width: 370px;
+    display: block;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em 0em 1em 0em;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align:center;
+    text-justify:center;
+    :first-child { margin-top: 0; }
+    :last-child { margin-bottom: 0; }
+}
+
+bayan {
+  font-family: "SYHei Regular", sans-serif;
+	max-width: 470px;
+    display: block;
+    margin-top: 0em;
+    margin-bottom: 0em;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0em 0em 1em 0em;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align:center;
+    text-justify:center;
+    :first-child { margin-top: 0; }
+    :last-child { margin-bottom: 0; }
+}
+
+/*  漢語七言詩歌 poem */
+wuyan {
+        font-family: "SYHei Regular", sans-serif;
+	max-width: 270px;
+    display: block;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0em 0em 1em 0em;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align:center;
+    text-justify:center;
+    :first-child { margin-top: 0; }
+    :last-child { margin-bottom: 0; }
+}
+
+chcite {
+	font-family: "SYHei Bold", sans-serif;
+        display: block;
+        text-align: right;
+	margin-top: 0.25rem;
+        margin-bottom: 0em;
+        margin-right: 0em;
+}
+chcite:before {
+        font-family: "SYHei Bold", sans-serif;
+	content: '──';
+}
+
+
+quocnchcite {
+	font-family: "SYHei Bold", sans-serif;
+        display: block;
+        text-align: right;
+        margin-right: 0em;
+}
+quocnchcite:before {
+        font-family: "SYHei Bold", sans-serif;
+	content: '──';
+}
+
+
+/* 波浪線書名號 */
+bk {
+        text-decoration: wavy underline;
+        text-decoration-skip: edges;
+        text-decoration-skip-ink: auto;
+}
+bk:hover{
+  color:darkblue;
+  border-style:none
+/*  border-width: 0px 0px 1px 0px; */
+  /* padding:4px; */
+}
+
+/* 漢化「提示信息框」設定. noticem.html 放入對應 shortcodes 文件夾*/
+
+.noticesm {
+    position: relative;
+    border-radius: .125rem;
+    color: #fff;
+    margin: 2rem 0;
+    padding: .3rem 0.5rem .00019rem .8rem;
+    > table {
+        table-layout:fixed;
+        width: 100%;
+        margin: 10px 0;
+        border-spacing: 0;
+    }
+
+    &.warning {
+        border-top: 30px solid #f1b37e;
+        background: #fefaf5;
+        color: rgba(150, 90, 38, 0.995) !important;
+
+        &::before {
+            position: absolute;
+            content: '⚠️ 特別警示';
+            font-family: "SYHei Heavy", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            top: -26.5px;
+            left: 0.4rem;
+            height: 100%;
+        }
+
+        a {
+            font-weight: bold;
+            color: rgba(134, 74, 22, 0.995);
+        }
+
+        > table {
+            thead {
+                background: #f1b37e;
+            }
+
+            th {
+                color: rgba(134, 74, 22, 0.995);
+            }
+
+            th, td {
+                padding: 5px 15px;
+                border: 1px double rgba(166, 106, 54, 0.45);
+            }
+        }
+
+        p > code, li > code, td > code, code {
+            padding: 3px 7px;
+            color: rgba(150, 90, 38, 0.995) !important;
+            background-color: darken(#fefaf5, 6%) !important;
+        }
+    }
+
+    &.tip {
+        border-top: 30px solid #d58181;
+        background: #fbeded;
+        color: rgba(132, 56, 56, 0.995) !important;
+
+        &::before {
+            position: absolute;
+            content: '◉ 官方吐槽';
+            font-family: "SYHei Heavy", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            top: -26.5px;
+            left: 0.4rem;
+            height: 100%;
+        }
+
+        a {
+            font-weight: bold;
+            color: rgba(116, 40, 40, 0.995);
+        }
+
+        > table {
+            thead {
+                background: #d58181;
+            }
+
+            th {
+                color: rgba(116, 40, 40, 0.995);
+            }
+
+            th, td {
+                padding: 5px 15px;
+                border: 1px double rgba(148, 72, 72, 0.45);
+            }
+        }
+
+        p > code, li > code, td > code, code {
+            padding: 3px 7px;
+            color: rgba(132, 56, 56, 0.995) !important;
+            background-color: darken(#fbeded, 6%) !important;
+        }
+    }
+
+    &.info {
+        border-top: 30px solid #6bb1e0;
+        background: #e6f3fb;
+        color: rgba(47, 103, 141, 0.995) !important;
+
+        &::before {
+            position: absolute;
+            content: '☯ 編者按語';
+            font-family: "SYHei Heavy", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            top: -26.5px;
+            left: 0.4rem;
+            height: 100%;
+        }
+
+        a {
+            font-weight: bold;
+            color: rgba(31, 87, 125, 0.995);
+        }
+
+        > table {
+            thead {
+                background: #6bb1e0;
+            }
+
+            th {
+                color: rgba(31, 87, 125, 0.995);
+            }
+
+            th, td {
+                padding: 5px 15px;
+                border: 1px double rgba(63, 119, 157, 0.45);
+            }
+        }
+
+        p > code, li > code, td > code, code {
+            padding: 3px 7px;
+            color: rgba(47, 103, 141, 0.995) !important;
+            background-color: darken(#e6f3fb, 6%) !important;
+        }
+    }
+
+    &.note {
+        border-top: 30px solid #84c578;
+        background: #e8f7e6;
+        color: rgba(72, 125, 63, 0.995) !important;
+
+        &::before {
+            position: absolute;
+            content: '㉄ 思考题目';
+            font-family: "SYHei Heavy", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            top: -26.5px;
+            left: 0.4rem;
+            height: 100%;
+        }
+
+        a {
+            font-weight: bold;
+            color: rgba(56, 109, 47, 0.995);
+        }
+
+        > table {
+            thead {
+                background: #84c578;
+            }
+
+            th {
+                color: rgba(56, 109, 47, 0.995);
+            }
+
+            th, td {
+                padding: 5px 15px;
+                border: 1px double rgba(82, 141, 79, 0.45);
+            }
+        }
+
+        p > code, li > code, td > code, code {
+            padding: 3px 7px;
+            color: rgba(72, 125, 63, 0.995) !important;
+            background-color: darken(#e8f7e6, 6%) !important;
+        }
+    }
+}
+
+/* 整合 HUGO LEARN THEME shortcodes 「附件添加效果」設定. attachments.html 放入對應 shortcodes 文件夾*/
+
+/* attachments shortcode */
+
+.ref::before {
+ font-family: "Font Awesome 5 Free", "FontAwesome", "SYHei Bold", sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  display: inline-block;
+  margin-left: -257px;
+  margin-right: 17px;
+  content: " Attachments ";
+}
+
+section.attachments {
+    //margin: -1rem 0rem 1rem;
+    //position: relative;
+}
+
+section.attachments label {
+    font-weight: 400;
+    padding-left: 16rem;
+    padding-top: 0.5em;
+    padding-bottom: 0.2em;
+    margin: 0;
+}
+
+section.attachments .attachments-files {
+    padding: 7px;
+    display: block;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-top: -.08rem;
+    margin-bottom: 1rem;
+    padding-left: 0.1rem;
+    color: rgba(72, 125, 63, 0.995) !important;
+        a {
+            font-weight: bold;
+            color: rgba(134, 74, 22, 0.995);
+        }
+}
+
+section.attachments.orange label {
+    color: #fff;
+    background: #F0B37E;
+}
+
+section.attachments.orange .attachments-files {
+    background: #FFF2DB;
+}
+
+section.attachments.green label {
+    color: #fff;
+    background: rgba(92, 184, 92, 0.8);
+}
+
+section.attachments.green .attachments-files {
+    background: #E6F9E6;
+}
+
+section.attachments.blue label {
+    color: #fff;
+    background: #6AB0DE;
+}
+
+section.attachments.blue .attachments-files {
+    background: #E7F2FA;
+}
+
+section.attachments.grey label {
+    color: #fff;
+    background: #505d65;
+}
+
+section.attachments.grey .attachments-files {
+    background: #f4f4f4;
+}
+
+/* 整合 HUGO LEARN THEME shortcodes 「頁面與子頁面效果」設定. children.html 放入對應 shortcodes 文件夾*/
+
+/* Children shortcode */
+.children p {
+    font-family: "SYHei Bold", sans-serif;
+    font-size: 1.2rem;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom:  0px;
+    padding-bottom: 0px;
+}
+.children-li p {
+    font-family: "SYSong Medium", "Open Sans", "Noto Serif", "SYSong Medium", "Web Ming CP", serif;
+    font-style: normal;
+    font-size: 1.2rem;
+
+}
+.children-h2 p, .children-h3 p {
+    // font-size: small;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom:  0px;
+    padding-bottom: 0px;
+}
+.children h3,.children h2 {
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
+
+
+/* FOOTNOTE 樣式去掉 hr 直線 */
+.footnotes {
+   > hr {
+     display: none;
+   }
+}
+
+a[href^="#fn:"],
+/* Back to footnote link */
+a[href^="#fnref:"] {
+  /* text-decoration: none; */
+ /* color: #E6F9E6; */
+ /* font-family: monospace; */
+}
+a[href^="#fn:"]:before{ content: '[' }
+a[href^="#fn:"]:after{ content: ']' }
+
+
+/* 目錄分欄 CSS */
+.newspaper1 {
+  margin-top: -.5rem;
+  margin-left: 1.7rem;
+  margin-right: .5rem;
+  margin-bottom: 1rem;
+  -webkit-columns: 120px 2; /* Chrome, Safari, Opera */
+  -moz-columns: 120px 2; /* Firefox */
+   columns: 120px 2;
+   /* column-rule: solid 3px gainsboro;  */
+   /* border-top: solid 3px gainsboro; */
+   /* border-bottom: solid 3px gainsboro; */
+   font-size: 1rem;
+   font-family: "SYHei Regular", sans-serif;
+}
+
+.newspaper2 {
+  -webkit-columns: 50px 3; /* Chrome, Safari, Opera */
+  -moz-columns: 50px 3; /* Firefox */
+  columns: 50px 3;
+  font-size: 1rem;
+   font-family: "SYHei Regular", sans-serif;
+}
+
+/*  POST AUTHOR and Date icon */
+
+.zuozhe::before {
+  font-family: "Font Awesome 5 Free", "SYSong Medium";
+  font-size: 1.2rem;
+  display: inline-block;
+  content: "";/*   */
+}
+.zuozheat::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.2rem;
+  display: inline-block;
+  content: "";/*  */
+}
+
+.riqi::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.2rem;
+  display: inline-block;
+  content: "";
+}
+.yuedushichang::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.2rem;
+  display: inline-block;
+  content: "";
+}
+
+.lianjie::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.2rem;
+  display: inline-block;
+  content: "";
+}
+.wenxuan::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.2rem;
+  display: inline-block;
+  content: "";
+}
+
+.tushu::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.2rem;
+  display: inline-block;
+  content: "";
+}
+
+.yueduliang::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.2rem;
+  display: inline-block;
+  content: "";
+}
+
+.zishu::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.2rem;
+  display: inline-block;
+  content: "";
+}
+
+.gengxin::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.2rem;
+  display: inline-block;
+  content: "";
+}
+
+ruby { /* //上标拼音或英漢對譯等效果 */
+  ruby-align:center;
+  font-family: "SYHei Regular", sans-serif;
+    margin-left: -3px;
+    margin-right: -4px;
+}
+
+
+
+h1 {
+	margin: 0rem 0 0.4rem 0;
+	padding: 0;
+         text-indent: 0rem;
+         font-size: 26px;
+         font-family: "SYHei Heavy", sans-serif;
+        text-align: left;
+	line-height: 36px;
+        padding: 9px 0px 5px 0%;
+	background: url("/images/author/secpig.png") no-repeat left;
+        font-style: normal;
+        font-weight: normal;
+   /* background: url('https://i.loli.net/2020/09/01/6PBqUGe2nzrJahQ.png');
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;  */
+}
+
+
+h2 {
+	margin: 0rem 0 0.4rem 0;
+  padding: 0;
+  font-size: 24px;
+  font-family: "SYHei Bold", sans-serif;
+	line-height: 32px;
+  text-align: left;
+	font-style: normal;
+  font-weight: normal;
+  color:#eb0735;
+    background: url('https://i.loli.net/2020/09/01/6PBqUGe2nzrJahQ.png');
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+h3 {
+	margin: 0rem 0 0.4rem 0;
+  padding: 0;
+  font-size: 20px;
+  font-family: "SYHei Bold", sans-serif;
+	line-height: 28px;
+	font-style: normal;
+  font-weight: normal;
+    background: url('https://i.loli.net/2020/09/01/6PBqUGe2nzrJahQ.png');
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    color:#eb0735;
+}
+
+h4 {
+	margin: 0rem 0 0.4rem 0;
+  padding: 0;
+  font-family: "SYHei Bold", sans-serif;
+	font-size: 20px;
+	line-height: 28px;
+	font-style: normal;
+  font-weight: normal;
+  color:#eb0735;
+}
+
+.header-section-number {
+	margin: 0rem 0 0.4rem 0;
+  padding: 0;
+  font-family: "SYHei Bold", sans-serif;
+	font-style: normal;
+  font-weight: normal;
+  color:#eb0735;
+}
+
+
+/* 嘗試自定義標題格式 */
+h5 {
+    font-family: "SYHei Heavy", sans-serif;
+    text-align: left;
+    font-size: 1.7rem;
+    line-height: 1.9rem;
+    font-style: normal;
+    font-weight: normal;
+}
+
+singlepagetitle {/* posts singlepagetitle title style */
+    font-family: "SYHei Heavy", sans-serif;
+    text-align: left;
+    /* margin: 0px 0px 5px 0px;  */
+    margin-bottom: -.7rem;
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* Round Image Author  */
+.circular--portrait {
+  position: left;
+  float: left;
+  display: inline-block;
+  width: 140px;
+  height: 140px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  background: url(URL) no-repeat;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  transform: rotate(-12deg); /* 圓形頭像旋轉角度  */
+}
+.circular--portrait img {
+  width: 100%;
+  height: auto;
+}
+
+/* 回到頭部按鈕樣式，方法參考 https://marsgrid.com/post/a11_back2top/   */
+.backtop {
+    color: #b3b1b1;
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    width: 32px;
+    height: 32px;
+    z-index: 999998;
+}
+
+/* 刪除線顏色 ~~ ~~*/
+del {
+  text-decoration:line-through double red;
+}
+
+
+/* 換行符號 <br>從行間距調整爲段落間距，以適應某些 shortcode 環境分段需求 // 在 markdown 文件中按兩次空格等同 br，即產生分段效果。 */
+/* br {
+  display: block;
+  content: "";
+  border-bottom: 7.5px solid transparent; // Works in Chrome/Safari
+}
+@-moz-document url-prefix() {
+  br {
+    margin-bottom: 7.5px; // As 'border-bottom' doesn't work in firefox and 'margin-bottom' doesn't work in Chrome/Safari.
+  }
+}
+
+wbr {//br 用於shortcode內的分段後，用 <wbr />在詩歌環境換行，chrome ？
+  display: list-item;
+  content: "";
+  //border-bottom: 5px solid transparent; // Works in Chrome/Safari
+}
+@-moz-document url-prefix() {
+  wbr {
+    //margin-bottom: 5px; // As 'border-bottom' doesn't work in firefox and 'margin-bottom' doesn't work in Chrome/Safari.
+  }
+}*/
+
+/* mark 筆 HTML 標籤，紅綠色 */
+:root {
+  --del-color: #ff92bf;
+  --ins-color: #ddff92;
+}
+
+rm {/* 淺紅色不規則Red Mark筆 <rm> </rm>*/
+  --color: var(--del-color, red);
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-image:
+    linear-gradient(to left, rgba(255, 255, 255, .5), transparent),
+    linear-gradient(2deg, var(--color) 50%, transparent 50%),
+    linear-gradient(-.9deg, var(--color) 50%, transparent 50%),
+    linear-gradient(-60deg, var(--color) 50%, transparent 50%),
+    linear-gradient(120deg, var(--color) 50%, transparent 50%);
+
+  background-size:
+    30% 1.5px,
+    calc(100% - 0px) 30px,
+    calc(100% - 10px) 120px,
+    30px 30px,
+    8px 8px;
+
+  background-position:
+    100% calc(50% + 2px),
+    center center,
+    center center,
+    2px 50%,
+    calc(100% - 3px) calc(50% + 1px);
+}
+
+/* 綠色G MARK筆 <gm> </gm> */
+gm {
+  background: var(--ins-color, green);
+  text-decoration: none;
+}
+
+
+/* definition shortcode 樣式 爲 defintion 新增的樣式 */
+.definition {
+    margin-bottom: 1rem;
+    padding:.5em .5em .5em .5em;
+    background: #e8f7e6;
+    color: rgba(72, 125, 63, 0.995) !important;
+    border-bottom-right-radius: .2em .2em;
+    border-bottom-left-radius: .2em .2em;
+    font-family: "SYHei Regular", sans-serif;
+    text-align:justify;
+    text-justify:auto;
+    :first-child { margin-top: 0; }
+    :last-child { margin-bottom: 0; }
+  }
+.definitiontitle {
+    /* margin-left: 2em;  */
+   /* margin-right: 2em;  */
+   /* max-width: 700px;  */
+    padding: 0.5em;
+    border-top-left-radius:.2em;
+    border-top-right-radius:.2em;
+    background: #2F4F4F;
+    color: white;
+    font-family: "SYHei Regular", sans-serif;
+    font-size: 1.2rem;
+    line-height: .8rem;
+    text-align:center;
+    text-justify:auto;
+    :first-child { margin-top: 0; }
+    :last-child { margin-bottom: 0; }
+  }
+/* .definitiontitle::before {
+//  font-family: "Font Awesome 5 Free";
+//  font-size: 1.2rem;
+// display: inline-block;
+//  content: "";//名詞解釋
+//}  */
+.qmarkl::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.2rem;
+  display: inline-block;
+  content: ""; /* //      */
+}
+.qmarkr::after {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.2rem;
+  display: inline-block;
+  content: "";
+}
+
+
+/* freebox shortcode 樣式 爲 defintion 新增的樣式 */
+.freebox {
+    /* margin-left: 2em; */
+    /* margin-right: 2em; */
+    margin-bottom: 1em;
+    /* max-width: 700px; */
+    padding:.5em .5em .5em .5em;
+        background: #e8f7e6;
+        color: rgba(72, 125, 63, 0.995) !important;
+    border-bottom-right-radius: .2em .2em;
+    border-bottom-left-radius: .2em .2em;
+    font-family: "SYHei Regular", sans-serif;
+    /* font-size: 1.2rem; */
+    /* line-height: 2rem; */
+    text-align:justify;  /* //中文無必要，英文不需要 */
+    /* text-justify:auto;  */
+    :first-child { margin-top: 0; }
+    :last-child { margin-bottom: 0; }
+  }
+.freeboxtitle {/* 爲 defintion title新增的樣式 */
+    /* margin-left: 2em; */
+    /* margin-right: 2em; */
+    /* max-width: 700px; */
+    padding: 0.5em;
+    border-top-left-radius:.3em;
+    border-top-right-radius:.3em;
+    background: #0E6251;
+    color: white;
+    /* border-radius: $border-radius;  */
+    font-family: "SYHei Regular", sans-serif;
+    font-size: 1.2rem;
+    line-height: .8rem;
+    text-align:center;
+    text-justify:auto;
+    :first-child { margin-top: 0; }
+    :last-child { margin-bottom: 0; }
+  }
+
+
+.freeboxforbib {/* 爲圖書簡介首頁的參考文獻樣式框格式  */
+    /* margin-left: 2em; */
+    /* margin-right: 2em; */
+    margin-bottom: 1em;
+    /* max-width: 700px; */
+    padding:.5em .5em .5em 1.8em;
+        background: #e8f7e6;
+        color: rgba(72, 125, 63, 0.995) !important;
+    border-bottom-right-radius: .2em .2em;
+    border-bottom-left-radius: .2em .2em;
+    font-family: "SYHei Regular", sans-serif;
+    /* font-size: 1.2rem; */
+    /* line-height: 2rem; */
+    text-align:justify;
+    text-justify:auto;
+    :first-child { margin-top: 0; }
+    :last-child { margin-bottom: 0; }
+  }
+
+/* dtpc shortcode 樣式(definition, theorem, proposition, corrollary) */
+.dtpcbox {/* 爲 dtpc 新增的樣式 */
+    /* margin-left: 2em; */
+    /* margin-right: 2em; */
+    margin-bottom: 1em;
+    /* max-width: 700px; */
+    padding:.5em .5em .5em .5em;
+        background: #e8f7e6;
+    /* color: rgba(72, 125, 63, 0.995) !important; //使用 darker/hacker/kimbie 顏色主題時需要固定字體顏色 */
+    border-bottom-right-radius: .2em .2em;
+    border-bottom-left-radius: .2em .2em;
+    font-family: "SYHei Regular", sans-serif;
+    /* font-size: 1.2rem;  */
+    /* line-height: 2rem;  */
+    /* text-align:justify; */
+    /* text-justify:auto;  */
+    :first-child { margin-top: 0; }
+    :last-child { margin-bottom: 0; }
+  }
+.dtpcboxtitle {/* 爲 dtpc title新增的樣式  */
+    /* margin-left: 2em;  */
+    /* margin-right: 2em;  */
+    /* max-width: 700px;  */
+    padding: 0.5em;
+    border-top-left-radius:.3em;
+    border-top-right-radius:.3em;
+    background: #0E6251; //#34495e
+    color: white;
+    /* border-radius: $border-radius;  */
+    font-family: "SYHei Regular", sans-serif;
+    font-size: 1.2rem;
+    line-height: .8rem;
+    text-align:left;
+    text-justify:auto;
+    :first-child { margin-top: 0; }
+    :last-child { margin-bottom: 0; }
+  }
+
+/* dtpc shortcode 樣式(example) */
+.dtpcexbox {/* 爲 dtpcex 新增的樣式 */
+    /* margin-left: 2em;  */
+    /* margin-right: 2em;  */
+    margin-bottom: 1em;
+    /* max-width: 700px;  */
+    padding:.5em .5em .5em .5em;
+        background: #e8f7e6;//#fafafa  #faf7f7
+       /* color: rgba(72, 125, 63, 0.995) !important; //使用 darker/hacker/kimbie 顏色主題時需要固定字體顏色  */
+    border-bottom-right-radius: .2em .2em;
+    border-bottom-left-radius: .2em .2em;
+    font-family: "SYHei Regular", sans-serif;
+    /* font-size: 1.2rem;  */
+    /* line-height: 2rem;  */
+    text-align:justify;
+    text-justify:auto;
+    :first-child { margin-top: 0; }
+    :last-child { margin-bottom: 0; }
+  }
+.dtpcexboxtitle {/* 爲 dtpcex title新增的樣式 */
+    /* margin-left: 2em; */
+    /* margin-right: 2em; */
+    /* max-width: 700px; */
+    padding: 0.5em;
+    border-top-left-radius:.3em;
+    border-top-right-radius:.3em;
+    background: #546158;
+    color: white;
+    /* border-radius: $border-radius;  */
+    font-family: "SYHei Regular", sans-serif;
+    font-size: 1.2rem;
+    line-height: .8rem;
+    text-align:left;
+    text-justify:auto;
+    :first-child { margin-top: 0; }
+    :last-child { margin-bottom: 0; }
+  }
+
+
+
+/* Codecaption 源代碼框 shortcode 樣式（在_markdown.scss內的 code/pre 內調整背景色、行號與源碼的距離等等） https://github.com/parsiya/Hugo-Octopress/blob/master/static/css/hugo-octopress.css  */
+
+figure.code {
+    background: none;
+    padding: 0;
+    border: 0;
+    margin-bottom: 1em;
+}
+figure.code pre {
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+figure.code figcaption {
+    position: relative
+}
+
+figure.code .highlighttable {
+    margin-bottom: 0;
+    table-layout: fixed;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+figure,
+figcaption {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: "SYHei Bold", sans-serif;
+}
+
+.code-title,
+figure.code figcaption { /* figcaption style changes here*/
+    text-align: center;
+    line-height: 1.7em;
+    text-shadow: #cbcccc 0 1px 0;
+    color: inherit;
+      text-rendering: optimizeLegibility;
+    margin-bottom: 0;
+    -moz-border-radius-topleft: 5px;
+    -webkit-border-top-left-radius: 5px;
+    border-top-left-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -webkit-border-top-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #aaa top repeat-x;
+    border: 5px solid #565656;
+    border-top-color: #cbcbcb;
+    border-left-color: #a5a5a5;
+    border-right-color: #a5a5a5;
+    border-bottom: 0;
+    font-size: 120%; /* change size of font in figcaption */
+}
+
+
+div.codewrapper {
+    background-color: #002B36;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* Fix codecaption and the new Chroma highlighter */
+
+div.highlight > pre > code,
+pre > code
+{
+    overflow-y: hidden;
+    display: block;
+    line-height: 1.5em;
+}
+
+.linenodiv {
+    background-color: #002B36!important;
+}
+
+td > div.highlight > pre > code,
+div.linenodiv > pre > code
+{
+    overflow: scroll;
+    overflow-y: hidden;
+    display: inline;
+}
+
+/* End fix codecaption and the new Chroma highlighter */
+
+pre::-webkit-scrollbar,
+.highlighttable::-webkit-scrollbar,
+.gist-highlighttable::-webkit-scrollbar {
+    height: .5em;
+    background: rgba(255, 255, 255, 0.15)
+}
+pre::-webkit-scrollbar-thumb:horizontal,
+.highlighttable::-webkit-scrollbar-thumb:horizontal,
+.gist-highlighttable::-webkit-scrollbar-thumb:horizontal {
+    background: rgba(255, 255, 255, 0.2);
+    -webkit-border-radius: 4px;
+    border-radius: 4px
+}
+
+
+/* Link image card 链接页面链接网站图片卡样式 */
+
+.fir-clickcircle {
+  height: 90px;
+  width: 90px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.fir-image-figure {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  position: relative;
+  text-decoration: none;
+}
+
+.fir-image-figure .caption, .fir-image-figure figcaption {
+  padding-left: 11px;
+}
+
+html.wf-active .fir-image-figure .fig-author-figure-title {
+  font-family: "SYHei Bold", sans-serif;
+  font-size: 16px;
+}
+
+.fir-image-figure .fig-author-figure-title {
+  font-family: "SYHei Bold", sans-serif;
+  font-size: 1.4rem;
+  margin-top: 2px;
+}
+
+.fir-image-figure .fig-author-figure-info {
+  font-family: "SYHei Bold", sans-serif;
+  font-size: 1.1rem;
+  margin-top: 1px;
+}
+
+
+/* Search Bar Design for Baidu Search*/
+.searchTerm {
+  width: 90%;
+  border: 0px solid #00B4CC;
+  padding: 4px;
+  height: 27px;
+  border-radius: 5px 5px 5px 5px;
+  outline: none;
+  color: #9DBFAF;
+  margin-bottom: 0.3em;
+}
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+
+/*! Generated by Font Squirrel (https://www.fontsquirrel.com) on October 26, 2019 */
+/* 自定義頁面字體 */
+@font-face {
+  font-family: 'SYHei Regular';
+  src: url('../fonts/GenYoGothicTW-Regular.woff2') format('woff2'),
+       url('../fonts/GenYoGothicTW-Regular.woff') format('woff'),
+       url('../fonts/GenYoGothicTW-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'SYHei Medium';
+  src: url('../fonts/GenYoGothicTW-Medium.woff2') format('woff2'),
+       url('../fonts/GenYoGothicTW-Medium.woff') format('woff'),
+       url('../fonts/GenYoGothicTW-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'SYHei Bold';
+  src: url('../fonts/GenYoGothicTW-Bold.woff2') format('woff2'),
+       url('../fonts/GenYoGothicTW-Bold.woff') format('woff'),
+       url('../fonts/GenYoGothicTW-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'SYHei Heavy';
+  src: url('../fonts/GenYoGothicTW-Heavy.woff2') format('woff2'),
+       url('../fonts/GenYoGothicTW-Heavy.woff') format('woff'),
+       url('../fonts/GenYoGothicTW-Heavy.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Chalk Script';
+  src: url('../fonts/Chalk-Script.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  src: url('../fonts/fontawesome-webfont.eot');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/fontawesome-webfont.woff2') format('woff2'),
+       url('../fonts/fontawesome-webfont.woff') format('woff'),
+       url('../fonts/fontawesome-webfont.ttf') format('truetype'),
+       url('../fonts/fontawesome-webfont.svg#fontawesome-webfont') format('svg');
+}
+
+@font-face {
+  font-family: 'GNUTypewriterStandard';
+  src: url('../fonts/GNUTypewriterStandard.eot');
+  src: url('fonts/fonts/gnutypewriter/8a7cb57723df9125503083ed59e7a11c/718af758a8ac10cf79fcc33420aacc3e/GNUTypewriterStandard.ttf') format('truetype'),url('../fonts/GNUTypewriterStandard.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/GNUTypewriterStandard.woff2') format('woff2'),
+       url('../fonts/GNUTypewriterStandard.woff') format('woff'),
+       url('../fonts/GNUTypewriterStandard.ttf') format('truetype'),
+       url('../fonts/GNUTypewriterStandard.svg#GNUTypewriterStandard') format('svg');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat-regular.woff2') format('woff2'),
+         url('../fonts/montserrat-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat-bold.woff2') format('woff2'),
+         url('../fonts/montserrat-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat-black.woff2') format('woff2'),
+         url('../fonts/montserrat-black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../fonts/merriweather-regular.woff2') format('woff2'),
+         url('../fonts/merriweather-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../fonts/merriweather-italic.woff2') format('woff2'),
+         url('../fonts/merriweather-italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../fonts/merriweather-bold.woff2') format('woff2'),
+         url('../fonts/merriweather-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../fonts/merriweather-bolditalic.woff2') format('woff2'),
+         url('../fonts/merriweather-bolditalic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../fonts/merriweather-black.woff2') format('woff2'),
+         url('../fonts/merriweather-black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Courgette';
+    src: url('../fonts/Courgette-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+/* muli-200normal - latin */
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200;
+  src:
+    local('Muli Extra Light '),
+    local('Muli-Extra Light'),
+    url('../fonts/muli-latin-200.woff2') format('woff2'),
+    url('../fonts/muli-latin-200.woff') format('woff'); /* Modern Browsers */
+}
+/* muli-200italic - latin */
+@font-face {
+  font-family: 'Muli';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 200;
+  src:
+    local('Muli Extra Light italic'),
+    local('Muli-Extra Lightitalic'),
+    url('../fonts/muli-latin-200italic.woff2') format('woff2'),
+    url('../fonts/muli-latin-200italic.woff') format('woff'); /* Modern Browsers */
+}
+/* muli-300normal - latin */
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src:
+    local('Muli Light '),
+    local('Muli-Light'),
+    url('../fonts/muli-latin-300.woff2') format('woff2'),
+    url('../fonts/muli-latin-300.woff') format('woff'); /* Modern Browsers */
+}
+/* muli-300italic - latin */
+@font-face {
+  font-family: 'Muli';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 300;
+  src:
+    local('Muli Light italic'),
+    local('Muli-Lightitalic'),
+    url('../fonts/muli-latin-300italic.woff2') format('woff2'),
+    url('../fonts/muli-latin-300italic.woff') format('woff'); /* Modern Browsers */
+}
+/* muli-400normal - latin */
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    local('Muli Regular '),
+    local('Muli-Regular'),
+    url('../fonts/muli-latin-400.woff2') format('woff2'),
+    url('../fonts/muli-latin-400.woff') format('woff'); /* Modern Browsers */
+}
+/* muli-400italic - latin */
+@font-face {
+  font-family: 'Muli';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    local('Muli Regular italic'),
+    local('Muli-Regularitalic'),
+    url('../fonts/muli-latin-400italic.woff2') format('woff2'),
+    url('../fonts/muli-latin-400italic.woff') format('woff'); /* Modern Browsers */
+}
+/* muli-600normal - latin */
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src:
+    local('Muli SemiBold '),
+    local('Muli-SemiBold'),
+    url('../fonts/muli-latin-600.woff2') format('woff2'),
+    url('../fonts/muli-latin-600.woff') format('woff'); /* Modern Browsers */
+}
+/* muli-600italic - latin */
+@font-face {
+  font-family: 'Muli';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 600;
+  src:
+    local('Muli SemiBold italic'),
+    local('Muli-SemiBolditalic'),
+    url('../fonts/muli-latin-600italic.woff2') format('woff2'),
+    url('../fonts/muli-latin-600italic.woff') format('woff'); /* Modern Browsers */
+}
+/* muli-700normal - latin */
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src:
+    local('Muli Bold '),
+    local('Muli-Bold'),
+    url('../fonts/muli-latin-700.woff2') format('woff2'),
+    url('../fonts/muli-latin-700.woff') format('woff'); /* Modern Browsers */
+}
+/* muli-700italic - latin */
+@font-face {
+  font-family: 'Muli';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 700;
+  src:
+    local('Muli Bold italic'),
+    local('Muli-Bolditalic'),
+    url('../fonts/muli-latin-700italic.woff2') format('woff2'),
+    url('../fonts/muli-latin-700italic.woff') format('woff'); /* Modern Browsers */
+}
+/* muli-800normal - latin */
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 800;
+  src:
+    local('Muli ExtraBold '),
+    local('Muli-ExtraBold'),
+    url('../fonts/muli-latin-800.woff2') format('woff2'),
+    url('../fonts/muli-latin-800.woff') format('woff'); /* Modern Browsers */
+}
+/* muli-800italic - latin */
+@font-face {
+  font-family: 'Muli';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 800;
+  src:
+    local('Muli ExtraBold italic'),
+    local('Muli-ExtraBolditalic'),
+    url('../fonts/muli-latin-800italic.woff2') format('woff2'),
+    url('../fonts/muli-latin-800italic.woff') format('woff'); /* Modern Browsers */
+}
+/* muli-900normal - latin */
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 900;
+  src:
+    local('Muli Black '),
+    local('Muli-Black'),
+    url('../fonts/muli-latin-900.woff2') format('woff2'),
+    url('../fonts/muli-latin-900.woff') format('woff'); /* Modern Browsers */
+}
+/* muli-900italic - latin */
+@font-face {
+  font-family: 'Muli';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 900;
+  src:
+    local('Muli Black italic'),
+    local('Muli-Blackitalic'),
+    url('../fonts/muli-latin-900italic.woff2') format('woff2'),
+    url('../fonts/muli-latin-900italic.woff') format('woff'); /* Modern Browsers */
+}
+
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/source-sans-pro/source-sans-pro-regular.eot');
+    src: url('../fonts/source-sans-pro/source-sans-pro-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/source-sans-pro/source-sans-pro-regular.woff') format('woff'),
+         url('../fonts/source-sans-pro/source-sans-pro-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/source-sans-pro/source-sans-pro-italic.eot');
+    src: url('../fonts/source-sans-pro/source-sans-pro-italic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/source-sans-pro/source-sans-pro-italic.woff') format('woff'),
+         url('../fonts/source-sans-pro/source-sans-pro-italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/source-sans-pro/source-sans-pro-semibold.eot');
+    src: url('../fonts/source-sans-pro/source-sans-pro-semibold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/source-sans-pro/source-sans-pro-semibold.woff') format('woff'),
+         url('../fonts/source-sans-pro/source-sans-pro-semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/source-sans-pro/source-sans-pro-semibolditalic.eot');
+    src: url('../fonts/source-sans-pro/source-sans-pro-semibolditalic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/source-sans-pro/source-sans-pro-semibolditalic.woff') format('woff'),
+         url('../fonts/source-sans-pro/source-sans-pro-semibolditalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'League Gothic';
+    src: url('../fonts/league-gothic/league-gothic.eot');
+    src: url('../fonts/league-gothic/league-gothic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/league-gothic/league-gothic.woff') format('woff'),
+         url('../fonts/league-gothic/league-gothic.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+**
+ * Basic typography style for copy text
+ */
+
+html {
+  font-family: 'SYHei Regular', sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'SYHei Regular', sans-serif;
+}
+
+p {
+  text-align:justify;
+  text-justify:auto;
+}
+
+
+blockquote {
+    font-family: "SYHei Regular", sans-serif;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: .5em;
+    margin-right: 0em;
+    /* padding: .1em 0.3em 0em .5em; */
+    border-left: .22em solid #b0b0b0;
+    text-align:justify;
+    text-justify:auto;
+}
+
+
