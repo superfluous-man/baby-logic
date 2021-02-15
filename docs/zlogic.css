@@ -1225,13 +1225,13 @@ h1 {
 	padding: 0;
          text-indent: 0rem;
          font-size: 26px;
-         font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
+         font-family: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
         text-align: left;
 	line-height: 36px;
         padding: 9px 0px 5px 0%;
 	background: url("/images/author/secpig.png") no-repeat left;
-        font-style: normal;
-        font-weight: normal;
+        font-style: bold;
+        font-weight: 700;
    /* background: url('https://i.loli.net/2020/09/01/6PBqUGe2nzrJahQ.png');
     background-size: contain;
     background-position: right;
@@ -1243,11 +1243,11 @@ h2 {
 	margin: 0rem 0 0.4rem 0;
   padding: 0;
   font-size: 24px;
-  font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
+  font-family: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
 	line-height: 32px;
   text-align: left;
-	font-style: normal;
-  font-weight: normal;
+  font-style: bold;
+        font-weight: 700;
   color:#eb0735;
     background: url('https://i.loli.net/2020/09/01/6PBqUGe2nzrJahQ.png');
     background-size: contain;
@@ -1259,10 +1259,10 @@ h3 {
 	margin: 0rem 0 0.4rem 0;
   padding: 0;
   font-size: 20px;
-  font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
+  font-family: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
 	line-height: 28px;
-	font-style: normal;
-  font-weight: normal;
+	font-style: bold;
+  font-weight: 700;
     background: url('https://i.loli.net/2020/09/01/6PBqUGe2nzrJahQ.png');
     background-size: contain;
     background-position: right;
@@ -1273,20 +1273,20 @@ h3 {
 h4 {
 	margin: 0rem 0 0.4rem 0;
   padding: 0;
-  font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
+font-family: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
 	font-size: 20px;
 	line-height: 28px;
-	font-style: normal;
-  font-weight: normal;
+	font-style: bold;
+  font-weight: 700;
   color:#eb0735;
 }
 
 .header-section-number {
 	margin: 0rem 0 0.4rem 0;
   padding: 0;
-  font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
-	font-style: normal;
-  font-weight: normal;
+font-family: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
+	font-style: bold;
+  font-weight: 900;
   color:#eb0735;
 }
 
