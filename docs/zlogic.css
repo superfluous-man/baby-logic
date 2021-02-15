@@ -356,7 +356,7 @@ img[alt="Philosophical Ethics book cover"]{
 
 ol li::marker {
   content: counter(list-item, upper-latin) "）";
-  font-family: "SYHei Bold", sans-serif;
+  font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
 }
 
 
@@ -367,7 +367,7 @@ ul {
 
 
 strong { /** markdown中 **粗體** 之例 **/
-    font-family: "SYHei Bold", sans-serif;
+    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
     font-style: normal;
     font-weight: normal;
 }
@@ -376,7 +376,7 @@ b {/** markdown中混用html <b>僞粗體</b> 之例,只用於中英文引文之
     font-weight: normal;
 }
 bb { /** markdown中部分shortcode內粗體<bb></bb> 與<strong>樣式同一 **/
-    font-family: "SYHei Bold", sans-serif;
+    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
     font-style: normal;
     font-weight: normal;
     color: #0E6251;
@@ -387,7 +387,7 @@ red {
 }
 
 tt { /** 文字下加三角形強調 **/
-    font-family: "SYHei Bold", sans-serif;
+    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
     font-style: normal;
     font-weight: normal;
     color: #0E6251;
@@ -519,7 +519,7 @@ riptitle {
 }
 
 chqq {
-     font-family: "SYHei Regular", sans-serif;
+     font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
 	font-size: 1.1rem;
 	/* color: #222c42; */
 	max-width: 700px;
@@ -674,7 +674,7 @@ citeen:before {
 
 /* chq 中文段落引用新樣式 paragraph */
 chq {
-        font-family: "SYHei Regular", sans-serif;
+      font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
 	/* font-size: 1.2rem;
 	//color: #222c42;
 	//max-width: 700px;
@@ -716,7 +716,7 @@ chq {
 }
 
 qiyan {
-        font-family: "SYHei Regular", sans-serif;
+        font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
 	max-width: 370px;
     display: block;
     margin-top: 0em;
@@ -733,7 +733,7 @@ qiyan {
 }
 
 bayan {
-  font-family: "SYHei Regular", sans-serif;
+  font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
 	max-width: 470px;
     display: block;
     margin-top: 0em;
@@ -752,7 +752,7 @@ bayan {
 
 /*  漢語七言詩歌 poem */
 wuyan {
-        font-family: "SYHei Regular", sans-serif;
+       font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
 	max-width: 270px;
     display: block;
     margin-top: 0em;
@@ -769,7 +769,7 @@ wuyan {
 }
 
 chcite {
-	font-family: "SYHei Bold", sans-serif;
+	font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
         display: block;
         text-align: right;
 	margin-top: 0.25rem;
@@ -777,19 +777,19 @@ chcite {
         margin-right: 0em;
 }
 chcite:before {
-        font-family: "SYHei Bold", sans-serif;
+        font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
 	content: '──';
 }
 
 
 quocnchcite {
-	font-family: "SYHei Bold", sans-serif;
+	font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
         display: block;
         text-align: right;
         margin-right: 0em;
 }
 quocnchcite:before {
-        font-family: "SYHei Bold", sans-serif;
+        font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
 	content: '──';
 }
 
@@ -830,7 +830,7 @@ bk:hover{
         &::before {
             position: absolute;
             content: '⚠️ 特別警示';
-            font-family: "SYHei Heavy", sans-serif;
+            font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
             font-style: normal;
             font-weight: normal;
             top: -26.5px;
@@ -873,7 +873,7 @@ bk:hover{
         &::before {
             position: absolute;
             content: '◉ 官方吐槽';
-            font-family: "SYHei Heavy", sans-serif;
+            font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
             font-style: normal;
             font-weight: normal;
             top: -26.5px;
@@ -916,7 +916,7 @@ bk:hover{
         &::before {
             position: absolute;
             content: '☯ 編者按語';
-            font-family: "SYHei Heavy", sans-serif;
+           font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
             font-style: normal;
             font-weight: normal;
             top: -26.5px;
@@ -959,7 +959,7 @@ bk:hover{
         &::before {
             position: absolute;
             content: '㉄ 思考题目';
-            font-family: "SYHei Heavy", sans-serif;
+            font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
             font-style: normal;
             font-weight: normal;
             top: -26.5px;
@@ -1009,10 +1009,7 @@ bk:hover{
   content: " Attachments ";
 }
 
-section.attachments {
-    //margin: -1rem 0rem 1rem;
-    //position: relative;
-}
+
 
 section.attachments label {
     font-weight: 400;
@@ -1077,7 +1074,7 @@ section.attachments.grey .attachments-files {
 
 /* Children shortcode */
 .children p {
-    font-family: "SYHei Bold", sans-serif;
+    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
     font-size: 1.2rem;
     margin-top: 0px;
     padding-top: 0px;
@@ -1085,13 +1082,12 @@ section.attachments.grey .attachments-files {
     padding-bottom: 0px;
 }
 .children-li p {
-    font-family: "SYSong Medium", "Open Sans", "Noto Serif", "SYSong Medium", "Web Ming CP", serif;
+    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
     font-style: normal;
     font-size: 1.2rem;
 
 }
 .children-h2 p, .children-h3 p {
-    // font-size: small;
     margin-top: 0px;
     padding-top: 0px;
     margin-bottom:  0px;
@@ -1135,7 +1131,7 @@ a[href^="#fn:"]:after{ content: ']' }
    /* border-top: solid 3px gainsboro; */
    /* border-bottom: solid 3px gainsboro; */
    font-size: 1rem;
-   font-family: "SYHei Regular", sans-serif;
+   font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
 }
 
 .newspaper2 {
@@ -1143,7 +1139,7 @@ a[href^="#fn:"]:after{ content: ']' }
   -moz-columns: 50px 3; /* Firefox */
   columns: 50px 3;
   font-size: 1rem;
-   font-family: "SYHei Regular", sans-serif;
+   font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
 }
 
 /*  POST AUTHOR and Date icon */
@@ -1217,7 +1213,7 @@ a[href^="#fn:"]:after{ content: ']' }
 
 ruby { /* //上标拼音或英漢對譯等效果 */
   ruby-align:center;
-  font-family: "SYHei Regular", sans-serif;
+  font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
     margin-left: -3px;
     margin-right: -4px;
 }
@@ -1229,7 +1225,7 @@ h1 {
 	padding: 0;
          text-indent: 0rem;
          font-size: 26px;
-         font-family: "SYHei Heavy", sans-serif;
+         font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
         text-align: left;
 	line-height: 36px;
         padding: 9px 0px 5px 0%;
@@ -1247,7 +1243,7 @@ h2 {
 	margin: 0rem 0 0.4rem 0;
   padding: 0;
   font-size: 24px;
-  font-family: "SYHei Bold", sans-serif;
+  font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
 	line-height: 32px;
   text-align: left;
 	font-style: normal;
@@ -1263,7 +1259,7 @@ h3 {
 	margin: 0rem 0 0.4rem 0;
   padding: 0;
   font-size: 20px;
-  font-family: "SYHei Bold", sans-serif;
+  font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
 	line-height: 28px;
 	font-style: normal;
   font-weight: normal;
@@ -1277,7 +1273,7 @@ h3 {
 h4 {
 	margin: 0rem 0 0.4rem 0;
   padding: 0;
-  font-family: "SYHei Bold", sans-serif;
+  font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
 	font-size: 20px;
 	line-height: 28px;
 	font-style: normal;
@@ -1288,7 +1284,7 @@ h4 {
 .header-section-number {
 	margin: 0rem 0 0.4rem 0;
   padding: 0;
-  font-family: "SYHei Bold", sans-serif;
+  font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
 	font-style: normal;
   font-weight: normal;
   color:#eb0735;
@@ -1297,7 +1293,7 @@ h4 {
 
 /* 嘗試自定義標題格式 */
 h5 {
-    font-family: "SYHei Heavy", sans-serif;
+   font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
     text-align: left;
     font-size: 1.7rem;
     line-height: 1.9rem;
@@ -1306,7 +1302,7 @@ h5 {
 }
 
 singlepagetitle {/* posts singlepagetitle title style */
-    font-family: "SYHei Heavy", sans-serif;
+    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
     text-align: left;
     /* margin: 0px 0px 5px 0px;  */
     margin-bottom: -.7rem;
@@ -1427,7 +1423,7 @@ gm {
     color: rgba(72, 125, 63, 0.995) !important;
     border-bottom-right-radius: .2em .2em;
     border-bottom-left-radius: .2em .2em;
-    font-family: "SYHei Regular", sans-serif;
+    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
     text-align:justify;
     text-justify:auto;
     :first-child { margin-top: 0; }
@@ -1442,7 +1438,7 @@ gm {
     border-top-right-radius:.2em;
     background: #2F4F4F;
     color: white;
-    font-family: "SYHei Regular", sans-serif;
+    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
     font-size: 1.2rem;
     line-height: .8rem;
     text-align:center;
@@ -1481,7 +1477,7 @@ gm {
         color: rgba(72, 125, 63, 0.995) !important;
     border-bottom-right-radius: .2em .2em;
     border-bottom-left-radius: .2em .2em;
-    font-family: "SYHei Regular", sans-serif;
+    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
     /* font-size: 1.2rem; */
     /* line-height: 2rem; */
     text-align:justify;  /* //中文無必要，英文不需要 */
@@ -1499,7 +1495,7 @@ gm {
     background: #0E6251;
     color: white;
     /* border-radius: $border-radius;  */
-    font-family: "SYHei Regular", sans-serif;
+    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
     font-size: 1.2rem;
     line-height: .8rem;
     text-align:center;
@@ -1519,7 +1515,7 @@ gm {
         color: rgba(72, 125, 63, 0.995) !important;
     border-bottom-right-radius: .2em .2em;
     border-bottom-left-radius: .2em .2em;
-    font-family: "SYHei Regular", sans-serif;
+    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
     /* font-size: 1.2rem; */
     /* line-height: 2rem; */
     text-align:justify;
@@ -1557,7 +1553,7 @@ gm {
     background: #0E6251; //#34495e
     color: white;
     /* border-radius: $border-radius;  */
-    font-family: "SYHei Regular", sans-serif;
+    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
     font-size: 1.2rem;
     line-height: .8rem;
     text-align:left;
@@ -1577,7 +1573,7 @@ gm {
        /* color: rgba(72, 125, 63, 0.995) !important; //使用 darker/hacker/kimbie 顏色主題時需要固定字體顏色  */
     border-bottom-right-radius: .2em .2em;
     border-bottom-left-radius: .2em .2em;
-    font-family: "SYHei Regular", sans-serif;
+    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
     /* font-size: 1.2rem;  */
     /* line-height: 2rem;  */
     text-align:justify;
@@ -1595,7 +1591,7 @@ gm {
     background: #546158;
     color: white;
     /* border-radius: $border-radius;  */
-    font-family: "SYHei Regular", sans-serif;
+    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
     font-size: 1.2rem;
     line-height: .8rem;
     text-align:left;
@@ -1770,45 +1766,6 @@ html.wf-active .fir-image-figure .fig-author-figure-title {
 
 /*! Generated by Font Squirrel (https://www.fontsquirrel.com) on October 26, 2019 */
 /* 自定義頁面字體 */
-@font-face {
-  font-family: 'SYHei Regular';
-  src: url('../fonts/GenYoGothicTW-Regular.woff2') format('woff2'),
-       url('../fonts/GenYoGothicTW-Regular.woff') format('woff'),
-       url('../fonts/GenYoGothicTW-Regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'SYHei Medium';
-  src: url('../fonts/GenYoGothicTW-Medium.woff2') format('woff2'),
-       url('../fonts/GenYoGothicTW-Medium.woff') format('woff'),
-       url('../fonts/GenYoGothicTW-Medium.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'SYHei Bold';
-  src: url('../fonts/GenYoGothicTW-Bold.woff2') format('woff2'),
-       url('../fonts/GenYoGothicTW-Bold.woff') format('woff'),
-       url('../fonts/GenYoGothicTW-Bold.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'SYHei Heavy';
-  src: url('../fonts/GenYoGothicTW-Heavy.woff2') format('woff2'),
-       url('../fonts/GenYoGothicTW-Heavy.woff') format('woff'),
-       url('../fonts/GenYoGothicTW-Heavy.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Chalk Script';
-  src: url('../fonts/Chalk-Script.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Font Awesome 5 Free';
-  src: url('../fonts/fontawesome-webfont.eot');
-  src: url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/fontawesome-webfont.woff2') format('woff2'),
-       url('../fonts/fontawesome-webfont.woff') format('woff'),
-       url('../fonts/fontawesome-webfont.ttf') format('truetype'),
-       url('../fonts/fontawesome-webfont.svg#fontawesome-webfont') format('svg');
-}
 
 @font-face {
   font-family: 'GNUTypewriterStandard';
@@ -1820,347 +1777,19 @@ html.wf-active .fir-image-figure .fig-author-figure-title {
        url('../fonts/GNUTypewriterStandard.svg#GNUTypewriterStandard') format('svg');
 }
 
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../fonts/montserrat-regular.woff2') format('woff2'),
-         url('../fonts/montserrat-regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../fonts/montserrat-bold.woff2') format('woff2'),
-         url('../fonts/montserrat-bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../fonts/montserrat-black.woff2') format('woff2'),
-         url('../fonts/montserrat-black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Merriweather';
-    src: url('../fonts/merriweather-regular.woff2') format('woff2'),
-         url('../fonts/merriweather-regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Merriweather';
-    src: url('../fonts/merriweather-italic.woff2') format('woff2'),
-         url('../fonts/merriweather-italic.woff') format('woff');
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Merriweather';
-    src: url('../fonts/merriweather-bold.woff2') format('woff2'),
-         url('../fonts/merriweather-bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Merriweather';
-    src: url('../fonts/merriweather-bolditalic.woff2') format('woff2'),
-         url('../fonts/merriweather-bolditalic.woff') format('woff');
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Merriweather';
-    src: url('../fonts/merriweather-black.woff2') format('woff2'),
-         url('../fonts/merriweather-black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Courgette';
-    src: url('../fonts/Courgette-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
-}
-
-/* muli-200normal - latin */
-@font-face {
-  font-family: 'Muli';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 200;
-  src:
-    local('Muli Extra Light '),
-    local('Muli-Extra Light'),
-    url('../fonts/muli-latin-200.woff2') format('woff2'),
-    url('../fonts/muli-latin-200.woff') format('woff'); /* Modern Browsers */
-}
-/* muli-200italic - latin */
-@font-face {
-  font-family: 'Muli';
-  font-style: italic;
-  font-display: swap;
-  font-weight: 200;
-  src:
-    local('Muli Extra Light italic'),
-    local('Muli-Extra Lightitalic'),
-    url('../fonts/muli-latin-200italic.woff2') format('woff2'),
-    url('../fonts/muli-latin-200italic.woff') format('woff'); /* Modern Browsers */
-}
-/* muli-300normal - latin */
-@font-face {
-  font-family: 'Muli';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 300;
-  src:
-    local('Muli Light '),
-    local('Muli-Light'),
-    url('../fonts/muli-latin-300.woff2') format('woff2'),
-    url('../fonts/muli-latin-300.woff') format('woff'); /* Modern Browsers */
-}
-/* muli-300italic - latin */
-@font-face {
-  font-family: 'Muli';
-  font-style: italic;
-  font-display: swap;
-  font-weight: 300;
-  src:
-    local('Muli Light italic'),
-    local('Muli-Lightitalic'),
-    url('../fonts/muli-latin-300italic.woff2') format('woff2'),
-    url('../fonts/muli-latin-300italic.woff') format('woff'); /* Modern Browsers */
-}
-/* muli-400normal - latin */
-@font-face {
-  font-family: 'Muli';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 400;
-  src:
-    local('Muli Regular '),
-    local('Muli-Regular'),
-    url('../fonts/muli-latin-400.woff2') format('woff2'),
-    url('../fonts/muli-latin-400.woff') format('woff'); /* Modern Browsers */
-}
-/* muli-400italic - latin */
-@font-face {
-  font-family: 'Muli';
-  font-style: italic;
-  font-display: swap;
-  font-weight: 400;
-  src:
-    local('Muli Regular italic'),
-    local('Muli-Regularitalic'),
-    url('../fonts/muli-latin-400italic.woff2') format('woff2'),
-    url('../fonts/muli-latin-400italic.woff') format('woff'); /* Modern Browsers */
-}
-/* muli-600normal - latin */
-@font-face {
-  font-family: 'Muli';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 600;
-  src:
-    local('Muli SemiBold '),
-    local('Muli-SemiBold'),
-    url('../fonts/muli-latin-600.woff2') format('woff2'),
-    url('../fonts/muli-latin-600.woff') format('woff'); /* Modern Browsers */
-}
-/* muli-600italic - latin */
-@font-face {
-  font-family: 'Muli';
-  font-style: italic;
-  font-display: swap;
-  font-weight: 600;
-  src:
-    local('Muli SemiBold italic'),
-    local('Muli-SemiBolditalic'),
-    url('../fonts/muli-latin-600italic.woff2') format('woff2'),
-    url('../fonts/muli-latin-600italic.woff') format('woff'); /* Modern Browsers */
-}
-/* muli-700normal - latin */
-@font-face {
-  font-family: 'Muli';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 700;
-  src:
-    local('Muli Bold '),
-    local('Muli-Bold'),
-    url('../fonts/muli-latin-700.woff2') format('woff2'),
-    url('../fonts/muli-latin-700.woff') format('woff'); /* Modern Browsers */
-}
-/* muli-700italic - latin */
-@font-face {
-  font-family: 'Muli';
-  font-style: italic;
-  font-display: swap;
-  font-weight: 700;
-  src:
-    local('Muli Bold italic'),
-    local('Muli-Bolditalic'),
-    url('../fonts/muli-latin-700italic.woff2') format('woff2'),
-    url('../fonts/muli-latin-700italic.woff') format('woff'); /* Modern Browsers */
-}
-/* muli-800normal - latin */
-@font-face {
-  font-family: 'Muli';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 800;
-  src:
-    local('Muli ExtraBold '),
-    local('Muli-ExtraBold'),
-    url('../fonts/muli-latin-800.woff2') format('woff2'),
-    url('../fonts/muli-latin-800.woff') format('woff'); /* Modern Browsers */
-}
-/* muli-800italic - latin */
-@font-face {
-  font-family: 'Muli';
-  font-style: italic;
-  font-display: swap;
-  font-weight: 800;
-  src:
-    local('Muli ExtraBold italic'),
-    local('Muli-ExtraBolditalic'),
-    url('../fonts/muli-latin-800italic.woff2') format('woff2'),
-    url('../fonts/muli-latin-800italic.woff') format('woff'); /* Modern Browsers */
-}
-/* muli-900normal - latin */
-@font-face {
-  font-family: 'Muli';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 900;
-  src:
-    local('Muli Black '),
-    local('Muli-Black'),
-    url('../fonts/muli-latin-900.woff2') format('woff2'),
-    url('../fonts/muli-latin-900.woff') format('woff'); /* Modern Browsers */
-}
-/* muli-900italic - latin */
-@font-face {
-  font-family: 'Muli';
-  font-style: italic;
-  font-display: swap;
-  font-weight: 900;
-  src:
-    local('Muli Black italic'),
-    local('Muli-Blackitalic'),
-    url('../fonts/muli-latin-900italic.woff2') format('woff2'),
-    url('../fonts/muli-latin-900italic.woff') format('woff'); /* Modern Browsers */
-}
-
-
-@font-face {
-    font-family: 'Source Sans Pro';
-    src: url('../fonts/source-sans-pro/source-sans-pro-regular.eot');
-    src: url('../fonts/source-sans-pro/source-sans-pro-regular.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/source-sans-pro/source-sans-pro-regular.woff') format('woff'),
-         url('../fonts/source-sans-pro/source-sans-pro-regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Source Sans Pro';
-    src: url('../fonts/source-sans-pro/source-sans-pro-italic.eot');
-    src: url('../fonts/source-sans-pro/source-sans-pro-italic.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/source-sans-pro/source-sans-pro-italic.woff') format('woff'),
-         url('../fonts/source-sans-pro/source-sans-pro-italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Source Sans Pro';
-    src: url('../fonts/source-sans-pro/source-sans-pro-semibold.eot');
-    src: url('../fonts/source-sans-pro/source-sans-pro-semibold.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/source-sans-pro/source-sans-pro-semibold.woff') format('woff'),
-         url('../fonts/source-sans-pro/source-sans-pro-semibold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Source Sans Pro';
-    src: url('../fonts/source-sans-pro/source-sans-pro-semibolditalic.eot');
-    src: url('../fonts/source-sans-pro/source-sans-pro-semibolditalic.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/source-sans-pro/source-sans-pro-semibolditalic.woff') format('woff'),
-         url('../fonts/source-sans-pro/source-sans-pro-semibolditalic.ttf') format('truetype');
-    font-weight: 600;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'League Gothic';
-    src: url('../fonts/league-gothic/league-gothic.eot');
-    src: url('../fonts/league-gothic/league-gothic.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/league-gothic/league-gothic.woff') format('woff'),
-         url('../fonts/league-gothic/league-gothic.ttf') format('truetype');
-
-    font-weight: normal;
-    font-style: normal;
-}
-
 
 **
  * Basic typography style for copy text
  */
 
 html {
-  font-family: 'SYHei Regular', sans-serif;
+  font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "Microsoft YaHei", "微软雅黑", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
 body {
-  font-family: 'SYHei Regular', sans-serif;
+  font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "Microsoft YaHei", "微软雅黑", sans-serif;
 }
 
 p {
@@ -2170,7 +1799,7 @@ p {
 
 
 blockquote {
-    font-family: "SYHei Regular", sans-serif;
+    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "Microsoft YaHei", "微软雅黑", sans-serif;
     display: block;
     margin-top: 1em;
     margin-bottom: 1em;
