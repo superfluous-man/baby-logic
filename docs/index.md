@@ -16,7 +16,10 @@ documentclass: book
 
 本筆記大致列出邏輯基礎學習階段的主要材料，主要參考（chāoxí ）以下課本攢集而成：
 
-{{% freeboxforbib title="主要參考文獻" %}}
+
+:::{.freebox}
+<b>参考文献：</b>
+
 1. 徐明, 2008. **符号逻辑讲义[M]**.武汉:武汉大学出版社.
 2. 胡龙彪,黄华新, 2006. **逻辑学教程[M]**.杭州:浙江大学出版社.
 3. 黄华新,张则幸, 2011. **逻辑学导论（第二版）[M]**.杭州:浙江大学出版社.
@@ -25,7 +28,7 @@ documentclass: book
 6. Smith N J J, 2012. **Logic: The Laws of Truth[M]**. New Jersey: Princeton University Press.
 7. Copi I M, Cohen C, Rodych V, 2018. **Introduction to Logic[M]**. New York: Routledge.
 8. Bergmann M, Moor J, Nelson J, 2014. **The Logic Book[M]**. Sixth. New York: McGraw‑Hill.
-{{% /freeboxforbib %}}
+:::
 
 
 其中，直接取自《符号逻辑讲义》的材料最多，取自《逻辑学导论》較多，素樸集合論、表列演算則直接取自完全開源的 [Open Logic Project](https://builds.openlogicproject.org/) 項目源碼。
