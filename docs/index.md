@@ -8,6 +8,9 @@ github-repo: superfluous-man/baby-logic
 cover-image: img/cover.png
 site: bookdown::bookdown_site
 documentclass: book
+biblio-style: apa
+bibliography: [zlogic.bib]
+link-citations: yes
 ---
 
 # Welcome {-} 
