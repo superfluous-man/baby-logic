@@ -1,6 +1,6 @@
 /* text boxes */
 div.example {
- font-family: Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+font-family: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
     margin-top: 1em;
     margin-bottom: 1em;
     margin-left: 1em;
@@ -12,7 +12,7 @@ div.example {
 }
 
 div.theorem {
- font-family: Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+font-family: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
     margin-top: 1em;
     margin-bottom: 1em;
     margin-left: 1em;
@@ -24,7 +24,7 @@ div.theorem {
 }
 
 blockquote {
-font-family: Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+font-family: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
     display: block;
     margin-top: .5em;
     margin-bottom: .9em;
@@ -410,7 +410,7 @@ strong { /** markdown中部分shortcode內粗體<bb></bb> 與<strong>樣式同�
 font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
     font-style: bold;
     font-weight: 600;
-     /* color: #eb0735; */
+    color: #eb0735;
 }
 
 red {
@@ -1262,6 +1262,7 @@ h1 {
 	  font-style: bold;
         font-weight: 700;
   color:#eb0735;
+    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
    /* background: url('https://i.loli.net/2020/09/01/6PBqUGe2nzrJahQ.png');
     background-size: contain;
     background-position: right;
@@ -1272,6 +1273,7 @@ h1 {
 h2 {
 	margin: 0rem 0 0.4rem 0;
   padding: 0;
+    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
   font-size: 26px;
 	line-height: 40px;
   text-align: left;
@@ -1283,6 +1285,7 @@ h2 {
 h3 {
 	margin: 0rem 0 0.4rem 0;
   padding: 0;
+    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
   font-size: 22px;
 	line-height: 36px;
 	font-style: bold;
@@ -1293,6 +1296,7 @@ h3 {
 h4 {
 	margin: 0rem 0 0.4rem 0;
   padding: 0;
+    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
 	font-size: 18px;
 	line-height: 32px;
 	font-style: bold;
