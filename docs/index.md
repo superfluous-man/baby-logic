@@ -38,12 +38,6 @@ link-citations: yes
 其中，直接取自《符号逻辑讲义》的材料最多，取自《逻辑学导论》較多，素樸集合論、表列演算則直接取自完全開源的 [Open Logic Project](https://builds.openlogicproject.org/) 項目源碼。
 
 
-
-## Acknowledgements {-}
-
-以上参考书之作者。
-
-
 <br>
   <br>
   <hr>
