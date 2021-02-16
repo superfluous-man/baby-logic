@@ -1,6 +1,9 @@
 exm:baby00
 exm:penguin
-thm:pyth
+exm:sportman
+exm:catman
+exm:catmanform
+exm:e-instance
 全書緒論
 论说
 论说的好坏

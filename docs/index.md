@@ -14,10 +14,9 @@ documentclass: book
 
 <a href="https://duoyu.ren/"><img src="img/cover.png" width="250" height="375" alt="Back to Homepage" class="cover" /></a> 
 
-「邏輯」有很多種，「邏輯學」也有很多種。不同的人學習邏輯學有不同的目的。本筆記中的「邏輯學」知識主要服務於語言、思維的分析，不追求邏輯學在其他領域的功能。
+「逻辑」有很多种，「逻辑学」也有很多种。不同的人学习逻辑学有不同的目的。本笔记中的「逻辑学」知识主要服务于语言、思维的分析，不追求逻辑学在其他领域的功能。
 
-本筆記大致列出邏輯基礎學習階段的主要材料，主要參考（chāoxí ）以下課本攢集而成：
-
+本笔记大致列出逻辑基础学习阶段的主要材料，主要参考（chāoxí）以下课本攒集而成：
 
 :::{.freebox}
 <b>参考文献：</b>
@@ -48,7 +47,7 @@ documentclass: book
 
 **Editorial comments**
 
-If you have a GitHub account and want to make any editorial suggestions, please do so here.
+有屁请在此处放，看看谁的屁更响。
 
 <script src="https://utteranc.es/client.js"
         repo="gwmatthews/ethics"
