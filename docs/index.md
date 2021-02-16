@@ -1,14 +1,14 @@
 ---
 knit: "bookdown::render_book"
 title: "Baby Logic"
+date: "2021-02-17"
 author: "Lǐ Èrgǒu"
 description: "Baby Logic Textbooks"
 url: 'https\://duoyu.ren/'
 github-repo: superfluous-man/baby-logic
 cover-image: img/cover.png
 site: bookdown::bookdown_site
-documentclass: book
-biblio-style: apa
+csl: apa.csl
 bibliography: [zlogic.bib]
 link-citations: yes
 ---
