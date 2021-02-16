@@ -3,8 +3,8 @@ div.example {
 font-family: Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
     margin-top: 1em;
     margin-bottom: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 0em;
+    margin-right: 0em;
     /* padding: .1em 0.3em 0em .5em; */
     text-align:justify;
     text-justify:auto;
