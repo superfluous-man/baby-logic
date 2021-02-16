@@ -1,5 +1,6 @@
 exm:baby00
 exm:penguin
+thm:pyth
 全書緒論
 论说
 论说的好坏
