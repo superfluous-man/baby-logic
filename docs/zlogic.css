@@ -438,7 +438,7 @@ ul {
 
 
 strong { /** markdown中部分shortcode內粗體<bb></bb> 與<strong>樣式同一 **/
-font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
+font-family: 'Noto Serif TC', 'Noto Serif SC', "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
     font-style: bold;
     font-weight: 600;
     color: #eb0735;
