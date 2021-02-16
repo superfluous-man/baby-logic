@@ -21,6 +21,19 @@ font-family: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "S
     text-justify:auto;
 }
 
+blockquote {
+font-family: Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+    display: block;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    /* padding: .1em 0.3em 0em .5em; */
+     border: none !important;
+    text-align:justify;
+    text-justify:auto;
+}
+
 div.argument {
   padding: 1em 2em 0.5em 2em;
   margin-top: 3em;
@@ -103,7 +116,7 @@ div.epigraph {
   background-image: url("./img/question.png");
 }
 
-.book .book-body .page-wrapper .page-inner section.normal blockquote, .more {
+.book .book-body .page-wrapper .page-inner .more {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -1243,7 +1256,7 @@ h1 {
          font-size: 26px;
          font-family: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
         text-align: left;
-	line-height: 30px;
+	line-height: 36px;
         padding: 9px 0px 5px 0%;
 	  font-style: bold;
         font-weight: 700;
@@ -1260,7 +1273,7 @@ h2 {
   padding: 0;
   font-size: 16px;
   font-family: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
-	line-height: 18px;
+	line-height: 26px;
   text-align: left;
   font-style: bold;
   font-weight: 700;
@@ -1272,7 +1285,7 @@ h3 {
   padding: 0;
   font-size: 14px;
   font-family: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
-	line-height: 16px;
+	line-height: 24px;
 	font-style: bold;
   font-weight: 700;
   color:#eb0735;
@@ -1283,7 +1296,7 @@ h4 {
   padding: 0;
 font-family: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
 	font-size: 12px;
-	line-height: 14px;
+	line-height: 22px;
 	font-style: bold;
   font-weight: 700;
   color:#eb0735;
@@ -1749,18 +1762,7 @@ p {
 }
 
 
-blockquote {
-font-family: Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: .5em;
-    margin-right: 0em;
-    /* padding: .1em 0.3em 0em .5em; */
-    border-left: .22em solid #b0b0b0;
-    text-align:justify;
-    text-justify:auto;
-}
+
 
 
 .freebox, .freeboxforbib {
