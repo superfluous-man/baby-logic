@@ -1243,7 +1243,7 @@ h1 {
          font-size: 26px;
          font-family: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
         text-align: left;
-	line-height: 36px;
+	line-height: 30px;
         padding: 9px 0px 5px 0%;
 	  font-style: bold;
         font-weight: 700;
@@ -1258,40 +1258,32 @@ h1 {
 h2 {
 	margin: 0rem 0 0.4rem 0;
   padding: 0;
-  font-size: 24px;
+  font-size: 16px;
   font-family: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
-	line-height: 32px;
+	line-height: 18px;
   text-align: left;
   font-style: bold;
-        font-weight: 700;
+  font-weight: 700;
   color:#eb0735;
-    background: url('https://i.loli.net/2020/09/01/6PBqUGe2nzrJahQ.png');
-    background-size: contain;
-    background-position: right;
-    background-repeat: no-repeat;
 }
 
 h3 {
 	margin: 0rem 0 0.4rem 0;
   padding: 0;
-  font-size: 20px;
+  font-size: 14px;
   font-family: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
-	line-height: 28px;
+	line-height: 16px;
 	font-style: bold;
   font-weight: 700;
-    background: url('https://i.loli.net/2020/09/01/6PBqUGe2nzrJahQ.png');
-    background-size: contain;
-    background-position: right;
-    background-repeat: no-repeat;
-    color:#eb0735;
+  color:#eb0735;
 }
 
 h4 {
 	margin: 0rem 0 0.4rem 0;
   padding: 0;
 font-family: Georgia, "Nimbus Roman No9 L", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, "TW\-Sung", "WenQuanYi Bitmap Song", "AR PL UMing CN", "AR PL UMing HK", "AR PL UMing TW", "AR PL UMing TW MBE", PMingLiU, MingLiU, serif;
-	font-size: 20px;
-	line-height: 28px;
+	font-size: 12px;
+	line-height: 14px;
 	font-style: bold;
   font-weight: 700;
   color:#eb0735;

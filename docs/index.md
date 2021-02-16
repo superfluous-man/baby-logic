@@ -12,7 +12,9 @@ documentclass: book
 
 # Welcome {-} 
 
-<a href="https://duoyu.ren/"><img src="img/cover.png" width="250" height="375" alt="Back to Homepage" class="cover" /></a> 「邏輯」有很多種，「邏輯學」也有很多種。不同的人學習邏輯學有不同的目的。本筆記中的「邏輯學」知識主要服務於語言、思維的分析，不追求邏輯學在其他領域的功能。
+<a href="https://duoyu.ren/"><img src="img/cover.png" width="250" height="375" alt="Back to Homepage" class="cover" /></a> 
+
+「邏輯」有很多種，「邏輯學」也有很多種。不同的人學習邏輯學有不同的目的。本筆記中的「邏輯學」知識主要服務於語言、思維的分析，不追求邏輯學在其他領域的功能。
 
 本筆記大致列出邏輯基礎學習階段的主要材料，主要參考（chāoxí ）以下課本攢集而成：
 
