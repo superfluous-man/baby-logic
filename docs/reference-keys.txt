@@ -4,7 +4,7 @@ exm:sportman
 exm:catman
 exm:catmanform
 exm:e-instance
-全書緒論
+bookintro
 论说
 论说的好坏
 论说形式的好坏
@@ -24,18 +24,6 @@ exm:e-instance
 逻辑与习惯的说理方式
 当代逻辑传统逻辑和普通人需要的逻辑
 prechap
-arguments-rationality-and-rhetoric
-the-structure-of-arguments
-premises
-conclusions
-pattern-of-reasoning
-validity-and-soundness
-key-concepts
-more-examples
-proofs-and-counterexamples
-slideshow-summary
-what-is-critical-thinking
-further-exploration
 chap-truth-table
 relevance
 appeal-to-authority
@@ -70,7 +58,7 @@ cold-biases
 anchoringframing-effects
 the-fundamental-attribution-error
 the-availability-heuristic
-slideshow-summary-1
+slideshow-summary
 our-buggy-moral-code
 relativism
 claims-and-consequences-of-moral-relativism
@@ -84,6 +72,6 @@ difference-and-tolerance
 questioning-relativism
 summary
 a-starting-point
-slideshow-summary-2
+slideshow-summary-1
 crash-course-metaethics
-further-exploration-1
+further-exploration
