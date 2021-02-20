@@ -1,4 +1,4 @@
-# (PART) 卷 VI 附錄 {-}
+# (PART) 卷 附錄 {-}
 
 # References {-}
 

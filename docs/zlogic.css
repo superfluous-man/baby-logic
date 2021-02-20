@@ -27,12 +27,12 @@
     /* border-left: 2px solid #aaa; */
     text-align:justify;
     text-justify:auto;
+    text-indent: -2.3rem;
 }
 
 .csl-entry:before {
   font-family: "Font Awesome 5 Free", FontAwesome, Serif;
   content: "";
-  left : 0.9em;
   color: skyblue;
 }
 
