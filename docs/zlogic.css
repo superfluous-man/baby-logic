@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700&family=Noto+Serif+TC:wght@500;700&display=swap');
+
+
 /*cwTeXYen (Chinese Traditional) 圓體字型*/
 /*@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);*/
 /*font-family: 'cwTeXYen', sans-serif;*/
@@ -18,7 +20,7 @@
 /*@import url(https://fonts.googleapis.com/earlyaccess/cwtexming.css);*/
 /*font-family: 'cwTeXMing', serif;*/
 
-/*apa bib style adjust*/
+/*apa bib style adjust 參考文獻樣式調整*/
 .csl-entry {
   font-family: 'Noto Serif TC', 'Noto Serif SC', "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "Microsoft YaHei", "微软雅黑", sans-serif;
     margin-top: 0.5em;
@@ -29,7 +31,7 @@
     text-justify:auto;
     text-indent: -2.3rem;
 }
-
+/*apa bib style adjust 參考文獻列表符號添加*/
 .csl-entry:before {
   font-family: "Font Awesome 5 Free", FontAwesome, Serif;
   content: "";
@@ -38,7 +40,7 @@
 
 /* text boxes */
 div.example {
- font-family: Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+font-family: 'Noto Serif TC', 'Noto Serif SC', "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "Microsoft YaHei", "微软雅黑", sans-serif;
     margin-top: 1em;
     margin-bottom: 1em;
     margin-left: 1em;
@@ -50,7 +52,7 @@ div.example {
 }
 
 div.theorem {
- font-family: Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+font-family: 'Noto Serif TC', 'Noto Serif SC', "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "Microsoft YaHei", "微软雅黑", sans-serif;
     margin-top: 1em;
     margin-bottom: 1em;
     margin-left: 1em;
@@ -62,7 +64,7 @@ div.theorem {
 }
 
 blockquote {
- font-family: Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, DFKai-SB, "TW\-Kai", serif;
+font-family: 'Noto Serif TC', 'Noto Serif SC', "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "Microsoft YaHei", "微软雅黑", sans-serif;
     display: block;
     margin-top: .5em;
     margin-bottom: .9em;
@@ -430,21 +432,23 @@ img[alt="Philosophical Ethics book cover"]{
 
 /* Here is your custom css styles. */
 
+/* 編號列表樣式 */
 ol {
   margin-top: -0.5em;
   display:block;
 }
 
 ol li::marker {
-  content: counter(list-item, decimal) ") ";
-  font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
+  content: counter(list-item, decimal) "）";
+  font-family: 'Noto Serif TC', 'Noto Serif SC', "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "Microsoft YaHei", "微软雅黑", sans-serif;
   font-style: bold;
-  font-weight: 500;
+  font-weight: 700;
 }
 
-
+/* 無編號列表樣式 */
 ul {
     list-style-image: url(https://cdn.bitdegree.org/learn/list-style-image-marker-1.png?426d93cd);
+
 }
 
 
@@ -1355,80 +1359,12 @@ h4 {
 }
 
 
-singlepagetitle {/* posts singlepagetitle title style */
-    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
-    text-align: left;
-    /* margin: 0px 0px 5px 0px;  */
-    margin-bottom: -.7rem;
-    font-size: 1.7rem;
-    line-height: 2.2rem;
-    font-style: normal;
-    font-weight: normal;
-}
 
-/* Round Image Author  */
-.circular--portrait {
-  position: left;
-  float: left;
-  display: inline-block;
-  width: 140px;
-  height: 140px;
-  margin: auto;
-  overflow: hidden;
-  border-radius: 50%;
-  border-radius: 150px;
-  -webkit-border-radius: 150px;
-  -moz-border-radius: 150px;
-  background: url(URL) no-repeat;
-  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-  transform: rotate(-12deg); /* 圓形頭像旋轉角度  */
-}
-.circular--portrait img {
-  width: 100%;
-  height: auto;
-}
-
-/* 回到頭部按鈕樣式，方法參考 https://marsgrid.com/post/a11_back2top/   */
-.backtop {
-    color: #b3b1b1;
-    position: fixed;
-    right: 16px;
-    bottom: 16px;
-    width: 32px;
-    height: 32px;
-    z-index: 999998;
-}
 
 /* 刪除線顏色 ~~ ~~*/
 del {
   text-decoration:line-through double red;
 }
-
-
-/* 換行符號 <br>從行間距調整爲段落間距，以適應某些 shortcode 環境分段需求 // 在 markdown 文件中按兩次空格等同 br，即產生分段效果。 */
-/* br {
-  display: block;
-  content: "";
-  border-bottom: 7.5px solid transparent; // Works in Chrome/Safari
-}
-@-moz-document url-prefix() {
-  br {
-    margin-bottom: 7.5px; // As 'border-bottom' doesn't work in firefox and 'margin-bottom' doesn't work in Chrome/Safari.
-  }
-}
-
-wbr {//br 用於shortcode內的分段後，用 <wbr />在詩歌環境換行，chrome ？
-  display: list-item;
-  content: "";
-  //border-bottom: 5px solid transparent; // Works in Chrome/Safari
-}
-@-moz-document url-prefix() {
-  wbr {
-    //margin-bottom: 5px; // As 'border-bottom' doesn't work in firefox and 'margin-bottom' doesn't work in Chrome/Safari.
-  }
-}*/
 
 /* mark 筆 HTML 標籤，紅綠色 */
 :root {
@@ -1468,297 +1404,6 @@ gm {
   text-decoration: none;
 }
 
-
-/* definition shortcode 樣式 爲 defintion 新增的樣式 */
-.definition {
-    margin-bottom: 1rem;
-    padding:.5em .5em .5em .5em;
-    background: #e8f7e6;
-    color: rgba(72, 125, 63, 0.995) !important;
-    border-bottom-right-radius: .2em .2em;
-    border-bottom-left-radius: .2em .2em;
-    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
-    text-align:justify;
-    text-justify:auto;
-    :first-child { margin-top: 0; }
-    :last-child { margin-bottom: 0; }
-  }
-.definitiontitle {
-    /* margin-left: 2em;  */
-   /* margin-right: 2em;  */
-   /* max-width: 700px;  */
-    padding: 0.5em;
-    border-top-left-radius:.2em;
-    border-top-right-radius:.2em;
-    background: #2F4F4F;
-    color: white;
-    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
-    font-size: 1.2rem;
-    line-height: .8rem;
-    text-align:center;
-    text-justify:auto;
-    :first-child { margin-top: 0; }
-    :last-child { margin-bottom: 0; }
-  }
-/* .definitiontitle::before {
-//  font-family: "Font Awesome 5 Free";
-//  font-size: 1.2rem;
-// display: inline-block;
-//  content: "";//名詞解釋
-//}  */
-.qmarkl::before {
-  font-family: "Font Awesome 5 Free";
-  font-size: 1.2rem;
-  display: inline-block;
-  content: ""; /* //      */
-}
-.qmarkr::after {
-  font-family: "Font Awesome 5 Free";
-  font-size: 1.2rem;
-  display: inline-block;
-  content: "";
-}
-
-
-
-/* dtpc shortcode 樣式(definition, theorem, proposition, corrollary) */
-.dtpcbox {/* 爲 dtpc 新增的樣式 */
-    /* margin-left: 2em; */
-    /* margin-right: 2em; */
-    margin-bottom: 1em;
-    /* max-width: 700px; */
-    padding:.5em .5em .5em .5em;
-        background: #e8f7e6;
-    /* color: rgba(72, 125, 63, 0.995) !important; //使用 darker/hacker/kimbie 顏色主題時需要固定字體顏色 */
-    border-bottom-right-radius: .2em .2em;
-    border-bottom-left-radius: .2em .2em;
-    font-family: "SYHei Regular", sans-serif;
-    /* font-size: 1.2rem;  */
-    /* line-height: 2rem;  */
-    /* text-align:justify; */
-    /* text-justify:auto;  */
-    :first-child { margin-top: 0; }
-    :last-child { margin-bottom: 0; }
-  }
-.dtpcboxtitle {/* 爲 dtpc title新增的樣式  */
-    /* margin-left: 2em;  */
-    /* margin-right: 2em;  */
-    /* max-width: 700px;  */
-    padding: 0.5em;
-    border-top-left-radius:.3em;
-    border-top-right-radius:.3em;
-    background: #0E6251; //#34495e
-    color: white;
-    /* border-radius: $border-radius;  */
-    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
-    font-size: 1.2rem;
-    line-height: .8rem;
-    text-align:left;
-    text-justify:auto;
-    :first-child { margin-top: 0; }
-    :last-child { margin-bottom: 0; }
-  }
-
-/* dtpc shortcode 樣式(example) */
-.dtpcexbox {/* 爲 dtpcex 新增的樣式 */
-    /* margin-left: 2em;  */
-    /* margin-right: 2em;  */
-    margin-bottom: 1em;
-    /* max-width: 700px;  */
-    padding:.5em .5em .5em .5em;
-        background: #e8f7e6;//#fafafa  #faf7f7
-       /* color: rgba(72, 125, 63, 0.995) !important; //使用 darker/hacker/kimbie 顏色主題時需要固定字體顏色  */
-    border-bottom-right-radius: .2em .2em;
-    border-bottom-left-radius: .2em .2em;
-    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
-    /* font-size: 1.2rem;  */
-    /* line-height: 2rem;  */
-    text-align:justify;
-    text-justify:auto;
-    :first-child { margin-top: 0; }
-    :last-child { margin-bottom: 0; }
-  }
-.dtpcexboxtitle {/* 爲 dtpcex title新增的樣式 */
-    /* margin-left: 2em; */
-    /* margin-right: 2em; */
-    /* max-width: 700px; */
-    padding: 0.5em;
-    border-top-left-radius:.3em;
-    border-top-right-radius:.3em;
-    background: #546158;
-    color: white;
-    /* border-radius: $border-radius;  */
-    font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "微软雅黑", sans-serif;
-    font-size: 1.2rem;
-    line-height: .8rem;
-    text-align:left;
-    text-justify:auto;
-    :first-child { margin-top: 0; }
-    :last-child { margin-bottom: 0; }
-  }
-
-
-
-/* Codecaption 源代碼框 shortcode 樣式（在_markdown.scss內的 code/pre 內調整背景色、行號與源碼的距離等等） https://github.com/parsiya/Hugo-Octopress/blob/master/static/css/hugo-octopress.css  */
-
-figure.code {
-    background: none;
-    padding: 0;
-    border: 0;
-    margin-bottom: 1em;
-}
-figure.code pre {
-    margin-top: 0em;
-    margin-bottom: 0em;
-}
-figure.code figcaption {
-    position: relative
-}
-
-figure.code .highlighttable {
-    margin-bottom: 0;
-    table-layout: fixed;
-    width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-figure,
-figcaption {
-    display: block;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font: inherit;
-    vertical-align: baseline;
-    font-family: "SYHei Bold", sans-serif;
-}
-
-.code-title,
-figure.code figcaption { /* figcaption style changes here*/
-    text-align: center;
-    line-height: 1.7em;
-    text-shadow: #cbcccc 0 1px 0;
-    color: inherit;
-      text-rendering: optimizeLegibility;
-    margin-bottom: 0;
-    -moz-border-radius-topleft: 5px;
-    -webkit-border-top-left-radius: 5px;
-    border-top-left-radius: 5px;
-    -moz-border-radius-topright: 5px;
-    -webkit-border-top-right-radius: 5px;
-    border-top-right-radius: 5px;
-    background: #aaa top repeat-x;
-    border: 5px solid #565656;
-    border-top-color: #cbcbcb;
-    border-left-color: #a5a5a5;
-    border-right-color: #a5a5a5;
-    border-bottom: 0;
-    font-size: 120%; /* change size of font in figcaption */
-}
-
-
-div.codewrapper {
-    background-color: #002B36;
-    overflow-x: auto;
-    overflow-y: hidden;
-}
-
-/* Fix codecaption and the new Chroma highlighter */
-
-div.highlight > pre > code,
-pre > code
-{
-    overflow-y: hidden;
-    display: block;
-    line-height: 1.5em;
-}
-
-.linenodiv {
-    background-color: #002B36!important;
-}
-
-td > div.highlight > pre > code,
-div.linenodiv > pre > code
-{
-    overflow: scroll;
-    overflow-y: hidden;
-    display: inline;
-}
-
-/* End fix codecaption and the new Chroma highlighter */
-
-pre::-webkit-scrollbar,
-.highlighttable::-webkit-scrollbar,
-.gist-highlighttable::-webkit-scrollbar {
-    height: .5em;
-    background: rgba(255, 255, 255, 0.15)
-}
-pre::-webkit-scrollbar-thumb:horizontal,
-.highlighttable::-webkit-scrollbar-thumb:horizontal,
-.gist-highlighttable::-webkit-scrollbar-thumb:horizontal {
-    background: rgba(255, 255, 255, 0.2);
-    -webkit-border-radius: 4px;
-    border-radius: 4px
-}
-
-
-/* Link image card 链接页面链接网站图片卡样式 */
-
-.fir-clickcircle {
-  height: 90px;
-  width: 90px;
-  border-radius: 100px;
-  cursor: pointer;
-}
-
-.fir-image-figure {
-  margin: 0;
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-  position: relative;
-  text-decoration: none;
-}
-
-.fir-image-figure .caption, .fir-image-figure figcaption {
-  padding-left: 11px;
-}
-
-html.wf-active .fir-image-figure .fig-author-figure-title {
-  font-family: "SYHei Bold", sans-serif;
-  font-size: 16px;
-}
-
-.fir-image-figure .fig-author-figure-title {
-  font-family: "SYHei Bold", sans-serif;
-  font-size: 1.4rem;
-  margin-top: 2px;
-}
-
-.fir-image-figure .fig-author-figure-info {
-  font-family: "SYHei Bold", sans-serif;
-  font-size: 1.1rem;
-  margin-top: 1px;
-}
-
-
-/* Search Bar Design for Baidu Search*/
-.searchTerm {
-  width: 90%;
-  border: 0px solid #00B4CC;
-  padding: 4px;
-  height: 27px;
-  border-radius: 5px 5px 5px 5px;
-  outline: none;
-  color: #9DBFAF;
-  margin-bottom: 0.3em;
-}
-.searchTerm:focus{
-  color: #00B4CC;
-}
 
 
 /*! Generated by Font Squirrel (https://www.fontsquirrel.com) on October 26, 2019 */
@@ -1802,9 +1447,6 @@ p {
 }
 
 
-
-
-
 .freebox, .freeboxforbib {
   padding: 0.3em 0.5em 0 1em;
   margin-top: 20px;
@@ -1824,7 +1466,3 @@ p {
   box-shadow: none;
   width: 100%;
 }
-
-
-
-
