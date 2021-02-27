@@ -332,7 +332,7 @@
 </ol>
 <p>易见两个前提都是假的，结论是真的，而整个论说也无懈可击。</p>
 <p>前提有真有假的好论说或坏论说的例子也很多，不一一列举了。一般说来，真、假前提和真、假结论的各种组合情况，就坏论说而言都是可能的；就好论说而言也差不多，只有一个例外：<b>好论说不会有真前提和假结论</b>。</p>
-<p>上面说过，对任何一个论说，如果在每个使其前提都真的情况下，其结论也一定真，那么这个论说是好的。所谓使前提都真的情况，简单地说就是能使所有前提同时成立的一种解释，而这种解释既可以是现实也可以和现实无关。比如我们讨论例 0.2 中的坏论说时，给出的理由是「麻雀不是企鹅，但不能因此而说麻雀不是鸟」。这相当于把「猴子」换成了「麻雀」或是把「猴子」解释成了麻雀。当然，这是不够清楚的说法。清楚一些的说法涉及「论说的形式」（argument form）。</p>
+<p>上面说过，对任何一个论说，如果在每个使其前提都真的情况下，其结论也一定真，那么这个论说是好的。所谓使前提都真的情况，简单地说就是能使所有前提同时成立的一种解释，而这种解释既可以是现实也可以和现实无关。比如我们讨论例 <a href="bookintro.html#exm:catman">1.5</a> 中的坏论说时，给出的理由是「麻雀不是企鹅，但不能因此而说麻雀不是鸟」。这相当于把「猴子」换成了「麻雀」或是把「猴子」解释成了麻雀。当然，这是不够清楚的说法。清楚一些的说法涉及「论说的形式」（argument form）。</p>
 
 <div class="example">
 <p><span id="exm:catmanform" class="example"><strong>例 1.6  (论说及其形式)  </strong></span>我们暂时依赖<strong>直观</strong>判断什么是一个论说的形式：<br></p>
@@ -415,22 +415,22 @@
 <p>演绎对「合理性」的基本要求是：「推理链」中的每个推理步骤，如果不是前提、定义、预设、公理、假设等或已经从这些东西「合理地」推出的命题，那么一定是从它们用某些明确的规则得到的。这些明确的规则都要有如下性质：在演绎中使用这些<b>规则</b>时，人们<b>从真命题只能得到真命题</b>。众所周知的各种三段论、假言推理规则和选言推理规则等就属于这种规则。（演绎中也常用被称之为「引理」和「定理」之类的东西。它们虽与公认的规则不同，但因为它们也是经演绎得到的，所以可以把它们看作是已经「合理地推出」的命题。）如此说来，至少直观上看，演绎像是将一个个好的论说接起来——它一步步推出的每个命题都是该命题前面某些命题的逻辑后承。</p>
 <div id="演绎的例子一" class="section level3" number="1.2.1">
 <h3><span class="header-section-number">1.2.1</span> 演绎的例子一</h3>
-<p>数学证明都是演绎的例子，我们就不列举了。这里来看另一类例子。上一节谈到例 0.1 之论说，我们曾假定张三给岀了他的说明。那个说明其实就是个演绎的例子。虽然那个说明中的命题并没有列成链，而对每一步到下一步的过渡，也没说明是运用了什么规则；但是，人们可以把那个说明「还原」成符合上述说法的演绎：</p>
-<blockquote>
-<p><b>例 0.9</b><br />
-1. 所有的人都爱我的宝宝。➠ 前提（经过复述）
-1. 我的宝宝是人。➠ 预设
-1. 我的宝宝爱我的宝宝。➠ 三段论
-1. 我的宝宝只爱我。➠ 前提
-1. 对每个 <span class="math inline">\(x\)</span>，如果我的宝宝爱 <span class="math inline">\(x\)</span>，那么 <span class="math inline">\(x\)</span> 就是我。➠ 「按定义改写」
-1. 如果我的宝宝爱我的宝宝，那么我的宝宝就是我。➠ 特例
-1. 我的宝宝就是我。➠ 肯定前件的假言推理（modus ponens）</p>
-</blockquote>
+<p>数学证明都是演绎的例子，我们就不列举了。这里来看另一类例子。上一节谈到例 <a href="bookintro.html#exm:baby01">1.2</a> 之论说，我们曾假定张三给岀了他的说明。那个说明其实就是个演绎的例子。虽然那个说明中的命题并没有列成链，而对每一步到下一步的过渡，也没说明是运用了什么规则；但是，人们可以把那个说明「还原」成符合上述说法的演绎：</p>
+
+<div class="example">
+<p><span id="exm:babydeduc" class="example"><strong>例 1.9  (宝宝的演绎)  </strong></span>证明的演绎过程：<br></p>
+<ol style="list-style-type: decimal">
+<li>所有的人都爱我的宝宝。<strong>➠</strong> 前提（经过复述）</li>
+<li>我的宝宝是人。<strong>➠</strong> 预设</li>
+<li>我的宝宝爱我的宝宝。<strong>➠</strong> 三段论</li>
+<li>我的宝宝只爱我。<strong>➠</strong> 前提</li>
+<li>对每个 <span class="math inline">\(x\)</span>，如果我的宝宝爱 <span class="math inline">\(x\)</span>，那么 <span class="math inline">\(x\)</span> 就是我。<strong>➠</strong> 「按定义改写」</li>
+<li>如果我的宝宝爱我的宝宝，那么我的宝宝就是我。<strong>➠</strong> 特例</li>
+<li>我的宝宝就是我。<strong>➠</strong> 肯定前件的假言推理（modus ponens）
+</div></li>
+</ol>
 <p>上述演绎「还原」的文字过程，可按照后续章节介绍的谓词逻辑的自然演绎方法表现。设定论域为人，<span class="math inline">\(\mathbf{a}\)</span> 为「我」，<span class="math inline">\(\mathbf{b}\)</span> 为「我的宝宝」，<span class="math inline">\(Px\)</span> 表示「<span class="math inline">\(x\)</span> 是人」，<span class="math inline">\(Lxy\)</span> 表示「<span class="math inline">\(x\)</span> 爱 <span class="math inline">\(y\)</span>」，则本例推理过程可表述为（学完相关章节后再阅读这个自然演绎的例子）：</p>
-<div class="figure">
-<img src="https://i.loli.net/2020/09/03/RiWgPDclO4hxI1U.png" alt="" />
-<p class="caption">natural deduction</p>
-</div>
+<p><img src="https://i.loli.net/2020/09/03/RiWgPDclO4hxI1U.png" /></p>
 <p>当然，这个例子难免让人觉得怪。比较近情理的一个说法是：对于「所有的人都爱我的宝宝」这句话，人们往往不把其中的「所有的人」理解为所有的人，而是理解为宝宝以外的所有人。根据这种说法，从「所有的人都爱我的宝宝」应该得不出「我的宝宝爱我的宝宝」，进而从上述两个前提应该得不出「我的宝宝就是我」这个结论。</p>
 <p>「所有的人」的这种「…以外的所有的人」的用法，是个习惯或语境的问题，而非命题的逻辑结构或推理的问题。显然，我们不能说「所有的人」的意思就是「宝宝以外的所有的人」的意思，因为在「所有的人都要睡觉」「所有的人都要吃饭」等句子中，「所有的人」显然不是指宝宝以外的所有的人。当然我们就更不能说「所有的 <span class="math inline">\(S\)</span> 是 <span class="math inline">\(P\)</span>」中的「所有的 <span class="math inline">\(S\)</span>」应理解为宝宝以外的所有的 <span class="math inline">\(S\)</span>。如果把「所有的人都爱我的宝宝」的形式概括为「所有的 <span class="math inline">\(S\)</span> 都与 <span class="math inline">\(a\)</span> 有关系 <span class="math inline">\(R\)</span>」（其中 <span class="math inline">\(a\)</span> 是某个 <span class="math inline">\(S\)</span>，就像我的宝宝是人），那么「所有的 <span class="math inline">\(S\)</span>」在句子中的意思是否就是所有不等于 <span class="math inline">\(a\)</span> 的 <span class="math inline">\(S\)</span> 呢？有些时候是这样，但显然也并不总是这样。</p>
 <p>比如，正常人不会认「所有的正整数都大于 1」这一命题是真的，因为正整数 1 不大于 1。然而，假如「所有的正整数」的意思就是所有不等于 1 的正整数，那么我们就必须承认这是个真命题。这样的例子太多了。日常会话中，我们习惯于怎么省事怎么说，「差不多就行」，甚至应该尽可能避免繁琐。但我们谈到理论问题时，「差一点」也不行。上面的例子告诉我们，如果在我们的理论中，我们把下列命题中的「除了 <span class="math inline">\(a\)</span>」漏掉了，</p>
