@@ -24,7 +24,7 @@
 <meta name="author" content="Lǐ Èrgǒu" />
 
 
-<meta name="date" content="2021-02-26" />
+<meta name="date" content="2021-02-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -90,7 +90,7 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="index.html">Baby Logic</a></li>
+<li><a href="https://duoyu.ren">Baby Logic</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
@@ -241,12 +241,7 @@
             <section class="normal" id="section-">
 <div id="bookintro" class="section level1" number="1">
 <h1><span class="header-section-number"> 1</span> 全书绪论</h1>
-<div class="centerpic">
-<p><img src="img/david-socrates.jpg" alt="illustration" style="width:50.0%" /></p>
-<div class="centercap">
-<p>Jacques-Louis David, “The Death of Socrates”</p>
-</div>
-</div>
+<p><img src="img/david-socrates.jpg" alt="illustration" style="width:100.0%" /></p>
 <p><enq>“I know what you’re thinking about,” said Tweedledum; “but it isn’t so, nohow.” “Contrariwise,” continued Tweedledee, “if it was so, it might be; and if it were so, it would be; but as it isn’t, it ain’t. That’s logic.”<cite>Lewis Carroll, Through the Looking-Glass, 1872</cite></enq></p>
 <p>在我上大学的时候，不少关于 X 的课程始于下面这样的问题：</p>
 <blockquote>
@@ -285,13 +280,15 @@
 <p>既然人人爱宝宝，而宝宝是人，所以宝宝爱宝宝。「宝宝只爱我」说的是：对任何 <span class="math inline">\(x\)</span>，如果宝宝爱 <span class="math inline">\(x\)</span>，那么 <span class="math inline">\(x\)</span> 就是我；从而如果宝宝爱宝宝，那么宝宝就是我。既然宝宝爱宝宝，所以宝宝就是我。</p>
 </blockquote>
 <p>通常人们用下述方法表示一个论说：将其前提和结论列出，用一道线将前提与结论分开，并在结论前加上「<span class="math inline">\(\therefore\)</span>」表示「所以」。比如，张三从例 <a href="bookintro.html#exm:baby00">1.1</a> 中的前提到结论「我的宝宝就是我」的论说就可以表示为</p>
-<blockquote>
+
+<div class="example">
+<p><span id="exm:baby01" class="example"><strong>例 1.2  (我的宝宝就是我)  </strong></span>前提与结论的表示：<br></p>
 <ol style="list-style-type: decimal">
 <li>人人都爱我的宝宝。</li>
 <li>我的宝宝只爱我。</li>
-<li>所以，我的宝宝就是我。</li>
+<li><strong>所以</strong>，我的宝宝就是我。
+</div></li>
 </ol>
-</blockquote>
 <div id="论说的好坏" class="section level3" number="1.1.1">
 <h3><span class="header-section-number">1.1.1</span> 论说的好坏</h3>
 <p>论说有好有坏。逻辑学要做的事情之一，就是区分好的论说与坏的论说，或者说是给出一般的方法，而依据这些方法，我们能对论说的好坏作出正确的判断。这大概是对逻辑的最常见的一种说明。要说明上述示例是否好的论说，先要说明什么样的论说是好的，什么样的是不好的。对此，最直观又最简单的说法与下面说的差不多：</p>
@@ -305,7 +302,7 @@
 <p>一个具体论说的好坏与其前提和结论的真假无关：一个好论说的前提和结论可能都是假的，而一个坏论说的前提和结论也可能都是真的。（<b>注</b>：论说本身的好坏与论说形式的好坏是相互区别而又有联系的两个问题。）</p>
 
 <div class="example">
-<p><span id="exm:penguin" class="example"><strong>例 1.2  (企鹅与猴子)  </strong></span>比如下面这个论说：</p>
+<p><span id="exm:penguin" class="example"><strong>例 1.3  (企鹅与猴子)  </strong></span>比如下面这个论说：</p>
 <ol style="list-style-type: decimal">
 <li>企鹅都是鸟。</li>
 <li>猴子都不是企鹅。</li>
@@ -315,7 +312,7 @@
 <p>它的前提和结论都是真的，但人们仅凭直观就知道这个论说是不好的；人们会说：不是企鹅的不一定就不是鸟，比如说麻雀就不是企鹅，但不能因此说麻雀不是鸟。企鹅的确都是鸟，猴子的确都不是企鹅，并且猴子也的确都不是鸟；但是，最后一个命题之前的「所以」是没道理的。</p>
 
 <div class="example">
-<p><span id="exm:sportman" class="example"><strong>例 1.3  (爱运动的男生)  </strong></span>再看下面的论说：</p>
+<p><span id="exm:sportman" class="example"><strong>例 1.4  (爱运动的男生)  </strong></span>再看下面的论说：</p>
 <ol style="list-style-type: decimal">
 <li>爱运动的学生学习成绩都很好。</li>
 <li>男学生都爱运动。</li>
@@ -326,7 +323,7 @@
 <p>常听到争论中的人说：「即使你的论证没问题，你的前提本身就是假的，结论当然也是假的。」这是一种常见的误解，仿佛好论说会「保存」虚假性，即会把前提的虚假性传到结论上。</p>
 
 <div class="example">
-<p><span id="exm:catman" class="example"><strong>例 1.4  (猫都是人)  </strong></span>本例表明好论说并不保存虚假性：<br></p>
+<p><span id="exm:catman" class="example"><strong>例 1.5  (猫都是人)  </strong></span>本例表明好论说并不保存虚假性：<br></p>
 <ol style="list-style-type: decimal">
 <li>所有的猫都是人。</li>
 <li>所有的学生都是猫。</li>
@@ -338,7 +335,7 @@
 <p>上面说过，对任何一个论说，如果在每个使其前提都真的情况下，其结论也一定真，那么这个论说是好的。所谓使前提都真的情况，简单地说就是能使所有前提同时成立的一种解释，而这种解释既可以是现实也可以和现实无关。比如我们讨论例 0.2 中的坏论说时，给出的理由是「麻雀不是企鹅，但不能因此而说麻雀不是鸟」。这相当于把「猴子」换成了「麻雀」或是把「猴子」解释成了麻雀。当然，这是不够清楚的说法。清楚一些的说法涉及「论说的形式」（argument form）。</p>
 
 <div class="example">
-<p><span id="exm:catmanform" class="example"><strong>例 1.5  (论说及其形式)  </strong></span>我们暂时依赖<strong>直观</strong>判断什么是一个论说的形式：<br></p>
+<p><span id="exm:catmanform" class="example"><strong>例 1.6  (论说及其形式)  </strong></span>我们暂时依赖<strong>直观</strong>判断什么是一个论说的形式：<br></p>
 <ol style="list-style-type: decimal">
 <li>所有的猫都是人。</li>
 <li>张三是猫。</li>
@@ -351,7 +348,7 @@
 <li>所以，<span class="math inline">\(a\)</span> 是 <span class="math inline">\(P\)</span>。
 </div></li>
 </ol>
-<p>再如下列是例 <a href="bookintro.html#exm:penguin">1.2</a> 的论证形式：</p>
+<p>再如下列是例 <a href="bookintro.html#exm:penguin">1.3</a> 的论证形式：</p>
 <blockquote>
 <ol style="list-style-type: decimal">
 <li>所有 <span class="math inline">\(S\)</span> 是 <span class="math inline">\(P\)</span>。</li>
@@ -359,7 +356,7 @@
 <li>所以，所有 <span class="math inline">\(Q\)</span> 都不是 <span class="math inline">\(P\)</span>。</li>
 </ol>
 </blockquote>
-<p>下列是例 <a href="bookintro.html#exm:sportman">1.3</a> 的论证形式：</p>
+<p>下列是例 <a href="bookintro.html#exm:sportman">1.4</a> 的论证形式：</p>
 <blockquote>
 <ol style="list-style-type: decimal">
 <li>所有 <span class="math inline">\(S\)</span> 是 <span class="math inline">\(P\)</span>。</li>
@@ -367,10 +364,10 @@
 <li>所以，所有 <span class="math inline">\(Q\)</span> 是 <span class="math inline">\(P\)</span>。</li>
 </ol>
 </blockquote>
-<p>不同的论说可以有相同的形式，而具有相同形式的论说称为这个论说形式的<b>特例</b>（instance）。例如，例 <a href="bookintro.html#exm:e-instance">1.6</a> 中有两个不同的论说，但它们的形式同是上列之形式，并且同是该形式之特例。</p>
+<p>不同的论说可以有相同的形式，而具有相同形式的论说称为这个论说形式的<b>特例</b>（instance）。例如，例 <a href="bookintro.html#exm:e-instance">1.7</a> 中有两个不同的论说，但它们的形式同是上列之形式，并且同是该形式之特例。</p>
 
 <div class="example">
-<p><span id="exm:e-instance" class="example"><strong>例 1.6  (论说形式之特例)  </strong></span>两个不同的论说具有相同之形式：<br></p>
+<p><span id="exm:e-instance" class="example"><strong>例 1.7  (论说形式之特例)  </strong></span>两个不同的论说具有相同之形式：<br></p>
 <ol style="list-style-type: decimal">
 <li>企鹅都是鸟。</li>
 <li>猴子都不是企鹅。</li>
@@ -389,23 +386,25 @@
 <h3><span class="header-section-number">1.1.3</span> 论说好坏取决于形式的好坏</h3>
 <p>一个论说的形式是好的（亦即它的形式没有反例），则称其为<b>好的论说</b>。一个论说的形式是坏的（亦即它的形式有反例），则称其为<b>坏的论说</b>。</p>
 <p>既然具体论说的好坏在于它的形式的好坏，那么就任何具体论说而言，它的（前提和）结论真不足以说明它好，而它的（前提和）结论假也不足以说明它坏——它的好坏在于同样形式的特例中有没有前提真而结论假的论说。由此可知，要说明一个论说是坏的论说，最直接的方法是去找一个与它形式相同且前提真而结论假的论说。</p>
-<p>我们来看如何说明一个论说是坏的论说。先考虑例 0.7 右侧的论说，易见它的前提都真而结论假；我们知道其形式是例 0.6 左列之形式，所以它是例 0.6 左列形式的反例。既然例 0.6 左列形式有反例，它就是坏的论说形式。现在来看例 0.2 中的论说，亦即例 0.7 左侧的论说，其形式也是例 0.6 左列之形式。我们现在知道例 0.6 左列形式是坏的论说形式，所以，例 0.2 中的论说是个坏的论说。我们来看另一个论说：</p>
-<blockquote>
-<p><b>例 0.8</b><br />
-1. 浩毕特都生活在沙伊鄂。
-1. 拜根斯都是浩毕特。
-1. 所以，拜根斯都生活在沙伊鄂。</p>
-</blockquote>
-<blockquote>
+<p>我们来看如何说明一个论说是坏的论说。先考虑例 <a href="bookintro.html#exm:e-instance">1.7</a> 下方的论说，易见它的前提都真而结论假；我们知道其形式是例 <a href="bookintro.html#exm:catmanform">1.6</a> 所列之形式，所以它是例 <a href="bookintro.html#exm:catmanform">1.6</a> 左列形式的反例。既然例 <a href="bookintro.html#exm:catmanform">1.6</a> 所列形式有反例，它就是坏的论说形式。现在来看例 <a href="bookintro.html#exm:penguin">1.3</a> 中的论说，亦即例 <a href="bookintro.html#exm:e-instance">1.7</a> 左侧的论说，其形式也是例 <a href="bookintro.html#exm:catmanform">1.6</a> 所列之形式。我们现在知道例 <a href="bookintro.html#exm:catmanform">1.6</a> 所列形式是坏的论说形式，所以，例 <a href="bookintro.html#exm:penguin">1.3</a> 中的论说是个坏的论说。</p>
+
+<div class="example">
+<p><span id="exm:formcont" class="example"><strong>例 1.8  (论说形式与内容)  </strong></span>我们来看另一个论说：<br></p>
+<ol style="list-style-type: decimal">
+<li>浩毕特都生活在沙伊鄂。</li>
+<li>拜根斯都是浩毕特。</li>
+<li>所以，拜根斯都生活在沙伊鄂。</li>
+</ol>
+<p>其论说形式为：</p>
 <ol style="list-style-type: decimal">
 <li>所有 <span class="math inline">\(S\)</span> 是 <span class="math inline">\(P\)</span>。</li>
 <li>所有 <span class="math inline">\(Q\)</span> 是 <span class="math inline">\(S\)</span>。</li>
-<li>所以，所有 <span class="math inline">\(Q\)</span> 是 <span class="math inline">\(P\)</span>。</li>
+<li>所以，所有 <span class="math inline">\(Q\)</span> 是 <span class="math inline">\(P\)</span>。
+</div></li>
 </ol>
-</blockquote>
-<p>在了解「浩毕特」「沙伊鄂」和「拜根斯」的意思之前，我们无法判断例 0.8 左列论证的前提或结论的真假。但是，我们知道其的形式是例 0.8 右列之形式。</p>
-<p>这个形式有下述特点：无论把什么类名词放在 S，P 或 Q 的位置上，都不会得到具有真前提和假结论的论说，即不会得到例 0.8 右列形式的反例。这就是说，例 0.8 右列之形式是好的论说形式。因为例 0.8 左列之形式是例 0.8 右列之形式的特例，所以它是个好的论说。</p>
-<p>然，说一个论说形式没有反例，并非仅仅是说没有找到它的反例，因为没找到反例不等于没有反例。例 0.8 右列之论说形式比较简单，容易看出它不会有反例；但是，一个好的论说形式可以很复杂，仅靠直观未必能说出它是否有反例。<b>这门课程的任务之一，就是学会判别好坏论说形式的若干方法</b>。</p>
+<p>在了解「浩毕特」「沙伊鄂」和「拜根斯」的意思之前，我们无法判断例 <a href="bookintro.html#exm:formcont">1.8</a> 论证的前提或结论的真假。但是，我们知道其形式。</p>
+<p>这个形式有下述特点：无论把什么类名词放在 S，P 或 Q 的位置上，都不会得到具有真前提和假结论的论说，即不会得到例 <a href="bookintro.html#exm:formcont">1.8</a> 所列形式的反例。这就是说，例 <a href="bookintro.html#exm:formcont">1.8</a> 所列之形式是好的论说形式。因为例 <a href="bookintro.html#exm:formcont">1.8</a> 所列之论说是例 <a href="bookintro.html#exm:formcont">1.8</a> 所列之形式的特例，所以它是个好的论说。</p>
+<p>然，说一个论说形式没有反例，并非仅仅是说没有找到它的反例，因为没找到反例不等于没有反例。例 <a href="bookintro.html#exm:formcont">1.8</a> 所列之论说形式比较简单，容易看出它不会有反例；但是，一个好的论说形式可以很复杂，仅靠直观未必能说出它是否有反例。<b>这门课程的任务之一，就是学会判别好坏论说形式的若干方法</b>。</p>
 <p>如果承认一个论说是好的，那么接受其前提就无法理性地拒绝其结论，从而否定其结论也就无法理性地坚持其前提；如果断定一个论说是坏的，那么接受其前提的同时可以拒绝其结论。用逻辑术语来说，如果一个论说是好的，那就意味着它的前提「逻辑蕴涵」（logically implies）它的结论（当代逻辑不仅讨论给定命题集合是否逻辑蕴涵某给定命题，它更要突破具体命题和具体命题集合的限制，把逻辑蕴涵关系作为对象来讨论。），或者说结论是前提的「逻辑后承」（logical consequence）；如果一个论说是坏的，那就意味着它的前提和结论之间没有逻辑蕴涵关系，亦即结论不是前提的逻辑后承。我们将在第一编中讨论逻辑蕴涵的一种简单形式——重言蕴涵（重言后承），而在第三编中讨论逻辑蕴涵（逻辑后承）。</p>
 </div>
 </div>

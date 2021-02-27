@@ -1,9 +1,11 @@
 exm:baby00
+exm:baby01
 exm:penguin
 exm:sportman
 exm:catman
 exm:catmanform
 exm:e-instance
+exm:form-cont
 bookintro
 论说
 论说的好坏
@@ -95,3 +97,4 @@ chap-truth-table
 slideshow-summary
 our-buggy-moral-code
 relativism
+exm:formcont
