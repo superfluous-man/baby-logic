@@ -439,8 +439,9 @@ img[alt="Philosophical Ethics book cover"]{
 
 /* 編號列表樣式 */
 ol {
-  margin-top: -0.5em;
+ /* margin-top: -1.5em; */
   display:block;
+  font-family: 'Noto Serif TC', 'Noto Serif SC', "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "Microsoft YaHei", "微软雅黑", sans-serif;
 }
 
 ol li::marker {
