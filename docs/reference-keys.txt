@@ -141,3 +141,4 @@ our-buggy-moral-code
 relativism
 cnj:prob0110
 exm:exmtuple
+thm:thmrussell
