@@ -24,7 +24,7 @@
 <meta name="author" content="Lǐ Èrgǒu" />
 
 
-<meta name="date" content="2021-02-27" />
+<meta name="date" content="2021-02-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -241,156 +241,176 @@
             <section class="normal" id="section-">
 <div id="prechap" class="section level1" number="2">
 <h1><span class="header-section-number"> 2</span> 预备章节</h1>
-<div class="centerpic">
 <p><img src="img/tenniel-tweedle-dee-dum.jpg" alt="illustration" style="width:50.0%" /></p>
-<div class="centercap">
-<p>John Tenniel, “Alice meets Tweedle Dee and Tweedle Dum”</p>
-</div>
-</div>
-<div class="epigraph">
-<p>‘Contrariwise,’ continued Tweedledee, ‘if it was so, it might be; and if it were so, it would be; but as it isn’t, it ain’t. That’s logic.’<br />
-<br />
-—Lewis Carroll, Through the Looking Glass</p>
-</div>
+<p><enq>天下万物生于有，有生于<strong>无</strong>。……<strong>道</strong>生一，一生二，二生三，三生<strong>万物</strong>。万物负阴而抱阳，冲气以为和。<cite>《道德经》第四十章、四十二章</cite></enq></p>
 <div id="集合属性元素外延" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> 集合：属性、元素、外延</h2>
 <div id="extensionality" class="section level3" number="2.1.1">
 <h3><span class="header-section-number">2.1.1</span> Extensionality</h3>
-<p>A <bb>set</bb> is a collection of objects, considered {as} a single object. The objects making up the set are called <bb>elements</bb> or <bb>members</bb> of the set. If <span class="math inline">\(x\)</span> is an <bb>element</bb> of a set <span class="math inline">\(a\)</span>, we write <span class="math inline">\(x \in a\)</span>; if not, we write <span class="math inline">\(x \notin a\)</span>. The set which has no <bb>element</bb>s is called the <bb>empty</bb> set and denoted "<span class="math inline">\(\varnothing\)</span>’’.</p>
+<p>A <bb>set</bb> is a collection of objects, considered <strong>as</strong> a single object. The objects making up the set are called <bb>elements</bb> or <bb>members</bb> of the set. If <span class="math inline">\(x\)</span> is an <bb>element</bb> of a set <span class="math inline">\(a\)</span>, we write <span class="math inline">\(x \in a\)</span>; if not, we write <span class="math inline">\(x \notin a\)</span>. The set which has no <bb>element</bb>s is called the <bb>empty</bb> set and denoted "<span class="math inline">\(\varnothing\)</span>’’.</p>
 <p>It does not matter how we <bb>specify</bb> the set, or how we <bb>order</bb> its <bb>element</bb>s, or indeed how <bb>many times</bb> we count its <bb>element</bb>s. All that matters are what its <bb>element</bb>s are. We codify this in the following principle.</p>
-<p>{{% dtpc title=“☯定義 1.0【Extensionality】” %}}
-If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are sets, then <span class="math inline">\(A = B\)</span> iff every <bb>element</bb> of <span class="math inline">\(A\)</span> is also an <bb>element</bb> of <span class="math inline">\(B\)</span>, and vice versa.
-{{% /dtpc %}}</p>
+
+<div class="definition">
+<span id="def:defSetEx" class="definition"><strong>定义 2.1  (Extensionality)  </strong></span>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are sets, then <span class="math inline">\(A = B\)</span> iff every <bb>element</bb> of <span class="math inline">\(A\)</span> is also an <bb>element</bb> of <span class="math inline">\(B\)</span>, and vice versa.
+</div>
 <p>Extensionality licenses some notation. In general, when we have some objects <span class="math inline">\(a_{1}, \cdots, a_{n}\)</span>, then <span class="math inline">\(\lbrace a_{1}, \cdots, a_{n}\rbrace\)</span> is <bb>the</bb> set whose <bb>element</bb>s are <span class="math inline">\(a_1, \ldots, a_n\)</span>. We emphasise the word "<bb>the</bb>’’, since extensionality tells us that there can be only <bb>one</bb> such set. Indeed, extensionality also licenses the following:</p>
 <p><span class="math display">\[\lbrace a, a, b \rbrace = \lbrace a, b \rbrace = \lbrace b,a \rbrace. \]</span></p>
 <p>This delivers on the point that, when we consider sets, we don’t care about the order of their <bb>element</bb>s, or how many times they are specified.</p>
-<p>{{% dtpcex title=“☯例 1.0” %}}
-Whenever you have a bunch of objects, you can collect them together in a set. The set of Richard’s siblings, for instance, is a set that contains one person, and we could write it as <span class="math inline">\(S =\lbrace \text{Ruth}\rbrace\)</span>. The set of positive integers less than <span class="math inline">\(4\)</span> is <span class="math inline">\(\lbrace 1, 2, 3 \rbrace\)</span>, but it can also be written as <span class="math inline">\(\lbrace 3, 2, 1\rbrace\)</span> or even as <span class="math inline">\(\lbrace 1, 2, 1, 2, 3\rbrace\)</span>. These are all the same set, by extensionality. For every <bb>element</bb> of <span class="math inline">\(\lbrace 1, 2, 3 \rbrace\)</span> is also an <bb>element</bb> of <span class="math inline">\(\lbrace3, 2, 1 \rbrace\)</span> (and of <span class="math inline">\(\lbrace 1, 2, 1, 2, 3\rbrace\)</span>), and vice versa.
-{{% /dtpcex %}}</p>
+
+<div class="example">
+<span id="exm:exmSetDef" class="example"><strong>例 2.1  (bunch of objects)  </strong></span>Whenever you have a bunch of objects, you can collect them together in a set. The set of Richard’s siblings, for instance, is a set that contains one person, and we could write it as <span class="math inline">\(S =\lbrace \text{Ruth}\rbrace\)</span>. The set of positive integers less than <span class="math inline">\(4\)</span> is <span class="math inline">\(\lbrace 1, 2, 3 \rbrace\)</span>, but it can also be written as <span class="math inline">\(\lbrace 3, 2, 1\rbrace\)</span> or even as <span class="math inline">\(\lbrace 1, 2, 1, 2, 3\rbrace\)</span>. These are all the same set, by extensionality. For every <bb>element</bb> of <span class="math inline">\(\lbrace 1, 2, 3 \rbrace\)</span> is also an <bb>element</bb> of <span class="math inline">\(\lbrace3, 2, 1 \rbrace\)</span> (and of <span class="math inline">\(\lbrace 1, 2, 1, 2, 3\rbrace\)</span>), and vice versa.
+</div>
 <p>Frequently we’ll specify a set by some property that its <bb>element</bb>s share. We’ll use the following shorthand notation for that: {<span class="math inline">\(x: \varphi(x)\)</span>}, where the <span class="math inline">\(\varphi(x)\)</span> stands for the property that <span class="math inline">\(x\)</span> has to have in order to be counted among the <bb>element</bb>s of the set.</p>
-<p>{{% dtpcex title=“☯例 1.1” %}}
-In our example, we could have specified <span class="math inline">\(S\)</span> also as <span class="math display">\[S = \lbrace x: x  \text{ is a sibling of Richard}\rbrace.\]</span>
-{{% /dtpcex %}}</p>
-<p>{{% dtpcex title=“☯例 1.2” %}}
-A number is called <bb>perfect</bb> iff it is equal to the sum of its proper divisors (i.e., numbers that evenly divide it but aren’t identical to the number). For instance, <span class="math inline">\(6\)</span> is perfect because its proper divisors are <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, and <span class="math inline">\(3\)</span>, and <span class="math inline">\(6 = 1 + 2 + 3\)</span>. In fact, <span class="math inline">\(6\)</span> is the only positive integer less than <span class="math inline">\(10\)</span> that is perfect. So, using extensionality, we can say:
+
+<div class="example">
+<p><span id="exm:exmSetproperty" class="example"><strong>例 2.2  (property)  </strong></span>In our example, we could have specified <span class="math inline">\(S\)</span> also as <span class="math display">\[S = \lbrace x: x  \text{ is a sibling of Richard}\rbrace.\]</span></p>
+</div>
+
+<div class="example">
+<span id="exm:exmSetperfect" class="example"><strong>例 2.3  (perfect number)  </strong></span>A number is called <bb>perfect</bb> iff it is equal to the sum of its proper divisors (i.e., numbers that evenly divide it but aren’t identical to the number). For instance, <span class="math inline">\(6\)</span> is perfect because its proper divisors are <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, and <span class="math inline">\(3\)</span>, and <span class="math inline">\(6 = 1 + 2 + 3\)</span>. In fact, <span class="math inline">\(6\)</span> is the only positive integer less than <span class="math inline">\(10\)</span> that is perfect. So, using extensionality, we can say:
 <span class="math display">\[\lbrace 6 \rbrace = \lbrace x:  \text{is perfect and } 0 \leqslant x \leqslant 10 \rbrace.\]</span>
-{{% /dtpcex %}}</p>
+</div>
 <p>We read the notation on the right as "the set of <span class="math inline">\(x\)</span>’s such that <span class="math inline">\(x\)</span> is perfect and <span class="math inline">\(0 \leqslant x \leqslant 10\)</span>’’. The identity here confirms that, when we consider sets, we don’t care about how they are specified. And, more generally, extensionality guarantees that there is always only one set of <span class="math inline">\(x\)</span>’s such that <span class="math inline">\(\varphi(x)\)</span>. So, extensionality justifies calling <span class="math inline">\(\lbrace x: \varphi(x)\rbrace\)</span> <bb>the</bb> set of <span class="math inline">\(x\)</span>’s such that <span class="math inline">\(\varphi(x)\)</span>.</p>
 <p>Extensionality gives us a way for showing that sets are identical: to show that <span class="math inline">\(A = B\)</span>, show that whenever <span class="math inline">\(x \in A\)</span> then also <span class="math inline">\(x \in B\)</span>, and whenever <span class="math inline">\(y \in B\)</span> then also <span class="math inline">\(y \in A\)</span>.</p>
-<blockquote>
-<p><bb>Problem 1.0</bb>
-Prove that there is at most one empty set, i.e., show that if <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are sets without <bb>element</bb>s, then <span class="math inline">\(A = B\)</span>.</p>
-</blockquote>
+
+<div class="conjecture">
+<span id="cnj:prob0101" class="conjecture"><strong>问题 2.1  </strong></span>Prove that there is at most one empty set, i.e., show that if <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are sets without <bb>element</bb>s, then <span class="math inline">\(A = B\)</span>.
+</div>
 </div>
 <div id="subsets-and-power-sets" class="section level3" number="2.1.2">
 <h3><span class="header-section-number">2.1.2</span> Subsets and Power Sets</h3>
 <p>We will often want to compare sets. And one obvious kind of comparison one might make is as follows: <bb>everything in one set is in the other too</bb>. This situation is sufficiently important for us to introduce some new notation.</p>
-<p>{{% dtpc title=“☯定義 1.1【Subset】” %}}
-If every <bb>element</bb> of a set <span class="math inline">\(A\)</span> is also an <bb>element</bb> of <span class="math inline">\(B\)</span>, then we say that <span class="math inline">\(A\)</span> is a <bb>subset</bb> of <span class="math inline">\(B\)</span>, and write <span class="math inline">\(A \subseteq B\)</span>. If <span class="math inline">\(A\)</span> is not a subset of <span class="math inline">\(B\)</span> we write <span class="math inline">\(A \not\subseteq B\)</span>. If <span class="math inline">\(A \subseteq B\)</span> but <span class="math inline">\(A \neq B\)</span>, we write <span class="math inline">\(A \subsetneq B\)</span> and say that <span class="math inline">\(A\)</span> is a <bb>proper subset</bb> of <span class="math inline">\(B\)</span>.
-{{% /dtpc %}}</p>
-<p>{{% dtpcex title=“☯例 1.3” %}}
-Every set is a subset of itself, and <span class="math inline">\(\varnothing\)</span> is a subset of every set. The set of even numbers is a subset of the set of natural numbers. Also, <span class="math inline">\(\lbrace a, b \rbrace \subseteq \lbrace a, b, c \rbrace\)</span>. But <span class="math inline">\(\lbrace a, b, e\rbrace\)</span> is not a subset of <span class="math inline">\(\lbrace a, b, c \rbrace\)</span>.
-{{% /dtpcex %}}</p>
-<p>{{% dtpcex title=“☯例 1.4” %}}
-The number <span class="math inline">\(2\)</span> is an <bb>element</bb> of the set of integers, whereas the set of even numbers is a subset of the set of integers. However, a set may happen to <bb>both</bb> be an <bb>element</bb> and a subset of some other set, e.g., <span class="math inline">\(\lbrace 0\rbrace \in \lbrace 0, \lbrace 0 \rbrace\rbrace\)</span> and also <span class="math inline">\(\lbrace 0\rbrace \subseteq \lbrace 0, \lbrace 0\rbrace\rbrace\)</span>.
-{{% /dtpcex %}}</p>
+
+<div class="definition">
+<span id="def:defSubset" class="definition"><strong>定义 2.2  (Subset)  </strong></span>If every <bb>element</bb> of a set <span class="math inline">\(A\)</span> is also an <bb>element</bb> of <span class="math inline">\(B\)</span>, then we say that <span class="math inline">\(A\)</span> is a <bb>subset</bb> of <span class="math inline">\(B\)</span>, and write <span class="math inline">\(A \subseteq B\)</span>. If <span class="math inline">\(A\)</span> is not a subset of <span class="math inline">\(B\)</span> we write <span class="math inline">\(A \not\subseteq B\)</span>. If <span class="math inline">\(A \subseteq B\)</span> but <span class="math inline">\(A \neq B\)</span>, we write <span class="math inline">\(A \subsetneq B\)</span> and say that <span class="math inline">\(A\)</span> is a <bb>proper subset</bb> of <span class="math inline">\(B\)</span>.
+</div>
+
+<div class="example">
+<span id="exm:exmSubset01" class="example"><strong>例 2.4  </strong></span>Every set is a subset of itself, and <span class="math inline">\(\varnothing\)</span> is a subset of every set. The set of even numbers is a subset of the set of natural numbers. Also, <span class="math inline">\(\lbrace a, b \rbrace \subseteq \lbrace a, b, c \rbrace\)</span>. But <span class="math inline">\(\lbrace a, b, e\rbrace\)</span> is not a subset of <span class="math inline">\(\lbrace a, b, c \rbrace\)</span>.
+</div>
+
+<div class="example">
+<span id="exm:exmSubset02" class="example"><strong>例 2.5  </strong></span>The number <span class="math inline">\(2\)</span> is an <bb>element</bb> of the set of integers, whereas the set of even numbers is a subset of the set of integers. However, a set may happen to <bb>both</bb> be an <bb>element</bb> and a subset of some other set, e.g., <span class="math inline">\(\lbrace 0\rbrace \in \lbrace 0, \lbrace 0 \rbrace\rbrace\)</span> and also <span class="math inline">\(\lbrace 0\rbrace \subseteq \lbrace 0, \lbrace 0\rbrace\rbrace\)</span>.
+</div>
 <p>Extensionality gives a criterion of identity for sets: <span class="math inline">\(A = B\)</span> iff every <bb>element</bb> of <span class="math inline">\(A\)</span> is also an <bb>element</bb> of <span class="math inline">\(B\)</span> and vice versa. The definition of “subset’’ defines <span class="math inline">\(A \subseteq B\)</span> precisely as the first half of this criterion: every <bb>element</bb> of <span class="math inline">\(A\)</span> is also an <bb>element</bb> of <span class="math inline">\(B\)</span>. Of course the definition also applies if we switch <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>: that is, <span class="math inline">\(B \subseteq A\)</span> iff every <bb>element</bb> of <span class="math inline">\(B\)</span> is also an <bb>element</bb> of <span class="math inline">\(A\)</span>. And that, in turn, is exactly the”vice versa’’ part of extensionality. In other words, extensionality entails that sets are equal iff they are subsets of one another.</p>
-<p>{{% dtpc title=“☯命題 1.0” %}}
-<span class="math inline">\(A = B\)</span> iff both <span class="math inline">\(A \subseteq B\)</span> and <span class="math inline">\(B \subseteq A\)</span>.
-{{% /dtpc %}}</p>
+
+<div class="proposition">
+<span id="prp:prpSubset01" class="proposition"><strong>命题 2.1  </strong></span><span class="math inline">\(A = B\)</span> iff both <span class="math inline">\(A \subseteq B\)</span> and <span class="math inline">\(B \subseteq A\)</span>.
+</div>
 <p>Now is also a good opportunity to introduce some further bits of helpful notation. In defining when <span class="math inline">\(A\)</span> is a subset of <span class="math inline">\(B\)</span> we said that “every <bb>element</bb> of <span class="math inline">\(A\)</span> is <span class="math inline">\(\cdots\)</span>,’’ and filled the”<span class="math inline">\(\cdots\)</span>’’ with "an <bb>element</bb> of <span class="math inline">\(B\)</span>’’. But this is such a common <bb>shape</bb> of expression that it will be helpful to introduce some formal notation for it.</p>
-<p>{{% dtpc title=“☯定義 1.2” %}}
-<span class="math inline">\((\forall x \in A) \varphi\)</span> abbreviates <span class="math inline">\(\forall x(x \in A \rightarrow \varphi)\)</span>. Similarly, <span class="math inline">\((\exists x \in A)\varphi\)</span> abbreviates <span class="math inline">\(\exists x(x \in A \land \varphi)\)</span>.
-{{% /dtpc %}}</p>
+
+<div class="definition">
+<span id="def:defSubsetabbr" class="definition"><strong>定义 2.3  </strong></span><span class="math inline">\((\forall x \in A) \varphi\)</span> <strong>abbreviates</strong> <span class="math inline">\(\forall x(x \in A \rightarrow \varphi)\)</span>. Similarly, <span class="math inline">\((\exists x \in A)\varphi\)</span> abbreviates <span class="math inline">\(\exists x(x \in A \land \varphi)\)</span>.
+</div>
 <p>Using this notation, we can say that <span class="math inline">\(A \subseteq B\)</span> iff <span class="math inline">\((\forall x \in A)x \in B\)</span>.</p>
 <p>Now we move on to considering a certain kind of set: the set of all subsets of a given set.</p>
-<p>{{% dtpc title=“☯定義 1.3【Power Set】” %}}
-The set consisting of all subsets of a set <span class="math inline">\(A\)</span> is called the <bb>power set of</bb> <span class="math inline">\(A,\)</span> written <span class="math inline">\(\mathscr{P}(A)\)</span>. <span class="math display">\[\mathscr{P}(A) =\lbrace B: B \subseteq A \rbrace\]</span>
-{{% /dtpc %}}</p>
-<p>{{% dtpcex title=“☯例 1.5” %}}
-What are all the possible subsets of <span class="math inline">\(\lbrace a, b, c \rbrace\)</span>? They are: <span class="math inline">\(\varnothing\)</span>, <span class="math inline">\(\lbrace a\rbrace\)</span>, <span class="math inline">\(\lbrace b\rbrace\)</span>, <span class="math inline">\(\lbrace c\rbrace\)</span>, <span class="math inline">\(\lbrace a, b\rbrace\)</span>, <span class="math inline">\(\lbrace a, c\rbrace\)</span>, <span class="math inline">\(\lbrace b, c\rbrace\)</span>, <span class="math inline">\(\lbrace a, b, c\rbrace\)</span>. The set of all these subsets is <span class="math inline">\(\mathscr{P}(\lbrace a,b,c)\rbrace\)</span>:
+
+<div class="definition">
+<span id="def:defPowset" class="definition"><strong>定义 2.4  (power set)  </strong></span>The set consisting of all subsets of a set <span class="math inline">\(A\)</span> is called the <bb>power set of</bb> <span class="math inline">\(A,\)</span> written <span class="math inline">\(\mathscr{P}(A)\)</span>. <span class="math display">\[\mathscr{P}(A) =\lbrace B: B \subseteq A \rbrace\]</span>
+</div>
+
+<div class="example">
+<span id="exm:exmPowset01" class="example"><strong>例 2.6  </strong></span>What are all the possible subsets of <span class="math inline">\(\lbrace a, b, c \rbrace\)</span>? They are: <span class="math inline">\(\varnothing\)</span>, <span class="math inline">\(\lbrace a\rbrace\)</span>, <span class="math inline">\(\lbrace b\rbrace\)</span>, <span class="math inline">\(\lbrace c\rbrace\)</span>, <span class="math inline">\(\lbrace a, b\rbrace\)</span>, <span class="math inline">\(\lbrace a, c\rbrace\)</span>, <span class="math inline">\(\lbrace b, c\rbrace\)</span>, <span class="math inline">\(\lbrace a, b, c\rbrace\)</span>. The set of all these subsets is <span class="math inline">\(\mathscr{P}(\lbrace a,b,c)\rbrace\)</span>:
 <span class="math display">\[\mathscr{P}(\lbrace a, b, c \rbrace) = \lbrace\varnothing, \lbrace a \rbrace, \lbrace b\rbrace, \lbrace c\rbrace, \lbrace a, b\rbrace, \lbrace b, c\rbrace, \lbrace a, c\rbrace, \lbrace a, b, c\rbrace\rbrace\]</span>
-{{% /dtpcex %}}</p>
-<blockquote>
-<p><bb>Problem 1.1</bb> List all subsets of <span class="math inline">\(\lbrace a, b, c, d\rbrace\)</span>.</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.2</bb> Show that if <span class="math inline">\(A\)</span> has <span class="math inline">\(n\)</span> <bb>element</bb>s, then <span class="math inline">\(\mathscr{P}(A)\)</span> has <span class="math inline">\(2^n\)</span> <bb>element</bb>s.</p>
-</blockquote>
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0102" class="conjecture"><strong>问题 2.2  </strong></span>List all subsets of <span class="math inline">\(\lbrace a, b, c, d\rbrace\)</span>.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0103" class="conjecture"><strong>问题 2.3  </strong></span>Show that if <span class="math inline">\(A\)</span> has <span class="math inline">\(n\)</span> <bb>element</bb>s, then <span class="math inline">\(\mathscr{P}(A)\)</span> has <span class="math inline">\(2^n\)</span> <bb>element</bb>s.
+</div>
 </div>
 <div id="some-important-sets" class="section level3" number="2.1.3">
 <h3><span class="header-section-number">2.1.3</span> Some Important Sets</h3>
-<p>{{% dtpcex title=“☯例 1.6” %}}
-We will mostly be dealing with sets whose <bb>element</bb>s are mathematical objects. Four such sets are important enough to have specific names:<br />
-&gt; 1. <span class="math inline">\(\mathbb{N} = \lbrace 0, 1, 2, 3, \cdots\rbrace\)</span> ➠ the set of natural numbers
-&gt; 1. <span class="math inline">\(\mathbb{Z} = \lbrace \cdots, -2, -1, 0, 1, 2, \cdots\rbrace\)</span> ➠ the set of integers
-&gt; 1. <span class="math inline">\(\mathbb{Q} = \lbrace \frac{m}{n}: m, n \in \mathbb{Z} \text{ and }n \neq 0\rbrace\)</span> ➠ the set of rationals
-&gt; 1. <span class="math inline">\(\mathbb{R} = \lbrace (-\infty, \infty)\rbrace\)</span> ➠ the set of real numbers (the continuum)
-These are all <bb>infinite</bb> sets, that is, they each have infinitely many <bb>element</bb>s.</p>
+
+<div class="example">
+<p><span id="exm:exmImpSet01" class="example"><strong>例 2.7  (Some Important Sets)  </strong></span>We will mostly be dealing with sets whose <bb>element</bb>s are mathematical objects. Four such sets are important enough to have specific names:</p>
+<blockquote>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\mathbb{N} = \lbrace 0, 1, 2, 3, \cdots\rbrace\)</span> ➠ the set of natural numbers</li>
+<li><span class="math inline">\(\mathbb{Z} = \lbrace \cdots, -2, -1, 0, 1, 2, \cdots\rbrace\)</span> ➠ the set of integers</li>
+<li><span class="math inline">\(\mathbb{Q} = \lbrace \frac{m}{n}: m, n \in \mathbb{Z} \text{ and }n \neq 0\rbrace\)</span> ➠ the set of rationals</li>
+<li><span class="math inline">\(\mathbb{R} = \lbrace (-\infty, \infty)\rbrace\)</span> ➠ the set of real numbers (the continuum)</li>
+</ol>
+</blockquote>
+<p>These are all <bb>infinite</bb> sets, that is, they each have infinitely many <bb>element</bb>s.</p>
 <p>As we move through these sets, we are adding <bb>more</bb> numbers to our stock. Indeed, it should be clear that <span class="math inline">\(\mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R}\)</span>: after all, every natural number is an integer; every integer is a rational; and every rational is a real. Equally, it should be clear that <span class="math inline">\(\mathbb{N} \subsetneq \mathbb{Z} \subsetneq \mathbb{Q}\)</span>, since <span class="math inline">\(-1\)</span> is an integer but not a natural number, and <span class="math inline">\(\frac{1}{2}\)</span> is rational but not integer. It is less obvious that <span class="math inline">\(\mathbb{Q} \subsetneq \mathbb{R}\)</span>, i.e., that there are some real numbers which are not rational.</p>
-<p>We’ll sometimes also use the set of positive integers $^{+} = , 2, 3, $ and the set containing just the first two natural numbers $ = , 1$.
-{{% /dtpcex %}}</p>
-<p>{{% dtpcex title=“☯例 1.7【Strings】” %}}
-Another interesting example is the set <span class="math inline">\({A}^{*}\)</span> of <bb>finite strings</bb> over an alphabet <span class="math inline">\(A\)</span>: any finite sequence of elements of <span class="math inline">\(A\)</span> is a string over <span class="math inline">\(A\)</span>. We include the <bb>empty string <span class="math inline">\(\Lambda\)</span></bb> among the strings over <span class="math inline">\(A\)</span>, for every alphabet <span class="math inline">\(A\)</span>. For instance,</p>
+We’ll sometimes also use the set of positive integers <span class="math inline">\(\mathbb{Z}^{+} = \lbrace 1, 2, 3, \cdots\rbrace\)</span> and the set containing just the first two natural numbers <span class="math inline">\(\mathbb{B} = \lbrace 0, 1\rbrace\)</span>.
+</div>
+
+<div class="example">
+<p><span id="exm:exmImpSet02" class="example"><strong>例 2.8  (Strings)  </strong></span>Another interesting example is the set <span class="math inline">\({A}^{*}\)</span> of <bb>finite strings</bb> over an alphabet <span class="math inline">\(A\)</span>: any finite sequence of elements of <span class="math inline">\(A\)</span> is a string over <span class="math inline">\(A\)</span>. We include the <bb>empty string <span class="math inline">\(\Lambda\)</span></bb> among the strings over <span class="math inline">\(A\)</span>, for every alphabet <span class="math inline">\(A\)</span>. For instance,</p>
 <p><span class="math display">\[\mathbb{B}^*=\lbrace \Lambda,0,1,00,01,10,11,000,001,010,011,100,101,110,111,0000,\cdots\rbrace .\]</span></p>
-<p>If <span class="math inline">\(x=x_{1}\ldots x_{n}\in A^{*}\)</span> is a string consisting of <span class="math inline">\(n\)</span> "letters’’ from <span class="math inline">\(A\)</span>, then we say <bb>length</bb> of the string is <span class="math inline">\(n\)</span> and write <span class="math inline">\(\text{len } {x}=n\)</span>.
-{{% /dtpcex %}}</p>
-<p>{{% dtpcex title=“☯例 1.8【Infinite sequences】” %}}
-For any set <span class="math inline">\(A\)</span> we may also consider the set <span class="math inline">\(A^\omega\)</span> of infinite sequences of <bb>element</bb>s of <span class="math inline">\(A\)</span>. An infinite sequence <span class="math inline">\(a_1a_2a_3a_4\cdots\)</span> consists of a one-way infinite list of objects, each one of which is an <bb>element</bb> of <span class="math inline">\(A\)</span>.
-{{% /dtpcex %}}</p>
+If <span class="math inline">\(x=x_{1}\ldots x_{n}\in A^{*}\)</span> is a string consisting of <span class="math inline">\(n\)</span> "letters’’ from <span class="math inline">\(A\)</span>, then we say <bb>length</bb> of the string is <span class="math inline">\(n\)</span> and write <span class="math inline">\(\text{len } {x}=n\)</span>.
+</div>
+
+<div class="example">
+<span id="exm:exmImpSet03" class="example"><strong>例 2.9  (Infinite sequences)  </strong></span>For any set <span class="math inline">\(A\)</span> we may also consider the set <span class="math inline">\(A^\omega\)</span> of infinite sequences of <bb>element</bb>s of <span class="math inline">\(A\)</span>. An infinite sequence <span class="math inline">\(a_1a_2a_3a_4\cdots\)</span> consists of a one-way infinite list of objects, each one of which is an <bb>element</bb> of <span class="math inline">\(A\)</span>.
+</div>
 </div>
 <div id="unions-and-intersections" class="section level3" number="2.1.4">
 <h3><span class="header-section-number">2.1.4</span> Unions and Intersections</h3>
-<p>We introduced definitions of sets by abstraction, i.e., definitions of the form $x: (x)$. Here, we invoke some property <span class="math inline">\(\phi\)</span>, and this property can mention sets we’ve already defined. So for instance, if <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are sets, the set $x: x A x B$ consists of all those objects which are <bb>element</bb>s of either <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span>, i.e., it’s the set that combines the <bb>element</bb>s of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>. We can visualize this as in Figure 1.0, where the highlighted area indicates the bb&gt;element</bb>s of the two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> together.</p>
-<div class="figure">
-<img src="https://i.loli.net/2020/09/03/P9lOKLIcT3GSix5.png" alt="" />
-<p class="caption">unionofsets</p>
-</div>
-<p>This operation on sets—combining them—is very useful and common, and so we give it a formal name and a symbol.</p>
-<p>{{% dtpc title=“☯定義 1.4【Union】” %}}
-The <bb>union</bb> of two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \cup B\)</span>, is the set of all things which are <bb>element</bb>s of <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, or both.
-<span class="math display">\[A \cup B = \lbrace x: x \in A \lor x \in B\rbrace \]</span>
-{{% /dtpc %}}</p>
-<p>{{% dtpcex title=“☯例 1.9” %}}
-Since the multiplicity of <bb>element</bb>s doesn’t matter, the union of two sets which have an element in common contains that <bb>element</bb> only once, e.g., $a, b, ca, 0, 1= a, b, c, 0, 1$. The union of a set and one of its subsets is just the bigger set: $a, b, c a = a, b, c$. The union of a set with the empty set is identical to the set: $a, b, c = a, b, c $.
-{{% /dtpcex %}}</p>
-<blockquote>
-<p><bb>Problem 1.3</bb>
-Prove that if <span class="math inline">\(A \subseteq B\)</span>, then <span class="math inline">\(A \cup B = B\)</span>.</p>
-</blockquote>
-<p>We can also consider a "dual’’ operation to union. This is the operation that forms the set of all <bb>element</bb>s that are <bb>element</bb>s of <span class="math inline">\(A\)</span> and are also <bb>element</bb>s of <span class="math inline">\(B\)</span>. This operation is called <bb>intersection</bb>, and can be depicted as in Figure 1.1.</p>
-<div class="figure">
-<img src="https://i.loli.net/2020/09/03/Fi7BoED2vNAHXkz.png" alt="" />
-<p class="caption">intersectionofsets</p>
-</div>
-<p>{{% dtpc title=“☯定義 1.5【Intersection】” %}}
-The <bb>intersection</bb> of two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \cap B\)</span>, is the set of all things which are <bb>element</bb>s of both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>.
-<span class="math display">\[A \cap B = \lbrace x: x \in A \land x \in B\rbrace \]</span> Two sets are called <bb>disjoint</bb> if their intersection is empty. This means they have no <bb>element</bb>s in common.
-{{% /dtpc %}}</p>
-<p>{{% dtpcex title=“☯例 1.10” %}}
-If two sets have no <bb>element</bb>s in common, their intersection is empty: <span class="math inline">\(\lbrace a, b, c\rbrace \cap \lbrace 0, 1\rbrace = \varnothing\)</span>. If two sets do have <bb>element</bb>s in common, their intersection is the set of all those: $a, b, c a, b, d = a, b$. The intersection of a set with one of its subsets is just the smaller set: $a, b, ca, b= a, b$. The intersection of any set with the empty set is empty: <span class="math inline">\(\lbrace a, b, c \rbrace \cap \varnothing = \varnothing\)</span>.
-{{% /dtpcex %}}</p>
-<blockquote>
-<p><bb>Problem 1.4</bb>
-Prove rigorously that if <span class="math inline">\(A \subseteq B\)</span>, then <span class="math inline">\(A \cap B = A\)</span>.</p>
-</blockquote>
-<p>We can also form the union or intersection of more than two sets. An elegant way of dealing with this in general is the following: suppose you collect all the sets you want to form the union (or intersection) of into a single set. Then we can define the union of all our original sets as the set of all objects which belong to at least one <bb>element</bb> of the set, and the intersection as the set of all objects which belong to every <bb>element</bb> of the set.</p>
-<p>{{% dtpc title=“☯定義 1.6” %}}
-If <span class="math inline">\(A\)</span> is a set of sets, then <span class="math inline">\(\bigcup A\)</span> is the set of <bb>element</bb>s of <bb>element</bb>s of <span class="math inline">\(A\)</span>:</p>
-<p>
-<span class="math display">\[
-    \begin{aligned}
-    \bigcup A &amp; = \{x: x \text{ belongs to an element of } A\},
-    \text{ i.e.,}\\
-    &amp; = \{x: \text{there is a } B \in A
-        \text{ so that } x \in B\}
-    \end{aligned}
-    \]</span>
+<p>We introduced definitions of sets by abstraction, i.e., definitions of the form <span class="math inline">\(\lbrace x: \phi(x)\rbrace\)</span>. Here, we invoke some property <span class="math inline">\(\varphi\)</span>, and this property can mention sets we’ve already defined. So for instance, if <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are sets, the set <span class="math inline">\(\lbrace x: x \in A \lor x \in B\rbrace\)</span> consists of all those objects which are <bb>element</bb>s of either <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span>, i.e., it’s the set that combines the <bb>element</bb>s of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>. We can visualize this as in Figure <a href="prechap.html#fig:setunion">2.1</a>, where the highlighted area indicates the bb&gt;element</bb>s of the two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> together.</p>
+<div class="figure"><span id="fig:setunion"></span>
+<img src="figs/SetUnion.png" alt="Sets Union" width="70%" />
+<p class="caption">
+图 2.1: Sets Union
 </p>
-<p>{{% /dtpc %}}</p>
-<p>{{% dtpc title=“☯定義 1.7” %}}
-If <span class="math inline">\(A\)</span> is a set of sets, then <span class="math inline">\(\bigcap A\)</span> is the set of objects which all elements of <span class="math inline">\(A\)</span> have in common:</p>
-<p>
+</div>
+This operation on sets—combining them—is very useful and common, and so we give it a formal name and a symbol.
+
+<div class="definition">
+<span id="def:defSetUnion" class="definition"><strong>定义 2.5  (Union)  </strong></span>The <bb>union</bb> of two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \cup B\)</span>, is the set of all things which are <bb>element</bb>s of <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, or both.
+<span class="math display">\[A \cup B = \lbrace x: x \in A \lor x \in B\rbrace\]</span>
+</div>
+
+<div class="example">
+<span id="exm:exmSetUI01" class="example"><strong>例 2.10  </strong></span>Since the multiplicity of <bb>element</bb>s doesn’t matter, the union of two sets which have an element in common contains that <bb>element</bb> only once, e.g., <span class="math inline">\(\lbrace a, b, c\rbrace \cup \lbrace a, 0, 1\rbrace = \lbrace a, b, c, 0, 1\rbrace\)</span>. The union of a set and one of its subsets is just the bigger set: <span class="math inline">\(\lbrace a, b, c \rbrace \cup \lbrace a \rbrace = \lbrace a, b, c\rbrace\)</span>. The union of a set with the empty set is identical to the set: <span class="math inline">\(\lbrace a, b, c \rbrace \cup \varnothing = \lbrace a, b, c \rbrace\)</span>.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0104" class="conjecture"><strong>问题 2.4  </strong></span>Prove that if <span class="math inline">\(A \subseteq B\)</span>, then <span class="math inline">\(A \cup B = B\)</span>.
+</div>
+<p>We can also consider a "dual’’ operation to union. This is the operation that forms the set of all <bb>element</bb>s that are <bb>element</bb>s of <span class="math inline">\(A\)</span> and are also <bb>element</bb>s of <span class="math inline">\(B\)</span>. This operation is called <bb>intersection</bb>, and can be depicted as in Figure <a href="prechap.html#fig:setintersection">2.2</a>.</p>
+<div class="figure"><span id="fig:setintersection"></span>
+<img src="figs/SetIntersection.png" alt="Sets Intersection" width="70%" />
+<p class="caption">
+图 2.2: Sets Intersection
+</p>
+</div>
+
+<div class="definition">
+<span id="def:defSetIntersection" class="definition"><strong>定义 2.6  (Intersection)  </strong></span>The <bb>intersection</bb> of two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, written <span class="math inline">\(A \cap B\)</span>, is the set of all things which are <bb>element</bb>s of both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>.
+<span class="math display">\[A \cap B = \lbrace x: x \in A \land x \in B\rbrace\]</span> Two sets are called <bb>disjoint</bb> if their intersection is empty. This means they have no <bb>element</bb>s in common.
+</div>
+
+<div class="example">
+<span id="exm:exmSetUI02" class="example"><strong>例 2.11  </strong></span>If two sets have no <bb>element</bb>s in common, their intersection is empty: <span class="math inline">\(\lbrace a, b, c\rbrace \cap \lbrace 0, 1\rbrace = \varnothing\)</span>. If two sets do have <bb>element</bb>s in common, their intersection is the set of all those: <span class="math inline">\(\lbrace a, b, c \rbrace \cap \lbrace a, b, d \rbrace = \lbrace a, b\rbrace\)</span>. The intersection of a set with one of its subsets is just the smaller set: <span class="math inline">\(\lbrace a, b, c\rbrace \cap \lbrace a, b\rbrace = \lbrace a, b\rbrace\)</span>. The intersection of any set with the empty set is empty: <span class="math inline">\(\lbrace a, b, c \rbrace \cap \varnothing = \varnothing\)</span>.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0105" class="conjecture"><strong>问题 2.5  </strong></span>Prove rigorously that if <span class="math inline">\(A \subseteq B\)</span>, then <span class="math inline">\(A \cap B = A\)</span>.
+</div>
+<p>We can also form the union or intersection of more than two sets. An elegant way of dealing with this in general is the following: suppose you collect all the sets you want to form the union (or intersection) of into a single set. Then we can define the union of all our original sets as the set of all objects which belong to at least one <bb>element</bb> of the set, and the intersection as the set of all objects which belong to every <bb>element</bb> of the set.</p>
+
+<div class="definition">
+<p><span id="def:defSetUnionOp" class="definition"><strong>定义 2.7  (Union Operation)  </strong></span>If <span class="math inline">\(A\)</span> is a set of sets, then <span class="math inline">\(\bigcup A\)</span> is the set of <bb>element</bb>s of <bb>element</bb>s of <span class="math inline">\(A\)</span>:</p>
+<blockquote>
+<span class="math display">\[
+\begin{aligned}
+\bigcup A &amp; = \{x: x \text{ belongs to an element of } A\},
+\text{ i.e.,}\\
+&amp; = \{x: \text{there is a } B \in A
+\text{ so that } x \in B\}
+\end{aligned}
+\]</span>
+</div>
+</blockquote>
+
+<div class="definition">
+<p><span id="def:defSetIntersectionOp" class="definition"><strong>定义 2.8  (Intersection Operation)  </strong></span>If <span class="math inline">\(A\)</span> is a set of sets, then <span class="math inline">\(\bigcap A\)</span> is the set of objects which all elements of <span class="math inline">\(A\)</span> have in common:</p>
 <span class="math display">\[
 \begin{aligned}
     \bigcap A &amp; = \{x: x \text{ belongs to every element of } A\},
@@ -398,128 +418,131 @@ If <span class="math inline">\(A\)</span> is a set of sets, then <span class="ma
     &amp; = \{x: \text{for all } B \in A, x \in B\}
     \end{aligned}
 \]</span>
-</p>
-<p>{{% /dtpc %}}</p>
-<p>{{% dtpcex title=“☯例 1.11” %}}
-Suppose $A = a, b , a, d, e , a, d $. Then $A = a, b, d, e $ and <span class="math inline">\(\bigcap A = \lbrace a \rbrace.\)</span>
-{{% /dtpcex %}}</p>
-<blockquote>
-<p><bb>Problem 1.3</bb>
-Show that if <span class="math inline">\(A\)</span> is a set and <span class="math inline">\(A \in B\)</span>, then <span class="math inline">\(A \subseteq \bigcup B\)</span>.</p>
-</blockquote>
+</div>
+
+<div class="example">
+<span id="exm:exmSetUI03" class="example"><strong>例 2.12  </strong></span>Suppose <span class="math inline">\(A = \lbrace \lbrace a, b \rbrace , \lbrace a, d, e \rbrace , \lbrace a, d \rbrace \rbrace\)</span>. Then <span class="math inline">\(\bigcup A = \lbrace a, b, d, e \rbrace\)</span> and <span class="math inline">\(\bigcap A = \lbrace a \rbrace.\)</span>
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0106" class="conjecture"><strong>问题 2.6  </strong></span>Show that if <span class="math inline">\(A\)</span> is a set and <span class="math inline">\(A \in B\)</span>, then <span class="math inline">\(A \subseteq \bigcup B\)</span>.
+</div>
 <p>We could also do the same for a sequence of sets <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2, \cdots\)</span>,</p>
-<p>
-<span class="math display">\[
+<p><span class="math display">\[
 \begin{aligned}
 \bigcup_i A_i &amp; = \{x: x \text{ belongs to one of the } A_i\}\\
 \bigcap_i A_i &amp; = \{x: x \text{ belongs to every } A_i\}.
 \end{aligned}
-\]</span>
-</p>
+\]</span></p>
 <p>When we have an <bb>index</bb> of sets, i.e., some set <span class="math inline">\(I\)</span> such that we
 are considering <span class="math inline">\(A_i\)</span> for each <span class="math inline">\(i \in I\)</span>, we may also use these
 abbreviations:</p>
-<p>
-<span class="math display">\[
+<p><span class="math display">\[
 \begin{aligned}
 \bigcup_{i \in I} A_i &amp; = \bigcup \{A_i: i \in I\}\\
 \bigcap_{i \in I} A_i &amp; = \bigcap\{A_i: i \in I\}
 \end{aligned}
-\]</span>
+\]</span></p>
+<p>Finally, we may want to think about the set of all <bb>element</bb>s in <span class="math inline">\(A\)</span> which are not in <span class="math inline">\(B\)</span>. We can depict this as in Figure <a href="prechap.html#fig:setdifference">2.3</a>.</p>
+<div class="figure"><span id="fig:setdifference"></span>
+<img src="figs/SetIntersection.png" alt="Sets Difference" width="70%" />
+<p class="caption">
+图 2.3: Sets Difference
 </p>
-<p>Finally, we may want to think about the set of all <bb>element</bb>s in <span class="math inline">\(A\)</span> which are not in <span class="math inline">\(B\)</span>. We can depict this as in Figure 1.2.</p>
-<div class="figure">
-<img src="https://i.loli.net/2020/09/03/96izN5GuPJ7DFVs.png" alt="" />
-<p class="caption">DifferenceofSets</p>
 </div>
-<p>{{% dtpc title=“☯定義 1.8【Difference】” %}}
-The <bb>set difference</bb> <span class="math inline">\(A \setminus B\)</span> is the set of all <bb>element</bb>s of <span class="math inline">\(A\)</span> which are not also <bb>element</bb>s of <span class="math inline">\(B\)</span>, i.e., <span class="math display">\[A\setminus B = \lbrace x: x\in A \text{ and } x \notin B\rbrace .\]</span>
-{{% /dtpc %}}</p>
-<blockquote>
-<p><bb>Problem 1.3</bb>
-Prove that if <span class="math inline">\(A \subsetneq B\)</span>, then <span class="math inline">\(B \setminus A \neq \varnothing\)</span>.</p>
-</blockquote>
+
+<div class="definition">
+<span id="def:defSetDifference" class="definition"><strong>定义 2.9  (Difference)  </strong></span>The <bb>set difference</bb> <span class="math inline">\(A \setminus B\)</span> is the set of all <bb>element</bb>s of <span class="math inline">\(A\)</span> which are not also <bb>element</bb>s of <span class="math inline">\(B\)</span>, i.e., <span class="math display">\[A\setminus B = \lbrace x: x\in A \text{ and } x \notin B\rbrace .\]</span>
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0107" class="conjecture"><strong>问题 2.7  </strong></span>Prove that if <span class="math inline">\(A \subsetneq B\)</span>, then <span class="math inline">\(B \setminus A \neq \varnothing\)</span>.
+</div>
 </div>
 <div id="pairs-tuples-cartesian-products" class="section level3" number="2.1.5">
 <h3><span class="header-section-number">2.1.5</span> Pairs, Tuples, Cartesian Products</h3>
-<p>It follows from extensionality that sets have no order to their elements. So if we want to represent order, we use <bb>ordered pairs</bb> <span class="math inline">\(⟨x, y⟩\)</span>. In an unordered pair $x, y$, the order does not matter: $x, y= y, x$. In an ordered pair, it does: if <span class="math inline">\(x \neq y\)</span>, then <span class="math inline">\(⟨x, y⟩ \neq ⟨y, x⟩\)</span>.</p>
+<p>It follows from extensionality that sets have no order to their elements. So if we want to represent order, we use <bb>ordered pairs</bb> <span class="math inline">\(⟨x, y⟩\)</span>. In an unordered pair <span class="math inline">\(\lbrace x, y\rbrace\)</span>, the order does not matter: <span class="math inline">\(\lbrace x, y\rbrace = \lbrace y, x\rbrace\)</span>. In an ordered pair, it does: if <span class="math inline">\(x \neq y\)</span>, then <span class="math inline">\(⟨x, y⟩ \neq ⟨y, x⟩\)</span>.</p>
 <p>How should we think about ordered pairs in set theory? Crucially, we want to preserve the idea that ordered pairs are identical iff they share the same first element and share the same second element, i.e.: <span class="math display">\[⟨a, b⟩= ⟨c, d⟩\text{ iff both }a = c \text{ and }b=d.\]</span> We can define ordered pairs in set theory using the Wiener-Kuratowski definition.</p>
-<p>{{% dtpc title=“☯定義 1.9【Ordered pair】” %}}
-$⟨a, b⟩ = a, a, b$.
-{{% /dtpc %}}</p>
-<blockquote>
-<p><bb>Problem 1.3</bb>
-Using Definition 1.9, prove that <span class="math inline">\(⟨a, b⟩= ⟨c, d⟩\)</span> iff both <span class="math inline">\(a = c\)</span> and <span class="math inline">\(b=d\)</span>.</p>
-</blockquote>
+
+<div class="definition">
+<span id="def:defOrderedpair" class="definition"><strong>定义 2.10  (Ordered pair)  </strong></span><span class="math inline">\(⟨a, b⟩ = \lbrace \lbrace a\rbrace , \lbrace a, b\rbrace \rbrace\)</span>.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0108" class="conjecture"><strong>问题 2.8  </strong></span>Using Definition <a href="prechap.html#def:defOrderedpair">2.10</a>, prove that <span class="math inline">\(⟨a, b⟩= ⟨c, d⟩\)</span> iff both <span class="math inline">\(a = c\)</span> and <span class="math inline">\(b=d\)</span>.
+</div>
 <p>Having fixed a definition of an ordered pair, we can use it to define further sets. For example, sometimes we also want ordered sequences of more than two objects, e.g., <bb>triples</bb> <span class="math inline">\(⟨x, y, z⟩\)</span>, <bb>quadruples</bb> <span class="math inline">\(⟨x, y, z, u⟩\)</span>, and so on. We can think of triples as special ordered pairs, where the first element is itself an ordered pair: <span class="math inline">\(⟨x, y, z⟩\)</span> is <span class="math inline">\(⟨⟨x, y⟩,z⟩\)</span>. The same is true for quadruples: <span class="math inline">\(⟨x,y,z,u⟩\)</span> is <span class="math inline">\(⟨⟨⟨x,y⟩,z⟩,u⟩\)</span>, and so on. In general, we talk of <bb>ordered <span class="math inline">\(n\)</span>-tuples</bb> <span class="math inline">\(⟨x_1, \cdots, x_n⟩\)</span>.</p>
 <p>Certain sets of ordered pairs, or other ordered <span class="math inline">\(n\)</span>-tuples, will be useful.</p>
-<p>{{% dtpc title=“☯定義 1.10【Cartesian product】” %}}
-Given sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, their <bb>Cartesian product</bb> <span class="math inline">\(A \times B\)</span> is
+
+<div class="definition">
+<span id="def:defCartesian" class="definition"><strong>定义 2.11  (Cartesian product)  </strong></span>Given sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, their <bb>Cartesian product</bb> <span class="math inline">\(A \times B\)</span> is
 defined by <span class="math display">\[A \times B = \lbrace ⟨x, y⟩: x \in A \text{ and } y \in B\rbrace.\]</span>
-{{% /dtpc %}}</p>
-<p>{{% dtpcex title=“☯例 1.12” %}}
-If $A = , 1$, and $B = , a, b$, then their product is
+</div>
+
+<div class="example">
+<span id="exm:exmOrderedpair01" class="example"><strong>例 2.13  </strong></span>If <span class="math inline">\(A = \lbrace 0, 1\rbrace\)</span>, and <span class="math inline">\(B = \lbrace 1, a, b\rbrace\)</span>, then their product is
 <span class="math display">\[A \times B = \lbrace  ⟨0, 1⟩, ⟨0, a⟩, ⟨0, b⟩, ⟨1, 1⟩, ⟨1, a⟩, ⟨1, b⟩ \rbrace.\]</span>
-{{% /dtpcex %}}</p>
-<p>{{% dtpcex title=“☯例 1.13” %}}
-If <span class="math inline">\(A\)</span> is a set, the product of <span class="math inline">\(A\)</span> with itself, <span class="math inline">\(A \times A\)</span>, is also written <span class="math inline">\(A^2\)</span>. It is the set of <bb>all</bb> pairs <span class="math inline">\(⟨x, y⟩\)</span> with <span class="math inline">\(x, y \in A\)</span>. The set of all triples <span class="math inline">\(⟨x, y, z⟩\)</span> is <span class="math inline">\(A^3\)</span>, and so on. We can give a recursive definition:</p>
-<p>
+</div>
+
+<div class="example">
+<p><span id="exm:exmOrderedpair02" class="example"><strong>例 2.14  </strong></span>If <span class="math inline">\(A\)</span> is a set, the product of <span class="math inline">\(A\)</span> with itself, <span class="math inline">\(A \times A\)</span>, is also written <span class="math inline">\(A^2\)</span>. It is the set of <bb>all</bb> pairs <span class="math inline">\(⟨x, y⟩\)</span> with <span class="math inline">\(x, y \in A\)</span>. The set of all triples <span class="math inline">\(⟨x, y, z⟩\)</span> is <span class="math inline">\(A^3\)</span>, and so on. We can give a recursive definition:</p>
+<blockquote>
 <span class="math display">\[\begin{align*}
-    A^1 &amp; = A\\
-    A^{k+1} &amp; = A^k \times A
-    \end{align*}\]</span>
-</p>
-<p>{{% /dtpcex %}}</p>
-<blockquote>
-<p><bb>Problem 1.3</bb>
-List all <bb>element</bb>s of <span class="math inline">\(\lbrace 1, 2, 3\rbrace ^3\)</span>.</p>
+A^1 &amp; = A\\
+A^{k+1} &amp; = A^k \times A
+\end{align*}\]</span>
+</div>
 </blockquote>
-<p>{{% dtpc title=“☯命題 1.1” %}}
-If <span class="math inline">\(A\)</span> has <span class="math inline">\(n\)</span> <bb>element</bb>s and <span class="math inline">\(B\)</span> has <span class="math inline">\(m\)</span> <bb>element</bb>s, then <span class="math inline">\(A \times B\)</span> has <span class="math inline">\(n\cdot m\)</span> elements.
-{{% /dtpc %}}</p>
+
+<div class="conjecture">
+<span id="cnj:prob0109" class="conjecture"><strong>问题 2.9  </strong></span>List all <bb>element</bb>s of <span class="math inline">\(\lbrace 1, 2, 3\rbrace ^3\)</span>.
+</div>
+
+<div class="proposition">
+<span id="prp:prpCartesian" class="proposition"><strong>命题 2.2  </strong></span>If <span class="math inline">\(A\)</span> has <span class="math inline">\(n\)</span> <bb>element</bb>s and <span class="math inline">\(B\)</span> has <span class="math inline">\(m\)</span> <bb>element</bb>s, then <span class="math inline">\(A \times B\)</span> has <span class="math inline">\(n\cdot m\)</span> elements.
+</div>
+
+<div class="proof">
+<p> <span class="proof"><em>PROOF: </em></span> For every <bb>element</bb> <span class="math inline">\(x\)</span> in <span class="math inline">\(A\)</span>, there are <span class="math inline">\(m\)</span> <bb>element</bb>s of the form <span class="math inline">\(⟨x, y⟩ \in A \times B\)</span>. Let <span class="math inline">\(B_x = \lbrace ⟨x, y⟩: y \in B\rbrace\)</span>. Since whenever <span class="math inline">\(x_1 \neq x_2\)</span>, <span class="math inline">\(⟨x_1, y⟩ \neq ⟨x_2, y⟩\)</span>, <span class="math inline">\(B_{x_1} \cap B_{x_2} = \varnothing\)</span>. But if <span class="math inline">\(A = \lbrace x_1, \cdots, x_n\rbrace\)</span>, then <span class="math inline">\(A \times B = B_{x_1} \cup \cdots \cup B_{x_n}\)</span>, and so has <span class="math inline">\(n\cdot m\)</span> <bb>element</bb>s.</p>
+<p>To visualize this, arrange the <bb>element</bb>s of <span class="math inline">\(A \times B\)</span> in a grid:</p>
 <blockquote>
-<p><bb>命題 1.1 之證明</bb>
-For every <bb>element</bb> <span class="math inline">\(x\)</span> in <span class="math inline">\(A\)</span>, there are <span class="math inline">\(m\)</span> <bb>element</bb>s of the form <span class="math inline">\(⟨x, y⟩ \in A \times B\)</span>. Let $B_x = ⟨x, y⟩: y B$. Since whenever <span class="math inline">\(x_1 \neq x_2\)</span>, <span class="math inline">\(⟨x_1, y⟩ \neq ⟨x_2, y⟩\)</span>, <span class="math inline">\(B_{x_1} \cap B_{x_2} = \varnothing\)</span>. But if $A = x_1, , x_n$, then <span class="math inline">\(A \times B = B_{x_1} \cup \cdots \cup B_{x_n}\)</span>, and so has <span class="math inline">\(n\cdot m\)</span> <bb>element</bb>s.
-To visualize this, arrange the <bb>element</bb>s of <span class="math inline">\(A \times B\)</span> in a grid:</p>
+<p><span class="math display">\[
+\begin{array}{rcccc}
+B_{x_1} = &amp; \{⟨x_1, y_1⟩ &amp; ⟨x_1, y_2⟩ &amp; \cdots &amp; ⟨x_1, y_m⟩\}\\
+B_{x_2} = &amp; \{⟨x_2, y_1⟩ &amp; ⟨x_2, y_2⟩ &amp; \cdots &amp; ⟨x_2, y_m⟩\}\\
+\vdots &amp; &amp; \vdots\\
+B_{x_n} = &amp; \{⟨x_n, y_1⟩ &amp; ⟨x_n, y_2⟩ &amp; \cdots &amp; ⟨x_n, y_m⟩\}
+\end{array}
+\]</span></p>
 </blockquote>
-<p>
-<span class="math display">\[
-    \begin{array}{rcccc}
-    B_{x_1} = &amp; \{⟨x_1, y_1⟩ &amp; ⟨x_1, y_2⟩ &amp; \cdots &amp; ⟨x_1, y_m⟩\}\\
-    B_{x_2} = &amp; \{⟨x_2, y_1⟩ &amp; ⟨x_2, y_2⟩ &amp; \cdots &amp; ⟨x_2, y_m⟩\}\\
-    \vdots &amp; &amp; \vdots\\
-    B_{x_n} = &amp; \{⟨x_n, y_1⟩ &amp; ⟨x_n, y_2⟩ &amp; \cdots &amp; ⟨x_n, y_m⟩\}
-    \end{array}
-    \]</span>
-</p>
-<blockquote>
-<p>Since the <span class="math inline">\(x_i\)</span> are all different, and the <span class="math inline">\(y_j\)</span> are all different, no two of the pairs in this grid are the same, and there are <span class="math inline">\(n\cdot m\)</span> of them.</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.3</bb>
-Show, by induction on <span class="math inline">\(k\)</span>, that for all <span class="math inline">\(k \ge 1\)</span>, if <span class="math inline">\(A\)</span> has <span class="math inline">\(n\)</span> <bb>element</bb>s, then <span class="math inline">\(A^k\)</span> has <span class="math inline">\(n^k\)</span> <bb>element</bb>s.</p>
-</blockquote>
-<p>{{% dtpcex title=“☯例 1.14” %}}
-If <span class="math inline">\(A\)</span> is a set, a <bb>word</bb> over <span class="math inline">\(A\)</span> is any sequence of <bb>element</bb>s of <span class="math inline">\(A\)</span>. A sequence can be thought of as an <span class="math inline">\(n\)</span>-tuple of <bb>element</bb>s of <span class="math inline">\(A\)</span>. For instance, if $A = a, b, c<span class="math inline">\(, then the sequence &quot;\)</span>bac$’’ can be thought of as the triple <span class="math inline">\(⟨b, a, c⟩\)</span>. Words, i.e., sequences of symbols, are of crucial importance in computer science. By convention, we count <bb>element</bb>s of <span class="math inline">\(A\)</span> as sequences of length <span class="math inline">\(1\)</span>, and <span class="math inline">\(\varnothing\)</span> as the sequence of length <span class="math inline">\(0\)</span>. The set of <bb>all</bb> words over <span class="math inline">\(A\)</span> then is
+Since the <span class="math inline">\(x_i\)</span> are all different, and the <span class="math inline">\(y_j\)</span> are all different, no two of the pairs in this grid are the same, and there are <span class="math inline">\(n\cdot m\)</span> of them.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0110" class="conjecture"><strong>问题 2.10  </strong></span>Show, by induction on <span class="math inline">\(k\)</span>, that for all <span class="math inline">\(k \ge 1\)</span>, if <span class="math inline">\(A\)</span> has <span class="math inline">\(n\)</span> <bb>element</bb>s, then <span class="math inline">\(A^k\)</span> has <span class="math inline">\(n^k\)</span> <bb>element</bb>s.
+</div>
+
+<div class="example">
+<span id="exm:exmtuple" class="example"><strong>例 2.15  </strong></span>If <span class="math inline">\(A\)</span> is a set, a <bb>word</bb> over <span class="math inline">\(A\)</span> is any sequence of <bb>element</bb>s of <span class="math inline">\(A\)</span>. A sequence can be thought of as an <span class="math inline">\(n\)</span>-tuple of <bb>element</bb>s of <span class="math inline">\(A\)</span>. For instance, if <span class="math inline">\(A = \lbrace a, b, c\rbrace\)</span>, then the sequence "<span class="math inline">\(bac\)</span>’’ can be thought of as the triple <span class="math inline">\(⟨b, a, c⟩\)</span>. Words, i.e., sequences of symbols, are of crucial importance in computer science. By convention, we count <bb>element</bb>s of <span class="math inline">\(A\)</span> as sequences of length <span class="math inline">\(1\)</span>, and <span class="math inline">\(\varnothing\)</span> as the sequence of length <span class="math inline">\(0\)</span>. The set of <bb>all</bb> words over <span class="math inline">\(A\)</span> then is
 <span class="math display">\[A^* = \lbrace \varnothing\rbrace  \cup A \cup A^2 \cup A^3 \cup \cdots\]</span>
-{{% /dtpcex %}}</p>
+</div>
 </div>
 <div id="russells-paradox" class="section level3" number="2.1.6">
 <h3><span class="header-section-number">2.1.6</span> Russell’s Paradox</h3>
-<p>Extensionality licenses the notation $x: (x)$, for <bb>the</bb> set of <span class="math inline">\(x\)</span>’s such that <span class="math inline">\(\phi(x)\)</span>. However, all that extensionality <bb>really</bb> licenses is the following thought. <bb>If</bb> there is a set whose members are all and only the <span class="math inline">\(\phi\)</span>’s, <bb>then</bb> there is only one such set. Otherwise put: having fixed some <span class="math inline">\(\phi\)</span>, the set $x: (x)$ is unique, <strong>if it exists</strong>.</p>
+<p>Extensionality licenses the notation <span class="math inline">\(\lbrace x: \phi(x)\rbrace\)</span>, for <bb>the</bb> set of <span class="math inline">\(x\)</span>’s such that <span class="math inline">\(\phi(x)\)</span>. However, all that extensionality <bb>really</bb> licenses is the following thought. <bb>If</bb> there is a set whose members are all and only the <span class="math inline">\(\varphi\)</span>’s, <bb>then</bb> there is only one such set. Otherwise put: having fixed some <span class="math inline">\(\varphi\)</span>, the set <span class="math inline">\(\lbrace x: \phi(x)\rbrace\)</span> is unique, <strong>if it exists</strong>.</p>
 <p>But this conditional is important! Crucially, not every property lends itself to <bb>comprehension</bb>. That is, some properties do <bb>not</bb> define sets. If they all did, then we would run into outright contradictions. The most famous example of this is Russell’s Paradox.</p>
 <p>Sets may be <bb>element</bb>s of other sets—for instance, the power set of a set <span class="math inline">\(A\)</span> is made up of sets. And so it makes sense to ask or investigate whether a set is an <bb>element</bb> of another set. Can a set be a member of itself? Nothing about the idea of a set seems to rule this out. For instance, if <bb>all</bb> sets form a collection of objects, one might think that they can be collected into a single set—the set of all sets. And it, being a set, would be an <bb>element</bb> of the set of all sets.</p>
 <p>Russell’s Paradox arises when we consider the property of not having itself as an <bb>element</bb>, of being <bb>non-self-membered</bb>. What if we suppose that there is a set of all sets that do not have themselves as an <bb>element</bb>? Does <span class="math display">\[R = \lbrace x: x \notin x\rbrace\]</span> exist? It turns out that we can prove that it does not.</p>
 <p>{{% dtpc title=“☯Theorem 1.0【Russell’s Paradox】” %}}
-There is no set $R = x: x x$.
+There is no set <span class="math inline">\(R = \lbrace x: x \notin x\rbrace\)</span>.
 {{% /dtpc %}}</p>
 <blockquote>
 <p><bb>Theorem 1.0 之證明</bb>
-For reductio, suppose that $R = x: x x$ exists. Then <span class="math inline">\(R \in R\)</span> iff <span class="math inline">\(R \notin R\)</span>, since sets are extensional. But this is a contradicion.</p>
+For reductio, suppose that <span class="math inline">\(R = \lbrace x: x \notin x\rbrace\)</span> exists. Then <span class="math inline">\(R \in R\)</span> iff <span class="math inline">\(R \notin R\)</span>, since sets are extensional. But this is a contradicion.</p>
 </blockquote>
 <p>Let’s run through the proof that no set <span class="math inline">\(R\)</span> of non-self-membered sets can exist more slowly. If <span class="math inline">\(R\)</span> exists, it makes sense to ask if <span class="math inline">\(R \in R\)</span> or not—it must be either <span class="math inline">\(\in R\)</span> or <span class="math inline">\(\notin R\)</span>. Suppose the former is true, i.e., <span class="math inline">\(R \in R\)</span>. <span class="math inline">\(R\)</span> was defined as the set of all sets that are not <bb>element</bb>s of themselves, and so if <span class="math inline">\(R \in R\)</span>, then <span class="math inline">\(R\)</span> does not have this defining property of <span class="math inline">\(R\)</span>. But only sets that have this property are in <span class="math inline">\(R\)</span>, hence, <span class="math inline">\(R\)</span> cannot be an <bb>element</bb> of <span class="math inline">\(R\)</span>, i.e., <span class="math inline">\(R \notin R\)</span>. But <span class="math inline">\(R\)</span> can’t both be and not be an <bb>element</bb> of <span class="math inline">\(R\)</span>, so we have a contradiction.</p>
 <p>Since the assumption that <span class="math inline">\(R \in R\)</span> leads to a contradiction, we have <span class="math inline">\(R \notin R\)</span>. But this also leads to a contradiction! For if <span class="math inline">\(R \notin R\)</span>, it does have the defining property of <span class="math inline">\(R\)</span>, and so would be an <bb>element</bb> of <span class="math inline">\(R\)</span> just like all the other non-self-membered sets. And again, it can’t both not be and be an <bb>element</bb> of <span class="math inline">\(R\)</span>.</p>
-<p>How do we set up a set theory which avoids falling into Russell’s Paradox, i.e., which avoids making the <bb>inconsistent</bb> claim that $R = x: x x$ exists? Well, we would need to lay down axioms which give us very precise conditions for stating when sets exist (and when they don’t).</p>
+<p>How do we set up a set theory which avoids falling into Russell’s Paradox, i.e., which avoids making the <bb>inconsistent</bb> claim that <span class="math inline">\(R = \lbrace x: x \notin x\rbrace\)</span> exists? Well, we would need to lay down axioms which give us very precise conditions for stating when sets exist (and when they don’t).</p>
 <p>The set theory sketched in this chapter doesn’t do this. It’s <bb>genuinely naïve</bb>. It tells you only that sets obey extensionality and that, if you have some sets, you can form their union, intersection, etc. It is possible to develop set theory more rigorously than this.</p>
 </div>
 </div>
@@ -528,7 +551,7 @@ For reductio, suppose that $R = x: x x$ exists. Then <span class="math inline">\
 <div id="relations-as-sets" class="section level3" number="2.2.1">
 <h3><span class="header-section-number">2.2.1</span> Relations as Sets</h3>
 <p>In §1.0.2（P.19）, we mentioned some important sets: <span class="math inline">\(\mathbb{N}\)</span>, <span class="math inline">\(\mathbb{Z}\)</span>, <span class="math inline">\(\mathbb{Q}\)</span>, <span class="math inline">\(\mathbb{R}\)</span>. You will no doubt remember some interesting relations between the <bb>element</bb>s of some of these sets. For instance, each of these sets has a completely standard <bb>order relation</bb> on it. There is also the relation <bb>is identical with</bb> that every object bears to itself and to no other thing. There are many more interesting relations that we’ll encounter, and even more possible relations. Before we review them, though, we will start by pointing out that we can look at relations as a special sort of set.</p>
-<p>For this, recall two things from §1.0.4（P.22）. First, recall the notion of a <bb>ordered pair</bb>: given <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, we can form <span class="math inline">\(⟨a, b⟩\)</span>. Importantly, the order of elements <bb>does</bb> matter here. So if <span class="math inline">\(a \neq b\)</span> then <span class="math inline">\(⟨a, b⟩ \neq ⟨b, a⟩\)</span>. (Contrast this with unordered pairs, i.e., <span class="math inline">\(2\)</span>-element sets, where $a, b=b, a$.) Second, recall the notion of a <strong>Cartesian product</strong>: if <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are sets, then we can form <span class="math inline">\(A \times B\)</span>, the set of all pairs <span class="math inline">\(⟨x, y⟩\)</span> with <span class="math inline">\(x \in A\)</span> and <span class="math inline">\(y \in B\)</span>. In particular, <span class="math inline">\(A^{2}= A \times A\)</span> is the set of all ordered pairs from <span class="math inline">\(A\)</span>.</p>
+<p>For this, recall two things from §1.0.4（P.22）. First, recall the notion of a <bb>ordered pair</bb>: given <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, we can form <span class="math inline">\(⟨a, b⟩\)</span>. Importantly, the order of elements <bb>does</bb> matter here. So if <span class="math inline">\(a \neq b\)</span> then <span class="math inline">\(⟨a, b⟩ \neq ⟨b, a⟩\)</span>. (Contrast this with unordered pairs, i.e., <span class="math inline">\(2\)</span>-element sets, where <span class="math inline">\(\lbrace a, b\rbrace =\lbrace b, a\rbrace\)</span>.) Second, recall the notion of a <strong>Cartesian product</strong>: if <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are sets, then we can form <span class="math inline">\(A \times B\)</span>, the set of all pairs <span class="math inline">\(⟨x, y⟩\)</span> with <span class="math inline">\(x \in A\)</span> and <span class="math inline">\(y \in B\)</span>. In particular, <span class="math inline">\(A^{2}= A \times A\)</span> is the set of all ordered pairs from <span class="math inline">\(A\)</span>.</p>
 <p>Now we will consider a particular relation on a set: the <span class="math inline">\(&lt;\)</span>-relation on the set <span class="math inline">\(\mathbb{N}\)</span> of natural numbers. Consider the set of all pairs of numbers <span class="math inline">\(⟨n, m⟩\)</span> where <span class="math inline">\(n &lt; m\)</span>, i.e., <span class="math display">\[R= \lbrace ⟨n, m⟩: n, m \in \mathbb{N} \text{ and } n &lt; m \rbrace.\]</span> There is a close connection between <span class="math inline">\(n\)</span> being less than <span class="math inline">\(m\)</span>, and the pair <span class="math inline">\(⟨n, m⟩\)</span> being a member of <span class="math inline">\(R\)</span>, namely: <span class="math display">\[n &lt; m \text{ iff }⟨n, m⟩ \in R.\]</span> Indeed, without any loss of information, we can consider the set <span class="math inline">\(R\)</span> to <bb>be</bb> the <span class="math inline">\(&lt;\)</span>-relation on <span class="math inline">\(\mathbb{N}\)</span>.</p>
 <p>In the same way we can construct a subset of <span class="math inline">\(\mathbb{N}^{2}\)</span> for any relation between numbers. Conversely, given any set of pairs of numbers <span class="math inline">\(S \subseteq \mathbb{N}^{2}\)</span>, there is a corresponding relation between numbers, namely, the relationship <span class="math inline">\(n\)</span> bears to <span class="math inline">\(m\)</span> if and only if <span class="math inline">\(⟨n, m⟩ \in S\)</span>. This justifies the following definition:</p>
 <p>{{% dtpc title=“☯定義 1.11【Binary relation】” %}}
@@ -552,9 +575,9 @@ The set <span class="math inline">\(\mathbb{N}^{2}\)</span> of pairs of natural 
     \end{array}
     \]</span>
 </p>
-<p>We have put the diagonal, here, in bold, since the subset of <span class="math inline">\(\mathbb{N}^2\)</span> consisting of the pairs lying on the diagonal, i.e., <span class="math display">\[\lbrace ⟨0,0 ⟩, ⟨ 1,1 ⟩, ⟨ 2,2 ⟩, \cdots\rbrace ,\]</span> is the <bb>identity relation on</bb> <span class="math inline">\(\mathbb{N}\)</span>. (Since the identity relation is popular, let’s define $Id_A=⟨ x,x ⟩: x X$ for any set <span class="math inline">\(A\)</span>.) The subset of all pairs lying above the diagonal, i.e., <span class="math display">\[L = \lbrace ⟨0,1⟩,⟨0,2⟩,\cdots,⟨1,2⟩,⟨1,3⟩, \cdots, ⟨2,3 ⟩, ⟨2,4⟩,\cdots\rbrace ,\]</span> is the <bb>less than</bb> relation, i.e., <span class="math inline">\(Lnm\)</span> iff <span class="math inline">\(n &lt; m\)</span>. The subset of pairs below the diagonal, i.e., <span class="math display">\[G=\lbrace ⟨1,0⟩,⟨2,0⟩, ⟨2,1⟩, ⟨3,0⟩,⟨3,1 ⟩,⟨3,2 ⟩, \cdots\rbrace ,\]</span> is the <bb>greater than</bb> relation, i.e., <span class="math inline">\(Gnm\)</span> iff <span class="math inline">\(n&gt;m\)</span>. The union of <span class="math inline">\(L\)</span> with <span class="math inline">\(I\)</span>, which we might call <span class="math inline">\(K=L\cup I\)</span>, is the <strong>less than or equal to</strong> relation: <span class="math inline">\(Knm\)</span> iff <span class="math inline">\(n \le m\)</span>. Similarly, <span class="math inline">\(H=G \cup I\)</span> is the <bb>greater than or equal to relation.</bb> These relations <span class="math inline">\(L\)</span>, <span class="math inline">\(G\)</span>, <span class="math inline">\(K\)</span>, and <span class="math inline">\(H\)</span> are special kinds of relations called <bb>orders</bb>. <span class="math inline">\(L\)</span> and <span class="math inline">\(G\)</span> have the property that no number bears <span class="math inline">\(L\)</span> or <span class="math inline">\(G\)</span> to itself (i.e., for all <span class="math inline">\(n\)</span>, neither <span class="math inline">\(Lnn\)</span> nor <span class="math inline">\(Gnn\)</span>). Relations with this property are called <bb>irreflexive</bb>, and, if they also happen to be orders, they are called <bb>strict orders.</bb>
+<p>We have put the diagonal, here, in bold, since the subset of <span class="math inline">\(\mathbb{N}^2\)</span> consisting of the pairs lying on the diagonal, i.e., <span class="math display">\[\lbrace ⟨0,0 ⟩, ⟨ 1,1 ⟩, ⟨ 2,2 ⟩, \cdots\rbrace ,\]</span> is the <bb>identity relation on</bb> <span class="math inline">\(\mathbb{N}\)</span>. (Since the identity relation is popular, let’s define <span class="math inline">\(Id_A=\lbrace ⟨ x,x ⟩: x \in X\rbrace\)</span> for any set <span class="math inline">\(A\)</span>.) The subset of all pairs lying above the diagonal, i.e., <span class="math display">\[L = \lbrace ⟨0,1⟩,⟨0,2⟩,\cdots,⟨1,2⟩,⟨1,3⟩, \cdots, ⟨2,3 ⟩, ⟨2,4⟩,\cdots\rbrace ,\]</span> is the <bb>less than</bb> relation, i.e., <span class="math inline">\(Lnm\)</span> iff <span class="math inline">\(n &lt; m\)</span>. The subset of pairs below the diagonal, i.e., <span class="math display">\[G=\lbrace ⟨1,0⟩,⟨2,0⟩, ⟨2,1⟩, ⟨3,0⟩,⟨3,1 ⟩,⟨3,2 ⟩, \cdots\rbrace ,\]</span> is the <bb>greater than</bb> relation, i.e., <span class="math inline">\(Gnm\)</span> iff <span class="math inline">\(n&gt;m\)</span>. The union of <span class="math inline">\(L\)</span> with <span class="math inline">\(I\)</span>, which we might call <span class="math inline">\(K=L\cup I\)</span>, is the <strong>less than or equal to</strong> relation: <span class="math inline">\(Knm\)</span> iff <span class="math inline">\(n \le m\)</span>. Similarly, <span class="math inline">\(H=G \cup I\)</span> is the <bb>greater than or equal to relation.</bb> These relations <span class="math inline">\(L\)</span>, <span class="math inline">\(G\)</span>, <span class="math inline">\(K\)</span>, and <span class="math inline">\(H\)</span> are special kinds of relations called <bb>orders</bb>. <span class="math inline">\(L\)</span> and <span class="math inline">\(G\)</span> have the property that no number bears <span class="math inline">\(L\)</span> or <span class="math inline">\(G\)</span> to itself (i.e., for all <span class="math inline">\(n\)</span>, neither <span class="math inline">\(Lnn\)</span> nor <span class="math inline">\(Gnn\)</span>). Relations with this property are called <bb>irreflexive</bb>, and, if they also happen to be orders, they are called <bb>strict orders.</bb>
 {{% /dtpcex %}}</p>
-<p>Although orders and identity are important and natural relations, it should be emphasized that according to our definition <bb>any</bb> subset of <span class="math inline">\(A^{2}\)</span> is a relation on <span class="math inline">\(A\)</span>, regardless of how unnatural or contrived it seems. In particular, <span class="math inline">\(\varnothing\)</span> is a relation on any set (the <bb>empty relation</bb>, which no pair of elements bears), and <span class="math inline">\(A^{2}\)</span> itself is a relation on <span class="math inline">\(A\)</span> as well (one which every pair bears), called the <bb>universal relation</bb>. But also something like $E=⟨n, m⟩: n&gt;5  m n $ counts as a relation.</p>
+<p>Although orders and identity are important and natural relations, it should be emphasized that according to our definition <bb>any</bb> subset of <span class="math inline">\(A^{2}\)</span> is a relation on <span class="math inline">\(A\)</span>, regardless of how unnatural or contrived it seems. In particular, <span class="math inline">\(\varnothing\)</span> is a relation on any set (the <bb>empty relation</bb>, which no pair of elements bears), and <span class="math inline">\(A^{2}\)</span> itself is a relation on <span class="math inline">\(A\)</span> as well (one which every pair bears), called the <bb>universal relation</bb>. But also something like <span class="math inline">\(E=\lbrace ⟨n, m⟩: n&gt;5 \text{ or } m \times n \ge 34\rbrace\)</span> counts as a relation.</p>
 <blockquote>
 <p><bb>Problem 1.10</bb>
 List the <bb>element</bb>s of the relation <span class="math inline">\(\subseteq\)</span> on the set <span class="math inline">\(\mathscr{P}({\lbrace a, b, c\rbrace })\)</span>.</p>
@@ -562,8 +585,8 @@ List the <bb>element</bb>s of the relation <span class="math inline">\(\subseteq
 </div>
 <div id="philosophical-reflections" class="section level3" number="2.2.2">
 <h3><span class="header-section-number">2.2.2</span> Philosophical Reflections</h3>
-<p>In §1.1.0（P.26）, we defined relations as certain sets. We should pause and ask a quick philosophical question: what is such a definition <bb>doing</bb>? It is extremely doubtful that we should want to say that we have <bb>discovered</bb> some metaphysical identity facts; that, for example, the order relation on <span class="math inline">\(\mathbb{N}\)</span> <strong>turned out</strong> to be the set $R= ⟨n,m⟩: n, m  n &lt; m$ we defined in §1.1.0（P.26）. Here are three reasons why.</p>
-<p>First: in Definition 1.9, we defined $⟨a, b⟩ = a, a, b$. Consider instead the definition <span class="math inline">\(\lVert a, b\rVert = \lbrace \lbrace b\rbrace , \lbrace a, b\rbrace \rbrace = ⟨b,a⟩\)</span>. When <span class="math inline">\(a \neq b\)</span>, we have that <span class="math inline">\(⟨a, b⟩ \neq \lVert a,b\rVert\)</span>. But we could equally have regarded <span class="math inline">\(\lVert a,b\rVert\)</span> as our definition of an ordered pair, rather than <span class="math inline">\(⟨a,b⟩\)</span>. Both definitions would have worked equally well. So now we have two equally good candidates to "be’’ the order relation on the natural numbers, namely:</p>
+<p>In §1.1.0（P.26）, we defined relations as certain sets. We should pause and ask a quick philosophical question: what is such a definition <bb>doing</bb>? It is extremely doubtful that we should want to say that we have <bb>discovered</bb> some metaphysical identity facts; that, for example, the order relation on <span class="math inline">\(\mathbb{N}\)</span> <strong>turned out</strong> to be the set <span class="math inline">\(R= \lbrace ⟨n,m⟩: n, m \in \mathbb{N}\text{ and } n &lt; m\rbrace\)</span> we defined in §1.1.0（P.26）. Here are three reasons why.</p>
+<p>First: in Definition 1.9, we defined <span class="math inline">\(⟨a, b⟩ = \lbrace \lbrace a\rbrace , \lbrace a, b\rbrace \rbrace\)</span>. Consider instead the definition <span class="math inline">\(\lVert a, b\rVert = \lbrace \lbrace b\rbrace , \lbrace a, b\rbrace \rbrace = ⟨b,a⟩\)</span>. When <span class="math inline">\(a \neq b\)</span>, we have that <span class="math inline">\(⟨a, b⟩ \neq \lVert a,b\rVert\)</span>. But we could equally have regarded <span class="math inline">\(\lVert a,b\rVert\)</span> as our definition of an ordered pair, rather than <span class="math inline">\(⟨a,b⟩\)</span>. Both definitions would have worked equally well. So now we have two equally good candidates to "be’’ the order relation on the natural numbers, namely:</p>
 <p>
 <span class="math display">\[
 \begin{aligned}
@@ -573,7 +596,7 @@ S &amp;= \{\lVert n,m\rVert: n, m \in \mathbb{N} \text{ and }n &lt; m\}.
 \]</span>
 </p>
 <p>Since <span class="math inline">\(R \neq S\)</span>, by extensionality, it is clear that they cannot <bb>both</bb> be identical to the order relation on <span class="math inline">\(\mathbb{N}\)</span>. But it would just be arbitrary, and hence a bit embarrassing, to claim that <span class="math inline">\(R\)</span> rather than <span class="math inline">\(S\)</span> (or vice versa) <bb>is</bb> the ordering relation, as a matter of fact. (This is a very simple instance of an argument against set-theoretic reductionism which Benacerraf made famous in 1965. We will revisit it several times.)</p>
-<p>Second: if we think that <bb>every</bb> relation should be identified with a set, then the relation of set-membership itself, <span class="math inline">\(\in\)</span>, should be a particular set. Indeed, it would have to be the set $⟨x,y⟩: x y$. But does this set exist? Given Russell’s Paradox, it is a non-trivial claim that such a set exists. In fact, it is possible to develop set theory in a rigorous way as an axiomatic theory. In this theory, it will be provable that there is no set of all sets. So, even if some relations can be treated as sets, the relation of set-membership will have to be a special case.</p>
+<p>Second: if we think that <bb>every</bb> relation should be identified with a set, then the relation of set-membership itself, <span class="math inline">\(\in\)</span>, should be a particular set. Indeed, it would have to be the set <span class="math inline">\(\lbrace ⟨x,y⟩: x \in y\rbrace\)</span>. But does this set exist? Given Russell’s Paradox, it is a non-trivial claim that such a set exists. In fact, it is possible to develop set theory in a rigorous way as an axiomatic theory. In this theory, it will be provable that there is no set of all sets. So, even if some relations can be treated as sets, the relation of set-membership will have to be a special case.</p>
 <p>Third: when we “identify’’ relations with sets, we said that we would allow ourselves to write <span class="math inline">\(Rxy\)</span> for <span class="math inline">\(⟨x,y⟩ \in R\)</span>. This is fine, provided that the membership relation,”<span class="math inline">\(\in\)</span>’‘, is treated <bb>as</bb> a predicate. But if we think that “<span class="math inline">\(\in\)</span>’’ stands for a certain kind of set, then the expression”<span class="math inline">\(⟨x,y⟩ \in R\)</span>’’ just consists of three singular terms which stand for sets: "<span class="math inline">\(⟨x,y⟩\)</span>’‘, "<span class="math inline">\(\in\)</span>’‘, and "<span class="math inline">\(R\)</span>’‘. And such a list of names is no more capable of expressing a proposition than the nonsense string: "the cup penholder the table’’. Again, even if some relations can be treated as sets, the relation of set-membership must be a special case. (This rolls together a simple version of Frege’s concept <bb>horse</bb> paradox, and a famous objection that Wittgenstein once raised against Russell.)</p>
 <p>So where does this leave us? Well, there is nothing <bb>wrong</bb> with our saying that the relations on the numbers are sets. We just have to understand the spirit in which that remark is made. We are not stating a metaphysical identity fact. We are simply noting that, in certain contexts, we can (and will) <bb>treat</bb> (certain) relations as certain sets.</p>
 </div>
@@ -618,7 +641,7 @@ A relation <span class="math inline">\(R \subseteq A^2\)</span> that is reflexiv
 {{% /dtpc %}}</p>
 <p>Equivalence relations give rise to the notion of an <bb>equivalence class</bb>. An equivalence relation "chunks up’’ the domain into different partitions. Within each partition, all the objects are related to one another; and no objects from different partitions relate to one another. Sometimes, it’s helpful just to talk about these partitions <bb>directly</bb>. To that end, we introduce a definition:</p>
 <p>{{% dtpc title=“☯定義 1.20【Equivalence class】” %}}
-Let <span class="math inline">\(R \subseteq A^2\)</span> be an equivalence relation. For each <span class="math inline">\(x \in A\)</span>, the <bb>equivalence class</bb> of <span class="math inline">\(x\)</span> in <span class="math inline">\(A\)</span> is the set $[x]_R = y A: Rxy$. The <bb>quotient</bb> of <span class="math inline">\(A\)</span> under <span class="math inline">\(R\)</span> is $A/_R = _R: x A$, i.e., the set of these equivalence classes.
+Let <span class="math inline">\(R \subseteq A^2\)</span> be an equivalence relation. For each <span class="math inline">\(x \in A\)</span>, the <bb>equivalence class</bb> of <span class="math inline">\(x\)</span> in <span class="math inline">\(A\)</span> is the set <span class="math inline">\([x]_R = \lbrace y \in A: Rxy\rbrace\)</span>. The <bb>quotient</bb> of <span class="math inline">\(A\)</span> under <span class="math inline">\(R\)</span> is <span class="math inline">\(A/_R = \lbrace [x]_R: x \in A\rbrace\)</span>, i.e., the set of these equivalence classes.
 {{% /dtpc %}}</p>
 <p>The next result vindicates the definition of an equivalence class, in proving that the equivalence classes are indeed the partitions of <span class="math inline">\(A\)</span>:</p>
 <p>{{% dtpc title=“☯命題 1.2” %}}
@@ -662,7 +685,7 @@ Every linear order is also a partial order, and every partial order is also a pr
 Consider the <bb>no longer than</bb> relation <span class="math inline">\(\preccurlyeq\)</span> on <span class="math inline">\(\mathbb{B}^*\)</span>: <span class="math inline">\(x \preccurlyeq y\)</span> iff <span class="math inline">\(\text{len } {x} \le \text{len } {y}\)</span>. This is a preorder (reflexive and transitive), and even connected, but not a partial order, since it is not anti-symmetric. For instance, <span class="math inline">\(01 \preccurlyeq 10\)</span> and <span class="math inline">\(10 \preccurlyeq 01\)</span>, but <span class="math inline">\(01 \neq 10\)</span>.
 {{% /dtpcex %}}</p>
 <p>{{% dtpcex title=“☯例 1.19” %}}
-An important partial order is the relation <span class="math inline">\(\subseteq\)</span> on a set of sets. This is not in general a linear order, since if <span class="math inline">\(a \neq b\)</span> and we consider $(a, b) = , a, b, a,b$, we see that $ab$ and $ab$ and $ba$.
+An important partial order is the relation <span class="math inline">\(\subseteq\)</span> on a set of sets. This is not in general a linear order, since if <span class="math inline">\(a \neq b\)</span> and we consider <span class="math inline">\(\mathscr{P}(\lbrace a, b\rbrace ) = \lbrace \varnothing, \lbrace a\rbrace , \lbrace b\rbrace , \lbrace a,b\rbrace \rbrace\)</span>, we see that <span class="math inline">\(\lbrace a\rbrace \nsubseteq \lbrace b\rbrace\)</span> and <span class="math inline">\(\lbrace a\rbrace \neq \lbrace b\rbrace\)</span> and <span class="math inline">\(\lbrace b\rbrace \nsubseteq \lbrace a\rbrace\)</span>.
 {{% /dtpcex %}}</p>
 <p>{{% dtpcex title=“☯例 1.20” %}}
 The relation of <bb>divisibility without remainder</bb> gives us a partial order which isn’t a linear order. For integers <span class="math inline">\(n\)</span>, <span class="math inline">\(m\)</span>, we write <span class="math inline">\(n\mid m\)</span> to mean <span class="math inline">\(n\)</span> (evenly) divides <span class="math inline">\(m\)</span>, i.e., iff there is some integer <span class="math inline">\(k\)</span> so that <span class="math inline">\(m=kn\)</span>. On <span class="math inline">\(\mathbb{N}\)</span>, this is a partial order, but not a linear order: for instance, <span class="math inline">\(2\nmid3\)</span> and also <span class="math inline">\(3\nmid2\)</span>. Considered as a relation on <span class="math inline">\(\mathbb{Z}\)</span>, divisibility is only a preorder since it is not anti-symmetric: <span class="math inline">\(1\mid-1\)</span> and <span class="math inline">\(-1\mid1\)</span> but <span class="math inline">\(1\neq-1\)</span>.
@@ -722,18 +745,17 @@ A <bb>directed graph</bb> <span class="math inline">\(G = ⟨V, E⟩\)</span> is
 {{% /dtpc %}}</p>
 <p>According to our definition, a graph just is a set together with a relation on that set. Of course, when talking about graphs, it’s only natural to expect that they are graphically represented: we can draw a graph by connecting two vertices <span class="math inline">\(v_1\)</span> and <span class="math inline">\(v_2\)</span> by an arrow iff <span class="math inline">\(⟨v_1, v_2⟩ \in E\)</span>. The only difference between a relation by itself and a graph is that a graph specifies the set of vertices, i.e., a graph may have isolated vertices. The important point, however, is that every relation <span class="math inline">\(R\)</span> on a set <span class="math inline">\(X\)</span> can be seen as a directed graph <span class="math inline">\(⟨X, R⟩\)</span>, and conversely, a directed graph <span class="math inline">\(⟨V, E⟩\)</span> can be seen as a relation <span class="math inline">\(E \subseteq V^2\)</span> with the set <span class="math inline">\(V\)</span> explicitly specified.</p>
 <p>{{% dtpcex title=“☯例 1.23” %}}
-The graph <span class="math inline">\(⟨V, E⟩\)</span> with $V = , 2, 3, 4$ and $E = ⟨1,1⟩, ⟨1, 2⟩, ⟨1, 3⟩, ⟨2, 3⟩$ looks like this:</p>
+The graph <span class="math inline">\(⟨V, E⟩\)</span> with <span class="math inline">\(V = \lbrace 1, 2, 3, 4\rbrace\)</span> and <span class="math inline">\(E = \lbrace ⟨1,1⟩, ⟨1, 2⟩, ⟨1, 3⟩, ⟨2, 3⟩\rbrace\)</span> looks like this:</p>
 <div class="figure">
 <img src="https://i.loli.net/2020/09/03/Eg9Ium37BZiHy62.png" alt="" />
 <p class="caption">zzzz.png</p>
 </div>
-<p>This is a different graph than <span class="math inline">\(⟨V&#39;, E⟩\)</span> with $V’ =
-, 2, 3$, which looks like this:</p>
+<p>This is a different graph than <span class="math inline">\(⟨V&#39;, E⟩\)</span> with <span class="math inline">\(V&#39; = \lbrace 1, 2, 3\rbrace\)</span>, which looks like this:</p>
 <p><img src="https://i.loli.net/2020/09/03/xyr1JsVlTAhNX2O.png" alt="zzzz.png" />
 {{% /dtpcex %}}</p>
 <blockquote>
 <p><bb>Problem 1.14</bb>
-Consider the less-than-or-equal-to relation <span class="math inline">\(\leqslant\)</span> on the set $, 2, 3, 4$ as a graph and draw the corresponding diagram.</p>
+Consider the less-than-or-equal-to relation <span class="math inline">\(\leqslant\)</span> on the set <span class="math inline">\(\lbrace 1, 2, 3, 4\rbrace\)</span> as a graph and draw the corresponding diagram.</p>
 </blockquote>
 </div>
 <div id="operations-on-relations" class="section level3" number="2.2.7">
@@ -747,9 +769,9 @@ other operations we can perform on relations.</p>
 <p>{{% dtpc title=“☯定義 1.28【Operations on Relations】” %}}
 Let <span class="math inline">\(R\)</span>, <span class="math inline">\(S\)</span> be relations, and <span class="math inline">\(A\)</span> be any set.
 1. The <bb>inverse</bb> of <span class="math inline">\(R\)</span> is <span class="math inline">\(R^{-1} = \lbrace ⟨y, x⟩: ⟨x, y⟩ \in R\rbrace\)</span>.
-1. The <bb>relative product</bb> of <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> is $(R S) = ⟨x, z⟩ : y(Rxy Syz)$.
+1. The <bb>relative product</bb> of <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> is <span class="math inline">\((R \mid S) = \lbrace ⟨x, z⟩ : \exists y(Rxy \land Syz)\rbrace\)</span>.
 1. The <bb>restriction</bb> of <span class="math inline">\(R\)</span> to <span class="math inline">\(A\)</span> is <span class="math inline">\(R\upharpoonright_{A}= R \cap A^2\)</span>.
-1. The <bb>application</bb> of <span class="math inline">\(R\)</span> to <span class="math inline">\(A\)</span> is $R[A] = y : (x A)Rxy$
+1. The <bb>application</bb> of <span class="math inline">\(R\)</span> to <span class="math inline">\(A\)</span> is <span class="math inline">\(R[A] = \lbrace y : (\exists x \in A)Rxy\rbrace\)</span>
 {{% /dtpc %}}</p>
 <p>{{% dtpcex title=“☯例 1.24” %}}
 Let <span class="math inline">\(S \subseteq \mathbb{Z}^2\)</span> be the successor relation on <span class="math inline">\(\mathbb{Z}\)</span>, i.e., <span class="math inline">\(S = \lbrace⟨x, y⟩ \in \mathbb{Z}^2: x + 1 = y\rbrace\)</span>, so that <span class="math inline">\(Sxy\)</span> iff <span class="math inline">\(x + 1 = y\)</span>.
@@ -990,7 +1012,7 @@ Suppose there is a <span class="math inline">\(y\)</span> such that <span class=
 <p>This section discusses enumerations, countability and uncountability. Several sections come in two versions: a more elementary one, that takes enumerations to be lists, or surjections from <span class="math inline">\(\mathbb{Z}^{+}\)</span>; and a more abstract onethat defines enumerations as bijections with <span class="math inline">\(\mathbb{N}\)</span>.</p>
 <div id="introduction" class="section level3" number="2.4.1">
 <h3><span class="header-section-number">2.4.1</span> Introduction</h3>
-<p>When Georg Cantor developed set theory in the 1870s, one of his aims was to make palatable the idea of an infinite collection—an actual infinity, as the medievals would say. A key part of this was his treatment of the <bb>size</bb> of different sets. If <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> are all distinct, then the set $a, b, c$ is intuitively <bb>larger</bb> than <span class="math inline">\(\lbrace a, b\rbrace\)</span>. But what about infinite sets? Are they all as large as each other? It turns out that they are not.</p>
+<p>When Georg Cantor developed set theory in the 1870s, one of his aims was to make palatable the idea of an infinite collection—an actual infinity, as the medievals would say. A key part of this was his treatment of the <bb>size</bb> of different sets. If <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> are all distinct, then the set <span class="math inline">\(\lbrace a, b, c\rbrace\)</span> is intuitively <bb>larger</bb> than <span class="math inline">\(\lbrace a, b\rbrace\)</span>. But what about infinite sets? Are they all as large as each other? It turns out that they are not.</p>
 <p>The first important idea here is that of an enumeration. We can list every finite set by listing all its <bb>element</bb>s. For some infinite sets, we can also list all their <bb>element</bb>s if we allow the list itself to be infinite. Such sets are called <bb>enumerable</bb>. Cantor’s surprising result, which we will fully understand by the end of this section, was that some infinite sets are not <bb>enumerable</bb>.</p>
 </div>
 <div id="enumerations-and-enumerable-sets" class="section level3" number="2.4.2">
@@ -1088,9 +1110,9 @@ Given a <bb>surjection</bb> <span class="math inline">\(f\colon \mathbb{Z}^{+} \
 <p>{{% dtpc title=“〶推論 1.0” %}}
 A set <span class="math inline">\(A\)</span> is <bb>enumerable</bb> iff it is empty or there is a <bb>surjective</bb> function <span class="math inline">\(f\colon \mathbb{N} \to A\)</span>.
 {{% /dtpc %}}</p>
-<p>We discussed above than an list of <bb>element</bb>s of a set <span class="math inline">\(A\)</span> can be turned into a list without repetitions. This is also true for enumerations, but a bit harder to formulate and prove rigorously. Any function <span class="math inline">\(f\colon \mathbb{Z}^{+} \to A\)</span> must be defined for all <span class="math inline">\(n \in \mathbb{Z}^{+}\)</span>. If there are only finitely many <bb>element</bb>s in <span class="math inline">\(A\)</span> then we clearly cannot have a function defined on the infinitely many <bb>element</bb>s of <span class="math inline">\(\mathbb{Z}^{+}\)</span> that takes as values all the <bb>element</bb>s of <span class="math inline">\(A\)</span> but never takes the same value twice. In that case, i.e., in the case where the list without repetitions is finite, we must choose a different domain for <span class="math inline">\(f\)</span>, one with only finitely many <bb>element</bb>s. Not having repetitions means that <span class="math inline">\(f\)</span> must be <bb>injective</bb>. Since it is also <bb>surjective</bb>, we are looking for a <bb>bijection</bb> between some finite set $, , n$ or <span class="math inline">\(\mathbb{Z}^{+}\)</span> and <span class="math inline">\(A\)</span>.</p>
+<p>We discussed above than an list of <bb>element</bb>s of a set <span class="math inline">\(A\)</span> can be turned into a list without repetitions. This is also true for enumerations, but a bit harder to formulate and prove rigorously. Any function <span class="math inline">\(f\colon \mathbb{Z}^{+} \to A\)</span> must be defined for all <span class="math inline">\(n \in \mathbb{Z}^{+}\)</span>. If there are only finitely many <bb>element</bb>s in <span class="math inline">\(A\)</span> then we clearly cannot have a function defined on the infinitely many <bb>element</bb>s of <span class="math inline">\(\mathbb{Z}^{+}\)</span> that takes as values all the <bb>element</bb>s of <span class="math inline">\(A\)</span> but never takes the same value twice. In that case, i.e., in the case where the list without repetitions is finite, we must choose a different domain for <span class="math inline">\(f\)</span>, one with only finitely many <bb>element</bb>s. Not having repetitions means that <span class="math inline">\(f\)</span> must be <bb>injective</bb>. Since it is also <bb>surjective</bb>, we are looking for a <bb>bijection</bb> between some finite set <span class="math inline">\(\lbrace 1, \cdots, n\rbrace\)</span> or <span class="math inline">\(\mathbb{Z}^{+}\)</span> and <span class="math inline">\(A\)</span>.</p>
 <p>{{% dtpc title=“☯命題 1.12” %}}
-If <span class="math inline">\(f\colon \mathbb{Z}^{+} \to A\)</span> is <bb>surjective</bb> (i.e., an enumeration of <span class="math inline">\(A\)</span>), there is a <bb>bijection</bb> <span class="math inline">\(g\colon Z \to A\)</span> where <span class="math inline">\(Z\)</span> is either <span class="math inline">\(\mathbb{Z}^{+}\)</span> or $, , n$ for some <span class="math inline">\(n \in \mathbb{Z}^{+}\)</span>.
+If <span class="math inline">\(f\colon \mathbb{Z}^{+} \to A\)</span> is <bb>surjective</bb> (i.e., an enumeration of <span class="math inline">\(A\)</span>), there is a <bb>bijection</bb> <span class="math inline">\(g\colon Z \to A\)</span> where <span class="math inline">\(Z\)</span> is either <span class="math inline">\(\mathbb{Z}^{+}\)</span> or <span class="math inline">\(\lbrace 1, \cdots, n\rbrace\)</span> for some <span class="math inline">\(n \in \mathbb{Z}^{+}\)</span>.
 {{% /dtpc %}}</p>
 <blockquote>
 <p><bb>命題 1.12 之證明</bb>
@@ -1098,11 +1120,11 @@ We define the function <span class="math inline">\(g\)</span> recursively: Let <
 The function <span class="math inline">\(g\)</span> is <bb>surjective</bb>, since any element of <span class="math inline">\(A\)</span> is among <span class="math inline">\(f(1)\)</span>, <span class="math inline">\(f(2)\)</span>,  (since <span class="math inline">\(f\)</span> is <bb>surjective</bb>) and so will eventually be a value of <span class="math inline">\(g(i)\)</span> for some <span class="math inline">\(i\)</span>. It is also <bb>injective</bb>, since if there were <span class="math inline">\(j &lt; i\)</span> such that <span class="math inline">\(g(j) = g(i)\)</span>, then <span class="math inline">\(g(i)\)</span> would already be among <span class="math inline">\(g(1), \cdots, g(i-1)\)</span>, contrary to how we defined <span class="math inline">\(g\)</span>.</p>
 </blockquote>
 <p>{{% dtpc title=“〶推論 1.1” %}}
-A set <span class="math inline">\(A\)</span> is <bb>enumerable</bb> iff it is empty or there is a <bb>bijection</bb> <span class="math inline">\(f\colon N \to A\)</span> where either <span class="math inline">\(N = \mathbb{N}\)</span> or $N = , , n$ for some <span class="math inline">\(n \in \mathbb{N}\)</span>.
+A set <span class="math inline">\(A\)</span> is <bb>enumerable</bb> iff it is empty or there is a <bb>bijection</bb> <span class="math inline">\(f\colon N \to A\)</span> where either <span class="math inline">\(N = \mathbb{N}\)</span> or <span class="math inline">\(N = \lbrace 0, \cdots, n\rbrace\)</span> for some <span class="math inline">\(n \in \mathbb{N}\)</span>.
 {{% /dtpc %}}</p>
 <blockquote>
 <p><bb>推論 1.1 之證明</bb>
-<span class="math inline">\(A\)</span> is <bb>enumerable</bb> iff <span class="math inline">\(A\)</span> is empty or there is a <bb>surjective</bb> <span class="math inline">\(f\colon \mathbb{Z}^{+} \to A\)</span>. By Proposition 1.12, the latter holds iff there is a <bb>bijective</bb> function <span class="math inline">\(f\colon Z \to A\)</span> where <span class="math inline">\(Z = \mathbb{Z}^{+}\)</span> or $Z = , , n$ for some <span class="math inline">\(n \in \mathbb{Z}^{+}\)</span>. By the same argument as in the proof of Proposition 1.11, that in turn is the case iff there is a <bb>bijection</bb> <span class="math inline">\(g\colon N \to A\)</span> where either <span class="math inline">\(N = \mathbb{N}\)</span> or $N = , , n-1$.</p>
+<span class="math inline">\(A\)</span> is <bb>enumerable</bb> iff <span class="math inline">\(A\)</span> is empty or there is a <bb>surjective</bb> <span class="math inline">\(f\colon \mathbb{Z}^{+} \to A\)</span>. By Proposition 1.12, the latter holds iff there is a <bb>bijective</bb> function <span class="math inline">\(f\colon Z \to A\)</span> where <span class="math inline">\(Z = \mathbb{Z}^{+}\)</span> or <span class="math inline">\(Z = \lbrace 1, \cdots, n\rbrace\)</span> for some <span class="math inline">\(n \in \mathbb{Z}^{+}\)</span>. By the same argument as in the proof of Proposition 1.11, that in turn is the case iff there is a <bb>bijection</bb> <span class="math inline">\(g\colon N \to A\)</span> where either <span class="math inline">\(N = \mathbb{N}\)</span> or <span class="math inline">\(N = \lbrace 0, \cdots, n-1\rbrace\)</span>.</p>
 </blockquote>
 <blockquote>
 <p><bb>Problem 1.3</bb>
@@ -1159,7 +1181,7 @@ According to Definition1.48（P.63）, a set <span class="math inline">\(A\)</sp
 Let <span class="math inline">\(f \colon \mathbb{N} \to \mathbb{N}\times\mathbb{N}\)</span> take each <span class="math inline">\(k \in \mathbb{N}\)</span> to the tuple <span class="math inline">\(⟨n,m⟩ \in \mathbb{N} \times \mathbb{N}\)</span> such that <span class="math inline">\(k\)</span> is the value of the <span class="math inline">\(n\)</span>th row and <span class="math inline">\(m\)</span>th column in Cantor’s zig-zag array.</p>
 </blockquote>
 <p>This technique also generalises rather nicely. For example, we can use it to enumerate the set of ordered triples of natural numbers, i.e.: <span class="math display">\[\mathbb{N} \times \mathbb{N} \times \mathbb{N} = \Setabs{⟨n,m,k⟩}{n,m,k \in \mathbb{N}}\]</span> We think of <span class="math inline">\(\mathbb{N} \times \mathbb{N} \times \mathbb{N}\)</span> as the Cartesian product of <span class="math inline">\(\mathbb{N} \times \mathbb{N}\)</span> with <span class="math inline">\(\mathbb{N}\)</span>, that is, <span class="math display">\[\mathbb{N}^3 = (\mathbb{N} \times \mathbb{N}) \times \mathbb{N} =\lbrace ⟨⟨n,m⟩,k⟩: n, m, k
-\in \mathbb{N}\rbrace \]</span> and thus we can enumerate <span class="math inline">\(\mathbb{N}^3\)</span> with an array by labelling one axis with the enumeration of <span class="math inline">\(\mathbb{N}\)</span>, and the other axis with the enumeration of <span class="math inline">\(\mathbb{N}^2\)</span>:</p>
+\in \mathbb{N}\rbrace\]</span> and thus we can enumerate <span class="math inline">\(\mathbb{N}^3\)</span> with an array by labelling one axis with the enumeration of <span class="math inline">\(\mathbb{N}\)</span>, and the other axis with the enumeration of <span class="math inline">\(\mathbb{N}^2\)</span>:</p>
 <p>
 <span class="math display">\[
 \begin{array}{ c | c | c | c | c | c}
@@ -1349,7 +1371,7 @@ Suppose, by way of contradiction, that <span class="math inline">\(\mathbb{B}^\o
 <p><bb>Theorem 1.2 之證明</bb>
 We proceed in the same way, by showing that for every list of subsets of <span class="math inline">\(\mathbb{Z}^{+}\)</span> there is a subset of <span class="math inline">\(\mathbb{Z}^{+}\)</span> which cannot be on the list. Suppose the following is a given list of subsets of <span class="math inline">\(\mathbb{Z}^{+}\)</span>: <span class="math display">\[ Z_{1}, Z_{2}, Z_{3}, \cdots \]</span> We now define a set <span class="math inline">\(\overline{Z}\)</span> such that for any <span class="math inline">\(n \in \mathbb{Z}^{+}\)</span>, <span class="math inline">\(n \in \overline{Z}\)</span> iff <span class="math inline">\(n \notin Z_{n}\)</span>: <span class="math display">\[ \overline{Z} = \lbrace n \in \mathbb{Z}^{+}: n \notin Z_n\rbrace\]</span> <span class="math inline">\(\overline{Z}\)</span> is clearly a set of positive integers, since by assumption each <span class="math inline">\(Z_n\)</span> is, and thus <span class="math inline">\(\overline{Z} \in \mathscr{P}({\mathbb{Z})^{+}}\)</span>. But <span class="math inline">\(\overline{Z}\)</span> cannot be on the list. To show this, we’ll establish that for each <span class="math inline">\(k \in \mathbb{Z}^{+}\)</span>, <span class="math inline">\(\overline{Z} \neq Z_k\)</span>.</p>
 <p>So let <span class="math inline">\(k \in \mathbb{Z}^{+}\)</span> be arbitrary. We’ve defined <span class="math inline">\(\overline{Z}\)</span> so that for any <span class="math inline">\(n \in \mathbb{Z}^{+}\)</span>, <span class="math inline">\(n \in \overline{Z}\)</span> iff <span class="math inline">\(n \notin Z_n\)</span>. In particular, taking <span class="math inline">\(n=k\)</span>, <span class="math inline">\(k \in \overline{Z}\)</span> iff <span class="math inline">\(k \notin Z_k\)</span>. But this shows that <span class="math inline">\(\overline{Z} \neq Z_k\)</span>, since <span class="math inline">\(k\)</span> is an <bb>element</bb> of one but not the other, and so <span class="math inline">\(\overline{Z}\)</span> and <span class="math inline">\(Z_k\)</span> have different <bb>element</bb>s. Since <span class="math inline">\(k\)</span> was arbitrary, <span class="math inline">\(\overline{Z}\)</span> is not on the list <span class="math inline">\(Z_1\)</span>, <span class="math inline">\(Z_2, \cdots\)</span> <span class="math inline">\(blacksquare\)</span></p>
-<p>The preceding proof did not mention a diagonal, but you can think of it as involving a diagonal if you picture it this way: Imagine the sets <span class="math inline">\(Z_1\)</span>, <span class="math inline">\(Z_2, \cdots\)</span>, written in an array, where each <bb>element</bb> <span class="math inline">\(j \in Z_i\)</span> is listed in the <span class="math inline">\(j\)</span>-th column. Say the first four sets on that list are $,2,3,$, $, 4, 6, $, $,2,5$, and $,4,5,$. Then the array would begin with</p>
+<p>The preceding proof did not mention a diagonal, but you can think of it as involving a diagonal if you picture it this way: Imagine the sets <span class="math inline">\(Z_1\)</span>, <span class="math inline">\(Z_2, \cdots\)</span>, written in an array, where each <bb>element</bb> <span class="math inline">\(j \in Z_i\)</span> is listed in the <span class="math inline">\(j\)</span>-th column. Say the first four sets on that list are <span class="math inline">\(\lbrace 1,2,3,\cdots\rbrace\)</span>, <span class="math inline">\(\lbrace 2, 4, 6, \cdots\rbrace\)</span>, <span class="math inline">\(\lbrace 1,2,5\rbrace\)</span>, and <span class="math inline">\(\lbrace 3,4,5,\cdots\rbrace\)</span>. Then the array would begin with</p>
 <p>
 <span class="math display">\[
 \begin{array}{r@{}rrrrrrr}
@@ -1382,7 +1404,7 @@ Show that if there is an <bb>injective</bb> function <span class="math inline">\
 </blockquote>
 <p><bb>Proof of Theorem 1.6（P.65）by reduction</bb>
 Suppose that <span class="math inline">\(\mathscr{P}({\mathbb{Z})^{+}}\)</span> were <bb>enumerable</bb>, and thus that there is an enumeration of it, <span class="math inline">\(Z_{1}\)</span>, <span class="math inline">\(Z_{2}\)</span>, <span class="math inline">\(Z_{3}, \cdots\)</span></p>
-<p>Define the function <span class="math inline">\(f \colon \mathscr{P}({\mathbb{Z})^{+}} \to \mathbb{B}^\omega\)</span> by letting <span class="math inline">\(f(Z)\)</span> be the sequence <span class="math inline">\(s_{k}\)</span> such that <span class="math inline">\(s_{k}(n) = 1\)</span> iff <span class="math inline">\(n \in Z\)</span>, and <span class="math inline">\(s_k(n) = 0\)</span> otherwise. This clearly defines a function, since whenever <span class="math inline">\(Z \subseteq \mathbb{Z}^{+}\)</span>, any <span class="math inline">\(n \in \mathbb{Z}^{+}\)</span> either is an <bb>element</bb> of <span class="math inline">\(Z\)</span> or isn’t. For instance, the set $2^{+} = , 4, 6, $ of positive even numbers gets mapped to the sequence <span class="math inline">\(010101\cdots\)</span>, the empty set gets mapped to <span class="math inline">\(0000\cdots\)</span> and the set <span class="math inline">\(\mathbb{Z}^{+}\)</span> itself to <span class="math inline">\(1111\cdots\)</span>.</p>
+<p>Define the function <span class="math inline">\(f \colon \mathscr{P}({\mathbb{Z})^{+}} \to \mathbb{B}^\omega\)</span> by letting <span class="math inline">\(f(Z)\)</span> be the sequence <span class="math inline">\(s_{k}\)</span> such that <span class="math inline">\(s_{k}(n) = 1\)</span> iff <span class="math inline">\(n \in Z\)</span>, and <span class="math inline">\(s_k(n) = 0\)</span> otherwise. This clearly defines a function, since whenever <span class="math inline">\(Z \subseteq \mathbb{Z}^{+}\)</span>, any <span class="math inline">\(n \in \mathbb{Z}^{+}\)</span> either is an <bb>element</bb> of <span class="math inline">\(Z\)</span> or isn’t. For instance, the set <span class="math inline">\(2\mathbb{Z}^{+} = \lbrace 2, 4, 6, \cdots\rbrace\)</span> of positive even numbers gets mapped to the sequence <span class="math inline">\(010101\cdots\)</span>, the empty set gets mapped to <span class="math inline">\(0000\cdots\)</span> and the set <span class="math inline">\(\mathbb{Z}^{+}\)</span> itself to <span class="math inline">\(1111\cdots\)</span>.</p>
 <p>It also is <bb>surjective</bb>: Every sequence of <span class="math inline">\(0\)</span>s and <span class="math inline">\(1\)</span>s corresponds to some set of positive integers, namely the one which has as its members those integers corresponding to the places where the sequence has <span class="math inline">\(1\)</span>s. More precisely, suppose <span class="math inline">\(s \in \mathbb{B}^\omega\)</span>. Define <span class="math inline">\(Z \subseteq \mathbb{Z}^{+}\)</span> by: <span class="math display">\[Z = \lbrace n \in \mathbb{Z}^{+}: s(n) = 1\rbrace\]</span> Then <span class="math inline">\(f(Z) = s\)</span>, as can be verified by consulting the definition of <span class="math inline">\(f\)</span>.</p>
 <p>Now consider the list <span class="math display">\[f(Z_1), f(Z_2), f(Z_3), \cdots\]</span> Since <span class="math inline">\(f\)</span> is <bb>surjective</bb>, every member of <span class="math inline">\(\mathbb{B}^\omega\)</span> must appear as a value of <span class="math inline">\(f\)</span> for some argument, and so must appear on the list. This list must therefore enumerate all of <span class="math inline">\(\mathbb{B}^\omega\)</span>.</p>
 <p>So if <span class="math inline">\(\mathscr{P}({\mathbb{Z})^{+}}\)</span> were <bb>enumerable</bb>, <span class="math inline">\(\mathbb{B}^\omega\)</span> would be <bb>enumerable</bb>. But <span class="math inline">\(\mathbb{B}^\omega\)</span> is <bb>nonenumerable</bb> (Theorem 1.5（P.64）). Hence <span class="math inline">\(\mathscr{P}({\mathbb{Z})^{+}}\)</span> is <bb>nonenumerable</bb>. <span class="math inline">\(\blacksquare\)</span></p>
@@ -1397,7 +1419,7 @@ Show that <span class="math inline">\(\mathbb{N}^\omega\)</span>, the set of inf
 </blockquote>
 <blockquote>
 <p><bb>Problem 1.42</bb>
-Let <span class="math inline">\(P\)</span> be the set of functions from the set of positive integers to the set $$, and let <span class="math inline">\(Q\)</span> be the set of <bb>partial</bb> functions from the set of positive integers to the set $$. Show that <span class="math inline">\(P\)</span> is <bb>enumerable</bb> and <span class="math inline">\(Q\)</span> is not. (Hint: reduce the problem of enumerating <span class="math inline">\(\mathbb{B}^\omega\)</span> to enumerating <span class="math inline">\(Q\)</span>).</p>
+Let <span class="math inline">\(P\)</span> be the set of functions from the set of positive integers to the set <span class="math inline">\(\lbrace 0\rbrace\)</span>, and let <span class="math inline">\(Q\)</span> be the set of <bb>partial</bb> functions from the set of positive integers to the set <span class="math inline">\(\lbrace 0\rbrace\)</span>. Show that <span class="math inline">\(P\)</span> is <bb>enumerable</bb> and <span class="math inline">\(Q\)</span> is not. (Hint: reduce the problem of enumerating <span class="math inline">\(\mathbb{B}^\omega\)</span> to enumerating <span class="math inline">\(Q\)</span>).</p>
 </blockquote>
 <blockquote>
 <p><bb>Problem 1.43</bb>

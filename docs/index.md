@@ -1,7 +1,7 @@
 ---
 knit: "bookdown::render_book"
 title: "Baby Logic"
-date: "2021-02-27"
+date: "2021-02-28"
 author: "Lǐ Èrgǒu"
 description: "Baby Logic Textbooks"
 url: 'https\://duoyu.ren/'
