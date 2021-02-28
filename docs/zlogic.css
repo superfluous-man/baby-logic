@@ -44,8 +44,8 @@ font-family: 'Noto Serif TC', 'Noto Serif SC', "system-ui", "-apple-system", "Bl
 font-style: normal;
     margin-top: 1em;
     margin-bottom: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 0em;
+    margin-right: 0em;
     padding: .3em 0.5em 0.3em .3em;
     border-left: 2px solid #aaa;
     text-align:justify;
@@ -57,8 +57,8 @@ font-family: 'Noto Serif TC', 'Noto Serif SC', "system-ui", "-apple-system", "Bl
 font-style: normal;
     margin-top: 1em;
     margin-bottom: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 0em;
+    margin-right: 0em;
     padding: .3em 0.5em 0.3em .3em;
     border-left: 3px solid #aaa; /* aaa  dbdbdb */
     background-color: #f5f5f5;
@@ -71,8 +71,8 @@ font-family: 'Noto Serif TC', 'Noto Serif SC', "system-ui", "-apple-system", "Bl
 font-style: normal;
     margin-top: 1em;
     margin-bottom: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 0em;
+    margin-right: 0em;
     padding: .3em 0.5em 0.3em .3em;
     border-left: 2px solid #aaa;
     text-align:justify;
@@ -84,8 +84,8 @@ font-family: 'Noto Serif TC', 'Noto Serif SC', "system-ui", "-apple-system", "Bl
 font-style: normal;
     margin-top: 1em;
     margin-bottom: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 0em;
+    margin-right: 0em;
     padding: .3em 0.5em 0.3em .3em;
     border-left: 3px solid #ff6080;
     background-color: #ffe1e7;
@@ -98,8 +98,8 @@ font-family: 'Noto Serif TC', 'Noto Serif SC', "system-ui", "-apple-system", "Bl
 font-style: normal;
     margin-top: 1em;
     margin-bottom: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 0em;
+    margin-right: 0em;
     padding: .3em 0.5em 0.3em .3em;
     border-left: 3px solid #5b8fe3;
     background-color: #e0eafa;
@@ -112,8 +112,8 @@ font-family: 'Noto Serif TC', 'Noto Serif SC', "system-ui", "-apple-system", "Bl
 font-style: normal;
     margin-top: 1em;
     margin-bottom: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 0em;
+    margin-right: 0em;
     padding: .3em 0.5em 0.3em .3em;
     border-left: 3px solid #5b8fe3;
     background-color: #e0eafa;
@@ -126,8 +126,8 @@ font-family: 'Noto Serif TC', 'Noto Serif SC', "system-ui", "-apple-system", "Bl
 font-style: normal;
     margin-top: 1em;
     margin-bottom: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 0em;
+    margin-right: 0em;
     padding: .3em 0.5em 0.3em .3em;
     border-left: 3px solid #5b8fe3;
     background-color: #e0eafa;
@@ -140,8 +140,8 @@ font-family: 'Noto Serif TC', 'Noto Serif SC', "system-ui", "-apple-system", "Bl
 font-style: normal;
     margin-top: 1em;
     margin-bottom: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 0em;
+    margin-right: 0em;
     padding: .3em 0.5em 0.3em .3em;
     border-left: 2px solid #0effdb;
     background-color: #d2fff8;

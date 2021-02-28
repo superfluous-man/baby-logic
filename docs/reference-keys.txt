@@ -48,6 +48,9 @@ exm:exmOrderedpair01
 exm:exmOrderedpair02
 cnj:prob0109
 prp:prpCartesian
+cnj:prob0110
+exm:exmtuple
+thm:thmrussell
 bookintro
 论说
 论说的好坏
@@ -139,6 +142,3 @@ chap-truth-table
 slideshow-summary
 our-buggy-moral-code
 relativism
-cnj:prob0110
-exm:exmtuple
-thm:thmrussell
