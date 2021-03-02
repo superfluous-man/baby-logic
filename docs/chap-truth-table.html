@@ -1442,10 +1442,10 @@
 <blockquote>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\neg \neg p \rightarrow p\)</span></li>
-<li>$ p (p q)$</li>
+<li><span class="math inline">\(p \rightarrow(\neg p \rightarrow q)\)</span></li>
 <li><span class="math inline">\(p \rightarrow p \wedge q\)</span></li>
-<li>$ p q p q$</li>
-<li>$p q p q $</li>
+<li><span class="math inline">\(p \wedge q \rightarrow p \vee q\)</span></li>
+<li><span class="math inline">\(p \vee q \rightarrow p \wedge q\)</span></li>
 <li><span class="math inline">\(p \vee q \rightarrow \neg(p \rightarrow q\)</span></li>
 <li><span class="math inline">\(p \wedge q \rightarrow \neg(p \rightarrow \neg q)\)</span></li>
 <li><span class="math inline">\((p \rightarrow q) \rightarrow \neg(\neg q \rightarrow \neg p)\)</span></li>
@@ -1540,28 +1540,20 @@
 </blockquote>
 
 <div class="exercise">
-<p><span id="exr:truthtexe10" class="exercise"><strong>练习 3.10  </strong></span></p>
+<p><span id="exr:truthtexe10" class="exercise"><strong>练习 3.10  </strong></span>设 <span class="math inline">\(\varphi\)</span> 和 <span class="math inline">\(\psi\)</span> 为任意公式。在每个括号中画 <span class="math inline">\(\checkmark\)</span> 或 ✗ 表明「对」和「错」：</p>
 <blockquote>
 <ol style="list-style-type: decimal">
-<li>任一公式都或者是重言式，或者是矛盾式，或者是或然式；并且只能是这三种公式中的一种。</li>
-<li>对任意公式集 <span class="math inline">\(\Gamma\)</span> 和任意公式 <span class="math inline">\(\varphi\)</span>，<span class="math inline">\(\Gamma\)</span> 或者重言蕴涵 <span class="math inline">\(\varphi\)</span> 或者重言蕴涵 <span class="math inline">\(\neg \varphi\)</span>。<br />
-</li>
-<li>对任意公式 <span class="math inline">\(\varphi\)</span> 和 <span class="math inline">\(\psi\)</span>，<span class="math inline">\(\varphi\)</span> 或者与 <span class="math inline">\(\psi\)</span> 重言等价或者与 <span class="math inline">\(\neg \psi\)</span> 重言等价。</li>
-<li>对任意公式 <span class="math inline">\(\varphi\)</span>，或者 <span class="math inline">\(\varphi\)</span> 可满足或者 <span class="math inline">\(\neg \varphi\)</span> 可满足。
+<li>如果 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 是重言式，那么 <span class="math inline">\(\varphi\)</span> 是重言式仅当 <span class="math inline">\(\psi\)</span> 是重言式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），矛盾式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），或然式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>）。</li>
+<li>如果 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 是重言式，那么 <span class="math inline">\(\varphi\)</span> 是矛盾式仅当 <span class="math inline">\(\psi\)</span> 是重言式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），矛盾式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），或然式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>）。</li>
+<li>如果 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 是重言式，那么 <span class="math inline">\(\varphi\)</span> 是或然式仅当 <span class="math inline">\(\psi\)</span> 是重言式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），矛盾式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），或然式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>）。</li>
+<li>如果 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 是矛盾式，那么 <span class="math inline">\(\varphi\)</span> 是重言式仅当 <span class="math inline">\(\psi\)</span> 是重言式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），矛盾式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），或然式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>）。</li>
+<li>如果 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 是矛盾式，那么 <span class="math inline">\(\varphi\)</span> 是矛盾式仅当 <span class="math inline">\(\psi\)</span> 是重言式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），矛盾式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），或然式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>）。</li>
+<li>如果 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 是矛盾式，那么 <span class="math inline">\(\varphi\)</span> 是或然式仅当 <span class="math inline">\(\psi\)</span> 是重言式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），矛盾式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），或然式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>）。</li>
+<li>如果 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 是或然式，那么。<span class="math inline">\(\varphi\)</span> 是重言式仅当 <span class="math inline">\(\psi\)</span> 是重言式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），矛盾式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），或然式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>）。</li>
+<li>如果 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 是或然式，那么 <span class="math inline">\(\varphi\)</span> 是矛盾式仅当 <span class="math inline">\(\psi\)</span> 是重言式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），矛盾式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），或然式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>）。</li>
+<li>如果 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 是或然式，那么 <span class="math inline">\(\varphi\)</span> 是或然式仅当 <span class="math inline">\(\psi\)</span> 是重言式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），矛盾式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），或然式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>）。
 </div></li>
 </ol>
-</blockquote>
-<blockquote>
-<p><bb>习题 2.9：设 <span class="math inline">\(\varphi\)</span> 和 <span class="math inline">\(\psi\)</span> 为任意公式。在每个括号中画 <span class="math inline">\(\checkmark\)</span> 或 ✗ 表明「对」和「错」</bb>
-1. 如果 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 是重言式，那么 <span class="math inline">\(\varphi\)</span> 是重言式仅当 <span class="math inline">\(\psi\)</span> 是重言式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），矛盾式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），或然式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>）。
-1. 如果 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 是重言式，那么 <span class="math inline">\(\varphi\)</span> 是矛盾式仅当 <span class="math inline">\(\psi\)</span> 是重言式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），矛盾式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），或然式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>）。
-1. 如果 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 是重言式，那么 <span class="math inline">\(\varphi\)</span> 是或然式仅当 <span class="math inline">\(\psi\)</span> 是重言式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），矛盾式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），或然式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>）。
-1. 如果 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 是矛盾式，那么 <span class="math inline">\(\varphi\)</span> 是重言式仅当 <span class="math inline">\(\psi\)</span> 是重言式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），矛盾式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），或然式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>）。
-1. 如果 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 是矛盾式，那么 <span class="math inline">\(\varphi\)</span> 是矛盾式仅当 <span class="math inline">\(\psi\)</span> 是重言式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），矛盾式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），或然式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>）。
-1. 如果 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 是矛盾式，那么 <span class="math inline">\(\varphi\)</span> 是或然式仅当 <span class="math inline">\(\psi\)</span> 是重言式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），矛盾式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），或然式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>）。
-1. 如果 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 是或然式，那么。<span class="math inline">\(\varphi\)</span> 是重言式仅当 <span class="math inline">\(\psi\)</span> 是重言式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），矛盾式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），或然式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>）。
-1. 如果 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 是或然式，那么 <span class="math inline">\(\varphi\)</span> 是矛盾式仅当 <span class="math inline">\(\psi\)</span> 是重言式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），矛盾式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），或然式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>）。
-1. 如果 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 是或然式，那么 <span class="math inline">\(\varphi\)</span> 是或然式仅当 <span class="math inline">\(\psi\)</span> 是重言式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），矛盾式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>），或然式（<span class="math inline">\(\underline{\hspace{1em}}\)</span>）。</p>
 </blockquote>
 
 <div class="exercise">
@@ -1573,25 +1565,25 @@
 <p><span id="exr:truthtexe12" class="exercise"><strong>练习 3.12  </strong></span>设 <span class="math inline">\(\varphi, \psi, \chi\)</span> 为任意公式。用（简化）真值表说明下列命题都成立：</p>
 <blockquote>
 <ol style="list-style-type: decimal">
-<li>$ _{0} $</li>
-<li>$_{0} $</li>
-<li>$, _{0} $</li>
+<li><span class="math inline">\(\varphi \vDash_{0} \varphi\)</span></li>
+<li><span class="math inline">\(\psi \vDash_{0} \varphi \vee \psi\)</span></li>
+<li><span class="math inline">\(\varphi, \psi \vDash_{0} \varphi \wedge \psi\)</span></li>
 <li><span class="math inline">\(\varphi \vDash_{0} \varphi \rightarrow \varphi\)</span></li>
 <li><span class="math inline">\(\varphi \vDash_{0} \psi \rightarrow \varphi\)</span></li>
-<li>$, _{0} $</li>
+<li><span class="math inline">\(\varphi, \varphi \rightarrow \psi \vDash_{0} \psi\)</span></li>
 <li><span class="math inline">\(\psi, \neg \psi \vDash_{0} \varphi\)</span></li>
 <li><span class="math inline">\(\varphi \vee \psi, \neg \psi \vDash_{0} \varphi\)</span></li>
 <li><span class="math inline">\(\neg(\varphi \rightarrow \neg \psi) \vDash_{0} \varphi\)</span></li>
-<li>$() _{0} $</li>
+<li><span class="math inline">\(\neg(\varphi \rightarrow \neg \psi) \vDash_{0} \psi\)</span></li>
 <li><span class="math inline">\(\varphi \rightarrow \neg \psi, \psi \vDash_{0} \neg \varphi\)</span></li>
-<li>$, _{0} $</li>
+<li><span class="math inline">\(\varphi \rightarrow \psi, \chi \rightarrow \varphi \vDash_{0} \chi \rightarrow \psi\)</span></li>
 <li><span class="math inline">\(\varphi \wedge \psi \vDash_{0} \psi \wedge \varphi\)</span></li>
 <li><span class="math inline">\(\varphi \vee \psi \vDash_{0} \psi \vee \varphi\)</span></li>
-<li>$_{0} $</li>
+<li><span class="math inline">\(\varphi \wedge \psi \vDash_{0} \varphi \vee \psi\)</span></li>
 <li>$() _{0} $</li>
 <li><span class="math inline">\(\neg \varphi \wedge \neg \psi \vDash_{0} \neg(\varphi \vee \psi)\)</span></li>
 <li><span class="math inline">\(\neg \varphi \vee \neg \psi \vDash_{0} \neg(\varphi \wedge \psi)\)</span></li>
-<li>$, _{0} $</li>
+<li><span class="math inline">\(\varphi \leftrightarrow \psi, \varphi \vDash_{0} \psi\)</span></li>
 <li><span class="math inline">\(\varphi \leftrightarrow \psi, \psi \vDash_{0} \varphi\)</span>
 </div></li>
 </ol>
@@ -1613,10 +1605,10 @@
 <p><span id="exr:truthtexe14" class="exercise"><strong>练习 3.14  </strong></span>用（简化）真值表说明下列各命题都不成立：</p>
 <blockquote>
 <ol style="list-style-type: decimal">
-<li>$p _{0} p q $</li>
+<li><span class="math inline">\(p \vDash_{0} p \wedge q\)</span></li>
 <li><span class="math inline">\(p \vee q \vDash_{0} p\)</span></li>
 <li><span class="math inline">\(p \rightarrow q, q \vDash_{0} p\)</span></li>
-<li>$p q _{0} q $</li>
+<li><span class="math inline">\(p \rightarrow q \vDash_{0} q\)</span></li>
 <li><span class="math inline">\(p \wedge q \vDash_{0}(p \rightarrow r) \wedge(q \rightarrow r)\)</span></li>
 <li><span class="math inline">\(p \vee q \vDash_{0}(p \rightarrow r) \vee(q \rightarrow r)\)</span></li>
 <li><span class="math inline">\(p \leftrightarrow q \vDash_{0} p\)</span></li>
@@ -1634,10 +1626,10 @@
 <li><span class="math inline">\(\varphi \rightarrow(\neg \varphi \rightarrow \psi)\)</span></li>
 <li><span class="math inline">\(\neg \varphi \rightarrow \neg(\varphi \wedge \psi)\)</span></li>
 <li><span class="math inline">\(\neg \psi \rightarrow \neg(\varphi \wedge \psi)\)</span></li>
-<li>$() $</li>
-<li>$() $</li>
+<li><span class="math inline">\(\neg(\varphi \vee \psi) \leftrightarrow \neg \varphi \wedge \neg \psi\)</span></li>
+<li><span class="math inline">\(\neg(\varphi \wedge \psi) \leftrightarrow \neg \varphi \vee \neg \psi\)</span></li>
 <li><span class="math inline">\(\neg(\neg \varphi \rightarrow \psi) \rightarrow \neg \varphi\)</span></li>
-<li>$() $</li>
+<li><span class="math inline">\(\neg(\neg \varphi \rightarrow \psi) \rightarrow \neg \psi\)</span></li>
 <li><span class="math inline">\((\varphi \rightarrow \psi) \rightarrow((\varphi \rightarrow \neg \psi) \rightarrow \neg \varphi)\)</span></li>
 <li><span class="math inline">\((\varphi \leftrightarrow \psi) \rightarrow(\psi \leftrightarrow \varphi)\)</span></li>
 <li><span class="math inline">\((\varphi \leftrightarrow(\psi \leftrightarrow \chi)) \leftrightarrow((\varphi \leftrightarrow \psi) \leftrightarrow \chi)\)</span></li>
