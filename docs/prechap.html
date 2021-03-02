@@ -1070,64 +1070,73 @@ Then <span class="math inline">\(R\)</span> is the graph of the function <span c
 <h3><span class="header-section-number">2.4.2</span> Enumerations and enumerable Sets</h3>
 <p>This section discusses enumerations of sets, defining them as surjections from <span class="math inline">\(\mathbb{Z}^{+}\)</span>. It does things slowly, for readers with little mathematical background. An alternative, terser version is given in §1.3.10（P.62）, which defines enumerations differently: as bijections with <span class="math inline">\(\mathbb{N}\)</span> (or an initial segment).</p>
 <p>We’ve already given examples of sets by listing their <bb>element</bb>s. Let’s discuss in more general terms how and when we can list the <bb>element</bb>s of a set, even if that set is infinite.</p>
-<p>{{% dtpc title=“☯定義 1.40【Enumeration, informally】” %}}
-Informally, an <bb>enumeration</bb> of a set <span class="math inline">\(A\)</span> is a list (possibly infinite) of <bb>element</bb>s of <span class="math inline">\(A\)</span> such that every <bb>element</bb> of <span class="math inline">\(A\)</span> appears on the list at some finite position. If <span class="math inline">\(A\)</span> has an enumeration, then <span class="math inline">\(A\)</span> is said to be <bb>enumerable</bb>.
-{{% /dtpc %}}</p>
-<p>A couple of points about enumerations:
-1. We count as enumerations only lists which have a beginning and in which every <bb>element</bb> other than the first has a single <bb>element</bb> immediately preceding it. In other words, there are only finitely many elements between the first <bb>element</bb> of the list and any other <bb>element</bb>. In particular, this means that every <bb>element</bb> of an enumeration has a finite position: the first <bb>element</bb> has position <span class="math inline">\(1\)</span>, the second position <span class="math inline">\(2\)</span>, etc.
-1. We can have different enumerations of the same set <span class="math inline">\(A\)</span> which differ by the order in which the <bb>element</bb>s appear: <span class="math inline">\(4\)</span>, <span class="math inline">\(1\)</span>, <span class="math inline">\(25\)</span>, <span class="math inline">\(16\)</span>, <span class="math inline">\(9\)</span> enumerates the (set of the) first five square numbers just as well as <span class="math inline">\(1\)</span>, <span class="math inline">\(4\)</span>, <span class="math inline">\(9\)</span>, <span class="math inline">\(16\)</span>, <span class="math inline">\(25\)</span> does.
-1. Redundant enumerations are still enumerations: <span class="math inline">\(1\)</span>, <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(3\)</span>, <span class="math inline">\(3, \cdots\)</span>, enumerates the same set as <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(3, \cdots\)</span>, does.
-1. Order and redundancy <bb>do</bb> matter when we specify an enumeration: we can enumerate the positive integers beginning with <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(3\)</span>, <span class="math inline">\(1, \cdots\)</span>, but the pattern is easier to see when enumerated in the standard way as <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(3\)</span>, <span class="math inline">\(4, \cdots\)</span>.
-1. Enumerations must have a beginning: , <span class="math inline">\(3\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(1\)</span> is not an enumeration of the positive integers because it has no first <bb>element</bb>. To see how this follows from the informal definition, ask yourself, “at what position in the list does the number 76 appear?”
-1. The following is not an enumeration of the positive integers: <span class="math inline">\(1\)</span>, <span class="math inline">\(3\)</span>, <span class="math inline">\(5, \cdots, 2\)</span>, <span class="math inline">\(4\)</span>, <span class="math inline">\(6, \cdots\)</span>. The problem is that the even numbers occur at places <span class="math inline">\(\infty + 1\)</span>, <span class="math inline">\(\infty + 2\)</span>, <span class="math inline">\(\infty + 3\)</span>, rather than at finite positions.
-1. The empty set is enumerable: it is enumerated by the empty list!</p>
-<p>{{% dtpc title=“☯命題 1.10” %}}
-If <span class="math inline">\(A\)</span> has an enumeration, it has an enumeration without repetitions.
-{{% /dtpc %}}</p>
-<blockquote>
-<p><bb>命題 1.10 之證明</bb>
-Suppose <span class="math inline">\(A\)</span> has an enumeration <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2, \cdots\)</span>, in which each <span class="math inline">\(x_i\)</span> is an <bb>element</bb> of <span class="math inline">\(A\)</span>. We can remove repetitions from an enumeration by removing repeated <bb>element</bb>s. For instance, we can turn the enumeration into a new one in which we list <span class="math inline">\(x_i\)</span> if it is an <bb>element</bb> of <span class="math inline">\(A\)</span> that is not among <span class="math inline">\(x_1, \cdots, x_{i-1}\)</span> or remove <span class="math inline">\(x_i\)</span> from the list if it already appears among <span class="math inline">\(x_1, \cdots, x_{i-1}\)</span>.</p>
-</blockquote>
+
+<div class="definition">
+<span id="def:defEnumeration" class="definition"><strong>定义 2.41  (Enumeration, informally)  </strong></span>Informally, an <bb>enumeration</bb> of a set <span class="math inline">\(A\)</span> is a list (possibly infinite) of <bb>element</bb>s of <span class="math inline">\(A\)</span> such that every <bb>element</bb> of <span class="math inline">\(A\)</span> appears on the list at some finite position. If <span class="math inline">\(A\)</span> has an enumeration, then <span class="math inline">\(A\)</span> is said to be <bb>enumerable</bb>.
+</div>
+<p>A couple of points about enumerations:</p>
+<ol style="list-style-type: decimal">
+<li>We count as enumerations only lists which have a beginning and in which every <bb>element</bb> other than the first has a single <bb>element</bb> immediately preceding it. In other words, there are only finitely many elements between the first <bb>element</bb> of the list and any other <bb>element</bb>. In particular, this means that every <bb>element</bb> of an enumeration has a finite position: the first <bb>element</bb> has position <span class="math inline">\(1\)</span>, the second position <span class="math inline">\(2\)</span>, etc.</li>
+<li>We can have different enumerations of the same set <span class="math inline">\(A\)</span> which differ by the order in which the <bb>element</bb>s appear: <span class="math inline">\(4\)</span>, <span class="math inline">\(1\)</span>, <span class="math inline">\(25\)</span>, <span class="math inline">\(16\)</span>, <span class="math inline">\(9\)</span> enumerates the (set of the) first five square numbers just as well as <span class="math inline">\(1\)</span>, <span class="math inline">\(4\)</span>, <span class="math inline">\(9\)</span>, <span class="math inline">\(16\)</span>, <span class="math inline">\(25\)</span> does.</li>
+<li>Redundant enumerations are still enumerations: <span class="math inline">\(1\)</span>, <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(3\)</span>, <span class="math inline">\(3, \cdots\)</span>, enumerates the same set as <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(3, \cdots\)</span>, does.</li>
+<li>Order and redundancy <bb>do</bb> matter when we specify an enumeration: we can enumerate the positive integers beginning with <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(3\)</span>, <span class="math inline">\(1, \cdots\)</span>, but the pattern is easier to see when enumerated in the standard way as <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(3\)</span>, <span class="math inline">\(4, \cdots\)</span>.</li>
+<li>Enumerations must have a beginning: , <span class="math inline">\(3\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(1\)</span> is not an enumeration of the positive integers because it has no first <bb>element</bb>. To see how this follows from the informal definition, ask yourself, “at what position in the list does the number 76 appear?”</li>
+<li>The following is not an enumeration of the positive integers: <span class="math inline">\(1\)</span>, <span class="math inline">\(3\)</span>, <span class="math inline">\(5, \cdots, 2\)</span>, <span class="math inline">\(4\)</span>, <span class="math inline">\(6, \cdots\)</span>. The problem is that the even numbers occur at places <span class="math inline">\(\infty + 1\)</span>, <span class="math inline">\(\infty + 2\)</span>, <span class="math inline">\(\infty + 3\)</span>, rather than at finite positions.</li>
+<li>The empty set is enumerable: it is enumerated by the empty list!</li>
+</ol>
+
+<div class="proposition">
+<span id="prp:prpenumeration" class="proposition"><strong>命题 2.11  </strong></span>If <span class="math inline">\(A\)</span> has an enumeration, it has an enumeration without repetitions.
+</div>
+
+<div class="proof">
+ <span class="proof"><em>PROOF: </em></span> Suppose <span class="math inline">\(A\)</span> has an enumeration <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2, \cdots\)</span>, in which each <span class="math inline">\(x_i\)</span> is an <bb>element</bb> of <span class="math inline">\(A\)</span>. We can remove repetitions from an enumeration by removing repeated <bb>element</bb>s. For instance, we can turn the enumeration into a new one in which we list <span class="math inline">\(x_i\)</span> if it is an <bb>element</bb> of <span class="math inline">\(A\)</span> that is not among <span class="math inline">\(x_1, \cdots, x_{i-1}\)</span> or remove <span class="math inline">\(x_i\)</span> from the list if it already appears among <span class="math inline">\(x_1, \cdots, x_{i-1}\)</span>.
+</div>
 <p>The last argument shows that in order to get a good handle on enumerations and <bb>enumerable</bb> sets and to prove things about them, we need a more precise definition. The following provides it.</p>
-<p>{{% dtpc title=“☯定義 1.41【Enumeration, formally】” %}}
-An <bb>enumeration</bb> of a set <span class="math inline">\(A \neq \varnothing\)</span> is any <bb>surjective</bb> function <span class="math inline">\(f \colon \mathbb{Z}^{+} \to A\)</span>.
-{{% /dtpc %}}</p>
+
+<div class="definition">
+<span id="def:defEnumerationform" class="definition"><strong>定义 2.42  (Enumeration, formally)  </strong></span>An <bb>enumeration</bb> of a set <span class="math inline">\(A \neq \varnothing\)</span> is any <bb>surjective</bb> function <span class="math inline">\(f \colon \mathbb{Z}^{+} \to A\)</span>.
+</div>
 <p>Let’s convince ourselves that the formal definition and the informal definition using a possibly infinite list are equivalent. First, any <bb>surjective</bb> function from <span class="math inline">\(\mathbb{Z}^{+}\)</span> to a set <span class="math inline">\(A\)</span> enumerates <span class="math inline">\(A\)</span>. Such a function determines an enumeration as defined informally above: the list <span class="math inline">\(f(1)\)</span>, <span class="math inline">\(f(2)\)</span>, <span class="math inline">\(f(3), \cdots\)</span>. Since <span class="math inline">\(f\)</span> is <bb>surjective</bb>, every <bb>element</bb> of <span class="math inline">\(A\)</span> is guaranteed to be the value of <span class="math inline">\(f(n)\)</span> for some <span class="math inline">\(n \in \mathbb{Z}^{+}\)</span>. Hence, every <bb>element</bb> of <span class="math inline">\(A\)</span> appears at some finite position in the list. Since the function may not be <bb>injective</bb>, the list may be redundant, but that is acceptable (as noted above).</p>
 <p>On the other hand, given a list that enumerates all <bb>element</bb>s of <span class="math inline">\(A\)</span>, we can define a <bb>surjective</bb> function <span class="math inline">\(f\colon \mathbb{Z}^{+} \to A\)</span> by letting <span class="math inline">\(f(n)\)</span> be the <span class="math inline">\(n\)</span>th <bb>element</bb> of the list, or the final <bb>element</bb> of the list if there is no <span class="math inline">\(n\)</span>th <bb>element</bb>. The only case where this does not produce a <bb>surjective</bb> function is when <span class="math inline">\(A\)</span> is empty, and hence the list is empty. So, every non-empty list determines a <bb>surjective</bb> function <span class="math inline">\(f\colon \mathbb{Z}^{+} \to A\)</span>.</p>
-<p>{{% dtpc title=“☯定義 1.42” %}}
-A set <span class="math inline">\(A\)</span> is <bb>enumerable</bb> iff it is empty or has an enumeration.
-{{% /dtpc %}}</p>
-<p>{{% dtpcex title=“☯例 1.36” %}}
-A function enumerating the positive integers (<span class="math inline">\(\mathbb{Z}^{+}\)</span>) is simply the identity function given by <span class="math inline">\(f(n) = n\)</span>. A function enumerating the natural numbers <span class="math inline">\(\mathbb{N}\)</span> is the function <span class="math inline">\(g(n) = n - 1\)</span>.
-{{% /dtpcex %}}</p>
-<p>{{% dtpcex title=“☯例 1.37” %}}
-The functions <span class="math inline">\(f\colon \mathbb{Z}^{+} \to \mathbb{Z}^{+}\)</span> and <span class="math inline">\(g \colon \mathbb{Z}^{+} \to \mathbb{Z}^{+}\)</span> given by</p>
-<p>
-<span class="math display">\[\begin{align*}
+
+<div class="definition">
+<span id="def:defenumerable" class="definition"><strong>定义 2.43  </strong></span>A set <span class="math inline">\(A\)</span> is <bb>enumerable</bb> iff it is empty or has an enumeration.
+</div>
+
+<div class="example">
+<span id="exm:exmEnumeration01" class="example"><strong>例 2.37  </strong></span>A function enumerating the positive integers (<span class="math inline">\(\mathbb{Z}^{+}\)</span>) is simply the identity function given by <span class="math inline">\(f(n) = n\)</span>. A function enumerating the natural numbers <span class="math inline">\(\mathbb{N}\)</span> is the function <span class="math inline">\(g(n) = n - 1\)</span>.
+</div>
+
+<div class="example">
+<p><span id="exm:exmEnumeration02" class="example"><strong>例 2.38  </strong></span>The functions <span class="math inline">\(f\colon \mathbb{Z}^{+} \to \mathbb{Z}^{+}\)</span> and <span class="math inline">\(g \colon \mathbb{Z}^{+} \to \mathbb{Z}^{+}\)</span> given by</p>
+<blockquote>
+<p><span class="math display">\[\begin{align*}
 &amp;  f(n) = 2n \text{ and}\\
 &amp; g(n) = 2n+1
-\end{align*}\]</span>
-</p>
-<p>enumerate the even positive integers and the odd positive integers, respectively. However, neither function is an enumeration of <span class="math inline">\(\mathbb{Z}^{+}\)</span>, since neither is <bb>surjective</bb>.
-{{% /dtpcex %}}</p>
-<blockquote>
-<p><bb>Problem 1.23</bb>
-Define an enumeration of the positive squares <span class="math inline">\(1\)</span>, <span class="math inline">\(4\)</span>, <span class="math inline">\(9\)</span>, <span class="math inline">\(16, \cdots\)</span></p>
+\end{align*}\]</span></p>
 </blockquote>
-<p>{{% dtpcex title=“☯例 1.38” %}}
-The function <span class="math inline">\(f(n) = (-1)^{n} \lceil \frac{(n-1)}{2}\rceil\)</span> (where <span class="math inline">\(\lceil x \rceil\)</span> denotes the <bb>ceiling</bb> function, which rounds <span class="math inline">\(x\)</span> up to the nearest integer) enumerates the set of integers <span class="math inline">\(\mathbb{Z}\)</span>. Notice how <span class="math inline">\(f\)</span> generates the values of <span class="math inline">\(\mathbb{Z}\)</span> by “hopping” back and forth between positive and negative integers:</p>
-<p>
-<span class="math display">\[
+enumerate the even positive integers and the odd positive integers, respectively. However, neither function is an enumeration of <span class="math inline">\(\mathbb{Z}^{+}\)</span>, since neither is <bb>surjective</bb>.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0124" class="conjecture"><strong>问题 2.24  </strong></span>Define an enumeration of the positive squares <span class="math inline">\(1\)</span>, <span class="math inline">\(4\)</span>, <span class="math inline">\(9\)</span>, <span class="math inline">\(16, \cdots\)</span>
+</div>
+
+<div class="example">
+<p><span id="exm:exmEnumeration03" class="example"><strong>例 2.39  </strong></span>The function <span class="math inline">\(f(n) = (-1)^{n} \lceil \frac{(n-1)}{2}\rceil\)</span> (where <span class="math inline">\(\lceil x \rceil\)</span> denotes the <bb>ceiling</bb> function, which rounds <span class="math inline">\(x\)</span> up to the nearest integer) enumerates the set of integers <span class="math inline">\(\mathbb{Z}\)</span>. Notice how <span class="math inline">\(f\)</span> generates the values of <span class="math inline">\(\mathbb{Z}\)</span> by “hopping” back and forth between positive and negative integers:</p>
+<blockquote>
+<p><span class="math display">\[
 \begin{array}{c c c c c c c c}
 f(1) &amp; f(2) &amp; f(3) &amp; f(4) &amp; f(5) &amp; f(6) &amp; f(7) &amp; \cdots \\ \\
 - \lceil \tfrac{0}{2} \rceil &amp; \lceil \tfrac{1}{2}\rceil &amp; - \lceil \tfrac{2}{2} \rceil &amp; \lceil \tfrac{3}{2} \rceil &amp; - \lceil \tfrac{4}{2} \rceil  &amp; \lceil \tfrac{5}{2}
 \rceil &amp; - \lceil \tfrac{6}{2} \rceil &amp; \cdots \\ \\
 0 &amp; 1 &amp; -1 &amp; 2 &amp; -2 &amp; 3 &amp; \cdots
 \end{array}
-\]</span>
-</p>
+\]</span></p>
+</blockquote>
 <p>You can also think of <span class="math inline">\(f\)</span> as defined by cases as follows:</p>
-<p>
+<blockquote>
 <span class="math display">\[
 f(n) = \begin{cases}
 0 &amp; \text{if $n = 1$}\\
@@ -1135,58 +1144,52 @@ n/2 &amp; \text{if $n$ is even}\\
 -(n-1)/2 &amp; \text{if $n$ is odd and $&gt;1$}
 \end{cases}
 \]</span>
-</p>
-<p>{{% /dtpcex %}}</p>
-<blockquote>
-<p><bb>Problem 1.24</bb>
-Show that if <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are <bb>enumerable</bb>, so is <span class="math inline">\(A \cup B\)</span>. To do this, suppose there are <bb>surjective</bb> functions <span class="math inline">\(f\colon \mathbb{Z}^{+} \to A\)</span> and <span class="math inline">\(g\colon \mathbb{Z}^{+} \to B\)</span>, and define a <bb>surjective</bb> function <span class="math inline">\(h\colon \mathbb{Z}^{+} \to A \cup B\)</span> and prove that it is <bb>surjective</bb>. Also consider the cases where <span class="math inline">\(A\)</span> or <span class="math inline">\(B = \varnothing\)</span>.</p>
+</div>
 </blockquote>
-<blockquote>
-<p><bb>Problem 1.25</bb>
-Show that if <span class="math inline">\(B \subseteq A\)</span> and <span class="math inline">\(A\)</span> is <bb>enumerable</bb>, so is <span class="math inline">\(B\)</span>. To do this, suppose there is a <bb>surjective</bb> function <span class="math inline">\(f\colon \mathbb{Z}^{+} \to A\)</span>. Define a <bb>surjective</bb> function <span class="math inline">\(g\colon \mathbb{Z}^{+} \to B\)</span> and prove that it is <bb>surjective</bb>. What happens if <span class="math inline">\(B = \varnothing\)</span>?</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.26</bb>
-Show by induction on <span class="math inline">\(n\)</span> that if <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2, \cdots, A_n\)</span> are all <bb>enumerable</bb>, so is <span class="math inline">\(A_1 \cup \cdots \cup A_n\)</span>. You may assume the fact that if two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are <bb>enumerable</bb>, so is <span class="math inline">\(A \cup B\)</span>.</p>
-</blockquote>
+
+<div class="conjecture">
+<span id="cnj:prob0125" class="conjecture"><strong>问题 2.25  </strong></span>Show that if <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are <bb>enumerable</bb>, so is <span class="math inline">\(A \cup B\)</span>. To do this, suppose there are <bb>surjective</bb> functions <span class="math inline">\(f\colon \mathbb{Z}^{+} \to A\)</span> and <span class="math inline">\(g\colon \mathbb{Z}^{+} \to B\)</span>, and define a <bb>surjective</bb> function <span class="math inline">\(h\colon \mathbb{Z}^{+} \to A \cup B\)</span> and prove that it is <bb>surjective</bb>. Also consider the cases where <span class="math inline">\(A\)</span> or <span class="math inline">\(B = \varnothing\)</span>.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0126" class="conjecture"><strong>问题 2.26  </strong></span>Show that if <span class="math inline">\(B \subseteq A\)</span> and <span class="math inline">\(A\)</span> is <bb>enumerable</bb>, so is <span class="math inline">\(B\)</span>. To do this, suppose there is a <bb>surjective</bb> function <span class="math inline">\(f\colon \mathbb{Z}^{+} \to A\)</span>. Define a <bb>surjective</bb> function <span class="math inline">\(g\colon \mathbb{Z}^{+} \to B\)</span> and prove that it is <bb>surjective</bb>. What happens if <span class="math inline">\(B = \varnothing\)</span>?
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0127" class="conjecture"><strong>问题 2.27  </strong></span>Show by induction on <span class="math inline">\(n\)</span> that if <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2, \cdots, A_n\)</span> are all <bb>enumerable</bb>, so is <span class="math inline">\(A_1 \cup \cdots \cup A_n\)</span>. You may assume the fact that if two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are <bb>enumerable</bb>, so is <span class="math inline">\(A \cup B\)</span>.
+</div>
 <p>Although it is perhaps more natural when listing the <bb>element</bb>s of a set to start counting from the <span class="math inline">\(1\)</span>st <bb>element</bb>, mathematicians like to use the natural numbers <span class="math inline">\(\mathbb{N}\)</span> for counting things. They talk about the <span class="math inline">\(0\)</span>th, <span class="math inline">\(1\)</span>st, <span class="math inline">\(2\)</span>nd, and so on, <bb>element</bb>s of a list. Correspondingly, we can define an enumeration as a <bb>surjective</bb> function from <span class="math inline">\(\mathbb{N}\)</span> to <span class="math inline">\(A\)</span>. Of course, the two definitions are equivalent.</p>
-<p>{{% dtpc title=“☯命題 1.11” %}}
-There is a <bb>surjection</bb> <span class="math inline">\(f\colon \mathbb{Z}^{+} \to A\)</span> iff there is a <bb>surjection</bb> <span class="math inline">\(g\colon \mathbb{N} \to A\)</span>.
-{{% /dtpc %}}</p>
-<blockquote>
-<p><bb>命題 1.11 之證明</bb>
-Given a <bb>surjection</bb> <span class="math inline">\(f\colon \mathbb{Z}^{+} \to A\)</span>, we can define <span class="math inline">\(g(n) = f(n+1)\)</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>. It is easy to see that <span class="math inline">\(g\colon \mathbb{N} \to A\)</span> is <bb>surjective</bb>. Conversely, given a <bb>surjection</bb> <span class="math inline">\(g\colon \mathbb{N} \to A\)</span>, define <span class="math inline">\(f(n) = g(n+1)\)</span>.</p>
-</blockquote>
+
+<div class="proposition">
+<span id="prp:prpsurjection" class="proposition"><strong>命题 2.12  </strong></span>There is a <bb>surjection</bb> <span class="math inline">\(f\colon \mathbb{Z}^{+} \to A\)</span> iff there is a <bb>surjection</bb> <span class="math inline">\(g\colon \mathbb{N} \to A\)</span>.
+</div>
+
+<div class="proof">
+ <span class="proof"><em>PROOF: </em></span> Given a <bb>surjection</bb> <span class="math inline">\(f\colon \mathbb{Z}^{+} \to A\)</span>, we can define <span class="math inline">\(g(n) = f(n+1)\)</span> for all <span class="math inline">\(n \in \mathbb{N}\)</span>. It is easy to see that <span class="math inline">\(g\colon \mathbb{N} \to A\)</span> is <bb>surjective</bb>. Conversely, given a <bb>surjection</bb> <span class="math inline">\(g\colon \mathbb{N} \to A\)</span>, define <span class="math inline">\(f(n) = g(n+1)\)</span>.
+</div>
 <p>This gives us the following result:</p>
-<p>{{% dtpc title=“〶推論 1.0” %}}
-A set <span class="math inline">\(A\)</span> is <bb>enumerable</bb> iff it is empty or there is a <bb>surjective</bb> function <span class="math inline">\(f\colon \mathbb{N} \to A\)</span>.
-{{% /dtpc %}}</p>
+
+<div class="corollary">
+<span id="cor:corsurjection" class="corollary"><strong>推论 2.1  </strong></span>A set <span class="math inline">\(A\)</span> is <bb>enumerable</bb> iff it is empty or there is a <bb>surjective</bb> function <span class="math inline">\(f\colon \mathbb{N} \to A\)</span>.
+</div>
 <p>We discussed above than an list of <bb>element</bb>s of a set <span class="math inline">\(A\)</span> can be turned into a list without repetitions. This is also true for enumerations, but a bit harder to formulate and prove rigorously. Any function <span class="math inline">\(f\colon \mathbb{Z}^{+} \to A\)</span> must be defined for all <span class="math inline">\(n \in \mathbb{Z}^{+}\)</span>. If there are only finitely many <bb>element</bb>s in <span class="math inline">\(A\)</span> then we clearly cannot have a function defined on the infinitely many <bb>element</bb>s of <span class="math inline">\(\mathbb{Z}^{+}\)</span> that takes as values all the <bb>element</bb>s of <span class="math inline">\(A\)</span> but never takes the same value twice. In that case, i.e., in the case where the list without repetitions is finite, we must choose a different domain for <span class="math inline">\(f\)</span>, one with only finitely many <bb>element</bb>s. Not having repetitions means that <span class="math inline">\(f\)</span> must be <bb>injective</bb>. Since it is also <bb>surjective</bb>, we are looking for a <bb>bijection</bb> between some finite set <span class="math inline">\(\lbrace 1, \cdots, n\rbrace\)</span> or <span class="math inline">\(\mathbb{Z}^{+}\)</span> and <span class="math inline">\(A\)</span>.</p>
-<p>{{% dtpc title=“☯命題 1.12” %}}
-If <span class="math inline">\(f\colon \mathbb{Z}^{+} \to A\)</span> is <bb>surjective</bb> (i.e., an enumeration of <span class="math inline">\(A\)</span>), there is a <bb>bijection</bb> <span class="math inline">\(g\colon Z \to A\)</span> where <span class="math inline">\(Z\)</span> is either <span class="math inline">\(\mathbb{Z}^{+}\)</span> or <span class="math inline">\(\lbrace 1, \cdots, n\rbrace\)</span> for some <span class="math inline">\(n \in \mathbb{Z}^{+}\)</span>.
-{{% /dtpc %}}</p>
-<blockquote>
-<p><bb>命題 1.12 之證明</bb>
-We define the function <span class="math inline">\(g\)</span> recursively: Let <span class="math inline">\(g(1) = f(1)\)</span>. If <span class="math inline">\(g(i)\)</span> has already been defined, let <span class="math inline">\(g(i+1)\)</span> be the first value of <span class="math inline">\(f(1), f(2),\cdots\)</span>, not already among <span class="math inline">\(g(1), \cdots, g(i)\)</span>, if there is one. If <span class="math inline">\(A\)</span> has just <span class="math inline">\(n\)</span> <bb>element</bb>s, then <span class="math inline">\(g(1), \cdots, g(n)\)</span> are all defined, and so we have defined a function <span class="math inline">\(g\colon \lbrace 1, \cdots, n\rbrace \to A\)</span>. If <span class="math inline">\(A\)</span> has infinitely many <bb>element</bb>s, then for any <span class="math inline">\(i\)</span> there must be an <bb>element</bb> of <span class="math inline">\(A\)</span> in the enumeration <span class="math inline">\(f(1)\)</span>, <span class="math inline">\(f(2), \cdots\)</span>, which is not already among <span class="math inline">\(g(1), \cdots, g(i)\)</span>. In this case we have defined a funtion <span class="math inline">\(g\colon \mathbb{Z}^{+} \to A\)</span>.
-The function <span class="math inline">\(g\)</span> is <bb>surjective</bb>, since any element of <span class="math inline">\(A\)</span> is among <span class="math inline">\(f(1)\)</span>, <span class="math inline">\(f(2)\)</span>,  (since <span class="math inline">\(f\)</span> is <bb>surjective</bb>) and so will eventually be a value of <span class="math inline">\(g(i)\)</span> for some <span class="math inline">\(i\)</span>. It is also <bb>injective</bb>, since if there were <span class="math inline">\(j &lt; i\)</span> such that <span class="math inline">\(g(j) = g(i)\)</span>, then <span class="math inline">\(g(i)\)</span> would already be among <span class="math inline">\(g(1), \cdots, g(i-1)\)</span>, contrary to how we defined <span class="math inline">\(g\)</span>.</p>
-</blockquote>
-<p>{{% dtpc title=“〶推論 1.1” %}}
-A set <span class="math inline">\(A\)</span> is <bb>enumerable</bb> iff it is empty or there is a <bb>bijection</bb> <span class="math inline">\(f\colon N \to A\)</span> where either <span class="math inline">\(N = \mathbb{N}\)</span> or <span class="math inline">\(N = \lbrace 0, \cdots, n\rbrace\)</span> for some <span class="math inline">\(n \in \mathbb{N}\)</span>.
-{{% /dtpc %}}</p>
-<blockquote>
-<p><bb>推論 1.1 之證明</bb>
-<span class="math inline">\(A\)</span> is <bb>enumerable</bb> iff <span class="math inline">\(A\)</span> is empty or there is a <bb>surjective</bb> <span class="math inline">\(f\colon \mathbb{Z}^{+} \to A\)</span>. By Proposition 1.12, the latter holds iff there is a <bb>bijective</bb> function <span class="math inline">\(f\colon Z \to A\)</span> where <span class="math inline">\(Z = \mathbb{Z}^{+}\)</span> or <span class="math inline">\(Z = \lbrace 1, \cdots, n\rbrace\)</span> for some <span class="math inline">\(n \in \mathbb{Z}^{+}\)</span>. By the same argument as in the proof of Proposition 1.11, that in turn is the case iff there is a <bb>bijection</bb> <span class="math inline">\(g\colon N \to A\)</span> where either <span class="math inline">\(N = \mathbb{N}\)</span> or <span class="math inline">\(N = \lbrace 0, \cdots, n-1\rbrace\)</span>.</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.3</bb>
-According to Definition1.48（P.63）, a set <span class="math inline">\(A\)</span> is enumerable iff <span class="math inline">\(A = \varnothing\)</span> or there is a <bb>surjective</bb> <span class="math inline">\(f\colon \mathbb{Z}^{+} \to A\)</span>. It is also possible to define “<bb>enumerable</bb> set” precisely by: a set is enumerable iff there is a <bb>injective</bb> function <span class="math inline">\(g\colon A \to \mathbb{Z}^{+}\)</span>. Show that the definitions are equivalent, i.e., show that there is a <bb>injective</bb> function <span class="math inline">\(g\colon A \to \mathbb{Z}^{+}\)</span> iff either <span class="math inline">\(A = \varnothing\)</span> or there is a <bb>surjective</bb> <span class="math inline">\(f\colon \mathbb{Z}^{+} \to A\)</span>.</p>
-</blockquote>
+
+<div class="corollary">
+<span id="cor:corenumerable" class="corollary"><strong>推论 2.2  </strong></span>A set <span class="math inline">\(A\)</span> is <bb>enumerable</bb> iff it is empty or there is a <bb>bijection</bb> <span class="math inline">\(f\colon N \to A\)</span> where either <span class="math inline">\(N = \mathbb{N}\)</span> or <span class="math inline">\(N = \lbrace 0, \cdots, n\rbrace\)</span> for some <span class="math inline">\(n \in \mathbb{N}\)</span>.
+</div>
+
+<div class="proof">
+ <span class="proof"><em>PROOF: </em></span> <span class="math inline">\(A\)</span> is <bb>enumerable</bb> iff <span class="math inline">\(A\)</span> is empty or there is a <bb>surjective</bb> <span class="math inline">\(f\colon \mathbb{Z}^{+} \to A\)</span>. By Proposition 1.12, the latter holds iff there is a <bb>bijective</bb> function <span class="math inline">\(f\colon Z \to A\)</span> where <span class="math inline">\(Z = \mathbb{Z}^{+}\)</span> or <span class="math inline">\(Z = \lbrace 1, \cdots, n\rbrace\)</span> for some <span class="math inline">\(n \in \mathbb{Z}^{+}\)</span>. By the same argument as in the proof of Proposition 1.11, that in turn is the case iff there is a <bb>bijection</bb> <span class="math inline">\(g\colon N \to A\)</span> where either <span class="math inline">\(N = \mathbb{N}\)</span> or <span class="math inline">\(N = \lbrace 0, \cdots, n-1\rbrace\)</span>.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0128" class="conjecture"><strong>问题 2.28  </strong></span>According to Definition1.48（P.63）, a set <span class="math inline">\(A\)</span> is enumerable iff <span class="math inline">\(A = \varnothing\)</span> or there is a <bb>surjective</bb> <span class="math inline">\(f\colon \mathbb{Z}^{+} \to A\)</span>. It is also possible to define “<bb>enumerable</bb> set” precisely by: a set is enumerable iff there is a <bb>injective</bb> function <span class="math inline">\(g\colon A \to \mathbb{Z}^{+}\)</span>. Show that the definitions are equivalent, i.e., show that there is a <bb>injective</bb> function <span class="math inline">\(g\colon A \to \mathbb{Z}^{+}\)</span> iff either <span class="math inline">\(A = \varnothing\)</span> or there is a <bb>surjective</bb> <span class="math inline">\(f\colon \mathbb{Z}^{+} \to A\)</span>.
+</div>
 </div>
 <div id="cantors-zig-zag-method" class="section level3" number="2.4.3">
 <h3><span class="header-section-number">2.4.3</span> Cantor’s Zig-Zag Method</h3>
 <p>We’ve already considered some “easy” enumerations. Now we will consider something a bit harder. Consider the set of pairs of natural numbers, which we defined in§1.0.4（P.22）defined by: <span class="math display">\[\mathbb{N} \times \mathbb{N} = \lbrace ⟨n,m⟩: n,m \in \mathbb{N}\rbrace\]</span> We can organize these ordered pairs into an <bb>array</bb>, like so:</p>
-<p>
-<span class="math display">\[
+<p><span class="math display">\[
 \begin{array}{ c | c | c | c | c | c}
 &amp; \mathbf 0 &amp; \mathbf 1 &amp; \mathbf 2 &amp; \mathbf 3 &amp; \cdots \\
 \hline
@@ -1200,11 +1203,9 @@ According to Definition1.48（P.63）, a set <span class="math inline">\(A\)</sp
 \hline
 \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots\\
 \end{array}
-\]</span>
-</p>
+\]</span></p>
 <p>Clearly, every ordered pair in <span class="math inline">\(\mathbb{N} \times \mathbb{N}\)</span> will appear exactly once in the array. In particular, <span class="math inline">\(⟨n,m⟩\)</span> will appear in the <span class="math inline">\(n\)</span>th row and <span class="math inline">\(m\)</span>th column. But how do we organize the elements of such an array into a “one-dimensional” list? The pattern in the array below demonstrates one way to do this (although of course there are many other options):</p>
-<p>
-<span class="math display">\[
+<p><span class="math display">\[
 \begin{array}{ c | c | c | c | c | c | c}
 &amp; \mathbf 0 &amp; \mathbf 1 &amp; \mathbf 2 &amp; \mathbf 3 &amp; \mathbf 4 &amp;\cdots \\
 \hline
@@ -1220,21 +1221,20 @@ According to Definition1.48（P.63）, a set <span class="math inline">\(A\)</sp
 \hline
 \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots&amp;\cdots &amp; \ddots\\
 \end{array}
-\]</span>
-</p>
+\]</span></p>
 <p>This pattern is called <bb>Cantor’s zig-zag method</bb>. It enumerates <span class="math inline">\(\mathbb{N} \times \mathbb{N}\)</span> as follows: <span class="math display">\[⟨0,0⟩, ⟨0,1⟩, ⟨1,0⟩, ⟨0,2⟩, ⟨1,1⟩, ⟨2,0⟩, ⟨0,3⟩, ⟨1,2⟩, ⟨2,1⟩, ⟨3,0⟩, \cdots\]</span></p>
 <p>And this establishes the following:</p>
-<p>{{% dtpc title=“☯命題 1.13” %}}
-<span class="math inline">\(\mathbb{N} \times \mathbb{N}\)</span> is <bb>enumerable</bb>.
-{{% /dtpc %}}</p>
-<blockquote>
-<p><bb>命題 1.13 之證明</bb>
-Let <span class="math inline">\(f \colon \mathbb{N} \to \mathbb{N}\times\mathbb{N}\)</span> take each <span class="math inline">\(k \in \mathbb{N}\)</span> to the tuple <span class="math inline">\(⟨n,m⟩ \in \mathbb{N} \times \mathbb{N}\)</span> such that <span class="math inline">\(k\)</span> is the value of the <span class="math inline">\(n\)</span>th row and <span class="math inline">\(m\)</span>th column in Cantor’s zig-zag array.</p>
-</blockquote>
+
+<div class="proposition">
+<span id="prp:prpntimesn" class="proposition"><strong>命题 2.13  </strong></span><span class="math inline">\(\mathbb{N} \times \mathbb{N}\)</span> is <bb>enumerable</bb>.
+</div>
+
+<div class="proof">
+ <span class="proof"><em>PROOF: </em></span> Let <span class="math inline">\(f \colon \mathbb{N} \to \mathbb{N}\times\mathbb{N}\)</span> take each <span class="math inline">\(k \in \mathbb{N}\)</span> to the tuple <span class="math inline">\(⟨n,m⟩ \in \mathbb{N} \times \mathbb{N}\)</span> such that <span class="math inline">\(k\)</span> is the value of the <span class="math inline">\(n\)</span>th row and <span class="math inline">\(m\)</span>th column in Cantor’s zig-zag array.
+</div>
 <p>This technique also generalises rather nicely. For example, we can use it to enumerate the set of ordered triples of natural numbers, i.e.: <span class="math display">\[\mathbb{N} \times \mathbb{N} \times \mathbb{N} = \Setabs{⟨n,m,k⟩}{n,m,k \in \mathbb{N}}\]</span> We think of <span class="math inline">\(\mathbb{N} \times \mathbb{N} \times \mathbb{N}\)</span> as the Cartesian product of <span class="math inline">\(\mathbb{N} \times \mathbb{N}\)</span> with <span class="math inline">\(\mathbb{N}\)</span>, that is, <span class="math display">\[\mathbb{N}^3 = (\mathbb{N} \times \mathbb{N}) \times \mathbb{N} =\lbrace ⟨⟨n,m⟩,k⟩: n, m, k
 \in \mathbb{N}\rbrace\]</span> and thus we can enumerate <span class="math inline">\(\mathbb{N}^3\)</span> with an array by labelling one axis with the enumeration of <span class="math inline">\(\mathbb{N}\)</span>, and the other axis with the enumeration of <span class="math inline">\(\mathbb{N}^2\)</span>:</p>
-<p>
-<span class="math display">\[
+<p><span class="math display">\[
 \begin{array}{ c | c | c | c | c | c}
 &amp; \mathbf 0 &amp; \mathbf 1 &amp; \mathbf 2 &amp; \mathbf 3 &amp; \cdots \\
 \hline
@@ -1248,102 +1248,94 @@ Let <span class="math inline">\(f \colon \mathbb{N} \to \mathbb{N}\times\mathbb{
 \hline
 \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots \\
 \end{array}
-\]</span>
-</p>
+\]</span></p>
 <p>Thus, by using a method like Cantor’s zig-zag method, we may similarly obtain an enumeration of <span class="math inline">\(\mathbb{N}^3\)</span>. And we can keep going, obtaining enumerations of <span class="math inline">\(\mathbb{N}^n\)</span> for any natural number <span class="math inline">\(n\)</span>. So, we have:</p>
-<p>{{% dtpc title=“☯命題 1.14” %}}
-<span class="math inline">\(\mathbb{N}^n\)</span> is <bb>enumerable</bb>, for every <span class="math inline">\(n \in \mathbb{N}\)</span>.
-{{% /dtpc %}}</p>
+
+<div class="proposition">
+<span id="prp:prpntimesnns" class="proposition"><strong>命题 2.14  </strong></span><span class="math inline">\(\mathbb{N}^n\)</span> is <bb>enumerable</bb>, for every <span class="math inline">\(n \in \mathbb{N}\)</span>.
+</div>
 </div>
 <div id="pairing-functions-and-codes" class="section level3" number="2.4.4">
 <h3><span class="header-section-number">2.4.4</span> Pairing Functions and Codes</h3>
 <p>Cantor’s zig-zag method makes the enumerability of <span class="math inline">\(\mathbb{N}^n\)</span> visually evident. But let us focus on our array depicting <span class="math inline">\(\mathbb{N}^2\)</span>. Following the zig-zag line in the array and counting the places, we can check that <span class="math inline">\(⟨1,2⟩\)</span> is associated with the number <span class="math inline">\(7\)</span>. However, it would be nice if we could compute this more directly. That is, it would be nice to have to hand the <bb>inverse</bb> of the zig-zag enumeration, <span class="math inline">\(g\colon \mathbb{N}^2 \to \mathbb{N}\)</span>, such that</p>
-<p>
-<span class="math display">\[\begin{align*}
+<p><span class="math display">\[\begin{align*}
 &amp; g(⟨0,0⟩) = 0,\;\\
 &amp; g(⟨0,1⟩) = 1,\;\\
 &amp; g(⟨1,0⟩) = 2, \; \cdots,\\
 &amp; g(⟨1,2⟩) = 7, \; \cdots
-\end{align*}\]</span>
-</p>
+\end{align*}\]</span></p>
 <p>This would enable to calculate exactly where <span class="math inline">\(⟨n, m⟩\)</span> will occur in our enumeration.</p>
 <p>In fact, we can define <span class="math inline">\(g\)</span> directly by making two observations. First: if the <span class="math inline">\(n\)</span>th row and <span class="math inline">\(m\)</span>th column contains value <span class="math inline">\(v\)</span>, then the <span class="math inline">\((n+1)\)</span>st row and <span class="math inline">\((m-1)\)</span>st column contains value <span class="math inline">\(v + 1\)</span>. Second: the first row of our enumeration consists of the triangular numbers, starting with <span class="math inline">\(0\)</span>, <span class="math inline">\(1\)</span>, <span class="math inline">\(3\)</span>, <span class="math inline">\(5\)</span>, etc. The <span class="math inline">\(k\)</span>th triangular number is the sum of the natural numbers <span class="math inline">\(&lt; k\)</span>, which can be computed as <span class="math inline">\(k(k+1)/2\)</span>. Putting these two observations together, consider this function: <span class="math display">\[g(n,m) = \frac{(n+m+1)(n+m)}{2} + n\]</span> We often just write <span class="math inline">\(g(n, m)\)</span> rather that <span class="math inline">\(g(⟨n, m⟩)\)</span>, since it is easier on the eyes. This tells you first to determine the <span class="math inline">\((n+m)^\text{th}\)</span> triangle number, and then subtract <span class="math inline">\(n\)</span> from it. And it populates the array in exactly the way we would like. So in particular, the pair <span class="math inline">\(⟨1, 2⟩\)</span> is sent to <span class="math inline">\(\frac{4 \times 3}{2} + 1 = 7\)</span>.</p>
 <p>This function <span class="math inline">\(g\)</span> is the <bb>inverse</bb> of an enumeration of a set of pairs. Such functions are called <bb>pairing functions</bb>.</p>
-<p>{{% dtpc title=“☯定義 1.43【Pairing function】” %}}
-A function <span class="math inline">\(f\colon A \times B \to \mathbb{N}\)</span> is an arithmetical <bb>pairing function</bb> if <span class="math inline">\(f\)</span> is injective. We also say that <span class="math inline">\(f\)</span> <bb>encodes</bb> <span class="math inline">\(A \times B\)</span>, and that <span class="math inline">\(f(x,y)\)</span> is the <bb>code</bb> for <span class="math inline">\(⟨x,y⟩\)</span>.
-{{% /dtpc %}}</p>
+
+<div class="definition">
+<span id="def:defPairingf" class="definition"><strong>定义 2.44  (Pairing function)  </strong></span>A function <span class="math inline">\(f\colon A \times B \to \mathbb{N}\)</span> is an arithmetical <bb>pairing function</bb> if <span class="math inline">\(f\)</span> is injective. We also say that <span class="math inline">\(f\)</span> <bb>encodes</bb> <span class="math inline">\(A \times B\)</span>, and that <span class="math inline">\(f(x,y)\)</span> is the <bb>code</bb> for <span class="math inline">\(⟨x,y⟩\)</span>.
+</div>
 <p>We can use pairing functions encode, e.g., pairs of natural numbers; or, in other words, we can represent each <bb>pair</bb> of elements using a <bb>single</bb> number. Using the inverse of the pairing function, we can <bb>decode</bb> the number, i.e., find out which pair it represents.</p>
-<blockquote>
-<p><bb>Problem 1.28</bb>
-Give an enumeration of the set of all non-negative rational numbers.</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.29</bb>
-Show that <span class="math inline">\(\mathbb{Q}\)</span> is <bb>enumerable</bb>. Recall that any rational number can be written as a fraction <span class="math inline">\(z/m\)</span> with <span class="math inline">\(z \in \mathbb{Z}\)</span>, <span class="math inline">\(m \in \mathbb{N}^+\)</span>.</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.30</bb>
-Define an enumeration of <span class="math inline">\(\mathbb{B}^*\)</span>.</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.31</bb>
-Recall from your introductory logic course that each possible truth table expresses a truth function. In other words, the truth functions are all functions from <span class="math inline">\(\mathbb{B}^k \to \mathbb{B}\)</span> for some <span class="math inline">\(k\)</span>. Prove that the set of all truth functions is enumerable.</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.32</bb>
-Show that the set of all finite subsets of an arbitrary infinite <bb>enumerable</bb> set is <bb>enumerable</bb>.</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.33</bb>
-A subset of <span class="math inline">\(\mathbb{N}\)</span> is said to be <bb>cofinite</bb> iff it is the complement of a finite set <span class="math inline">\(\mathbb{N}\)</span>; that is, <span class="math inline">\(A \subseteq \mathbb{N}\)</span> is cofinite iff <span class="math inline">\(\mathbb{N}\setminus A\)</span> is finite. Let <span class="math inline">\(I\)</span> be the set whose <bb>element</bb>s are exactly the finite and cofinite subsets of <span class="math inline">\(\mathbb{N}\)</span>. Show that <span class="math inline">\(I\)</span> is <bb>enumerable</bb>.</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.34</bb>
-Show that the <bb>enumerable</bb> union of <bb>enumerable</bb> sets is <bb>enumerable</bb>. That is, whenever <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2\)</span>,  are sets, and each <span class="math inline">\(A_i\)</span> is <bb>enumerable</bb>, then the union <span class="math inline">\(\bigcup_{i=1}^\infty A_i\)</span> of all of them is also <bb>enumerable</bb>. [NB: this is hard!]</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.35</bb>
-Let <span class="math inline">\(f \colon A \times B \to \mathbb{N}\)</span> be an arbitrary pairing function. Show that the inverse of <span class="math inline">\(f\)</span> is an enumeration of <span class="math inline">\(A \times B\)</span>.</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.36</bb>
-Specify a function that encodes <span class="math inline">\(\mathbb{N}^3\)</span>.</p>
-</blockquote>
+
+<div class="conjecture">
+<span id="cnj:prob0129" class="conjecture"><strong>问题 2.29  </strong></span>Give an enumeration of the set of all non-negative rational numbers.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0130" class="conjecture"><strong>问题 2.30  </strong></span>Show that <span class="math inline">\(\mathbb{Q}\)</span> is <bb>enumerable</bb>. Recall that any rational number can be written as a fraction <span class="math inline">\(z/m\)</span> with <span class="math inline">\(z \in \mathbb{Z}\)</span>, <span class="math inline">\(m \in \mathbb{N}^+\)</span>.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0131" class="conjecture"><strong>问题 2.31  </strong></span>Define an enumeration of <span class="math inline">\(\mathbb{B}^*\)</span>.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0132" class="conjecture"><strong>问题 2.32  </strong></span>Recall from your introductory logic course that each possible truth table expresses a truth function. In other words, the truth functions are all functions from <span class="math inline">\(\mathbb{B}^k \to \mathbb{B}\)</span> for some <span class="math inline">\(k\)</span>. Prove that the set of all truth functions is enumerable.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0133" class="conjecture"><strong>问题 2.33  </strong></span>Show that the set of all finite subsets of an arbitrary infinite <bb>enumerable</bb> set is <bb>enumerable</bb>.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0134" class="conjecture"><strong>问题 2.34  </strong></span>A subset of <span class="math inline">\(\mathbb{N}\)</span> is said to be <bb>cofinite</bb> iff it is the complement of a finite set <span class="math inline">\(\mathbb{N}\)</span>; that is, <span class="math inline">\(A \subseteq \mathbb{N}\)</span> is cofinite iff <span class="math inline">\(\mathbb{N}\setminus A\)</span> is finite. Let <span class="math inline">\(I\)</span> be the set whose <bb>element</bb>s are exactly the finite and cofinite subsets of <span class="math inline">\(\mathbb{N}\)</span>. Show that <span class="math inline">\(I\)</span> is <bb>enumerable</bb>.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0135" class="conjecture"><strong>问题 2.35  </strong></span>Show that the <bb>enumerable</bb> union of <bb>enumerable</bb> sets is <bb>enumerable</bb>. That is, whenever <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2\)</span>,  are sets, and each <span class="math inline">\(A_i\)</span> is <bb>enumerable</bb>, then the union <span class="math inline">\(\bigcup_{i=1}^\infty A_i\)</span> of all of them is also <bb>enumerable</bb>. [NB: this is hard!]
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0136" class="conjecture"><strong>问题 2.36  </strong></span>Let <span class="math inline">\(f \colon A \times B \to \mathbb{N}\)</span> be an arbitrary pairing function. Show that the inverse of <span class="math inline">\(f\)</span> is an enumeration of <span class="math inline">\(A \times B\)</span>.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0137" class="conjecture"><strong>问题 2.37  </strong></span>Specify a function that encodes <span class="math inline">\(\mathbb{N}^3\)</span>.
+</div>
 </div>
 <div id="an-alternative-pairing-function" class="section level3" number="2.4.5">
 <h3><span class="header-section-number">2.4.5</span> An Alternative Pairing Function</h3>
 <p>There are other enumerations of <span class="math inline">\(\mathbb{N}^2\)</span> that make it easier to figure out what their inverses are. Here is one. Instead of visualizing the enumeration in an array, start with the list of positive integers associated with (initially) empty spaces. Imagine filling these spaces successively with pairs <span class="math inline">\(⟨n,m⟩\)</span> as follow. Starting with the pairs that have <span class="math inline">\(0\)</span> in the first place (i.e., pairs <span class="math inline">\(⟨0,m⟩\)</span>), put the first (i.e., <span class="math inline">\(⟨0,0⟩\)</span>) in the first empty place, then skip an empty space, put the second (i.e., <span class="math inline">\(⟨0,2⟩\)</span>) in the next empty place, skip one again, and so forth. The (incomplete) beginning of our enumeration now looks like this</p>
-<p>
-<span class="math display">\[
+<p><span class="math display">\[
 \begin{array}{@{}c c c c c c c c c c c@{}}
 \mathbf 1 &amp; \mathbf 2 &amp; \mathbf 3 &amp; \mathbf 4 &amp; \mathbf 5 &amp; \mathbf 6 &amp; \mathbf 7 &amp; \mathbf 8 &amp; \mathbf 9 &amp; \mathbf{10} &amp; \cdots \\ \\
 ⟨0,1⟩ &amp;  &amp; ⟨0,2⟩ &amp;  &amp; ⟨0,3⟩ &amp; &amp; ⟨0,4⟩ &amp;  &amp; ⟨0,5⟩ &amp;  &amp; \cdots \\
 \end{array}
-\]</span>
-</p>
+\]</span></p>
 <p>Repeat this with pairs <span class="math inline">\(⟨1,m⟩\)</span> for the place that still remain empty, again skipping every other empty place:</p>
-<p>
-<span class="math display">\[
+<p><span class="math display">\[
 \begin{array}{@{}c c c c c c c c c c c@{}}
 \mathbf 1 &amp; \mathbf 2 &amp; \mathbf 3 &amp; \mathbf 4 &amp; \mathbf 5 &amp; \mathbf 6 &amp; \mathbf 7 &amp; \mathbf 8 &amp; \mathbf 9 &amp; \mathbf{10} &amp; \cdots \\ \\
 ⟨0,0⟩ &amp; ⟨1,0⟩ &amp; ⟨0,1⟩ &amp;  &amp; ⟨0,2⟩ &amp; ⟨1,1⟩ &amp; 
 ⟨0,3⟩ &amp; &amp; ⟨0,4⟩ &amp;  ⟨1,2⟩ &amp; \cdots \\
 \end{array}
-\]</span>
-</p>
+\]</span></p>
 <p>Enter pairs <span class="math inline">\(⟨2,m⟩\)</span>, <span class="math inline">\(⟨2,m⟩\)</span>, etc., in the same way. Our completed enumeration thus starts like this:</p>
-<p>
-<span class="math display">\[
+<p><span class="math display">\[
 \begin{array}{@{}cc c c c c c c c c c@{}}
 \mathbf 1 &amp; \mathbf 2 &amp; \mathbf 3 &amp; \mathbf 4 &amp; \mathbf 5 &amp; \mathbf 6 &amp; \mathbf 7 &amp; \mathbf 8 &amp; \mathbf 9 &amp; \mathbf{10} &amp; \cdots \\ \\
 ⟨0,0⟩ &amp; ⟨1,0⟩ &amp; ⟨0,1⟩ &amp; ⟨2,0⟩  &amp; ⟨0,2⟩ &amp; 
 ⟨1,1⟩ &amp; ⟨0,3⟩ &amp; ⟨3,0⟩  &amp; ⟨0,4⟩ &amp;  ⟨1,2⟩ &amp; \cdots \\
 \end{array}
-\]</span>
-</p>
+\]</span></p>
 <p>If we number the cells in the array above according to this enumeration, we will not find a neat zig-zag line, but this arrangement:</p>
-<p>
-<span class="math display">\[
+<p><span class="math display">\[
 \begin{array}{ c | c | c | c | c | c | c | c }
 &amp; \mathbf 0 &amp; \mathbf 1 &amp; \mathbf 2 &amp; \mathbf 3 &amp; \mathbf 4 &amp; \mathbf 5 &amp; \cdots \\
 \hline
@@ -1361,33 +1353,36 @@ Specify a function that encodes <span class="math inline">\(\mathbb{N}^3\)</span
 \hline
 \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots\\
 \end{array}
-\]</span>
-</p>
+\]</span></p>
 <p>We can see that the pairs in row <span class="math inline">\(0\)</span> are in the odd numbered places of our enumeration, i.e., pair <span class="math inline">\(⟨0,m⟩\)</span> is in place <span class="math inline">\(2m+1\)</span>; pairs in the second row, <span class="math inline">\(⟨1,m⟩\)</span>, are in places whose number is the double of an odd number, specifically, <span class="math inline">\(2 \cdot (2m+1)\)</span>; pairs in the third row, <span class="math inline">\(⟨2,m⟩\)</span>, are in places whose number is four times an odd number, <span class="math inline">\(4 \cdot (2m+1)\)</span>; and so on. The factors of <span class="math inline">\((2m+1)\)</span> for each row, <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(4\)</span>, <span class="math inline">\(8\)</span>, , are exactly the powers of <span class="math inline">\(2\)</span>: <span class="math inline">\(1= 2^0\)</span>, <span class="math inline">\(2 = 2^1\)</span>, <span class="math inline">\(4 = 2^2\)</span>, <span class="math inline">\(8 = 2^3, \cdots\)</span>.In fact, the relevant exponent is always the first member of the pair in question. Thus, for pair <span class="math inline">\(⟨n,m⟩\)</span> the factor is <span class="math inline">\(2^n\)</span>. This gives us the general formula: <span class="math inline">\(2^n \cdot (2m+1)\)</span>. However, this is a mapping of pairs to <bb>positive</bb> integers, i.e., <span class="math inline">\(⟨0,0⟩\)</span> has position <span class="math inline">\(1\)</span>. If we want to begin at position <span class="math inline">\(0\)</span> we must subtract <span class="math inline">\(1\)</span> from the result. This gives us:</p>
-<p>{{% dtpcex title=“☯例 1.39” %}}
-The function <span class="math inline">\(h\colon \mathbb{N}^2 \to \mathbb{N}\)</span> given by <span class="math display">\[h(n,m) = 2^n (2m+1) - 1\]</span> is a pairing function for the set of pairs of natural numbers <span class="math inline">\(\mathbb{N}^2\)</span>.
-{{% /dtpcex %}}</p>
+
+<div class="example">
+<span id="exm:exmpairingfunction01" class="example"><strong>例 2.40  </strong></span>The function <span class="math inline">\(h\colon \mathbb{N}^2 \to \mathbb{N}\)</span> given by <span class="math display">\[h(n,m) = 2^n (2m+1) - 1\]</span> is a pairing function for the set of pairs of natural numbers <span class="math inline">\(\mathbb{N}^2\)</span>.
+</div>
 <p>Accordingly, in our second enumeration of <span class="math inline">\(\mathbb{N}^2\)</span>, the pair <span class="math inline">\(⟨0,0⟩\)</span> has code <span class="math inline">\(h(0,0) = 2^0(2\cdot 0+1) - 1 = 0\)</span>; <span class="math inline">\(⟨1,2⟩\)</span> has code <span class="math inline">\(2^{1} \cdot (2 \cdot 2 + 1) - 1 = 2 \cdot 5 - 1 = 9\)</span>; <span class="math inline">\(⟨2,6⟩\)</span> has code <span class="math inline">\(2^{2} \cdot (2 \cdot 6 + 1) - 1 = 51\)</span>.</p>
 <p>Sometimes it is enough to encode pairs of natural numbers <span class="math inline">\(\mathbb{N}^2\)</span> without requiring that the encoding is surjective. Such encodings have inverses that are only partial functions.</p>
-<p>{{% dtpcex title=“☯例 1.39” %}}
-The function <span class="math inline">\(j\colon \mathbb{N}^2 \to \mathbb{N}^+\)</span> given by <span class="math display">\[j(n,m) = 2^n3^m\]</span> is a <bb>injective</bb> function <span class="math inline">\(\mathbb{N}^2 \to \mathbb{N}\)</span>.
-{{% /dtpcex %}}</p>
+
+<div class="example">
+<span id="exm:exmpairingfunction02" class="example"><strong>例 2.41  </strong></span>The function <span class="math inline">\(j\colon \mathbb{N}^2 \to \mathbb{N}^+\)</span> given by <span class="math display">\[j(n,m) = 2^n3^m\]</span> is a <bb>injective</bb> function <span class="math inline">\(\mathbb{N}^2 \to \mathbb{N}\)</span>.
+</div>
 </div>
 <div id="nonenumerable-sets" class="section level3" number="2.4.6">
 <h3><span class="header-section-number">2.4.6</span> Nonenumerable Sets</h3>
-<p>This section proves the non-enumerability of <span class="math inline">\(\mathbb{B}^\omega\)</span> and <span class="math inline">\(\mathscr{P}({\mathbb{Z})^{+}}\)</span> using the definition in§1.3.1（P.45）. It is designed to be a little more elementary and a little more detailed than the version in §1.3.10（P.62）.</p>
+<p>This section proves the non-enumerability of <span class="math inline">\(\mathbb{B}^\omega\)</span> and <span class="math inline">\(\mathscr{P}({\mathbb{Z})^{+}}\)</span> using the definition in §1.3.1（P.45）. It is designed to be a little more elementary and a little more detailed than the version in §1.3.10（P.62）.</p>
 <p>Some sets, such as the set <span class="math inline">\(\mathbb{Z}^{+}\)</span> of positive integers, are infinite. So far we’ve seen examples of infinite sets which were all <bb>enumerable</bb>. However, there are also infinite sets which do not have this property. Such sets are called <bb>nonenumerable</bb>.</p>
 <p>First of all, it is perhaps already surprising that there are <bb>nonenumerable</bb> sets. For any <bb>enumerable</bb> set <span class="math inline">\(A\)</span> there is a <bb>surjective</bb> function <span class="math inline">\(f \colon \mathbb{Z}^{+} \to A\)</span>. If a set is <bb>nonenumerable</bb> there is no such function. That is, no function mapping the infinitely many <bb>element</bb>s of <span class="math inline">\(\mathbb{Z}^{+}\)</span> to <span class="math inline">\(A\)</span> can exhaust all of <span class="math inline">\(A\)</span>. So there are “more” <bb>element</bb>s of <span class="math inline">\(A\)</span> than the infinitely many positive integers.</p>
 <p>How would one prove that a set is <bb>nonenumerable</bb>? You have to show that no such surjective function can exist. Equivalently, you have to show that the elements of <span class="math inline">\(A\)</span> cannot be enumerated in a one way infinite list. The best way to do this is to show that every list of <bb>element</bb>s of <span class="math inline">\(A\)</span> must leave at least one element out; or that no function <span class="math inline">\(f\colon \mathbb{Z}^{+} \to A\)</span> can be <bb>surjective</bb>. We can do this using Cantor’s <bb>diagonal method</bb>. Given a list of <bb>element</bb>s of <span class="math inline">\(A\)</span>, say, <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2, \cdots\)</span>, we construct another element of <span class="math inline">\(A\)</span> which, by its construction, cannot possibly be on that list.</p>
 <p>Our first example is the set <span class="math inline">\(\mathbb{B}^\omega\)</span> of all infinite, non-gappy sequences of <span class="math inline">\(0\)</span>’s and <span class="math inline">\(1\)</span>’s.</p>
-<p>{{% dtpc title=“☯Theorem 1.1” %}}
-<span class="math inline">\(\mathbb{B}^\omega\)</span> is <bb>nonenumerable</bb>.
-{{% /dtpc %}}</p>
-<p><bb>Theorem 1.1 之證明</bb>
-Suppose, by way of contradiction, that <span class="math inline">\(\mathbb{B}^\omega\)</span> is <bb>enumerable</bb>, i.e., suppose that there is a list <span class="math inline">\(s_{1}\)</span>, <span class="math inline">\(s_{2}\)</span>, <span class="math inline">\(s_{3}\)</span>, <span class="math inline">\(s_{4}, \cdots\)</span>, of all <bb>element</bb>s of <span class="math inline">\(\mathbb{B}^\omega\)</span>. Each of these <span class="math inline">\(s_i\)</span> is itself an infinite sequence of <span class="math inline">\(0\)</span>’s and <span class="math inline">\(1\)</span>’s. Let’s call the <span class="math inline">\(j\)</span>-th element of the <span class="math inline">\(i\)</span>-th sequence in this list <span class="math inline">\(s_i(j)\)</span>. Then the <span class="math inline">\(i\)</span>-th sequence <span class="math inline">\(s_i\)</span> is <span class="math display">\[s_i(1), s_i(2), s_i(3), \cdots\]</span></p>
+
+<div class="theorem">
+<span id="thm:thmnonenumerable" class="theorem"><strong>定理 2.2  </strong></span><span class="math inline">\(\mathbb{B}^\omega\)</span> is <bb>nonenumerable</bb>.
+</div>
+
+<div class="proof">
+<p> <span class="proof"><em>PROOF: </em></span> Suppose, by way of contradiction, that <span class="math inline">\(\mathbb{B}^\omega\)</span> is <bb>enumerable</bb>, i.e., suppose that there is a list <span class="math inline">\(s_{1}\)</span>, <span class="math inline">\(s_{2}\)</span>, <span class="math inline">\(s_{3}\)</span>, <span class="math inline">\(s_{4}, \cdots\)</span>, of all <bb>element</bb>s of <span class="math inline">\(\mathbb{B}^\omega\)</span>. Each of these <span class="math inline">\(s_i\)</span> is itself an infinite sequence of <span class="math inline">\(0\)</span>’s and <span class="math inline">\(1\)</span>’s. Let’s call the <span class="math inline">\(j\)</span>-th element of the <span class="math inline">\(i\)</span>-th sequence in this list <span class="math inline">\(s_i(j)\)</span>. Then the <span class="math inline">\(i\)</span>-th sequence <span class="math inline">\(s_i\)</span> is <span class="math display">\[s_i(1), s_i(2), s_i(3), \cdots\]</span></p>
 <p>We may arrange this list, and the elements of each sequence <span class="math inline">\(s_i\)</span> in it, in an array:</p>
-<p>
-<span class="math display">\[
+<blockquote>
+<p><span class="math display">\[
 \begin{array}{c|c|c|c|c|c}
 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; \cdots \\\hline
 1 &amp; \mathbf{s_{1}(1)} &amp; s_{1}(2) &amp; s_{1}(3) &amp; s_1(4) &amp; \cdots \\\hline
@@ -1396,35 +1391,39 @@ Suppose, by way of contradiction, that <span class="math inline">\(\mathbb{B}^\o
 4 &amp; s_{4}(1)&amp; s_{4}(2) &amp; s_4(3) &amp; \mathbf{s_4(4)} &amp; \cdots \\\hline
 \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \mathbf{\ddots}
 \end{array}
-\]</span>
-</p>
+\]</span></p>
+</blockquote>
 <p>The labels down the side give the number of the sequence in the list <span class="math inline">\(s_1\)</span>, <span class="math inline">\(s_2\)</span>, ; the numbers across the top label the <bb>element</bb>s of the individual sequences. For instance, <span class="math inline">\(s_{1}(1)\)</span> is a name for whatever number, a <span class="math inline">\(0\)</span> or a <span class="math inline">\(1\)</span>, is the first <bb>element</bb> in the sequence <span class="math inline">\(s_{1}\)</span>, and so on.</p>
 <p>Now we construct an infinite sequence, <span class="math inline">\(\overline{s}\)</span>, of <span class="math inline">\(0\)</span>’s and <span class="math inline">\(1\)</span>’s which cannot possibly be on this list. The definition of <span class="math inline">\(\overline{s}\)</span> will depend on the list <span class="math inline">\(s_1\)</span>, <span class="math inline">\(s_2, \cdots\)</span>. Any infinite list of infinite sequences of <span class="math inline">\(0\)</span>’s and <span class="math inline">\(1\)</span>’s gives rise to an infinite sequence <span class="math inline">\(\overline{s}\)</span> which is guaranteed to not appear on the list.</p>
 <p>To define <span class="math inline">\(\overline{s}\)</span>, we specify what all its <bb>element</bb>s are, i.e., we specify <span class="math inline">\(\overline{s}(n)\)</span> for all <span class="math inline">\(n \in \mathbb{Z}^{+}\)</span>. We do this by reading down the diagonal of the array above (hence the name “diagonal method”) and then changing every <span class="math inline">\(1\)</span> to a <span class="math inline">\(0\)</span> and every <span class="math inline">\(1\)</span> to a <span class="math inline">\(0\)</span>. More abstractly, we define <span class="math inline">\(\overline{s}(n)\)</span> to be <span class="math inline">\(0\)</span> or <span class="math inline">\(1\)</span> according to whether the <span class="math inline">\(n\)</span>-th <bb>element</bb> of the diagonal, <span class="math inline">\(s_n(n)\)</span>, is <span class="math inline">\(1\)</span> or <span class="math inline">\(0\)</span>.</p>
-<p>
-<span class="math display">\[
+<blockquote>
+<p><span class="math display">\[
 \overline{s}(n) =
 \begin{cases}
 1 &amp; \text{if $s_{n}(n) = 0$}\\
 0 &amp; \text{if $s_{n}(n) = 1$}.
 \end{cases}
-\]</span>
-</p>
+\]</span></p>
+</blockquote>
 <p>If you like formulas better than definitions by cases, you could also define <span class="math inline">\(\overline{s}(n) = 1 - s_n(n)\)</span>.</p>
 <p>Clearly <span class="math inline">\(\overline{s}\)</span> is an infinite sequence of <span class="math inline">\(0\)</span>’s and <span class="math inline">\(1\)</span>’s, since it is just the mirror sequence to the sequence of <span class="math inline">\(0\)</span>’s and <span class="math inline">\(1\)</span>’s that appear on the diagonal of our array. So <span class="math inline">\(\overline{s}\)</span> is an <bb>element</bb> of <span class="math inline">\(\mathbb{B}^\omega\)</span>. But it cannot be on the list <span class="math inline">\(s_1\)</span>, <span class="math inline">\(s_2, \cdots\)</span>, Why not?</p>
 <p>It can’t be the first sequence in the list, <span class="math inline">\(s_1\)</span>, because it differs from <span class="math inline">\(s_1\)</span> in the first <bb>element</bb>. Whatever <span class="math inline">\(s_1(1)\)</span> is, we defined <span class="math inline">\(\overline{s}(1)\)</span> to be the opposite. It can’t be the second sequence in the list, because <span class="math inline">\(\overline{s}\)</span> differs from <span class="math inline">\(s_2\)</span> in the second element: if <span class="math inline">\(s_2(2)\)</span> is <span class="math inline">\(0\)</span>, <span class="math inline">\(\overline{s}(2)\)</span> is <span class="math inline">\(1\)</span>, and vice versa. And so on.</p>
 <p>More precisely: if <span class="math inline">\(\overline{s}\)</span> were on the list, there would be some <span class="math inline">\(k\)</span> so that <span class="math inline">\(\overline{s} = s_{k}\)</span>. Two sequences are identical iff they agree at every place, i.e., for any <span class="math inline">\(n\)</span>, <span class="math inline">\(\overline{s}(n) = s_{k}(n)\)</span>. So in particular, taking <span class="math inline">\(n = k\)</span> as a special case, <span class="math inline">\(\overline{s}(k) = s_{k}(k)\)</span> would have to hold. <span class="math inline">\(s_k(k)\)</span> is either <span class="math inline">\(0\)</span> or <span class="math inline">\(1\)</span>. If it is <span class="math inline">\(0\)</span> then <span class="math inline">\(\overline{s}(k)\)</span> must be <span class="math inline">\(1\)</span>—that’s how we defined <span class="math inline">\(\overline{s}\)</span>. But if <span class="math inline">\(s_k(k) = 1\)</span> then, again because of the way we defined <span class="math inline">\(\overline{s}\)</span>, <span class="math inline">\(\overline{s}(k) = 0\)</span>. In either case <span class="math inline">\(\overline{s}(k) \neq s_{k}(k)\)</span>.</p>
-<p>We started by assuming that there is a list of <bb>element</bb>s of <span class="math inline">\(\mathbb{B}^\omega\)</span>, <span class="math inline">\(s_1\)</span>, <span class="math inline">\(s_2, \cdots\)</span>, From this list we constructed a sequence <span class="math inline">\(\overline{s}\)</span> which we proved cannot be on the list. But it definitely is a sequence of <span class="math inline">\(0\)</span>’s and <span class="math inline">\(1\)</span>’s if all the <span class="math inline">\(s_i\)</span> are sequences of <span class="math inline">\(0\)</span>’s and <span class="math inline">\(1\)</span>’s, i.e., <span class="math inline">\(\overline{s} \in \mathbb{B}^\omega\)</span>. This shows in particular that there can be no list of <bb>all</bb> <bb>element</bb>s of <span class="math inline">\(\mathbb{B}^\omega\)</span>, since for any such list we could also construct a sequence <span class="math inline">\(\overline{s}\)</span> guaranteed to not be on the list, so the assumption that there is a list of all sequences in <span class="math inline">\(\mathbb{B}^\omega\)</span> leads to a contradiction. <span class="math inline">\(\blacksquare\)</span></p>
+We started by assuming that there is a list of <bb>element</bb>s of <span class="math inline">\(\mathbb{B}^\omega\)</span>, <span class="math inline">\(s_1\)</span>, <span class="math inline">\(s_2, \cdots\)</span>, From this list we constructed a sequence <span class="math inline">\(\overline{s}\)</span> which we proved cannot be on the list. But it definitely is a sequence of <span class="math inline">\(0\)</span>’s and <span class="math inline">\(1\)</span>’s if all the <span class="math inline">\(s_i\)</span> are sequences of <span class="math inline">\(0\)</span>’s and <span class="math inline">\(1\)</span>’s, i.e., <span class="math inline">\(\overline{s} \in \mathbb{B}^\omega\)</span>. This shows in particular that there can be no list of <bb>all</bb> <bb>element</bb>s of <span class="math inline">\(\mathbb{B}^\omega\)</span>, since for any such list we could also construct a sequence <span class="math inline">\(\overline{s}\)</span> guaranteed to not be on the list, so the assumption that there is a list of all sequences in <span class="math inline">\(\mathbb{B}^\omega\)</span> leads to a contradiction. <span class="math inline">\(\blacksquare\)</span>
+</div>
 <p>This proof method is called “diagonalization” because it uses the diagonal of the array to define <span class="math inline">\(\overline{s}\)</span>. Diagonalization need not involve the presence of an array: we can show that sets are not <bb>enumerable</bb> by using a similar idea even when no array and no actual diagonal is involved.</p>
-<p>{{% dtpc title=“☯Theorem 1.2” %}}
-<span class="math inline">\(\mathscr{P}({\mathbb{Z})^{+}}\)</span> is not <bb>enumerable</bb>.
-{{% /dtpc %}}</p>
-<p><bb>Theorem 1.2 之證明</bb>
-We proceed in the same way, by showing that for every list of subsets of <span class="math inline">\(\mathbb{Z}^{+}\)</span> there is a subset of <span class="math inline">\(\mathbb{Z}^{+}\)</span> which cannot be on the list. Suppose the following is a given list of subsets of <span class="math inline">\(\mathbb{Z}^{+}\)</span>: <span class="math display">\[ Z_{1}, Z_{2}, Z_{3}, \cdots \]</span> We now define a set <span class="math inline">\(\overline{Z}\)</span> such that for any <span class="math inline">\(n \in \mathbb{Z}^{+}\)</span>, <span class="math inline">\(n \in \overline{Z}\)</span> iff <span class="math inline">\(n \notin Z_{n}\)</span>: <span class="math display">\[ \overline{Z} = \lbrace n \in \mathbb{Z}^{+}: n \notin Z_n\rbrace\]</span> <span class="math inline">\(\overline{Z}\)</span> is clearly a set of positive integers, since by assumption each <span class="math inline">\(Z_n\)</span> is, and thus <span class="math inline">\(\overline{Z} \in \mathscr{P}({\mathbb{Z})^{+}}\)</span>. But <span class="math inline">\(\overline{Z}\)</span> cannot be on the list. To show this, we’ll establish that for each <span class="math inline">\(k \in \mathbb{Z}^{+}\)</span>, <span class="math inline">\(\overline{Z} \neq Z_k\)</span>.</p>
+
+<div class="theorem">
+<span id="thm:thmenumerable01" class="theorem"><strong>定理 2.3  </strong></span><span class="math inline">\(\mathscr{P}({\mathbb{Z})^{+}}\)</span> is not <bb>enumerable</bb>.
+</div>
+
+<div class="proof">
+ <span class="proof"><em>PROOF: </em></span> We proceed in the same way, by showing that for every list of subsets of <span class="math inline">\(\mathbb{Z}^{+}\)</span> there is a subset of <span class="math inline">\(\mathbb{Z}^{+}\)</span> which cannot be on the list. Suppose the following is a given list of subsets of <span class="math inline">\(\mathbb{Z}^{+}\)</span>: <span class="math display">\[ Z_{1}, Z_{2}, Z_{3}, \cdots \]</span> We now define a set <span class="math inline">\(\overline{Z}\)</span> such that for any <span class="math inline">\(n \in \mathbb{Z}^{+}\)</span>, <span class="math inline">\(n \in \overline{Z}\)</span> iff <span class="math inline">\(n \notin Z_{n}\)</span>: <span class="math display">\[ \overline{Z} = \lbrace n \in \mathbb{Z}^{+}: n \notin Z_n\rbrace\]</span>
+</div>
+<p><span class="math inline">\(\overline{Z}\)</span> is clearly a set of positive integers, since by assumption each <span class="math inline">\(Z_n\)</span> is, and thus <span class="math inline">\(\overline{Z} \in \mathscr{P}({\mathbb{Z})^{+}}\)</span>. But <span class="math inline">\(\overline{Z}\)</span> cannot be on the list. To show this, we’ll establish that for each <span class="math inline">\(k \in \mathbb{Z}^{+}\)</span>, <span class="math inline">\(\overline{Z} \neq Z_k\)</span>.</p>
 <p>So let <span class="math inline">\(k \in \mathbb{Z}^{+}\)</span> be arbitrary. We’ve defined <span class="math inline">\(\overline{Z}\)</span> so that for any <span class="math inline">\(n \in \mathbb{Z}^{+}\)</span>, <span class="math inline">\(n \in \overline{Z}\)</span> iff <span class="math inline">\(n \notin Z_n\)</span>. In particular, taking <span class="math inline">\(n=k\)</span>, <span class="math inline">\(k \in \overline{Z}\)</span> iff <span class="math inline">\(k \notin Z_k\)</span>. But this shows that <span class="math inline">\(\overline{Z} \neq Z_k\)</span>, since <span class="math inline">\(k\)</span> is an <bb>element</bb> of one but not the other, and so <span class="math inline">\(\overline{Z}\)</span> and <span class="math inline">\(Z_k\)</span> have different <bb>element</bb>s. Since <span class="math inline">\(k\)</span> was arbitrary, <span class="math inline">\(\overline{Z}\)</span> is not on the list <span class="math inline">\(Z_1\)</span>, <span class="math inline">\(Z_2, \cdots\)</span> <span class="math inline">\(blacksquare\)</span></p>
 <p>The preceding proof did not mention a diagonal, but you can think of it as involving a diagonal if you picture it this way: Imagine the sets <span class="math inline">\(Z_1\)</span>, <span class="math inline">\(Z_2, \cdots\)</span>, written in an array, where each <bb>element</bb> <span class="math inline">\(j \in Z_i\)</span> is listed in the <span class="math inline">\(j\)</span>-th column. Say the first four sets on that list are <span class="math inline">\(\lbrace 1,2,3,\cdots\rbrace\)</span>, <span class="math inline">\(\lbrace 2, 4, 6, \cdots\rbrace\)</span>, <span class="math inline">\(\lbrace 1,2,5\rbrace\)</span>, and <span class="math inline">\(\lbrace 3,4,5,\cdots\rbrace\)</span>. Then the array would begin with</p>
-<p>
-<span class="math display">\[
+<p><span class="math display">\[
 \begin{array}{r@{}rrrrrrr}
 Z_1 = \lbrace  &amp; \mathbf{1}, &amp; 2, &amp; 3, &amp; 4, &amp; 5, &amp; 6, &amp; \cdots\rbrace \\
 Z_2 = \lbrace  &amp;  &amp; \mathbf{2}, &amp;  &amp; 4, &amp;  &amp; 6, &amp; \cdots\rbrace \\
@@ -1432,54 +1431,55 @@ Z_3 = \lbrace  &amp; 1, &amp; 2, &amp;  &amp;  &amp; 5\phantom{,} &amp;  &amp; \
 Z_4 = \lbrace  &amp;  &amp;  &amp; 3, &amp; \mathbf{4}, &amp; 5, &amp; 6, &amp; \cdots\rbrace \\
 \vdots &amp; &amp; &amp; &amp; &amp; \ddots
 \end{array}
-\]</span>
-</p>
+\]</span></p>
 <p>Then <span class="math inline">\(\overline{Z}\)</span> is the set obtained by going down the diagonal, leaving out any numbers that appear along the diagonal and include those <span class="math inline">\(j\)</span> where the array has a gap in the <span class="math inline">\(j\)</span>-th row/column. In the above case, we would leave out <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span>, include <span class="math inline">\(3\)</span>, leave out <span class="math inline">\(4\)</span>, etc.</p>
-<blockquote>
-<p><bb>Problem 1.37</bb>
-Show that <span class="math inline">\(\mathscr{P}({\mathbb{N})}\)</span> is <bb>nonenumerable</bb> by a diagonal argument.</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.38</bb>
-Show that the set of functions <span class="math inline">\(f \colon \mathbb{Z}^{+} \to \mathbb{Z}^{+}\)</span> is <bb>nonenumerable</bb> by an explicit diagonal argument. That is, show that if <span class="math inline">\(f_1\)</span>, <span class="math inline">\(f_2\)</span>, , is a list of functions and each <span class="math inline">\(f_i\colon \mathbb{Z}^{+} \to \mathbb{Z}^{+}\)</span>, then there is some <span class="math inline">\(\overline{f}\colon \mathbb{Z}^{+} \to \mathbb{Z}^{+}\)</span> not on this list.</p>
-</blockquote>
+
+<div class="conjecture">
+<span id="cnj:prob0138" class="conjecture"><strong>问题 2.38  </strong></span>Show that <span class="math inline">\(\mathscr{P}({\mathbb{N})}\)</span> is <bb>nonenumerable</bb> by a diagonal argument.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0139" class="conjecture"><strong>问题 2.39  </strong></span>Show that the set of functions <span class="math inline">\(f \colon \mathbb{Z}^{+} \to \mathbb{Z}^{+}\)</span> is <bb>nonenumerable</bb> by an explicit diagonal argument. That is, show that if <span class="math inline">\(f_1\)</span>, <span class="math inline">\(f_2\)</span>, , is a list of functions and each <span class="math inline">\(f_i\colon \mathbb{Z}^{+} \to \mathbb{Z}^{+}\)</span>, then there is some <span class="math inline">\(\overline{f}\colon \mathbb{Z}^{+} \to \mathbb{Z}^{+}\)</span> not on this list.
+</div>
 </div>
 <div id="reduction" class="section level3" number="2.4.7">
 <h3><span class="header-section-number">2.4.7</span> Reduction</h3>
 <p>This section proves non-enumerability by reduction, matching the results in §1.3.5（P.53）. An alternative, slightly more condensed version matching the results in §1.3.11（P.64）is provided in§1.3.12（P.66）.</p>
 <p>We showed <span class="math inline">\(\mathscr{P}({\mathbb{Z})^{+}}\)</span> to be <bb>nonenumerable</bb> by a diagonalization argument. We already had a proof that <span class="math inline">\(\mathbb{B}^\omega\)</span>, the set of all infinite sequences of <span class="math inline">\(0\)</span>s and <span class="math inline">\(1\)</span>s, is <bb>nonenumerable</bb>. Here’s another way we can prove that <span class="math inline">\(\mathscr{P}({\mathbb{Z})^{+}}\)</span> is <bb>nonenumerable</bb>: Show that if <span class="math inline">\(\mathscr{P}({\mathbb{Z})^{+}}\)</span> is <bb>enumerable</bb> then <span class="math inline">\(\mathbb{B}^\omega\)</span> is also <bb>enumerable</bb>. Since we know <span class="math inline">\(\mathbb{B}^\omega\)</span> is not <bb>enumerable</bb>, <span class="math inline">\(\mathscr{P}({\mathbb{Z})^{+}}\)</span> can’t be either. This is called <bb>reducing</bb> one problem to another—in this case, we reduce the problem of enumerating <span class="math inline">\(\mathbb{B}^\omega\)</span> to the problem of enumerating <span class="math inline">\(\mathscr{P}({\mathbb{Z})^{+}}\)</span>. A solution to the latter—an enumeration of <span class="math inline">\(\mathscr{P}({\mathbb{Z})^{+}}\)</span>—would yield a solution to the former—an enumeration of <span class="math inline">\(\mathbb{B}^\omega\)</span>.</p>
 <p>How do we reduce the problem of enumerating a set <span class="math inline">\(B\)</span> to that of enumerating a set <span class="math inline">\(A\)</span>? We provide a way of turning an enumeration of <span class="math inline">\(A\)</span> into an enumeration of <span class="math inline">\(B\)</span>. The easiest way to do that is to define a <bb>surjective</bb> function <span class="math inline">\(f\colon A \to B\)</span>. If <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2, \cdots\)</span>, enumerates <span class="math inline">\(A\)</span>, then <span class="math inline">\(f(x_1)\)</span>, <span class="math inline">\(f(x_2), \cdots\)</span>, would enumerate <span class="math inline">\(B\)</span>. In our case, we are looking for a surjective function <span class="math inline">\(f\colon \mathscr{P}({\mathbb{Z})^{+}} \to \mathbb{B}^\omega\)</span>.</p>
-<blockquote>
-<p><bb>Problem 1.3</bb>
-Show that if there is an <bb>injective</bb> function <span class="math inline">\(g\colon B \to A\)</span>, and <span class="math inline">\(B\)</span> is <bb>nonenumerable</bb>, then so is <span class="math inline">\(A\)</span>. Do this by showing how you can use <span class="math inline">\(g\)</span> to turn an enumeration of <span class="math inline">\(A\)</span> into one of <span class="math inline">\(B\)</span>.</p>
-</blockquote>
-<p><bb>Proof of Theorem 1.6（P.65）by reduction</bb>
-Suppose that <span class="math inline">\(\mathscr{P}({\mathbb{Z})^{+}}\)</span> were <bb>enumerable</bb>, and thus that there is an enumeration of it, <span class="math inline">\(Z_{1}\)</span>, <span class="math inline">\(Z_{2}\)</span>, <span class="math inline">\(Z_{3}, \cdots\)</span></p>
+
+<div class="conjecture">
+<span id="cnj:prob0140" class="conjecture"><strong>问题 2.40  </strong></span>Show that if there is an <bb>injective</bb> function <span class="math inline">\(g\colon B \to A\)</span>, and <span class="math inline">\(B\)</span> is <bb>nonenumerable</bb>, then so is <span class="math inline">\(A\)</span>. Do this by showing how you can use <span class="math inline">\(g\)</span> to turn an enumeration of <span class="math inline">\(A\)</span> into one of <span class="math inline">\(B\)</span>.
+</div>
+
+<div class="proof">
+<p> <span class="proof"><em>PROOF</em> (Proof of Theorem 2.3 by reduction): </span> Suppose that <span class="math inline">\(\mathscr{P}({\mathbb{Z})^{+}}\)</span> were <bb>enumerable</bb>, and thus that there is an enumeration of it, <span class="math inline">\(Z_{1}\)</span>, <span class="math inline">\(Z_{2}\)</span>, <span class="math inline">\(Z_{3}, \cdots\)</span></p>
 <p>Define the function <span class="math inline">\(f \colon \mathscr{P}({\mathbb{Z})^{+}} \to \mathbb{B}^\omega\)</span> by letting <span class="math inline">\(f(Z)\)</span> be the sequence <span class="math inline">\(s_{k}\)</span> such that <span class="math inline">\(s_{k}(n) = 1\)</span> iff <span class="math inline">\(n \in Z\)</span>, and <span class="math inline">\(s_k(n) = 0\)</span> otherwise. This clearly defines a function, since whenever <span class="math inline">\(Z \subseteq \mathbb{Z}^{+}\)</span>, any <span class="math inline">\(n \in \mathbb{Z}^{+}\)</span> either is an <bb>element</bb> of <span class="math inline">\(Z\)</span> or isn’t. For instance, the set <span class="math inline">\(2\mathbb{Z}^{+} = \lbrace 2, 4, 6, \cdots\rbrace\)</span> of positive even numbers gets mapped to the sequence <span class="math inline">\(010101\cdots\)</span>, the empty set gets mapped to <span class="math inline">\(0000\cdots\)</span> and the set <span class="math inline">\(\mathbb{Z}^{+}\)</span> itself to <span class="math inline">\(1111\cdots\)</span>.</p>
 <p>It also is <bb>surjective</bb>: Every sequence of <span class="math inline">\(0\)</span>s and <span class="math inline">\(1\)</span>s corresponds to some set of positive integers, namely the one which has as its members those integers corresponding to the places where the sequence has <span class="math inline">\(1\)</span>s. More precisely, suppose <span class="math inline">\(s \in \mathbb{B}^\omega\)</span>. Define <span class="math inline">\(Z \subseteq \mathbb{Z}^{+}\)</span> by: <span class="math display">\[Z = \lbrace n \in \mathbb{Z}^{+}: s(n) = 1\rbrace\]</span> Then <span class="math inline">\(f(Z) = s\)</span>, as can be verified by consulting the definition of <span class="math inline">\(f\)</span>.</p>
 <p>Now consider the list <span class="math display">\[f(Z_1), f(Z_2), f(Z_3), \cdots\]</span> Since <span class="math inline">\(f\)</span> is <bb>surjective</bb>, every member of <span class="math inline">\(\mathbb{B}^\omega\)</span> must appear as a value of <span class="math inline">\(f\)</span> for some argument, and so must appear on the list. This list must therefore enumerate all of <span class="math inline">\(\mathbb{B}^\omega\)</span>.</p>
-<p>So if <span class="math inline">\(\mathscr{P}({\mathbb{Z})^{+}}\)</span> were <bb>enumerable</bb>, <span class="math inline">\(\mathbb{B}^\omega\)</span> would be <bb>enumerable</bb>. But <span class="math inline">\(\mathbb{B}^\omega\)</span> is <bb>nonenumerable</bb> (Theorem 1.5（P.64）). Hence <span class="math inline">\(\mathscr{P}({\mathbb{Z})^{+}}\)</span> is <bb>nonenumerable</bb>. <span class="math inline">\(\blacksquare\)</span></p>
+So if <span class="math inline">\(\mathscr{P}({\mathbb{Z})^{+}}\)</span> were <bb>enumerable</bb>, <span class="math inline">\(\mathbb{B}^\omega\)</span> would be <bb>enumerable</bb>. But <span class="math inline">\(\mathbb{B}^\omega\)</span> is <bb>nonenumerable</bb> (Theorem <a href="prechap.html#thm:thmnonenumerable">2.2</a>). Hence <span class="math inline">\(\mathscr{P}({\mathbb{Z})^{+}}\)</span> is <bb>nonenumerable</bb>. <span class="math inline">\(\blacksquare\)</span>
+</div>
 <p>It is easy to be confused about the direction the reduction goes in. For instance, a <bb>surjective</bb> function <span class="math inline">\(g \colon \mathbb{B}^\omega \to B\)</span> does <bb>not</bb> establish that <span class="math inline">\(B\)</span> is <bb>nonenumerable</bb>. (Consider <span class="math inline">\(g \colon \mathbb{B}^\omega \to \mathbb{B}\)</span> defined by <span class="math inline">\(g(s) = s(1)\)</span>, the function that maps a sequence of <span class="math inline">\(0\)</span>’s and <span class="math inline">\(1\)</span>’s to its first <bb>element</bb>. It is <bb>surjective</bb>, because some sequences start with <span class="math inline">\(0\)</span> and some start with <span class="math inline">\(1\)</span>. But <span class="math inline">\(\mathbb{B}\)</span> is finite.) Note also that the function <span class="math inline">\(f\)</span> must be <bb>surjective</bb>, or otherwise the argument does not go through: <span class="math inline">\(f(x_1)\)</span>, <span class="math inline">\(f(x_2), \cdots\)</span>, would then not be guaranteed to include all the <bb>element</bb>s of <span class="math inline">\(B\)</span>. For instance, <span class="math display">\[ h(n) = \underbrace{000\cdots0}_{\text{$n$ $0$&#39;s}} \]</span> defines a function <span class="math inline">\(h\colon \mathbb{Z}^{+} \to \mathbb{B}^\omega\)</span>, but <span class="math inline">\(\mathbb{Z}^{+}\)</span> is <bb>enumerable</bb>.</p>
-<blockquote>
-<p><bb>Problem 1.40</bb>
-Show that the set of all <bb>sets of</bb> pairs of positive integers is <bb>nonenumerable</bb> by a reduction argument.</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.41</bb>
-Show that <span class="math inline">\(\mathbb{N}^\omega\)</span>, the set of infinite sequences of natural numbers, is <bb>nonenumerable</bb> by a reduction argument.</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.42</bb>
-Let <span class="math inline">\(P\)</span> be the set of functions from the set of positive integers to the set <span class="math inline">\(\lbrace 0\rbrace\)</span>, and let <span class="math inline">\(Q\)</span> be the set of <bb>partial</bb> functions from the set of positive integers to the set <span class="math inline">\(\lbrace 0\rbrace\)</span>. Show that <span class="math inline">\(P\)</span> is <bb>enumerable</bb> and <span class="math inline">\(Q\)</span> is not. (Hint: reduce the problem of enumerating <span class="math inline">\(\mathbb{B}^\omega\)</span> to enumerating <span class="math inline">\(Q\)</span>).</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.43</bb>
-Let <span class="math inline">\(S\)</span> be the set of all <bb>surjective</bb> functions from the set of positive integers to the set <span class="math inline">\(\lbrace 0,1\rbrace\)</span>, i.e., <span class="math inline">\(S\)</span> consists of all <bb>surjective</bb> <span class="math inline">\(f\colon \mathbb{Z}^{+} \to \mathbb{B}\)</span>. Show that <span class="math inline">\(S\)</span> is <bb>nonenumerable</bb>.</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.44</bb>
-Show that the set <span class="math inline">\(\mathbb{R}\)</span> of all real numbers is <bb>nonenumerable</bb>.</p>
-</blockquote>
+
+<div class="conjecture">
+<span id="cnj:prob0141" class="conjecture"><strong>问题 2.41  </strong></span>Show that the set of all <bb>sets of</bb> pairs of positive integers is <bb>nonenumerable</bb> by a reduction argument.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0142" class="conjecture"><strong>问题 2.42  </strong></span>Show that <span class="math inline">\(\mathbb{N}^\omega\)</span>, the set of infinite sequences of natural numbers, is <bb>nonenumerable</bb> by a reduction argument.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0143" class="conjecture"><strong>问题 2.43  </strong></span>Let <span class="math inline">\(P\)</span> be the set of functions from the set of positive integers to the set <span class="math inline">\(\lbrace 0\rbrace\)</span>, and let <span class="math inline">\(Q\)</span> be the set of <bb>partial</bb> functions from the set of positive integers to the set <span class="math inline">\(\lbrace 0\rbrace\)</span>. Show that <span class="math inline">\(P\)</span> is <bb>enumerable</bb> and <span class="math inline">\(Q\)</span> is not. (Hint: reduce the problem of enumerating <span class="math inline">\(\mathbb{B}^\omega\)</span> to enumerating <span class="math inline">\(Q\)</span>).
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0144" class="conjecture"><strong>问题 2.44  </strong></span>Let <span class="math inline">\(S\)</span> be the set of all <bb>surjective</bb> functions from the set of positive integers to the set <span class="math inline">\(\lbrace 0,1\rbrace\)</span>, i.e., <span class="math inline">\(S\)</span> consists of all <bb>surjective</bb> <span class="math inline">\(f\colon \mathbb{Z}^{+} \to \mathbb{B}\)</span>. Show that <span class="math inline">\(S\)</span> is <bb>nonenumerable</bb>.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0145" class="conjecture"><strong>问题 2.45  </strong></span>Show that the set <span class="math inline">\(\mathbb{R}\)</span> of all real numbers is <bb>nonenumerable</bb>.
+</div>
 <br>
 <br>
 <hr>
