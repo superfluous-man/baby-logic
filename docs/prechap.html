@@ -24,7 +24,7 @@
 <meta name="author" content="Lǐ Èrgǒu" />
 
 
-<meta name="date" content="2021-02-28" />
+<meta name="date" content="2021-03-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -129,14 +129,14 @@
 <ul>
 <li class="chapter" data-level="2.1.1" data-path="prechap.html"><a href="prechap.html#extensionality"><i class="fa fa-check"></i><b>2.1.1</b> Extensionality</a></li>
 <li class="chapter" data-level="2.1.2" data-path="prechap.html"><a href="prechap.html#subsets-and-power-sets"><i class="fa fa-check"></i><b>2.1.2</b> Subsets and Power Sets</a></li>
-<li class="chapter" data-level="2.1.3" data-path="prechap.html"><a href="prechap.html#some-important-sets"><i class="fa fa-check"></i><b>2.1.3</b> Some Important Sets</a></li>
+<li class="chapter" data-level="2.1.3" data-path="prechap.html"><a href="prechap.html#SomeImpSet"><i class="fa fa-check"></i><b>2.1.3</b> Some Important Sets</a></li>
 <li class="chapter" data-level="2.1.4" data-path="prechap.html"><a href="prechap.html#unions-and-intersections"><i class="fa fa-check"></i><b>2.1.4</b> Unions and Intersections</a></li>
-<li class="chapter" data-level="2.1.5" data-path="prechap.html"><a href="prechap.html#pairs-tuples-cartesian-products"><i class="fa fa-check"></i><b>2.1.5</b> Pairs, Tuples, Cartesian Products</a></li>
+<li class="chapter" data-level="2.1.5" data-path="prechap.html"><a href="prechap.html#CartesianP"><i class="fa fa-check"></i><b>2.1.5</b> Pairs, Tuples, Cartesian Products</a></li>
 <li class="chapter" data-level="2.1.6" data-path="prechap.html"><a href="prechap.html#russells-paradox"><i class="fa fa-check"></i><b>2.1.6</b> Russell’s Paradox</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="prechap.html"><a href="prechap.html#关系集合上的结构"><i class="fa fa-check"></i><b>2.2</b> 关系：集合上的结构</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="prechap.html"><a href="prechap.html#relations-as-sets"><i class="fa fa-check"></i><b>2.2.1</b> Relations as Sets</a></li>
+<li class="chapter" data-level="2.2.1" data-path="prechap.html"><a href="prechap.html#RelationSet"><i class="fa fa-check"></i><b>2.2.1</b> Relations as Sets</a></li>
 <li class="chapter" data-level="2.2.2" data-path="prechap.html"><a href="prechap.html#philosophical-reflections"><i class="fa fa-check"></i><b>2.2.2</b> Philosophical Reflections</a></li>
 <li class="chapter" data-level="2.2.3" data-path="prechap.html"><a href="prechap.html#special-properties-of-relations"><i class="fa fa-check"></i><b>2.2.3</b> Special Properties of Relations</a></li>
 <li class="chapter" data-level="2.2.4" data-path="prechap.html"><a href="prechap.html#equivalence-relations"><i class="fa fa-check"></i><b>2.2.4</b> Equivalence Relations</a></li>
@@ -247,13 +247,13 @@
 <h2><span class="header-section-number">2.1</span> 集合：属性、元素、外延</h2>
 <div id="extensionality" class="section level3" number="2.1.1">
 <h3><span class="header-section-number">2.1.1</span> Extensionality</h3>
-<p>A <bb>set</bb> is a collection of objects, considered <strong>as</strong> a single object. The objects making up the set are called <bb>elements</bb> or <bb>members</bb> of the set. If <span class="math inline">\(x\)</span> is an <bb>element</bb> of a set <span class="math inline">\(a\)</span>, we write <span class="math inline">\(x \in a\)</span>; if not, we write <span class="math inline">\(x \notin a\)</span>. The set which has no <bb>element</bb>s is called the <bb>empty</bb> set and denoted "<span class="math inline">\(\varnothing\)</span>’’.</p>
+<p>A <bb>set</bb> is a collection of objects, considered <strong>as</strong> a single object. The objects making up the set are called <bb>elements</bb> or <bb>members</bb> of the set. If <span class="math inline">\(x\)</span> is an <bb>element</bb> of a set <span class="math inline">\(a\)</span>, we write <span class="math inline">\(x \in a\)</span>; if not, we write <span class="math inline">\(x \notin a\)</span>. The set which has no <bb>element</bb>s is called the <bb>empty</bb> set and denoted “<span class="math inline">\(\varnothing\)</span>.”</p>
 <p>It does not matter how we <bb>specify</bb> the set, or how we <bb>order</bb> its <bb>element</bb>s, or indeed how <bb>many times</bb> we count its <bb>element</bb>s. All that matters are what its <bb>element</bb>s are. We codify this in the following principle.</p>
 
 <div class="definition">
 <span id="def:defSetEx" class="definition"><strong>定义 2.1  (Extensionality)  </strong></span>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are sets, then <span class="math inline">\(A = B\)</span> iff every <bb>element</bb> of <span class="math inline">\(A\)</span> is also an <bb>element</bb> of <span class="math inline">\(B\)</span>, and vice versa.
 </div>
-<p>Extensionality licenses some notation. In general, when we have some objects <span class="math inline">\(a_{1}, \cdots, a_{n}\)</span>, then <span class="math inline">\(\lbrace a_{1}, \cdots, a_{n}\rbrace\)</span> is <bb>the</bb> set whose <bb>element</bb>s are <span class="math inline">\(a_1, \ldots, a_n\)</span>. We emphasise the word "<bb>the</bb>’’, since extensionality tells us that there can be only <bb>one</bb> such set. Indeed, extensionality also licenses the following:</p>
+<p>Extensionality licenses some notation. In general, when we have some objects <span class="math inline">\(a_{1}, \cdots, a_{n}\)</span>, then <span class="math inline">\(\lbrace a_{1}, \cdots, a_{n}\rbrace\)</span> is <bb>the</bb> set whose <bb>element</bb>s are <span class="math inline">\(a_1, \ldots, a_n\)</span>. We emphasise the word “<bb>the</bb>,” since extensionality tells us that there can be only <bb>one</bb> such set. Indeed, extensionality also licenses the following:</p>
 <p><span class="math display">\[\lbrace a, a, b \rbrace = \lbrace a, b \rbrace = \lbrace b,a \rbrace. \]</span></p>
 <p>This delivers on the point that, when we consider sets, we don’t care about the order of their <bb>element</bb>s, or how many times they are specified.</p>
 
@@ -270,7 +270,7 @@
 <span id="exm:exmSetperfect" class="example"><strong>例 2.3  (perfect number)  </strong></span>A number is called <bb>perfect</bb> iff it is equal to the sum of its proper divisors (i.e., numbers that evenly divide it but aren’t identical to the number). For instance, <span class="math inline">\(6\)</span> is perfect because its proper divisors are <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, and <span class="math inline">\(3\)</span>, and <span class="math inline">\(6 = 1 + 2 + 3\)</span>. In fact, <span class="math inline">\(6\)</span> is the only positive integer less than <span class="math inline">\(10\)</span> that is perfect. So, using extensionality, we can say:
 <span class="math display">\[\lbrace 6 \rbrace = \lbrace x:  \text{is perfect and } 0 \leqslant x \leqslant 10 \rbrace.\]</span>
 </div>
-<p>We read the notation on the right as "the set of <span class="math inline">\(x\)</span>’s such that <span class="math inline">\(x\)</span> is perfect and <span class="math inline">\(0 \leqslant x \leqslant 10\)</span>’’. The identity here confirms that, when we consider sets, we don’t care about how they are specified. And, more generally, extensionality guarantees that there is always only one set of <span class="math inline">\(x\)</span>’s such that <span class="math inline">\(\varphi(x)\)</span>. So, extensionality justifies calling <span class="math inline">\(\lbrace x: \varphi(x)\rbrace\)</span> <bb>the</bb> set of <span class="math inline">\(x\)</span>’s such that <span class="math inline">\(\varphi(x)\)</span>.</p>
+<p>We read the notation on the right as “the set of <span class="math inline">\(x\)</span>’s such that <span class="math inline">\(x\)</span> is perfect and <span class="math inline">\(0 \leqslant x \leqslant 10\)</span>.” The identity here confirms that, when we consider sets, we don’t care about how they are specified. And, more generally, extensionality guarantees that there is always only one set of <span class="math inline">\(x\)</span>’s such that <span class="math inline">\(\varphi(x)\)</span>. So, extensionality justifies calling <span class="math inline">\(\lbrace x: \varphi(x)\rbrace\)</span> <bb>the</bb> set of <span class="math inline">\(x\)</span>’s such that <span class="math inline">\(\varphi(x)\)</span>.</p>
 <p>Extensionality gives us a way for showing that sets are identical: to show that <span class="math inline">\(A = B\)</span>, show that whenever <span class="math inline">\(x \in A\)</span> then also <span class="math inline">\(x \in B\)</span>, and whenever <span class="math inline">\(y \in B\)</span> then also <span class="math inline">\(y \in A\)</span>.</p>
 
 <div class="conjecture">
@@ -292,12 +292,12 @@
 <div class="example">
 <span id="exm:exmSubset02" class="example"><strong>例 2.5  </strong></span>The number <span class="math inline">\(2\)</span> is an <bb>element</bb> of the set of integers, whereas the set of even numbers is a subset of the set of integers. However, a set may happen to <bb>both</bb> be an <bb>element</bb> and a subset of some other set, e.g., <span class="math inline">\(\lbrace 0\rbrace \in \lbrace 0, \lbrace 0 \rbrace\rbrace\)</span> and also <span class="math inline">\(\lbrace 0\rbrace \subseteq \lbrace 0, \lbrace 0\rbrace\rbrace\)</span>.
 </div>
-<p>Extensionality gives a criterion of identity for sets: <span class="math inline">\(A = B\)</span> iff every <bb>element</bb> of <span class="math inline">\(A\)</span> is also an <bb>element</bb> of <span class="math inline">\(B\)</span> and vice versa. The definition of “subset’’ defines <span class="math inline">\(A \subseteq B\)</span> precisely as the first half of this criterion: every <bb>element</bb> of <span class="math inline">\(A\)</span> is also an <bb>element</bb> of <span class="math inline">\(B\)</span>. Of course the definition also applies if we switch <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>: that is, <span class="math inline">\(B \subseteq A\)</span> iff every <bb>element</bb> of <span class="math inline">\(B\)</span> is also an <bb>element</bb> of <span class="math inline">\(A\)</span>. And that, in turn, is exactly the”vice versa’’ part of extensionality. In other words, extensionality entails that sets are equal iff they are subsets of one another.</p>
+<p>Extensionality gives a criterion of identity for sets: <span class="math inline">\(A = B\)</span> iff every <bb>element</bb> of <span class="math inline">\(A\)</span> is also an <bb>element</bb> of <span class="math inline">\(B\)</span> and vice versa. The definition of “subset” defines <span class="math inline">\(A \subseteq B\)</span> precisely as the first half of this criterion: every <bb>element</bb> of <span class="math inline">\(A\)</span> is also an <bb>element</bb> of <span class="math inline">\(B\)</span>. Of course the definition also applies if we switch <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>: that is, <span class="math inline">\(B \subseteq A\)</span> iff every <bb>element</bb> of <span class="math inline">\(B\)</span> is also an <bb>element</bb> of <span class="math inline">\(A\)</span>. And that, in turn, is exactly the “vice versa” part of extensionality. In other words, extensionality entails that sets are equal iff they are subsets of one another.</p>
 
 <div class="proposition">
 <span id="prp:prpSubset01" class="proposition"><strong>命题 2.1  </strong></span><span class="math inline">\(A = B\)</span> iff both <span class="math inline">\(A \subseteq B\)</span> and <span class="math inline">\(B \subseteq A\)</span>.
 </div>
-<p>Now is also a good opportunity to introduce some further bits of helpful notation. In defining when <span class="math inline">\(A\)</span> is a subset of <span class="math inline">\(B\)</span> we said that “every <bb>element</bb> of <span class="math inline">\(A\)</span> is <span class="math inline">\(\cdots\)</span>,’’ and filled the”<span class="math inline">\(\cdots\)</span>’’ with "an <bb>element</bb> of <span class="math inline">\(B\)</span>’’. But this is such a common <bb>shape</bb> of expression that it will be helpful to introduce some formal notation for it.</p>
+<p>Now is also a good opportunity to introduce some further bits of helpful notation. In defining when <span class="math inline">\(A\)</span> is a subset of <span class="math inline">\(B\)</span> we said that “every <bb>element</bb> of <span class="math inline">\(A\)</span> is <span class="math inline">\(\cdots\)</span>,” and filled the “<span class="math inline">\(\cdots\)</span>” with “an <bb>element</bb> of <span class="math inline">\(B\)</span>.” But this is such a common <bb>shape</bb> of expression that it will be helpful to introduce some formal notation for it.</p>
 
 <div class="definition">
 <span id="def:defSubsetabbr" class="definition"><strong>定义 2.3  </strong></span><span class="math inline">\((\forall x \in A) \varphi\)</span> <strong>abbreviates</strong> <span class="math inline">\(\forall x(x \in A \rightarrow \varphi)\)</span>. Similarly, <span class="math inline">\((\exists x \in A)\varphi\)</span> abbreviates <span class="math inline">\(\exists x(x \in A \land \varphi)\)</span>.
@@ -322,7 +322,7 @@
 <span id="cnj:prob0103" class="conjecture"><strong>问题 2.3  </strong></span>Show that if <span class="math inline">\(A\)</span> has <span class="math inline">\(n\)</span> <bb>element</bb>s, then <span class="math inline">\(\mathscr{P}(A)\)</span> has <span class="math inline">\(2^n\)</span> <bb>element</bb>s.
 </div>
 </div>
-<div id="some-important-sets" class="section level3" number="2.1.3">
+<div id="SomeImpSet" class="section level3" number="2.1.3">
 <h3><span class="header-section-number">2.1.3</span> Some Important Sets</h3>
 
 <div class="example">
@@ -343,7 +343,7 @@ We’ll sometimes also use the set of positive integers <span class="math inline
 <div class="example">
 <p><span id="exm:exmImpSet02" class="example"><strong>例 2.8  (Strings)  </strong></span>Another interesting example is the set <span class="math inline">\({A}^{*}\)</span> of <bb>finite strings</bb> over an alphabet <span class="math inline">\(A\)</span>: any finite sequence of elements of <span class="math inline">\(A\)</span> is a string over <span class="math inline">\(A\)</span>. We include the <bb>empty string <span class="math inline">\(\Lambda\)</span></bb> among the strings over <span class="math inline">\(A\)</span>, for every alphabet <span class="math inline">\(A\)</span>. For instance,</p>
 <p><span class="math display">\[\mathbb{B}^*=\lbrace \Lambda,0,1,00,01,10,11,000,001,010,011,100,101,110,111,0000,\cdots\rbrace .\]</span></p>
-If <span class="math inline">\(x=x_{1}\ldots x_{n}\in A^{*}\)</span> is a string consisting of <span class="math inline">\(n\)</span> "letters’’ from <span class="math inline">\(A\)</span>, then we say <bb>length</bb> of the string is <span class="math inline">\(n\)</span> and write <span class="math inline">\(\text{len } {x}=n\)</span>.
+If <span class="math inline">\(x=x_{1}\ldots x_{n}\in A^{*}\)</span> is a string consisting of <span class="math inline">\(n\)</span> “letters” from <span class="math inline">\(A\)</span>, then we say <bb>length</bb> of the string is <span class="math inline">\(n\)</span> and write <span class="math inline">\(\text{len } {x}=n\)</span>.
 </div>
 
 <div class="example">
@@ -373,7 +373,7 @@ This operation on sets—combining them—is very useful and common, and so we g
 <div class="conjecture">
 <span id="cnj:prob0104" class="conjecture"><strong>问题 2.4  </strong></span>Prove that if <span class="math inline">\(A \subseteq B\)</span>, then <span class="math inline">\(A \cup B = B\)</span>.
 </div>
-<p>We can also consider a "dual’’ operation to union. This is the operation that forms the set of all <bb>element</bb>s that are <bb>element</bb>s of <span class="math inline">\(A\)</span> and are also <bb>element</bb>s of <span class="math inline">\(B\)</span>. This operation is called <bb>intersection</bb>, and can be depicted as in Figure <a href="prechap.html#fig:setintersection">2.2</a>.</p>
+<p>We can also consider a “dual” operation to union. This is the operation that forms the set of all <bb>element</bb>s that are <bb>element</bb>s of <span class="math inline">\(A\)</span> and are also <bb>element</bb>s of <span class="math inline">\(B\)</span>. This operation is called <bb>intersection</bb>, and can be depicted as in Figure <a href="prechap.html#fig:setintersection">2.2</a>.</p>
 <div class="figure"><span id="fig:setintersection"></span>
 <img src="figs/SetIntersection.png" alt="Sets Intersection" width="70%" />
 <p class="caption">
@@ -459,7 +459,7 @@ abbreviations:</p>
 <span id="cnj:prob0107" class="conjecture"><strong>问题 2.7  </strong></span>Prove that if <span class="math inline">\(A \subsetneq B\)</span>, then <span class="math inline">\(B \setminus A \neq \varnothing\)</span>.
 </div>
 </div>
-<div id="pairs-tuples-cartesian-products" class="section level3" number="2.1.5">
+<div id="CartesianP" class="section level3" number="2.1.5">
 <h3><span class="header-section-number">2.1.5</span> Pairs, Tuples, Cartesian Products</h3>
 <p>It follows from extensionality that sets have no order to their elements. So if we want to represent order, we use <bb>ordered pairs</bb> <span class="math inline">\(⟨x, y⟩\)</span>. In an unordered pair <span class="math inline">\(\lbrace x, y\rbrace\)</span>, the order does not matter: <span class="math inline">\(\lbrace x, y\rbrace = \lbrace y, x\rbrace\)</span>. In an ordered pair, it does: if <span class="math inline">\(x \neq y\)</span>, then <span class="math inline">\(⟨x, y⟩ \neq ⟨y, x⟩\)</span>.</p>
 <p>How should we think about ordered pairs in set theory? Crucially, we want to preserve the idea that ordered pairs are identical iff they share the same first element and share the same second element, i.e.: <span class="math display">\[⟨a, b⟩= ⟨c, d⟩\text{ iff both }a = c \text{ and }b=d.\]</span> We can define ordered pairs in set theory using the Wiener-Kuratowski definition.</p>
@@ -523,7 +523,7 @@ Since the <span class="math inline">\(x_i\)</span> are all different, and the <s
 </div>
 
 <div class="example">
-<span id="exm:exmtuple" class="example"><strong>例 2.15  </strong></span>If <span class="math inline">\(A\)</span> is a set, a <bb>word</bb> over <span class="math inline">\(A\)</span> is any sequence of <bb>element</bb>s of <span class="math inline">\(A\)</span>. A sequence can be thought of as an <span class="math inline">\(n\)</span>-tuple of <bb>element</bb>s of <span class="math inline">\(A\)</span>. For instance, if <span class="math inline">\(A = \lbrace a, b, c\rbrace\)</span>, then the sequence "<span class="math inline">\(bac\)</span>’’ can be thought of as the triple <span class="math inline">\(⟨b, a, c⟩\)</span>. Words, i.e., sequences of symbols, are of crucial importance in computer science. By convention, we count <bb>element</bb>s of <span class="math inline">\(A\)</span> as sequences of length <span class="math inline">\(1\)</span>, and <span class="math inline">\(\varnothing\)</span> as the sequence of length <span class="math inline">\(0\)</span>. The set of <bb>all</bb> words over <span class="math inline">\(A\)</span> then is
+<span id="exm:exmtuple" class="example"><strong>例 2.15  </strong></span>If <span class="math inline">\(A\)</span> is a set, a <bb>word</bb> over <span class="math inline">\(A\)</span> is any sequence of <bb>element</bb>s of <span class="math inline">\(A\)</span>. A sequence can be thought of as an <span class="math inline">\(n\)</span>-tuple of <bb>element</bb>s of <span class="math inline">\(A\)</span>. For instance, if <span class="math inline">\(A = \lbrace a, b, c\rbrace\)</span>, then the sequence “<span class="math inline">\(bac\)</span>” can be thought of as the triple <span class="math inline">\(⟨b, a, c⟩\)</span>. Words, i.e., sequences of symbols, are of crucial importance in computer science. By convention, we count <bb>element</bb>s of <span class="math inline">\(A\)</span> as sequences of length <span class="math inline">\(1\)</span>, and <span class="math inline">\(\varnothing\)</span> as the sequence of length <span class="math inline">\(0\)</span>. The set of <bb>all</bb> words over <span class="math inline">\(A\)</span> then is
 <span class="math display">\[A^* = \lbrace \varnothing\rbrace  \cup A \cup A^2 \cup A^3 \cup \cdots\]</span>
 </div>
 </div>
@@ -549,87 +549,96 @@ Since the <span class="math inline">\(x_i\)</span> are all different, and the <s
 </div>
 <div id="关系集合上的结构" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> 关系：集合上的结构</h2>
-<div id="relations-as-sets" class="section level3" number="2.2.1">
+<div id="RelationSet" class="section level3" number="2.2.1">
 <h3><span class="header-section-number">2.2.1</span> Relations as Sets</h3>
-<p>In §1.0.2（P.19）, we mentioned some important sets: <span class="math inline">\(\mathbb{N}\)</span>, <span class="math inline">\(\mathbb{Z}\)</span>, <span class="math inline">\(\mathbb{Q}\)</span>, <span class="math inline">\(\mathbb{R}\)</span>. You will no doubt remember some interesting relations between the <bb>element</bb>s of some of these sets. For instance, each of these sets has a completely standard <bb>order relation</bb> on it. There is also the relation <bb>is identical with</bb> that every object bears to itself and to no other thing. There are many more interesting relations that we’ll encounter, and even more possible relations. Before we review them, though, we will start by pointing out that we can look at relations as a special sort of set.</p>
-<p>For this, recall two things from §1.0.4（P.22）. First, recall the notion of a <bb>ordered pair</bb>: given <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, we can form <span class="math inline">\(⟨a, b⟩\)</span>. Importantly, the order of elements <bb>does</bb> matter here. So if <span class="math inline">\(a \neq b\)</span> then <span class="math inline">\(⟨a, b⟩ \neq ⟨b, a⟩\)</span>. (Contrast this with unordered pairs, i.e., <span class="math inline">\(2\)</span>-element sets, where <span class="math inline">\(\lbrace a, b\rbrace =\lbrace b, a\rbrace\)</span>.) Second, recall the notion of a <strong>Cartesian product</strong>: if <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are sets, then we can form <span class="math inline">\(A \times B\)</span>, the set of all pairs <span class="math inline">\(⟨x, y⟩\)</span> with <span class="math inline">\(x \in A\)</span> and <span class="math inline">\(y \in B\)</span>. In particular, <span class="math inline">\(A^{2}= A \times A\)</span> is the set of all ordered pairs from <span class="math inline">\(A\)</span>.</p>
+<p>In <a href="prechap.html#SomeImpSet">2.1.3</a>, we mentioned some important sets: <span class="math inline">\(\mathbb{N}\)</span>, <span class="math inline">\(\mathbb{Z}\)</span>, <span class="math inline">\(\mathbb{Q}\)</span>, <span class="math inline">\(\mathbb{R}\)</span>. You will no doubt remember some interesting relations between the <bb>element</bb>s of some of these sets. For instance, each of these sets has a completely standard <bb>order relation</bb> on it. There is also the relation <bb>is identical with</bb> that every object bears to itself and to no other thing. There are many more interesting relations that we’ll encounter, and even more possible relations. Before we review them, though, we will start by pointing out that we can look at relations as a special sort of set.</p>
+<p>For this, recall two things from <a href="prechap.html#CartesianP">2.1.5</a>. First, recall the notion of a <bb>ordered pair</bb>: given <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, we can form <span class="math inline">\(⟨a, b⟩\)</span>. Importantly, the order of elements <bb>does</bb> matter here. So if <span class="math inline">\(a \neq b\)</span> then <span class="math inline">\(⟨a, b⟩ \neq ⟨b, a⟩\)</span>. (Contrast this with unordered pairs, i.e., <span class="math inline">\(2\)</span>-element sets, where <span class="math inline">\(\lbrace a, b\rbrace =\lbrace b, a\rbrace\)</span>.) Second, recall the notion of a <strong>Cartesian product</strong>: if <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are sets, then we can form <span class="math inline">\(A \times B\)</span>, the set of all pairs <span class="math inline">\(⟨x, y⟩\)</span> with <span class="math inline">\(x \in A\)</span> and <span class="math inline">\(y \in B\)</span>. In particular, <span class="math inline">\(A^{2}= A \times A\)</span> is the set of all ordered pairs from <span class="math inline">\(A\)</span>.</p>
 <p>Now we will consider a particular relation on a set: the <span class="math inline">\(&lt;\)</span>-relation on the set <span class="math inline">\(\mathbb{N}\)</span> of natural numbers. Consider the set of all pairs of numbers <span class="math inline">\(⟨n, m⟩\)</span> where <span class="math inline">\(n &lt; m\)</span>, i.e., <span class="math display">\[R= \lbrace ⟨n, m⟩: n, m \in \mathbb{N} \text{ and } n &lt; m \rbrace.\]</span> There is a close connection between <span class="math inline">\(n\)</span> being less than <span class="math inline">\(m\)</span>, and the pair <span class="math inline">\(⟨n, m⟩\)</span> being a member of <span class="math inline">\(R\)</span>, namely: <span class="math display">\[n &lt; m \text{ iff }⟨n, m⟩ \in R.\]</span> Indeed, without any loss of information, we can consider the set <span class="math inline">\(R\)</span> to <bb>be</bb> the <span class="math inline">\(&lt;\)</span>-relation on <span class="math inline">\(\mathbb{N}\)</span>.</p>
 <p>In the same way we can construct a subset of <span class="math inline">\(\mathbb{N}^{2}\)</span> for any relation between numbers. Conversely, given any set of pairs of numbers <span class="math inline">\(S \subseteq \mathbb{N}^{2}\)</span>, there is a corresponding relation between numbers, namely, the relationship <span class="math inline">\(n\)</span> bears to <span class="math inline">\(m\)</span> if and only if <span class="math inline">\(⟨n, m⟩ \in S\)</span>. This justifies the following definition:</p>
-<p>{{% dtpc title=“☯定義 1.11【Binary relation】” %}}
-A <bb>binary relation</bb> on a set <span class="math inline">\(A\)</span> is a subset of <span class="math inline">\(A^{2}\)</span>. If <span class="math inline">\(R \subseteq A^{2}\)</span> is a binary relation on <span class="math inline">\(A\)</span> and <span class="math inline">\(x, y \in A\)</span>, we sometimes write <span class="math inline">\(Rxy\)</span> (or <span class="math inline">\(xRy\)</span>) for <span class="math inline">\(⟨x, y⟩ \in R\)</span>.
-{{% /dtpc %}}</p>
-<p>{{% dtpcex title=“☯例 1.15” %}}
-The set <span class="math inline">\(\mathbb{N}^{2}\)</span> of pairs of natural numbers can be listed in a
+
+<div class="definition">
+<span id="def:defbirelation" class="definition"><strong>定义 2.12  (Binary relation)  </strong></span>A <bb>binary relation</bb> on a set <span class="math inline">\(A\)</span> is a subset of <span class="math inline">\(A^{2}\)</span>. If <span class="math inline">\(R \subseteq A^{2}\)</span> is a binary relation on <span class="math inline">\(A\)</span> and <span class="math inline">\(x, y \in A\)</span>, we sometimes write <span class="math inline">\(Rxy\)</span> (or <span class="math inline">\(xRy\)</span>) for <span class="math inline">\(⟨x, y⟩ \in R\)</span>.
+</div>
+
+<div class="example">
+<p><span id="exm:exmbirelation" class="example"><strong>例 2.16  </strong></span>The set <span class="math inline">\(\mathbb{N}^{2}\)</span> of pairs of natural numbers can be listed in a
 2-dimensional matrix like this:</p>
-<p>
-<span class="math display">\[
-    \begin{array}{ccccc}
-    \mathbf{⟨0,0⟩} &amp; ⟨0,1⟩ &amp;
-    ⟨0,2⟩ &amp; ⟨0,3⟩ &amp; \cdots\\
-    ⟨1,0⟩ &amp; \mathbf{⟨1,1⟩} &amp;
-    ⟨1,2⟩ &amp; ⟨1,3⟩ &amp; \cdots\\
-    ⟨2,0⟩ &amp; ⟨2,1⟩ &amp;
-    \mathbf{⟨2,2⟩} &amp; ⟨2,3⟩ &amp; \cdots\\
-    ⟨3,0⟩ &amp; ⟨3,1⟩ &amp; ⟨3,2⟩ &amp;
-    \mathbf{⟨3,3⟩} &amp; \cdots\\
-    \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \mathbf{\ddots}
-    \end{array}
-    \]</span>
-</p>
-<p>We have put the diagonal, here, in bold, since the subset of <span class="math inline">\(\mathbb{N}^2\)</span> consisting of the pairs lying on the diagonal, i.e., <span class="math display">\[\lbrace ⟨0,0 ⟩, ⟨ 1,1 ⟩, ⟨ 2,2 ⟩, \cdots\rbrace ,\]</span> is the <bb>identity relation on</bb> <span class="math inline">\(\mathbb{N}\)</span>. (Since the identity relation is popular, let’s define <span class="math inline">\(Id_A=\lbrace ⟨ x,x ⟩: x \in X\rbrace\)</span> for any set <span class="math inline">\(A\)</span>.) The subset of all pairs lying above the diagonal, i.e., <span class="math display">\[L = \lbrace ⟨0,1⟩,⟨0,2⟩,\cdots,⟨1,2⟩,⟨1,3⟩, \cdots, ⟨2,3 ⟩, ⟨2,4⟩,\cdots\rbrace ,\]</span> is the <bb>less than</bb> relation, i.e., <span class="math inline">\(Lnm\)</span> iff <span class="math inline">\(n &lt; m\)</span>. The subset of pairs below the diagonal, i.e., <span class="math display">\[G=\lbrace ⟨1,0⟩,⟨2,0⟩, ⟨2,1⟩, ⟨3,0⟩,⟨3,1 ⟩,⟨3,2 ⟩, \cdots\rbrace ,\]</span> is the <bb>greater than</bb> relation, i.e., <span class="math inline">\(Gnm\)</span> iff <span class="math inline">\(n&gt;m\)</span>. The union of <span class="math inline">\(L\)</span> with <span class="math inline">\(I\)</span>, which we might call <span class="math inline">\(K=L\cup I\)</span>, is the <strong>less than or equal to</strong> relation: <span class="math inline">\(Knm\)</span> iff <span class="math inline">\(n \le m\)</span>. Similarly, <span class="math inline">\(H=G \cup I\)</span> is the <bb>greater than or equal to relation.</bb> These relations <span class="math inline">\(L\)</span>, <span class="math inline">\(G\)</span>, <span class="math inline">\(K\)</span>, and <span class="math inline">\(H\)</span> are special kinds of relations called <bb>orders</bb>. <span class="math inline">\(L\)</span> and <span class="math inline">\(G\)</span> have the property that no number bears <span class="math inline">\(L\)</span> or <span class="math inline">\(G\)</span> to itself (i.e., for all <span class="math inline">\(n\)</span>, neither <span class="math inline">\(Lnn\)</span> nor <span class="math inline">\(Gnn\)</span>). Relations with this property are called <bb>irreflexive</bb>, and, if they also happen to be orders, they are called <bb>strict orders.</bb>
-{{% /dtpcex %}}</p>
-<p>Although orders and identity are important and natural relations, it should be emphasized that according to our definition <bb>any</bb> subset of <span class="math inline">\(A^{2}\)</span> is a relation on <span class="math inline">\(A\)</span>, regardless of how unnatural or contrived it seems. In particular, <span class="math inline">\(\varnothing\)</span> is a relation on any set (the <bb>empty relation</bb>, which no pair of elements bears), and <span class="math inline">\(A^{2}\)</span> itself is a relation on <span class="math inline">\(A\)</span> as well (one which every pair bears), called the <bb>universal relation</bb>. But also something like <span class="math inline">\(E=\lbrace ⟨n, m⟩: n&gt;5 \text{ or } m \times n \ge 34\rbrace\)</span> counts as a relation.</p>
 <blockquote>
-<p><bb>Problem 1.10</bb>
-List the <bb>element</bb>s of the relation <span class="math inline">\(\subseteq\)</span> on the set <span class="math inline">\(\mathscr{P}({\lbrace a, b, c\rbrace })\)</span>.</p>
+<p><span class="math display">\[
+\begin{array}{ccccc}
+\mathbf{⟨0,0⟩} &amp; ⟨0,1⟩ &amp;
+⟨0,2⟩ &amp; ⟨0,3⟩ &amp; \cdots\\
+⟨1,0⟩ &amp; \mathbf{⟨1,1⟩} &amp;
+⟨1,2⟩ &amp; ⟨1,3⟩ &amp; \cdots\\
+⟨2,0⟩ &amp; ⟨2,1⟩ &amp;
+\mathbf{⟨2,2⟩} &amp; ⟨2,3⟩ &amp; \cdots\\
+⟨3,0⟩ &amp; ⟨3,1⟩ &amp; ⟨3,2⟩ &amp;
+\mathbf{⟨3,3⟩} &amp; \cdots\\
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \mathbf{\ddots}
+\end{array}
+\]</span></p>
 </blockquote>
+<p>We have put the diagonal, here, in bold, since the subset of <span class="math inline">\(\mathbb{N}^2\)</span> consisting of the pairs lying on the diagonal, i.e., <span class="math display">\[\lbrace ⟨0,0 ⟩, ⟨ 1,1 ⟩, ⟨ 2,2 ⟩, \cdots\rbrace ,\]</span> is the <bb>identity relation on</bb> <span class="math inline">\(\mathbb{N}\)</span>. (Since the identity relation is popular, let’s define <span class="math inline">\(Id_A=\lbrace ⟨ x,x ⟩: x \in X\rbrace\)</span> for any set <span class="math inline">\(A\)</span>.) The subset of all pairs lying above the diagonal, i.e.,</p>
+<p><span class="math display">\[L = \lbrace ⟨0,1⟩,⟨0,2⟩,\cdots,⟨1,2⟩,⟨1,3⟩, \cdots, ⟨2,3 ⟩, ⟨2,4⟩,\cdots\rbrace ,\]</span> is</p>
+the <bb>less than</bb> relation, i.e., <span class="math inline">\(Lnm\)</span> iff <span class="math inline">\(n &lt; m\)</span>. The subset of pairs below the diagonal, i.e., <span class="math display">\[G=\lbrace ⟨1,0⟩,⟨2,0⟩, ⟨2,1⟩, ⟨3,0⟩,⟨3,1 ⟩,⟨3,2 ⟩, \cdots\rbrace ,\]</span> is the <bb>greater than</bb> relation, i.e., <span class="math inline">\(Gnm\)</span> iff <span class="math inline">\(n&gt;m\)</span>. The union of <span class="math inline">\(L\)</span> with <span class="math inline">\(I\)</span>, which we might call <span class="math inline">\(K=L\cup I\)</span>, is the <strong>less than or equal to</strong> relation: <span class="math inline">\(Knm\)</span> iff <span class="math inline">\(n \le m\)</span>. Similarly, <span class="math inline">\(H=G \cup I\)</span> is the <bb>greater than or equal to relation.</bb> These relations <span class="math inline">\(L\)</span>, <span class="math inline">\(G\)</span>, <span class="math inline">\(K\)</span>, and <span class="math inline">\(H\)</span> are special kinds of relations called <bb>orders</bb>. <span class="math inline">\(L\)</span> and <span class="math inline">\(G\)</span> have the property that no number bears <span class="math inline">\(L\)</span> or <span class="math inline">\(G\)</span> to itself (i.e., for all <span class="math inline">\(n\)</span>, neither <span class="math inline">\(Lnn\)</span> nor <span class="math inline">\(Gnn\)</span>). Relations with this property are called <bb>irreflexive</bb>, and, if they also happen to be orders, they are called <bb>strict orders.</bb>
+</div>
+<p>Although orders and identity are important and natural relations, it should be emphasized that according to our definition <bb>any</bb> subset of <span class="math inline">\(A^{2}\)</span> is a relation on <span class="math inline">\(A\)</span>, regardless of how unnatural or contrived it seems. In particular, <span class="math inline">\(\varnothing\)</span> is a relation on any set (the <bb>empty relation</bb>, which no pair of elements bears), and <span class="math inline">\(A^{2}\)</span> itself is a relation on <span class="math inline">\(A\)</span> as well (one which every pair bears), called the <bb>universal relation</bb>. But also something like <span class="math inline">\(E=\lbrace ⟨n, m⟩: n&gt;5 \text{ or } m \times n \ge 34\rbrace\)</span> counts as a relation.</p>
+
+<div class="conjecture">
+<span id="cnj:prob0111" class="conjecture"><strong>问题 2.11  </strong></span>List the <bb>element</bb>s of the relation <span class="math inline">\(\subseteq\)</span> on the set <span class="math inline">\(\mathscr{P}({\lbrace a, b, c\rbrace })\)</span>.
+</div>
 </div>
 <div id="philosophical-reflections" class="section level3" number="2.2.2">
 <h3><span class="header-section-number">2.2.2</span> Philosophical Reflections</h3>
-<p>In §1.1.0（P.26）, we defined relations as certain sets. We should pause and ask a quick philosophical question: what is such a definition <bb>doing</bb>? It is extremely doubtful that we should want to say that we have <bb>discovered</bb> some metaphysical identity facts; that, for example, the order relation on <span class="math inline">\(\mathbb{N}\)</span> <strong>turned out</strong> to be the set <span class="math inline">\(R= \lbrace ⟨n,m⟩: n, m \in \mathbb{N}\text{ and } n &lt; m\rbrace\)</span> we defined in §1.1.0（P.26）. Here are three reasons why.</p>
-<p>First: in Definition 1.9, we defined <span class="math inline">\(⟨a, b⟩ = \lbrace \lbrace a\rbrace , \lbrace a, b\rbrace \rbrace\)</span>. Consider instead the definition <span class="math inline">\(\lVert a, b\rVert = \lbrace \lbrace b\rbrace , \lbrace a, b\rbrace \rbrace = ⟨b,a⟩\)</span>. When <span class="math inline">\(a \neq b\)</span>, we have that <span class="math inline">\(⟨a, b⟩ \neq \lVert a,b\rVert\)</span>. But we could equally have regarded <span class="math inline">\(\lVert a,b\rVert\)</span> as our definition of an ordered pair, rather than <span class="math inline">\(⟨a,b⟩\)</span>. Both definitions would have worked equally well. So now we have two equally good candidates to "be’’ the order relation on the natural numbers, namely:</p>
-<p>
-<span class="math display">\[
+<p>In <a href="prechap.html#RelationSet">2.2.1</a>, we defined relations as certain sets. We should pause and ask a quick philosophical question: what is such a definition <bb>doing</bb>? It is extremely doubtful that we should want to say that we have <bb>discovered</bb> some metaphysical identity facts; that, for example, the order relation on <span class="math inline">\(\mathbb{N}\)</span> <strong>turned out</strong> to be the set <span class="math inline">\(R= \lbrace ⟨n,m⟩: n, m \in \mathbb{N}\text{ and } n &lt; m\rbrace\)</span> we defined in <a href="prechap.html#RelationSet">2.2.1</a>. Here are three reasons why.</p>
+<p>First: in Definition <a href="prechap.html#def:defOrderedpair">2.10</a>, we defined <span class="math inline">\(⟨a, b⟩ = \lbrace \lbrace a\rbrace , \lbrace a, b\rbrace \rbrace\)</span>. Consider instead the definition <span class="math inline">\(\lVert a, b\rVert = \lbrace \lbrace b\rbrace , \lbrace a, b\rbrace \rbrace = ⟨b,a⟩\)</span>. When <span class="math inline">\(a \neq b\)</span>, we have that <span class="math inline">\(⟨a, b⟩ \neq \lVert a,b\rVert\)</span>. But we could equally have regarded <span class="math inline">\(\lVert a,b\rVert\)</span> as our definition of an ordered pair, rather than <span class="math inline">\(⟨a,b⟩\)</span>. Both definitions would have worked equally well. So now we have two equally good candidates to “be” the order relation on the natural numbers, namely:</p>
+<p><span class="math display">\[
 \begin{aligned}
 R &amp;= \{⟨n,m⟩: n, m \in \mathbb{N} \text{ and }n &lt; m\}\\
 S &amp;= \{\lVert n,m\rVert: n, m \in \mathbb{N} \text{ and }n &lt; m\}.
 \end{aligned}
-\]</span>
-</p>
+\]</span></p>
 <p>Since <span class="math inline">\(R \neq S\)</span>, by extensionality, it is clear that they cannot <bb>both</bb> be identical to the order relation on <span class="math inline">\(\mathbb{N}\)</span>. But it would just be arbitrary, and hence a bit embarrassing, to claim that <span class="math inline">\(R\)</span> rather than <span class="math inline">\(S\)</span> (or vice versa) <bb>is</bb> the ordering relation, as a matter of fact. (This is a very simple instance of an argument against set-theoretic reductionism which Benacerraf made famous in 1965. We will revisit it several times.)</p>
 <p>Second: if we think that <bb>every</bb> relation should be identified with a set, then the relation of set-membership itself, <span class="math inline">\(\in\)</span>, should be a particular set. Indeed, it would have to be the set <span class="math inline">\(\lbrace ⟨x,y⟩: x \in y\rbrace\)</span>. But does this set exist? Given Russell’s Paradox, it is a non-trivial claim that such a set exists. In fact, it is possible to develop set theory in a rigorous way as an axiomatic theory. In this theory, it will be provable that there is no set of all sets. So, even if some relations can be treated as sets, the relation of set-membership will have to be a special case.</p>
-<p>Third: when we “identify’’ relations with sets, we said that we would allow ourselves to write <span class="math inline">\(Rxy\)</span> for <span class="math inline">\(⟨x,y⟩ \in R\)</span>. This is fine, provided that the membership relation,”<span class="math inline">\(\in\)</span>’‘, is treated <bb>as</bb> a predicate. But if we think that “<span class="math inline">\(\in\)</span>’’ stands for a certain kind of set, then the expression”<span class="math inline">\(⟨x,y⟩ \in R\)</span>’’ just consists of three singular terms which stand for sets: "<span class="math inline">\(⟨x,y⟩\)</span>’‘, "<span class="math inline">\(\in\)</span>’‘, and "<span class="math inline">\(R\)</span>’‘. And such a list of names is no more capable of expressing a proposition than the nonsense string: "the cup penholder the table’’. Again, even if some relations can be treated as sets, the relation of set-membership must be a special case. (This rolls together a simple version of Frege’s concept <bb>horse</bb> paradox, and a famous objection that Wittgenstein once raised against Russell.)</p>
+<p>Third: when we “identify” relations with sets, we said that we would allow ourselves to write <span class="math inline">\(Rxy\)</span> for <span class="math inline">\(⟨x,y⟩ \in R\)</span>. This is fine, provided that the membership relation, “<span class="math inline">\(\in\)</span>,” is treated <bb>as</bb> a predicate. But if we think that “<span class="math inline">\(\in\)</span>” stands for a certain kind of set, then the expression “<span class="math inline">\(⟨x,y⟩ \in R\)</span>” just consists of three singular terms which stand for sets: “<span class="math inline">\(⟨x,y⟩\)</span>,” “<span class="math inline">\(\in\)</span>,” and “<span class="math inline">\(R\)</span>.” And such a list of names is no more capable of expressing a proposition than the nonsense string: “the cup penholder the table.” Again, even if some relations can be treated as sets, the relation of set-membership must be a special case. (This rolls together a simple version of Frege’s concept <bb>horse</bb> paradox, and a famous objection that Wittgenstein once raised against Russell.)</p>
 <p>So where does this leave us? Well, there is nothing <bb>wrong</bb> with our saying that the relations on the numbers are sets. We just have to understand the spirit in which that remark is made. We are not stating a metaphysical identity fact. We are simply noting that, in certain contexts, we can (and will) <bb>treat</bb> (certain) relations as certain sets.</p>
 </div>
 <div id="special-properties-of-relations" class="section level3" number="2.2.3">
 <h3><span class="header-section-number">2.2.3</span> Special Properties of Relations</h3>
 <p>Some kinds of relations turn out to be so common that they have been given special names. For instance, <span class="math inline">\(\leqslant\)</span> and <span class="math inline">\(\subseteq\)</span> both relate their respective domains (say, <span class="math inline">\(\mathbb{N}\)</span> in the case of <span class="math inline">\(\leqslant\)</span> and <span class="math inline">\(\mathscr{P}({A})\)</span> in the case of <span class="math inline">\(\subseteq\)</span>) in similar ways. To get at exactly how these relations are similar, and how they differ, we categorize them according to some special properties that relations can have. It turns out that (combinations of) some of these special properties are especially important: orders and equivalence relations.</p>
-<p>{{% dtpc title=“☯定義 1.12【Reflexivity】” %}}
-A relation <span class="math inline">\(R \subseteq A^2\)</span> is <bb>reflexive</bb> iff, for every <span class="math inline">\(x \in A\)</span>, <span class="math inline">\(Rxx\)</span>.
-{{% /dtpc %}}</p>
-<p>{{% dtpc title=“☯定義 1.13【Transitivity】” %}}
-A relation <span class="math inline">\(R \subseteq A^2\)</span> is <bb>transitive</bb> iff, whenever <span class="math inline">\(Rxy\)</span> and <span class="math inline">\(Ryz\)</span>, then also <span class="math inline">\(Rxz\)</span>.
-{{% /dtpc %}}</p>
-<p>{{% dtpc title=“☯定義 1.14【Symmetry】” %}}
-A relation <span class="math inline">\(R \subseteq A^2\)</span> is <bb>symmetric</bb> iff, whenever <span class="math inline">\(Rxy\)</span>, then also <span class="math inline">\(Ryx\)</span>.
-{{% /dtpc %}}</p>
-<p>{{% dtpc title=“☯定義 1.15【Anti-symmetry】” %}}
-A relation <span class="math inline">\(R \subseteq A^2\)</span> is <bb>anti-symmetric</bb> iff, whenever both <span class="math inline">\(Rxy\)</span> and <span class="math inline">\(Ryx\)</span>, then <span class="math inline">\(x=y\)</span> (or, in other words: if <span class="math inline">\(x\neq y\)</span> then either <span class="math inline">\(\lnot Rxy\)</span> or <span class="math inline">\(\lnot Ryx\)</span>).
-{{% /dtpc %}}</p>
+
+<div class="definition">
+<span id="def:defReflexivity" class="definition"><strong>定义 2.13  (Reflexivity)  </strong></span>A relation <span class="math inline">\(R \subseteq A^2\)</span> is <bb>reflexive</bb> iff, for every <span class="math inline">\(x \in A\)</span>, <span class="math inline">\(Rxx\)</span>.
+</div>
+
+<div class="definition">
+<span id="def:defTransitivity" class="definition"><strong>定义 2.14  (Transitivity)  </strong></span>A relation <span class="math inline">\(R \subseteq A^2\)</span> is <bb>transitive</bb> iff, whenever <span class="math inline">\(Rxy\)</span> and <span class="math inline">\(Ryz\)</span>, then also <span class="math inline">\(Rxz\)</span>.
+</div>
+
+<div class="definition">
+<span id="def:defSymmetry" class="definition"><strong>定义 2.15  (Symmetry)  </strong></span>A relation <span class="math inline">\(R \subseteq A^2\)</span> is <bb>symmetric</bb> iff, whenever <span class="math inline">\(Rxy\)</span>, then also <span class="math inline">\(Ryx\)</span>.
+</div>
+
+<div class="definition">
+<span id="def:defASymmetry" class="definition"><strong>定义 2.16  (Anti-symmetry)  </strong></span>A relation <span class="math inline">\(R \subseteq A^2\)</span> is <bb>anti-symmetric</bb> iff, whenever both <span class="math inline">\(Rxy\)</span> and <span class="math inline">\(Ryx\)</span>, then <span class="math inline">\(x=y\)</span> (or, in other words: if <span class="math inline">\(x\neq y\)</span> then either <span class="math inline">\(\lnot Rxy\)</span> or <span class="math inline">\(\lnot Ryx\)</span>).
+</div>
 <p>In a symmetric relation, <span class="math inline">\(Rxy\)</span> and <span class="math inline">\(Ryx\)</span> always hold together, or neither holds. In an anti-symmetric relation, the only way for <span class="math inline">\(Rxy\)</span> and <span class="math inline">\(Ryx\)</span> to hold together is if <span class="math inline">\(x = y\)</span>. Note that this does not <bb>require</bb> that <span class="math inline">\(Rxy\)</span> and <span class="math inline">\(Ryx\)</span> holds when <span class="math inline">\(x = y\)</span>, only that it isn’t ruled out. So an anti-symmetric relation can be reflexive, but it is not the case that every anti-symmetric relation is reflexive. Also note that being anti-symmetric and merely not being symmetric are different conditions. In fact, a relation can be both symmetric and anti-symmetric at the same time (e.g., the identity relation is).</p>
-<p>{{% dtpc title=“☯定義 1.16【Connectivity】” %}}
-A relation <span class="math inline">\(R \subseteq A^2\)</span> is <bb>connected</bb> if for all <span class="math inline">\(x,y\in X\)</span>, if <span class="math inline">\(x \neq y\)</span>, then either <span class="math inline">\(Rxy\)</span> or <span class="math inline">\(Ryx\)</span>.
-{{% /dtpc %}}</p>
-<blockquote>
-<p><bb>Problem 1.11</bb>
-Give examples of relations that are (a) reflexive and symmetric but not transitive, (b) reflexive and anti-symmetric, (c) anti-symmetric, transitive, but not reflexive, and (d) reflexive, symmetric, and transitive. Do not use relations on numbers or sets.</p>
-</blockquote>
-<p>{{% dtpc title=“☯定義 1.17【Irreflexivity】” %}}
-A relation <span class="math inline">\(R \subseteq A^2\)</span> is called <bb>irreflexive</bb> if, for all <span class="math inline">\(x \in A\)</span>, not <span class="math inline">\(Rxx\)</span>.
-{{% /dtpc %}}</p>
-<p>{{% dtpc title=“☯定義 1.18【Asymmetry】” %}}
-A relation <span class="math inline">\(R \subseteq A^2\)</span> is called <bb>asymmetric</bb> if for no pair <span class="math inline">\(x,y\in A\)</span> we have both <span class="math inline">\(Rxy\)</span> and <span class="math inline">\(Ryx\)</span>.
-{{% /dtpc %}}</p>
+
+<div class="definition">
+<span id="def:defConnectivity" class="definition"><strong>定义 2.17  (Connectivity)  </strong></span>A relation <span class="math inline">\(R \subseteq A^2\)</span> is <bb>connected</bb> if for all <span class="math inline">\(x,y\in X\)</span>, if <span class="math inline">\(x \neq y\)</span>, then either <span class="math inline">\(Rxy\)</span> or <span class="math inline">\(Ryx\)</span>.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0112" class="conjecture"><strong>问题 2.12  </strong></span>Give examples of relations that are (a) reflexive and symmetric but not transitive, (b) reflexive and anti-symmetric, (c) anti-symmetric, transitive, but not reflexive, and (d) reflexive, symmetric, and transitive. Do not use relations on numbers or sets.
+</div>
+
+<div class="definition">
+<span id="def:defIrreflexivity" class="definition"><strong>定义 2.18  (Irreflexivity)  </strong></span>A relation <span class="math inline">\(R \subseteq A^2\)</span> is called <bb>irreflexive</bb> if, for all <span class="math inline">\(x \in A\)</span>, not <span class="math inline">\(Rxx\)</span>.
+</div>
+
+<div class="definition">
+<span id="def:defAsymmetry" class="definition"><strong>定义 2.19  (Asymmetry)  </strong></span>A relation <span class="math inline">\(R \subseteq A^2\)</span> is called <bb>asymmetric</bb> if for no pair <span class="math inline">\(x,y\in A\)</span> we have both <span class="math inline">\(Rxy\)</span> and <span class="math inline">\(Ryx\)</span>.
+</div>
 <p>Note that if <span class="math inline">\(A \neq \varnothing\)</span>, then no irreflexive relation on <span class="math inline">\(A\)</span> is reflexive and every asymmetric relation on <span class="math inline">\(A\)</span> is also anti-symmetric. However, there are <span class="math inline">\(R \subseteq A^2\)</span> that are not reflexive and also not irreflexive, and there are anti-symmetric relations that are not asymmetric.</p>
 </div>
 <div id="equivalence-relations" class="section level3" number="2.2.4">
@@ -637,162 +646,190 @@ A relation <span class="math inline">\(R \subseteq A^2\)</span> is called <bb>as
 <p>The identity relation on a set is reflexive, symmetric, and
 transitive. Relations <span class="math inline">\(R\)</span> that have all three of these properties are very
 common.</p>
-<p>{{% dtpc title=“☯定義 1.19【Equivalence relation】” %}}
-A relation <span class="math inline">\(R \subseteq A^2\)</span> that is reflexive, symmetric, and transitive is called an <bb>equivalence relation</bb>. <bb>element</bb>s <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> of <span class="math inline">\(A\)</span> are said to be <bb><span class="math inline">\(R\)</span>-equivalent</bb> if <span class="math inline">\(Rxy\)</span>.
-{{% /dtpc %}}</p>
-<p>Equivalence relations give rise to the notion of an <bb>equivalence class</bb>. An equivalence relation "chunks up’’ the domain into different partitions. Within each partition, all the objects are related to one another; and no objects from different partitions relate to one another. Sometimes, it’s helpful just to talk about these partitions <bb>directly</bb>. To that end, we introduce a definition:</p>
-<p>{{% dtpc title=“☯定義 1.20【Equivalence class】” %}}
-Let <span class="math inline">\(R \subseteq A^2\)</span> be an equivalence relation. For each <span class="math inline">\(x \in A\)</span>, the <bb>equivalence class</bb> of <span class="math inline">\(x\)</span> in <span class="math inline">\(A\)</span> is the set <span class="math inline">\([x]_R = \lbrace y \in A: Rxy\rbrace\)</span>. The <bb>quotient</bb> of <span class="math inline">\(A\)</span> under <span class="math inline">\(R\)</span> is <span class="math inline">\(A/_R = \lbrace [x]_R: x \in A\rbrace\)</span>, i.e., the set of these equivalence classes.
-{{% /dtpc %}}</p>
+
+<div class="definition">
+<span id="def:defErelation" class="definition"><strong>定义 2.20  (Equivalence relation)  </strong></span>A relation <span class="math inline">\(R \subseteq A^2\)</span> that is reflexive, symmetric, and transitive is called an <bb>equivalence relation</bb>. <bb>element</bb>s <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> of <span class="math inline">\(A\)</span> are said to be <bb><span class="math inline">\(R\)</span>-equivalent</bb> if <span class="math inline">\(Rxy\)</span>.
+</div>
+<p>Equivalence relations give rise to the notion of an <bb>equivalence class</bb>. An equivalence relation “chunks up” the domain into different partitions. Within each partition, all the objects are related to one another; and no objects from different partitions relate to one another. Sometimes, it’s helpful just to talk about these partitions <bb>directly</bb>. To that end, we introduce a definition:</p>
+
+<div class="definition">
+<span id="def:defEclass" class="definition"><strong>定义 2.21  (Equivalence class)  </strong></span>Let <span class="math inline">\(R \subseteq A^2\)</span> be an equivalence relation. For each <span class="math inline">\(x \in A\)</span>, the <bb>equivalence class</bb> of <span class="math inline">\(x\)</span> in <span class="math inline">\(A\)</span> is the set <span class="math inline">\([x]_R = \lbrace y \in A: Rxy\rbrace\)</span>. The <bb>quotient</bb> of <span class="math inline">\(A\)</span> under <span class="math inline">\(R\)</span> is <span class="math inline">\(A/_R = \lbrace [x]_R: x \in A\rbrace\)</span>, i.e., the set of these equivalence classes.
+</div>
 <p>The next result vindicates the definition of an equivalence class, in proving that the equivalence classes are indeed the partitions of <span class="math inline">\(A\)</span>:</p>
-<p>{{% dtpc title=“☯命題 1.2” %}}
-If <span class="math inline">\(R \subseteq A^2\)</span> is an equivalence relation, then <span class="math inline">\(Rxy\)</span> iff <span class="math inline">\([x]_R = [y]_R\)</span>.
-{{% /dtpc %}}</p>
-<blockquote>
-<p><bb>命題 1.2 之證明</bb>
-For the left-to-right direction, suppose <span class="math inline">\(Rxy\)</span>, and let <span class="math inline">\(z \in [x]_R\)</span>. By definition, then, <span class="math inline">\(Rxz\)</span>. Since <span class="math inline">\(R\)</span> is an equivalence relation, <span class="math inline">\(Ryz\)</span>. (Spelling this out: as <span class="math inline">\(Rxy\)</span> and <span class="math inline">\(R\)</span> is symmetric we have <span class="math inline">\(Ryx\)</span>, and as <span class="math inline">\(Rxz\)</span> and <span class="math inline">\(R\)</span> is transitive we have <span class="math inline">\(Ryz\)</span>.) So <span class="math inline">\(z \in [y]_R\)</span>. Generalising, <span class="math inline">\([x]_R \subseteq [y]_R\)</span>. But exactly similarly, <span class="math inline">\([y]_R \subseteq [x]_R\)</span>. So <span class="math inline">\([x]_R = [y]_R\)</span>, by extensionality.
-For the right-to-left direction, suppose <span class="math inline">\([x]_R = [y]_R\)</span>. Since <span class="math inline">\(R\)</span> is reflexive, <span class="math inline">\(Ryy\)</span>, so <span class="math inline">\(y \in [y]_R\)</span>. Thus also <span class="math inline">\(y \in [x]_R\)</span> by the assumption that <span class="math inline">\([x]_R = [y]_R\)</span>. So <span class="math inline">\(Rxy\)</span>.</p>
-</blockquote>
-<p>{{% dtpcex title=“☯例 1.16” %}}
-A nice example of equivalence relations comes from modular arithmetic. For any <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(n \in \mathbb{N}\)</span>, say that <span class="math inline">\(a \equiv_{n} b\)</span> iff dividing <span class="math inline">\(a\)</span> by <span class="math inline">\(n\)</span> gives remainder <span class="math inline">\(b\)</span>. (Somewhat more symbolically: <span class="math inline">\(a \equiv_{n} b\)</span> iff <span class="math inline">\((\exists k \in \mathbb{N})a - b = kn\)</span>.) Now, <span class="math inline">\(\equiv_{n}\)</span> is an equivalence relation, for any <span class="math inline">\(n\)</span>. And there are exactly <span class="math inline">\(n\)</span> distinct equivalence classes generated by <span class="math inline">\(\equiv_{n}\)</span>; that is, <span class="math inline">\({\mathbb{N}/}_{\equiv_{n}}\)</span> has <span class="math inline">\(n\)</span> elements. These are:</p>
+
+<div class="proposition">
+<span id="prp:prpEclass" class="proposition"><strong>命题 2.3  </strong></span>If <span class="math inline">\(R \subseteq A^2\)</span> is an equivalence relation, then <span class="math inline">\(Rxy\)</span> iff <span class="math inline">\([x]_R = [y]_R\)</span>.
+</div>
+
+<div class="proof">
+ <span class="proof"><em>PROOF: </em></span> For the left-to-right direction, suppose <span class="math inline">\(Rxy\)</span>, and let <span class="math inline">\(z \in [x]_R\)</span>. By definition, then, <span class="math inline">\(Rxz\)</span>. Since <span class="math inline">\(R\)</span> is an equivalence relation, <span class="math inline">\(Ryz\)</span>. (Spelling this out: as <span class="math inline">\(Rxy\)</span> and <span class="math inline">\(R\)</span> is symmetric we have <span class="math inline">\(Ryx\)</span>, and as <span class="math inline">\(Rxz\)</span> and <span class="math inline">\(R\)</span> is transitive we have <span class="math inline">\(Ryz\)</span>.) So <span class="math inline">\(z \in [y]_R\)</span>. Generalising, <span class="math inline">\([x]_R \subseteq [y]_R\)</span>. But exactly similarly, <span class="math inline">\([y]_R \subseteq [x]_R\)</span>. So <span class="math inline">\([x]_R = [y]_R\)</span>, by extensionality.
+&gt; For the right-to-left direction, suppose <span class="math inline">\([x]_R = [y]_R\)</span>. Since <span class="math inline">\(R\)</span> is reflexive, <span class="math inline">\(Ryy\)</span>, so <span class="math inline">\(y \in [y]_R\)</span>. Thus also <span class="math inline">\(y \in [x]_R\)</span> by the assumption that <span class="math inline">\([x]_R = [y]_R\)</span>. So <span class="math inline">\(Rxy\)</span>.
+</div>
+
+<div class="example">
+<p><span id="exm:exmEclass" class="example"><strong>例 2.17  </strong></span>A nice example of equivalence relations comes from modular arithmetic. For any <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(n \in \mathbb{N}\)</span>, say that <span class="math inline">\(a \equiv_{n} b\)</span> iff dividing <span class="math inline">\(a\)</span> by <span class="math inline">\(n\)</span> gives remainder <span class="math inline">\(b\)</span>. (Somewhat more symbolically: <span class="math inline">\(a \equiv_{n} b\)</span> iff <span class="math inline">\((\exists k \in \mathbb{N})a - b = kn\)</span>.) Now, <span class="math inline">\(\equiv_{n}\)</span> is an equivalence relation, for any <span class="math inline">\(n\)</span>. And there are exactly <span class="math inline">\(n\)</span> distinct equivalence classes generated by <span class="math inline">\(\equiv_{n}\)</span>; that is, <span class="math inline">\({\mathbb{N}/}_{\equiv_{n}}\)</span> has <span class="math inline">\(n\)</span> elements. These are:</p>
 <ol style="list-style-type: decimal">
-<li><p>the set of numbers divisible by <span class="math inline">\(n\)</span> without remainder, i.e., <span class="math inline">\([0]_{\equiv_{n}}\)</span>;</p></li>
-<li><p>the set of numbers divisible by <span class="math inline">\(n\)</span> with remainder <span class="math inline">\(1\)</span>, i.e., <span class="math inline">\([1]_{\equiv_{n}}; \cdots\)</span>;</p></li>
-<li><p>and the set of numbers divisible by <span class="math inline">\(n\)</span> with remainder <span class="math inline">\(n-1\)</span>, i.e., <span class="math inline">\([n-1]_{\equiv_{n}}\)</span>.
-{{% /dtpcex %}}</p></li>
+<li>the set of numbers divisible by <span class="math inline">\(n\)</span> without remainder, i.e., <span class="math inline">\([0]_{\equiv_{n}}\)</span>;</li>
+<li>the set of numbers divisible by <span class="math inline">\(n\)</span> with remainder <span class="math inline">\(1\)</span>, i.e., <span class="math inline">\([1]_{\equiv_{n}}; \cdots\)</span>;</li>
+<li>and the set of numbers divisible by <span class="math inline">\(n\)</span> with remainder <span class="math inline">\(n-1\)</span>, i.e., <span class="math inline">\([n-1]_{\equiv_{n}}\)</span>.
+</div></li>
 </ol>
-<blockquote>
-<p><bb>Problem 1.12</bb>
-Show that <span class="math inline">\(\equiv_{n}\)</span> is an equivalence relation, for any <span class="math inline">\(n \in \mathbb{N}\)</span>, and that <span class="math inline">\({\mathbb{N}/}_{\equiv_{n}}\)</span> has exactly <span class="math inline">\(n\)</span> members.</p>
-</blockquote>
+
+<div class="conjecture">
+<span id="cnj:prob0113" class="conjecture"><strong>问题 2.13  </strong></span>Show that <span class="math inline">\(\equiv_{n}\)</span> is an equivalence relation, for any <span class="math inline">\(n \in \mathbb{N}\)</span>, and that <span class="math inline">\({\mathbb{N}/}_{\equiv_{n}}\)</span> has exactly <span class="math inline">\(n\)</span> members.
+</div>
 </div>
 <div id="orders" class="section level3" number="2.2.5">
 <h3><span class="header-section-number">2.2.5</span> Orders</h3>
-<p>Many of our comparisons involve describing some objects as being "less than’‘, "equal to’‘, or "greater than’’ other objects, in a certain respect. These involve <bb>order</bb> relations. But there are different kinds of order relations. For instance, some require that any two objects be comparable, others don’t. Some include identity (like <span class="math inline">\(\leqslant\)</span>) and some exclude it (like <span class="math inline">\(&lt;\)</span>). It will help us to have a taxonomy here.</p>
-<p>{{% dtpc title=“☯定義 1.21【Preorder】” %}}
-A relation which is both reflexive and transitive is called a <bb>preorder.</bb>
-{{% /dtpc %}}</p>
-<p>{{% dtpc title=“☯定義 1.22【Partial order】” %}}
-A preorder which is also anti-symmetric is called a <bb>partial order</bb>.
-{{% /dtpc %}}</p>
-<p>{{% dtpc title=“☯定義 1.23【Linear order】” %}}
-A partial order which is also connected is called a <bb>total order</bb> or <bb>linear order.</bb>
-{{% /dtpc %}}</p>
+<p>Many of our comparisons involve describing some objects as being “less than,” “equal to,” or “greater than” other objects, in a certain respect. These involve <bb>order</bb> relations. But there are different kinds of order relations. For instance, some require that any two objects be comparable, others don’t. Some include identity (like <span class="math inline">\(\leqslant\)</span>) and some exclude it (like <span class="math inline">\(&lt;\)</span>). It will help us to have a taxonomy here.</p>
+
+<div class="definition">
+<span id="def:defPreorder" class="definition"><strong>定义 2.22  (Preorder)  </strong></span>A relation which is both reflexive and transitive is called a <bb>preorder.</bb>
+</div>
+
+<div class="definition">
+<span id="def:defPorder" class="definition"><strong>定义 2.23  (Partial order)  </strong></span>A preorder which is also anti-symmetric is called a <bb>partial order</bb>.
+</div>
+
+<div class="definition">
+<span id="def:defLorder" class="definition"><strong>定义 2.24  (Linear order)  </strong></span>A partial order which is also connected is called a <bb>total order</bb> or <bb>linear order.</bb>
+</div>
 <p>Every linear order is also a partial order, and every partial order is also a preorder, but the converses don’t hold.</p>
-<p>{{% dtpcex title=“☯例 1.17” %}}
-Every linear order is also a partial order, and every partial order is also a preorder, but the converses don’t hold. The universal relation on <span class="math inline">\(A\)</span> is a preorder, since it is reflexive and transitive. But, if <span class="math inline">\(A\)</span> has more than one <bb>element</bb>, the universal relation is not anti-symmetric, and so not a partial order.
-{{% /dtpcex %}}</p>
-<p>{{% dtpcex title=“☯例 1.18” %}}
-Consider the <bb>no longer than</bb> relation <span class="math inline">\(\preccurlyeq\)</span> on <span class="math inline">\(\mathbb{B}^*\)</span>: <span class="math inline">\(x \preccurlyeq y\)</span> iff <span class="math inline">\(\text{len } {x} \le \text{len } {y}\)</span>. This is a preorder (reflexive and transitive), and even connected, but not a partial order, since it is not anti-symmetric. For instance, <span class="math inline">\(01 \preccurlyeq 10\)</span> and <span class="math inline">\(10 \preccurlyeq 01\)</span>, but <span class="math inline">\(01 \neq 10\)</span>.
-{{% /dtpcex %}}</p>
-<p>{{% dtpcex title=“☯例 1.19” %}}
-An important partial order is the relation <span class="math inline">\(\subseteq\)</span> on a set of sets. This is not in general a linear order, since if <span class="math inline">\(a \neq b\)</span> and we consider <span class="math inline">\(\mathscr{P}(\lbrace a, b\rbrace ) = \lbrace \varnothing, \lbrace a\rbrace , \lbrace b\rbrace , \lbrace a,b\rbrace \rbrace\)</span>, we see that <span class="math inline">\(\lbrace a\rbrace \nsubseteq \lbrace b\rbrace\)</span> and <span class="math inline">\(\lbrace a\rbrace \neq \lbrace b\rbrace\)</span> and <span class="math inline">\(\lbrace b\rbrace \nsubseteq \lbrace a\rbrace\)</span>.
-{{% /dtpcex %}}</p>
-<p>{{% dtpcex title=“☯例 1.20” %}}
-The relation of <bb>divisibility without remainder</bb> gives us a partial order which isn’t a linear order. For integers <span class="math inline">\(n\)</span>, <span class="math inline">\(m\)</span>, we write <span class="math inline">\(n\mid m\)</span> to mean <span class="math inline">\(n\)</span> (evenly) divides <span class="math inline">\(m\)</span>, i.e., iff there is some integer <span class="math inline">\(k\)</span> so that <span class="math inline">\(m=kn\)</span>. On <span class="math inline">\(\mathbb{N}\)</span>, this is a partial order, but not a linear order: for instance, <span class="math inline">\(2\nmid3\)</span> and also <span class="math inline">\(3\nmid2\)</span>. Considered as a relation on <span class="math inline">\(\mathbb{Z}\)</span>, divisibility is only a preorder since it is not anti-symmetric: <span class="math inline">\(1\mid-1\)</span> and <span class="math inline">\(-1\mid1\)</span> but <span class="math inline">\(1\neq-1\)</span>.
-{{% /dtpcex %}}</p>
-<p>{{% dtpc title=“☯定義 1.24【Strict order】” %}}
-A <bb>strict order</bb> is a relation which is irreflexive, asymmetric, and transitive.
-{{% /dtpc %}}</p>
-<p>{{% dtpc title=“☯定義 1.25【Strict linear order】” %}}
-A strict order which is also connected is called a <bb>strict linear order.</bb>
-{{% /dtpc %}}</p>
-<p>{{% dtpcex title=“☯例 1.21” %}}
-<span class="math inline">\(\leqslant\)</span> is the linear order corresponding to the strict linear order <span class="math inline">\(&lt;\)</span>. <span class="math inline">\(\subseteq\)</span> is the partial order corresponding to the strict order <span class="math inline">\(\subsetneq\)</span>.
-{{% /dtpcex %}}</p>
-<p>{{% dtpc title=“☯定義 1.26【Total order】” %}}
-A strict order which is also connected is called a <bb>total order</bb>. This is also sometimes called a <bb>strict linear order</bb>.
-{{% /dtpc %}}</p>
+
+<div class="example">
+<span id="exm:exmorder01" class="example"><strong>例 2.18  </strong></span>Every linear order is also a partial order, and every partial order is also a preorder, but the converses don’t hold. The universal relation on <span class="math inline">\(A\)</span> is a preorder, since it is reflexive and transitive. But, if <span class="math inline">\(A\)</span> has more than one <bb>element</bb>, the universal relation is not anti-symmetric, and so not a partial order.
+</div>
+
+<div class="example">
+<span id="exm:exmorder02" class="example"><strong>例 2.19  </strong></span>Consider the <bb>no longer than</bb> relation <span class="math inline">\(\preccurlyeq\)</span> on <span class="math inline">\(\mathbb{B}^*\)</span>: <span class="math inline">\(x \preccurlyeq y\)</span> iff <span class="math inline">\(\text{len } {x} \le \text{len } {y}\)</span>. This is a preorder (reflexive and transitive), and even connected, but not a partial order, since it is not anti-symmetric. For instance, <span class="math inline">\(01 \preccurlyeq 10\)</span> and <span class="math inline">\(10 \preccurlyeq 01\)</span>, but <span class="math inline">\(01 \neq 10\)</span>.
+</div>
+
+<div class="example">
+<span id="exm:exmorder03" class="example"><strong>例 2.20  </strong></span>An important partial order is the relation <span class="math inline">\(\subseteq\)</span> on a set of sets. This is not in general a linear order, since if <span class="math inline">\(a \neq b\)</span> and we consider <span class="math inline">\(\mathscr{P}(\lbrace a, b\rbrace ) = \lbrace \varnothing, \lbrace a\rbrace , \lbrace b\rbrace , \lbrace a,b\rbrace \rbrace\)</span>, we see that <span class="math inline">\(\lbrace a\rbrace \nsubseteq \lbrace b\rbrace\)</span> and <span class="math inline">\(\lbrace a\rbrace \neq \lbrace b\rbrace\)</span> and <span class="math inline">\(\lbrace b\rbrace \nsubseteq \lbrace a\rbrace\)</span>.
+</div>
+
+<div class="example">
+<span id="exm:exmorder04" class="example"><strong>例 2.21  </strong></span>The relation of <bb>divisibility without remainder</bb> gives us a partial order which isn’t a linear order. For integers <span class="math inline">\(n\)</span>, <span class="math inline">\(m\)</span>, we write <span class="math inline">\(n\mid m\)</span> to mean <span class="math inline">\(n\)</span> (evenly) divides <span class="math inline">\(m\)</span>, i.e., iff there is some integer <span class="math inline">\(k\)</span> so that <span class="math inline">\(m=kn\)</span>. On <span class="math inline">\(\mathbb{N}\)</span>, this is a partial order, but not a linear order: for instance, <span class="math inline">\(2\nmid3\)</span> and also <span class="math inline">\(3\nmid2\)</span>. Considered as a relation on <span class="math inline">\(\mathbb{Z}\)</span>, divisibility is only a preorder since it is not anti-symmetric: <span class="math inline">\(1\mid-1\)</span> and <span class="math inline">\(-1\mid1\)</span> but <span class="math inline">\(1\neq-1\)</span>.
+</div>
+
+<div class="definition">
+<span id="def:defSorder" class="definition"><strong>定义 2.25  (Strict order)  </strong></span>A <bb>strict order</bb> is a relation which is irreflexive, asymmetric, and transitive.
+</div>
+
+<div class="definition">
+<span id="def:defSLorder" class="definition"><strong>定义 2.26  (Strict linear order)  </strong></span>A strict order which is also connected is called a <bb>strict linear order.</bb>
+</div>
+
+<div class="example">
+<span id="exm:exmorder05" class="example"><strong>例 2.22  </strong></span><span class="math inline">\(\leqslant\)</span> is the linear order corresponding to the strict linear order <span class="math inline">\(&lt;\)</span>. <span class="math inline">\(\subseteq\)</span> is the partial order corresponding to the strict order <span class="math inline">\(\subsetneq\)</span>.
+</div>
+
+<div class="definition">
+<span id="def:defTorder" class="definition"><strong>定义 2.27  (Total order)  </strong></span>A strict order which is also connected is called a <bb>total order</bb>. This is also sometimes called a <bb>strict linear order</bb>.
+</div>
 <p>Any strict order <span class="math inline">\(R\)</span> on <span class="math inline">\(A\)</span> can be turned into a partial order by adding the diagonal Id<span class="math inline">\(_{A}\)</span>, i.e., adding all the pairs <span class="math inline">\(⟨x, x⟩\)</span>. (This is called the <bb>reflexive closure</bb> of <span class="math inline">\(R\)</span>.) Conversely, starting from a partial order, one can get a strict order by removing Id<span class="math inline">\(_A\)</span>. These next two results make this precise.</p>
-<p>{{% dtpc title=“☯命題 1.3” %}}
-If <span class="math inline">\(R\)</span> is a strict order on <span class="math inline">\(A\)</span>, then <span class="math inline">\(R^+ = R \cup Id_A\)</span> is a partial order. Moreover, if <span class="math inline">\(R\)</span> is total, then <span class="math inline">\(R^+\)</span> is a linear order.
-{{% /dtpc %}}</p>
-<blockquote>
-<p><bb>命題 1.3 之證明</bb>
-1. Suppose <span class="math inline">\(R\)</span> is a strict order, i.e., <span class="math inline">\(R \subseteq A^2\)</span> and <span class="math inline">\(R\)</span> is irreflexive, asymmetric, and transitive. Let <span class="math inline">\(R^+ = R \cup Id_A\)</span>. We have to show that <span class="math inline">\(R^+\)</span> is reflexive, antisymmetric, and transitive.
+
+<div class="proposition">
+<span id="prp:prpSorder" class="proposition"><strong>命题 2.4  </strong></span>If <span class="math inline">\(R\)</span> is a strict order on <span class="math inline">\(A\)</span>, then <span class="math inline">\(R^+ = R \cup Id_A\)</span> is a partial order. Moreover, if <span class="math inline">\(R\)</span> is total, then <span class="math inline">\(R^+\)</span> is a linear order.
+</div>
+
+<div class="proof">
+ <span class="proof"><em>PROOF: </em></span> 1. Suppose <span class="math inline">\(R\)</span> is a strict order, i.e., <span class="math inline">\(R \subseteq A^2\)</span> and <span class="math inline">\(R\)</span> is irreflexive, asymmetric, and transitive. Let <span class="math inline">\(R^+ = R \cup Id_A\)</span>. We have to show that <span class="math inline">\(R^+\)</span> is reflexive, antisymmetric, and transitive.
 1. <span class="math inline">\(R^+\)</span> is clearly reflexive, since <span class="math inline">\(⟨x, x⟩ \in Id_A \subseteq R^+\)</span> for all <span class="math inline">\(x \in A.\)</span>
 1. To show <span class="math inline">\(R^+\)</span> is antisymmetric, suppose for reductio that <span class="math inline">\(R^+xy\)</span> and <span class="math inline">\(R^+yx\)</span> but <span class="math inline">\(x \neq y\)</span>. Since <span class="math inline">\(⟨x,y⟩ \in R \cup Id_X\)</span>, but <span class="math inline">\(⟨x, y⟩ \notin Id_X\)</span>, we must have <span class="math inline">\(⟨x, y⟩ \in R\)</span>, i.e., <span class="math inline">\(Rxy\)</span>. Similarly, <span class="math inline">\(Ryx\)</span>. But this contradicts the assumption that <span class="math inline">\(R\)</span> is asymmetric.
 1. To establish transitivity, suppose that <span class="math inline">\(R^+xy\)</span> and <span class="math inline">\(R^+yz\)</span>. If both <span class="math inline">\(⟨x, y⟩ \in R\)</span> and <span class="math inline">\(⟨y,z⟩ \in R\)</span>, then <span class="math inline">\(⟨x, z⟩ \in R\)</span> since <span class="math inline">\(R\)</span> is transitive. Otherwise, either <span class="math inline">\(⟨x, y⟩ \in Id_X\)</span>, i.e., <span class="math inline">\(x = y\)</span>, or <span class="math inline">\(⟨y, z⟩ \in Id_X\)</span>, i.e., <span class="math inline">\(y = z\)</span>. In the first case, we have that <span class="math inline">\(R^+yz\)</span> by assumption, <span class="math inline">\(x = y\)</span>, hence <span class="math inline">\(R^+xz\)</span>. Similarly in the second case. In either case, <span class="math inline">\(R^+xz\)</span>, thus, <span class="math inline">\(R^+\)</span> is also transitive.
-1. Concerning the "moreover’’ clause, suppose <span class="math inline">\(R\)</span> is a total order, i.e., that <span class="math inline">\(R\)</span> is connected. So for all <span class="math inline">\(x \neq y\)</span>, either <span class="math inline">\(Rxy\)</span> or <span class="math inline">\(Ryx\)</span>, i.e., either <span class="math inline">\(⟨x, y⟩ \in R\)</span> or <span class="math inline">\(⟨y, x⟩ \in R\)</span>. Since <span class="math inline">\(R \subseteq R^+\)</span>, this remains true of <span class="math inline">\(R^+\)</span>, so <span class="math inline">\(R^+\)</span> is connected as well.</p>
-</blockquote>
-<p>{{% dtpc title=“☯命題 1.4” %}}
-If <span class="math inline">\(R\)</span> is a partial order on <span class="math inline">\(X\)</span>, then <span class="math inline">\(R^- = R \setminus Id_X\)</span> is a strict order. Moreover, if <span class="math inline">\(R\)</span> is linear, then <span class="math inline">\(R^-\)</span> is total.
-{{% /dtpc %}}</p>
-<blockquote>
-<p><bb>命題 1.4 之證明</bb>
-This is left as an exercise.</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.4</bb>
-Give a proof of Proposition 1.4.</p>
-</blockquote>
-<p>{{% dtpcex title=“☯例 1.22” %}}
-<span class="math inline">\(\leqslant\)</span> is the linear order corresponding to the total order <span class="math inline">\(&lt;\)</span>. <span class="math inline">\(\subseteq\)</span> is the partial order corresponding to the strict order <span class="math inline">\(\subsetneq\)</span>.
-{{% /dtpcex %}}</p>
+1. Concerning the “moreover” clause, suppose <span class="math inline">\(R\)</span> is a total order, i.e., that <span class="math inline">\(R\)</span> is connected. So for all <span class="math inline">\(x \neq y\)</span>, either <span class="math inline">\(Rxy\)</span> or <span class="math inline">\(Ryx\)</span>, i.e., either <span class="math inline">\(⟨x, y⟩ \in R\)</span> or <span class="math inline">\(⟨y, x⟩ \in R\)</span>. Since <span class="math inline">\(R \subseteq R^+\)</span>, this remains true of <span class="math inline">\(R^+\)</span>, so <span class="math inline">\(R^+\)</span> is connected as well.
+</div>
+
+<div class="proposition">
+<span id="prp:prpPorder" class="proposition"><strong>命题 2.5  </strong></span>If <span class="math inline">\(R\)</span> is a partial order on <span class="math inline">\(X\)</span>, then <span class="math inline">\(R^- = R \setminus \text{Id}_X\)</span> is a strict order. Moreover, if <span class="math inline">\(R\)</span> is linear, then <span class="math inline">\(R^-\)</span> is total.
+</div>
+
+<div class="proof">
+ <span class="proof"><em>PROOF: </em></span> This is left as an exercise.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0114" class="conjecture"><strong>问题 2.14  </strong></span>Give a proof of Proposition <a href="prechap.html#prp:prpPorder">2.5</a>.
+</div>
+
+<div class="example">
+<span id="exm:exmorder06" class="example"><strong>例 2.23  </strong></span><span class="math inline">\(\leqslant\)</span> is the linear order corresponding to the total order <span class="math inline">\(&lt;\)</span>. <span class="math inline">\(\subseteq\)</span> is the partial order corresponding to the strict order <span class="math inline">\(\subsetneq\)</span>.
+</div>
 <p>The following simple result which establishes that total orders satisfy an extensionality-like property:</p>
-<p>{{% dtpc title=“☯命題 1.5” %}}
-If <span class="math inline">\(&lt;\)</span> totally orders <span class="math inline">\(A\)</span>, then: <span class="math display">\[(\forall a, b \in A)((\forall x \in A)(x &lt; a \leftrightarrow x &lt; b) \rightarrow a = b)\]</span>
-{{% /dtpc %}}</p>
-<blockquote>
-<p><bb>命題 1.5 之證明</bb>
-Suppose <span class="math inline">\((\forall x \in A)(x &lt; a \leftrightarrow x &lt; b)\)</span>. If <span class="math inline">\(a &lt; b\)</span>, then <span class="math inline">\(a &lt; a\)</span>, contradicting the fact that <span class="math inline">\(&lt;\)</span> is irreflexive; so <span class="math inline">\(a \nless b\)</span>. Exactly similarly, <span class="math inline">\(b \nless a\)</span>. So <span class="math inline">\(a = b\)</span>, as <span class="math inline">\(&lt;\)</span> is connected.</p>
-</blockquote>
+
+<div class="proposition">
+<span id="prp:prpTorder" class="proposition"><strong>命题 2.6  </strong></span>If <span class="math inline">\(&lt;\)</span> totally orders <span class="math inline">\(A\)</span>, then: <span class="math display">\[(\forall a, b \in A)((\forall x \in A)(x &lt; a \leftrightarrow x &lt; b) \rightarrow a = b)\]</span>
+</div>
+
+<div class="proof">
+ <span class="proof"><em>PROOF: </em></span> Suppose <span class="math inline">\((\forall x \in A)(x &lt; a \leftrightarrow x &lt; b)\)</span>. If <span class="math inline">\(a &lt; b\)</span>, then <span class="math inline">\(a &lt; a\)</span>, contradicting the fact that <span class="math inline">\(&lt;\)</span> is irreflexive; so <span class="math inline">\(a \nless b\)</span>. Exactly similarly, <span class="math inline">\(b \nless a\)</span>. So <span class="math inline">\(a = b\)</span>, as <span class="math inline">\(&lt;\)</span> is connected.
+</div>
 </div>
 <div id="graphs" class="section level3" number="2.2.6">
 <h3><span class="header-section-number">2.2.6</span> Graphs</h3>
-<p>A <bb>graph</bb> is a diagram in which points—called “nodes’’ or”vertices’’ (plural of "vertex’’)—are connected by edges. Graphs are a ubiquitous tool in discrete mathematics and in computer science. They are incredibly useful for representing, and visualizing, relationships and structures, from concrete things like networks of various kinds to abstract structures such as the possible outcomes of decisions. There are many different kinds of graphs in the literature which differ, e.g., according to whether the edges are directed or not, have labels or not, whether there can be edges from a node to the same node, multiple edges between the same nodes, etc. <strong>Directed graphs</strong> have a special connection to relations.</p>
-<p>{{% dtpc title=“☯定義 1.27【Directed graph】” %}}
-A <bb>directed graph</bb> <span class="math inline">\(G = ⟨V, E⟩\)</span> is a set of <bb>vertices</bb> <span class="math inline">\(V\)</span> and a set of <bb>edges</bb> <span class="math inline">\(E \subseteq V^2\)</span>.
-{{% /dtpc %}}</p>
-<p>According to our definition, a graph just is a set together with a relation on that set. Of course, when talking about graphs, it’s only natural to expect that they are graphically represented: we can draw a graph by connecting two vertices <span class="math inline">\(v_1\)</span> and <span class="math inline">\(v_2\)</span> by an arrow iff <span class="math inline">\(⟨v_1, v_2⟩ \in E\)</span>. The only difference between a relation by itself and a graph is that a graph specifies the set of vertices, i.e., a graph may have isolated vertices. The important point, however, is that every relation <span class="math inline">\(R\)</span> on a set <span class="math inline">\(X\)</span> can be seen as a directed graph <span class="math inline">\(⟨X, R⟩\)</span>, and conversely, a directed graph <span class="math inline">\(⟨V, E⟩\)</span> can be seen as a relation <span class="math inline">\(E \subseteq V^2\)</span> with the set <span class="math inline">\(V\)</span> explicitly specified.</p>
-<p>{{% dtpcex title=“☯例 1.23” %}}
-The graph <span class="math inline">\(⟨V, E⟩\)</span> with <span class="math inline">\(V = \lbrace 1, 2, 3, 4\rbrace\)</span> and <span class="math inline">\(E = \lbrace ⟨1,1⟩, ⟨1, 2⟩, ⟨1, 3⟩, ⟨2, 3⟩\rbrace\)</span> looks like this:</p>
-<div class="figure">
-<img src="https://i.loli.net/2020/09/03/Eg9Ium37BZiHy62.png" alt="" />
-<p class="caption">zzzz.png</p>
+<p>A <bb>graph</bb> is a diagram in which points—called “nodes” or “vertices” (plural of “vertex”)—are connected by edges. Graphs are a ubiquitous tool in discrete mathematics and in computer science. They are incredibly useful for representing, and visualizing, relationships and structures, from concrete things like networks of various kinds to abstract structures such as the possible outcomes of decisions. There are many different kinds of graphs in the literature which differ, e.g., according to whether the edges are directed or not, have labels or not, whether there can be edges from a node to the same node, multiple edges between the same nodes, etc. <strong>Directed graphs</strong> have a special connection to relations.</p>
+
+<div class="definition">
+<span id="def:defDgraph" class="definition"><strong>定义 2.28  (Directed graph)  </strong></span>A <bb>directed graph</bb> <span class="math inline">\(G = ⟨V, E⟩\)</span> is a set of <bb>vertices</bb> <span class="math inline">\(V\)</span> and a set of <bb>edges</bb> <span class="math inline">\(E \subseteq V^2\)</span>.
 </div>
+<p>According to our definition, a graph just is a set together with a relation on that set. Of course, when talking about graphs, it’s only natural to expect that they are graphically represented: we can draw a graph by connecting two vertices <span class="math inline">\(v_1\)</span> and <span class="math inline">\(v_2\)</span> by an arrow iff <span class="math inline">\(⟨v_1, v_2⟩ \in E\)</span>. The only difference between a relation by itself and a graph is that a graph specifies the set of vertices, i.e., a graph may have isolated vertices. The important point, however, is that every relation <span class="math inline">\(R\)</span> on a set <span class="math inline">\(X\)</span> can be seen as a directed graph <span class="math inline">\(⟨X, R⟩\)</span>, and conversely, a directed graph <span class="math inline">\(⟨V, E⟩\)</span> can be seen as a relation <span class="math inline">\(E \subseteq V^2\)</span> with the set <span class="math inline">\(V\)</span> explicitly specified.</p>
+
+<div class="example">
+<p><span id="exm:exmgraph" class="example"><strong>例 2.24  </strong></span>The graph <span class="math inline">\(⟨V, E⟩\)</span> with <span class="math inline">\(V = \lbrace 1, 2, 3, 4\rbrace\)</span> and <span class="math inline">\(E = \lbrace ⟨1,1⟩, ⟨1, 2⟩, ⟨1, 3⟩, ⟨2, 3⟩\rbrace\)</span> looks like this:</p>
+<p><img src="https://i.loli.net/2020/09/03/Eg9Ium37BZiHy62.png" /></p>
 <p>This is a different graph than <span class="math inline">\(⟨V&#39;, E⟩\)</span> with <span class="math inline">\(V&#39; = \lbrace 1, 2, 3\rbrace\)</span>, which looks like this:</p>
-<p><img src="https://i.loli.net/2020/09/03/xyr1JsVlTAhNX2O.png" alt="zzzz.png" />
-{{% /dtpcex %}}</p>
-<blockquote>
-<p><bb>Problem 1.14</bb>
-Consider the less-than-or-equal-to relation <span class="math inline">\(\leqslant\)</span> on the set <span class="math inline">\(\lbrace 1, 2, 3, 4\rbrace\)</span> as a graph and draw the corresponding diagram.</p>
-</blockquote>
+<img src="https://i.loli.net/2020/09/03/xyr1JsVlTAhNX2O.png" />
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0115" class="conjecture"><strong>问题 2.15  </strong></span>Consider the less-than-or-equal-to relation <span class="math inline">\(\leqslant\)</span> on the set <span class="math inline">\(\lbrace 1, 2, 3, 4\rbrace\)</span> as a graph and draw the corresponding diagram.
+</div>
 </div>
 <div id="operations-on-relations" class="section level3" number="2.2.7">
 <h3><span class="header-section-number">2.2.7</span> Operations on Relations</h3>
 <p>It is often useful to modify or combine relations. In
-Proposition1.3（P.32）, we considered the <bb>union</bb>
+Proposition <a href="prechap.html#prp:prpSorder">2.4</a>, we considered the <bb>union</bb>
 of relations, which is just the union of two relations considered as
-sets of pairs. Similarly, in Proposition1.4（P.33）,
+sets of pairs. Similarly, in Proposition <a href="prechap.html#prp:prpPorder">2.5</a>,
 we considered the relative difference of relations. Here are some
 other operations we can perform on relations.</p>
-<p>{{% dtpc title=“☯定義 1.28【Operations on Relations】” %}}
-Let <span class="math inline">\(R\)</span>, <span class="math inline">\(S\)</span> be relations, and <span class="math inline">\(A\)</span> be any set.
-1. The <bb>inverse</bb> of <span class="math inline">\(R\)</span> is <span class="math inline">\(R^{-1} = \lbrace ⟨y, x⟩: ⟨x, y⟩ \in R\rbrace\)</span>.
-1. The <bb>relative product</bb> of <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> is <span class="math inline">\((R \mid S) = \lbrace ⟨x, z⟩ : \exists y(Rxy \land Syz)\rbrace\)</span>.
-1. The <bb>restriction</bb> of <span class="math inline">\(R\)</span> to <span class="math inline">\(A\)</span> is <span class="math inline">\(R\upharpoonright_{A}= R \cap A^2\)</span>.
-1. The <bb>application</bb> of <span class="math inline">\(R\)</span> to <span class="math inline">\(A\)</span> is <span class="math inline">\(R[A] = \lbrace y : (\exists x \in A)Rxy\rbrace\)</span>
-{{% /dtpc %}}</p>
-<p>{{% dtpcex title=“☯例 1.24” %}}
-Let <span class="math inline">\(S \subseteq \mathbb{Z}^2\)</span> be the successor relation on <span class="math inline">\(\mathbb{Z}\)</span>, i.e., <span class="math inline">\(S = \lbrace⟨x, y⟩ \in \mathbb{Z}^2: x + 1 = y\rbrace\)</span>, so that <span class="math inline">\(Sxy\)</span> iff <span class="math inline">\(x + 1 = y\)</span>.
-1. <span class="math inline">\(S^{-1}\)</span> is the predecessor relation on <span class="math inline">\(\mathbb{Z}\)</span>, i.e., <span class="math inline">\(\lbrace ⟨x,y⟩\in\mathbb{Z}^2: x -1 =y\rbrace\)</span>.
-1. <span class="math inline">\(S\mid S\)</span> is <span class="math inline">\(\lbrace ⟨x,y⟩\in\mathbb{Z}^2: x + 2 =y\rbrace\)</span>
-1. <span class="math inline">\(S\upharpoonright_{\mathbb{N}}\)</span> is the successor relation on <span class="math inline">\(\mathbb{N}\)</span>.
-1. <span class="math inline">\(S[\lbrace 1,2,3\rbrace ]\)</span> is <span class="math inline">\(\lbrace 2, 3, 4\rbrace\)</span>.
-{{% /dtpcex %}}</p>
-<p>{{% dtpc title=“☯定義 1.29【Transitive closure】” %}}
-Let <span class="math inline">\(R \subseteq A^2\)</span> be a binary relation.
-1. The <bb>transitive closure</bb> of <span class="math inline">\(R\)</span> is <span class="math inline">\(R^+ = \bigcup_{0 &lt; n \in \mathbb{N}} R^n\)</span>, where we recursively define <span class="math inline">\(R^1 = R\)</span> and <span class="math inline">\(R^{n+1} = R^n \mid R\)</span>.
-1. The <bb>reflexive transitive closure</bb> of <span class="math inline">\(R\)</span> is <span class="math inline">\(R^* = R^+ \cup Id_X\)</span>.
-{{% /dtpc %}}</p>
-<p>{{% dtpcex title=“☯例 1.25” %}}
-Take the successor relation <span class="math inline">\(S \subseteq \mathbb{Z}^2\)</span>. <span class="math inline">\(S^2xy\)</span> iff <span class="math inline">\(x + 2 = y\)</span>, <span class="math inline">\(S^3xy\)</span> iff <span class="math inline">\(x + 3 = y\)</span>, etc. So <span class="math inline">\(S^+xy\)</span> iff <span class="math inline">\(x + n = y\)</span> for some <span class="math inline">\(n &gt; 1\)</span>. In other words, <span class="math inline">\(S^+xy\)</span> iff <span class="math inline">\(x &lt; y\)</span>, and <span class="math inline">\(S^*xy\)</span> iff <span class="math inline">\(x \le y\)</span>.
-{{% /dtpcex %}}</p>
-<blockquote>
-<p><bb>Problem 1.15</bb>
-Show that the transitive closure of <span class="math inline">\(R\)</span> is in fact transitive.</p>
-</blockquote>
+
+<div class="definition">
+<p><span id="def:defOpRel" class="definition"><strong>定义 2.29  (Operations on Relations)  </strong></span>Let <span class="math inline">\(R\)</span>, <span class="math inline">\(S\)</span> be relations, and <span class="math inline">\(A\)</span> be any set.</p>
+<ol style="list-style-type: decimal">
+<li>The <bb>inverse</bb> of <span class="math inline">\(R\)</span> is <span class="math inline">\(R^{-1} = \lbrace ⟨y, x⟩: ⟨x, y⟩ \in R\rbrace\)</span>.</li>
+<li>The <bb>relative product</bb> of <span class="math inline">\(R\)</span> and <span class="math inline">\(S\)</span> is <span class="math inline">\((R \mid S) = \lbrace ⟨x, z⟩ : \exists y(Rxy \land Syz)\rbrace\)</span>.</li>
+<li>The <bb>restriction</bb> of <span class="math inline">\(R\)</span> to <span class="math inline">\(A\)</span> is <span class="math inline">\(R\upharpoonright_{A}= R \cap A^2\)</span>.</li>
+<li>The <bb>application</bb> of <span class="math inline">\(R\)</span> to <span class="math inline">\(A\)</span> is <span class="math inline">\(R[A] = \lbrace y : (\exists x \in A)Rxy\rbrace\)</span>
+</div></li>
+</ol>
+
+<div class="example">
+<p><span id="exm:exmOpRel01" class="example"><strong>例 2.25  </strong></span>Let <span class="math inline">\(S \subseteq \mathbb{Z}^2\)</span> be the successor relation on <span class="math inline">\(\mathbb{Z}\)</span>, i.e., <span class="math inline">\(S = \lbrace⟨x, y⟩ \in \mathbb{Z}^2: x + 1 = y\rbrace\)</span>, so that <span class="math inline">\(Sxy\)</span> iff <span class="math inline">\(x + 1 = y\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(S^{-1}\)</span> is the predecessor relation on <span class="math inline">\(\mathbb{Z}\)</span>, i.e., <span class="math inline">\(\lbrace ⟨x,y⟩\in\mathbb{Z}^2: x -1 =y\rbrace\)</span>.</li>
+<li><span class="math inline">\(S\mid S\)</span> is <span class="math inline">\(\lbrace ⟨x,y⟩\in\mathbb{Z}^2: x + 2 =y\rbrace\)</span></li>
+<li><span class="math inline">\(S\upharpoonright_{\mathbb{N}}\)</span> is the successor relation on <span class="math inline">\(\mathbb{N}\)</span>.</li>
+<li><span class="math inline">\(S[\lbrace 1,2,3\rbrace ]\)</span> is <span class="math inline">\(\lbrace 2, 3, 4\rbrace\)</span>.
+</div></li>
+</ol>
+
+<div class="definition">
+<p><span id="def:defTclosure" class="definition"><strong>定义 2.30  (Transitive closure)  </strong></span>Let <span class="math inline">\(R \subseteq A^2\)</span> be a binary relation.</p>
+<ol style="list-style-type: decimal">
+<li>The <bb>transitive closure</bb> of <span class="math inline">\(R\)</span> is <span class="math inline">\(R^+ = \bigcup_{0 &lt; n \in \mathbb{N}} R^n\)</span>, where we recursively define <span class="math inline">\(R^1 = R\)</span> and <span class="math inline">\(R^{n+1} = R^n \mid R\)</span>.</li>
+<li>The <bb>reflexive transitive closure</bb> of <span class="math inline">\(R\)</span> is <span class="math inline">\(R^* = R^+ \cup Id_X\)</span>.
+</div></li>
+</ol>
+
+<div class="example">
+<span id="exm:exmOpRel02" class="example"><strong>例 2.26  </strong></span>Take the successor relation <span class="math inline">\(S \subseteq \mathbb{Z}^2\)</span>. <span class="math inline">\(S^2xy\)</span> iff <span class="math inline">\(x + 2 = y\)</span>, <span class="math inline">\(S^3xy\)</span> iff <span class="math inline">\(x + 3 = y\)</span>, etc. So <span class="math inline">\(S^+xy\)</span> iff <span class="math inline">\(x + n = y\)</span> for some <span class="math inline">\(n &gt; 1\)</span>. In other words, <span class="math inline">\(S^+xy\)</span> iff <span class="math inline">\(x &lt; y\)</span>, and <span class="math inline">\(S^*xy\)</span> iff <span class="math inline">\(x \le y\)</span>.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0116" class="conjecture"><strong>问题 2.16  </strong></span>Show that the transitive closure of <span class="math inline">\(R\)</span> is in fact transitive.
+</div>
 </div>
 </div>
 <div id="函数关系之特例" class="section level2" number="2.3">
@@ -802,210 +839,223 @@ Show that the transitive closure of <span class="math inline">\(R\)</span> is in
 <p>A <bb>function</bb> is a map which sends each <bb>element</bb> of a given set to a specific <bb>element</bb> in some (other) given set. For instance, the operation of adding <span class="math inline">\(1\)</span> defines a function: each number <span class="math inline">\(n\)</span> is mapped to a unique number <span class="math inline">\(n+1\)</span>.</p>
 <p>More generally, functions may take pairs, triples, etc., as inputs and returns some kind of output. Many functions are familiar to us from basic arithmetic. For instance, addition and multiplication are functions. They take in two numbers and return a third.</p>
 <p>In this mathematical, abstract sense, a function is a <bb>black box</bb>: what matters is only what output is paired with what input, not the method for calculating the output.</p>
-<p>{{% dtpc title=“☯定義 1.30【Function】” %}}
-A <bb>function</bb> <span class="math inline">\(f \colon A \to B\)</span> is a mapping of each <bb>element</bb> of <span class="math inline">\(A\)</span> to an <bb>element</bb> of <span class="math inline">\(B\)</span>.
-1. We call <span class="math inline">\(A\)</span> the <bb>domain</bb> of <span class="math inline">\(f\)</span> and <span class="math inline">\(B\)</span> the <bb>codomain</bb> of <span class="math inline">\(f\)</span>. The <bb>element</bb>s of <span class="math inline">\(A\)</span> are called inputs or <bb>arguments</bb> of <span class="math inline">\(f\)</span>, and the <bb>element</bb> of <span class="math inline">\(B\)</span> that is paired with an argument <span class="math inline">\(x\)</span> by <span class="math inline">\(f\)</span> is called the <bb>value of <span class="math inline">\(f\)</span></bb> for argument <span class="math inline">\(x\)</span>, written <span class="math inline">\(f(x)\)</span>.
-1. The <bb>range</bb> <span class="math inline">\(\text{ran}(f)\)</span> of <span class="math inline">\(f\)</span> is the subset of the codomain consisting of the values of <span class="math inline">\(f\)</span> for some argument; <span class="math inline">\(\text{ran}(f) = \lbrace f(x): x \in A\rbrace\)</span>.
-{{% /dtpc %}}</p>
+
+<div class="definition">
+<p><span id="def:defFunction" class="definition"><strong>定义 2.31  (Function)  </strong></span>A <bb>function</bb> <span class="math inline">\(f \colon A \to B\)</span> is a mapping of each <bb>element</bb> of <span class="math inline">\(A\)</span> to an <bb>element</bb> of <span class="math inline">\(B\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>We call <span class="math inline">\(A\)</span> the <bb>domain</bb> of <span class="math inline">\(f\)</span> and <span class="math inline">\(B\)</span> the <bb>codomain</bb> of <span class="math inline">\(f\)</span>. The <bb>element</bb>s of <span class="math inline">\(A\)</span> are called inputs or <bb>arguments</bb> of <span class="math inline">\(f\)</span>, and the <bb>element</bb> of <span class="math inline">\(B\)</span> that is paired with an argument <span class="math inline">\(x\)</span> by <span class="math inline">\(f\)</span> is called the <bb>value of <span class="math inline">\(f\)</span></bb> for argument <span class="math inline">\(x\)</span>, written <span class="math inline">\(f(x)\)</span>.</li>
+<li>The <bb>range</bb> <span class="math inline">\(\text{ran}(f)\)</span> of <span class="math inline">\(f\)</span> is the subset of the codomain consisting of the values of <span class="math inline">\(f\)</span> for some argument; <span class="math inline">\(\text{ran}(f) = \lbrace f(x): x \in A\rbrace\)</span>.
+</div></li>
+</ol>
 <p>The diagram in Figure 1.3 may help to think about functions. The ellipse on the left represents the function’s <bb>domain</bb>; the ellipse on the right represents the function’s <bb>codomain</bb>; and an arrow points from an <bb>argument</bb> in the domain to the corresponding <bb>value</bb> in the codomain.</p>
-<div class="figure">
-<img src="https://i.loli.net/2020/09/04/Ajr4cVnlOqgduWo.png" alt="" />
-<p class="caption">defnoffunction</p>
+<p><img src="https://i.loli.net/2020/09/04/Ajr4cVnlOqgduWo.png" /></p>
+
+<div class="example">
+<span id="exm:exmFunction01" class="example"><strong>例 2.27  </strong></span>Multiplication takes pairs of natural numbers as inputs and maps them to natural numbers as outputs, so goes from <span class="math inline">\(\mathbb{N} \times \mathbb{N}\)</span> (the domain) to <span class="math inline">\(\mathbb{N}\)</span> (the codomain). As it turns out, the range is also <span class="math inline">\(\mathbb{N}\)</span>, since every <span class="math inline">\(n \in \mathbb{N}\)</span> is <span class="math inline">\(n \times 1\)</span>.
 </div>
-<p>{{% dtpcex title=“☯例 1.26” %}}
-Multiplication takes pairs of natural numbers as inputs and maps them to natural numbers as outputs, so goes from <span class="math inline">\(\mathbb{N} \times \mathbb{N}\)</span> (the domain) to <span class="math inline">\(\mathbb{N}\)</span> (the codomain). As it turns out, the range is also <span class="math inline">\(\mathbb{N}\)</span>, since every <span class="math inline">\(n \in \mathbb{N}\)</span> is <span class="math inline">\(n \times 1\)</span>.
-{{% /dtpcex %}}</p>
-<p>{{% dtpcex title=“☯例 1.27” %}}
-Multiplication is a function because it pairs each input—each pair of natural numbers—with a single output: <span class="math inline">\(\times \colon \mathbb{N}^2 \to \mathbb{N}\)</span>. By contrast, the square root operation applied to the domain <span class="math inline">\(\mathbb{N}\)</span> is not functional, since each positive integer <span class="math inline">\(n\)</span> has two square roots: <span class="math inline">\(\sqrt{n}\)</span> and <span class="math inline">\(-\sqrt{n}\)</span>. We can make it functional by only returning the positive square root: <span class="math inline">\(\sqrt{\phantom{X}} \colon \mathbb{N} \to \mathbb{R}\)</span>.
-{{% /dtpcex %}}</p>
-<p>{{% dtpcex title=“☯例 1.28” %}}
-The relation that pairs each student in a class with their final grade is a function—no student can get two different final grades in the same class. The relation that pairs each student in a class with their parents is not a function: students can have zero, or two, or more parents.
-{{% /dtpcex %}}</p>
+
+<div class="example">
+<span id="exm:exmFunction02" class="example"><strong>例 2.28  </strong></span>Multiplication is a function because it pairs each input—each pair of natural numbers—with a single output: <span class="math inline">\(\times \colon \mathbb{N}^2 \to \mathbb{N}\)</span>. By contrast, the square root operation applied to the domain <span class="math inline">\(\mathbb{N}\)</span> is not functional, since each positive integer <span class="math inline">\(n\)</span> has two square roots: <span class="math inline">\(\sqrt{n}\)</span> and <span class="math inline">\(-\sqrt{n}\)</span>. We can make it functional by only returning the positive square root: <span class="math inline">\(\sqrt{\phantom{X}} \colon \mathbb{N} \to \mathbb{R}\)</span>.
+</div>
+
+<div class="example">
+<span id="exm:exmFunction03" class="example"><strong>例 2.29  </strong></span>The relation that pairs each student in a class with their final grade is a function—no student can get two different final grades in the same class. The relation that pairs each student in a class with their parents is not a function: students can have zero, or two, or more parents.
+</div>
 <p>We can define functions by specifying in some precise way what the
 value of the function is for every possible argment. Different ways of
 doing this are by giving a formula, describing a method for computing
 the value, or listing the values for each argument. However functions
 are defined, we must make sure that for each argment we specify one,
 and only one, value.</p>
-<p>{{% dtpcex title=“☯例 1.29” %}}
-Let <span class="math inline">\(f \colon \mathbb{N} \to \mathbb{N}\)</span> be defined such that <span class="math inline">\(f(x) = x+1\)</span>. This is a definition that specifies <span class="math inline">\(f\)</span> as a function which takes in natural numbers and outputs natural numbers. It tells us that, given a natural number <span class="math inline">\(x\)</span>, <span class="math inline">\(f\)</span> will output its successor <span class="math inline">\(x+1\)</span>. In this case, the codomain <span class="math inline">\(\mathbb{N}\)</span> is not the range of <span class="math inline">\(f\)</span>, since the natural number <span class="math inline">\(0\)</span> is not the successor of any natural number. The range of <span class="math inline">\(f\)</span> is the set of all positive integers, <span class="math inline">\(\mathbb{Z}^{+}\)</span>.
-{{% /dtpcex %}}</p>
-<p>{{% dtpcex title=“☯例 1.30” %}}
-Let <span class="math inline">\(g \colon \mathbb{N} \to \mathbb{N}\)</span> be defined such that <span class="math inline">\(g(x) = x+2-1\)</span>. This tells us that <span class="math inline">\(g\)</span> is a function which takes in natural numbers and outputs natural numbers. Given a natural number <span class="math inline">\(n\)</span>, <span class="math inline">\(g\)</span> will output the predecessor of the successor of the successor of <span class="math inline">\(x\)</span>, i.e., <span class="math inline">\(x+1\)</span>.
-{{% /dtpcex %}}</p>
+
+<div class="example">
+<span id="exm:exmFunction04" class="example"><strong>例 2.30  </strong></span>Let <span class="math inline">\(f \colon \mathbb{N} \to \mathbb{N}\)</span> be defined such that <span class="math inline">\(f(x) = x+1\)</span>. This is a definition that specifies <span class="math inline">\(f\)</span> as a function which takes in natural numbers and outputs natural numbers. It tells us that, given a natural number <span class="math inline">\(x\)</span>, <span class="math inline">\(f\)</span> will output its successor <span class="math inline">\(x+1\)</span>. In this case, the codomain <span class="math inline">\(\mathbb{N}\)</span> is not the range of <span class="math inline">\(f\)</span>, since the natural number <span class="math inline">\(0\)</span> is not the successor of any natural number. The range of <span class="math inline">\(f\)</span> is the set of all positive integers, <span class="math inline">\(\mathbb{Z}^{+}\)</span>.
+</div>
+
+<div class="example">
+<span id="exm:exmFunction05" class="example"><strong>例 2.31  </strong></span>Let <span class="math inline">\(g \colon \mathbb{N} \to \mathbb{N}\)</span> be defined such that <span class="math inline">\(g(x) = x+2-1\)</span>. This tells us that <span class="math inline">\(g\)</span> is a function which takes in natural numbers and outputs natural numbers. Given a natural number <span class="math inline">\(n\)</span>, <span class="math inline">\(g\)</span> will output the predecessor of the successor of the successor of <span class="math inline">\(x\)</span>, i.e., <span class="math inline">\(x+1\)</span>.
+</div>
 <p>We just considered two functions, <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span>, with different <bb>definitions</bb>. However, these are the <bb>same function</bb>. After all, for any natural number <span class="math inline">\(n\)</span>, we have that <span class="math inline">\(f(n) = n+1 = n+2-1 = g(n)\)</span>. Otherwise put: our definitions for <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> specify the same mapping by means of different equations. Implicitly, then, we are relying upon a principle of extensionality for functions, <span class="math display">\[\text{if }\forall x\, f(x) = g(x)\text{, then }f = g\]</span> provided that <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> share the same domain and codomain.</p>
-{{% dtpcex title=“☯例 1.31” %}}
-We can also define functions by cases. For instance, we could define <span class="math inline">\(h \colon \mathbb{N} \to \mathbb{N}\)</span> by
-<p>
-<span class="math display">\[h(x) =
-    \begin{cases}
-    \displaystyle\frac{x}{2} &amp; \text{if $x$ is even} \\
-    \displaystyle\frac{x+1}{2} &amp; \text{if $x$ is odd.}
-    \end{cases}\]</span>
-</p>
-<p>Since every natural number is either even or odd, the output of this function will always be a natural number. Just remember that if you define a function by cases, every possible input must fall into exactly one case. In some cases, this will require a proof that the cases are exhaustive and exclusive.
-{{% /dtpcex %}}</p>
+
+<div class="example">
+<p><span id="exm:exmFunction06" class="example"><strong>例 2.32  </strong></span>We can also define functions by cases. For instance, we could define <span class="math inline">\(h \colon \mathbb{N} \to \mathbb{N}\)</span> by</p>
+<blockquote>
+<p><span class="math display">\[h(x) =
+\begin{cases}
+\displaystyle\frac{x}{2} &amp; \text{if $x$ is even} \\
+\displaystyle\frac{x+1}{2} &amp; \text{if $x$ is odd.}
+\end{cases}\]</span></p>
+</blockquote>
+Since every natural number is either even or odd, the output of this function will always be a natural number. Just remember that if you define a function by cases, every possible input must fall into exactly one case. In some cases, this will require a proof that the cases are exhaustive and exclusive.
+</div>
 </div>
 <div id="kinds-of-functions" class="section level3" number="2.3.2">
 <h3><span class="header-section-number">2.3.2</span> Kinds of Functions</h3>
 <p>It will be useful to introduce a kind of taxonomy for some of the kinds of functions which we encounter most frequently.</p>
 <p>To start, we might want to consider functions which have the property that every member of the codomain is a value of the function. Such functions are called <bb>surjective</bb>, and can be pictured as in Figure 1.4.</p>
-<div class="figure">
-<img src="https://i.loli.net/2020/09/04/5nBmbKUJP2aeDc9.png" alt="" />
-<p class="caption">surjectivefunction.png</p>
+<p><img src="https://i.loli.net/2020/09/04/5nBmbKUJP2aeDc9.png" /></p>
+
+<div class="definition">
+<span id="def:defSFunction" class="definition"><strong>定义 2.32  (Surjective function)  </strong></span>A function <span class="math inline">\(f \colon A \rightarrow B\)</span> is <bb>surjective</bb> iff <span class="math inline">\(B\)</span> is also the range of <span class="math inline">\(f\)</span>, i.e., for every <span class="math inline">\(y \in B\)</span> there is at least one <span class="math inline">\(x \in A\)</span> such that <span class="math inline">\(f(x) = y\)</span>, or in symbols: <span class="math display">\[(\forall y \in B)(\exists x \in A)f(x) = y.\]</span> We call such a function a <bb>surjection</bb> from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span>.
 </div>
-<p>{{% dtpc title=“☯定義 1.31【Surjective function】” %}}
-A function <span class="math inline">\(f \colon A \rightarrow B\)</span> is <bb>surjective</bb> iff <span class="math inline">\(B\)</span> is also the range of <span class="math inline">\(f\)</span>, i.e., for every <span class="math inline">\(y \in B\)</span> there is at least one <span class="math inline">\(x \in A\)</span> such that <span class="math inline">\(f(x) = y\)</span>, or in symbols: <span class="math display">\[(\forall y \in B)(\exists x \in A)f(x) = y.\]</span> We call such a function a <bb>surjection</bb> from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span>.
-{{% /dtpc %}}</p>
 <p>If you want to show that <span class="math inline">\(f\)</span> is a <bb>surjection</bb>, then you need to show that every object in <span class="math inline">\(f\)</span>’s codomain is the value of <span class="math inline">\(f(x)\)</span> for some input <span class="math inline">\(x\)</span>.</p>
 <p>Note that any function <bb>induces</bb> a <bb>surjection</bb>. After all, given a function <span class="math inline">\(f \colon A \to B\)</span>, let <span class="math inline">\(f&#39; \colon A \to \text{ran}(f)\)</span> be defined by <span class="math inline">\(f&#39;(x) = f(x)\)</span>. Since <span class="math inline">\(\text{ran}(f)\)</span> is <bb>defined</bb> as <span class="math inline">\(\lbrace f(x) \in B: x \in A\rbrace\)</span>, this function <span class="math inline">\(f&#39;\)</span> is guaranteed to be a <bb>surjection</bb>.</p>
 <p>Now, any function maps each possible input to a unique output. But there are also functions which never map different inputs to the same outputs. Such functions are called <bb>injective</bb>, and can be pictured as in Figure 1.5.</p>
-<div class="figure">
-<img src="https://i.loli.net/2020/09/04/gVLDQzdtlKMwjpN.png" alt="" />
-<p class="caption">222.png</p>
+<p><img src="https://i.loli.net/2020/09/04/gVLDQzdtlKMwjpN.png" /></p>
+
+<div class="definition">
+<span id="def:defIFunction" class="definition"><strong>定义 2.33  (Injective function)  </strong></span>A function <span class="math inline">\(f \colon A \rightarrow B\)</span> is <bb>injective</bb> iff for each <span class="math inline">\(y \in B\)</span> there is at most one <span class="math inline">\(x \in A\)</span> such that <span class="math inline">\(f(x) = y\)</span>. We call such a function an <bb>injection</bb> from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span>.
 </div>
-<p>{{% dtpc title=“☯定義 1.32【Injective function】” %}}
-A function <span class="math inline">\(f \colon A \rightarrow B\)</span> is <bb>injective</bb> iff for each <span class="math inline">\(y \in B\)</span> there is at most one <span class="math inline">\(x \in A\)</span> such that <span class="math inline">\(f(x) = y\)</span>. We call such a function an <bb>injection</bb> from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span>.
-{{% /dtpc %}}</p>
 <p>If you want to show that <span class="math inline">\(f\)</span> is an <bb>injection</bb>, you need to show that for any <bb>element</bb>s <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> of <span class="math inline">\(f\)</span>’s domain, if <span class="math inline">\(f(x)=f(y)\)</span>, then <span class="math inline">\(x=y\)</span>.</p>
-<p>{{% dtpcex title=“☯例 1.32” %}}
-The constant function <span class="math inline">\(f\colon \mathbb{N} \to \mathbb{N}\)</span> given by <span class="math inline">\(f(x) = 1\)</span> is neither <bb>injective</bb>, nor <bb>surjective</bb>. The identity function <span class="math inline">\(f\colon \mathbb{N} \to \mathbb{N}\)</span> given by <span class="math inline">\(f(x) = x\)</span> is both <bb>injective</bb> and <bb>surjective</bb>.
+
+<div class="example">
+<p><span id="exm:exmFunction07" class="example"><strong>例 2.33  </strong></span>The constant function <span class="math inline">\(f\colon \mathbb{N} \to \mathbb{N}\)</span> given by <span class="math inline">\(f(x) = 1\)</span> is neither <bb>injective</bb>, nor <bb>surjective</bb>. The identity function <span class="math inline">\(f\colon \mathbb{N} \to \mathbb{N}\)</span> given by <span class="math inline">\(f(x) = x\)</span> is both <bb>injective</bb> and <bb>surjective</bb>.
 The successor function <span class="math inline">\(f \colon \mathbb{N} \to \mathbb{N}\)</span> given by <span class="math inline">\(f(x) = x+1\)</span> is <bb>injective</bb> but not <bb>surjective</bb>.
 The function <span class="math inline">\(f \colon \mathbb{N} \to \mathbb{N}\)</span> defined by:</p>
-<p>
-<span class="math display">\[f(x) =\begin{cases}
+<blockquote>
+<p><span class="math display">\[f(x) =\begin{cases}
 \displaystyle\frac{x}{2} &amp; \text{if $x$ is even} \\
 \displaystyle\frac{x+1}{2} &amp; \text{if $x$ is odd.}
-\end{cases}\]</span>
-</p>
-<p>is <bb>surjective</bb>, but not <bb>injective</bb>.
-{{% /dtpcex %}}</p>
-<p>Often enough, we want to consider functions which are both <bb>injective</bb> and <bb>surjective</bb>. We call such functions <bb>bijective</bb>. They look like the function pictured in Figure 1.6. <bb>bijection</bb>s are also sometimes called <bb>one-to-one correspondences</bb>, since they uniquely pair elements of the codomain with elements of the domain.</p>
-<div class="figure">
-<img src="https://i.loli.net/2020/09/04/PpOsUwucAmM3qhv.png" alt="" />
-<p class="caption">333.png</p>
+\end{cases}\]</span></p>
+</blockquote>
+is <bb>surjective</bb>, but not <bb>injective</bb>.
 </div>
-<p>{{% dtpc title=“☯定義 1.33【bijection】” %}}
-A function <span class="math inline">\(f \colon A \to B\)</span> is <bb>bijective</bb> iff it is both <bb>surjective</bb> and <bb>injective</bb>. We call such a function a <bb>bijection</bb> from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span> (or between <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>).
-{{% /dtpc %}}</p>
+<p>Often enough, we want to consider functions which are both <bb>injective</bb> and <bb>surjective</bb>. We call such functions <bb>bijective</bb>. They look like the function pictured in Figure 1.6. <bb>bijection</bb>s are also sometimes called <bb>one-to-one correspondences</bb>, since they uniquely pair elements of the codomain with elements of the domain.</p>
+<p><img src="https://i.loli.net/2020/09/04/PpOsUwucAmM3qhv.png" /></p>
+
+<div class="definition">
+<span id="def:defbijection" class="definition"><strong>定义 2.34  (bijection)  </strong></span>A function <span class="math inline">\(f \colon A \to B\)</span> is <bb>bijective</bb> iff it is both <bb>surjective</bb> and <bb>injective</bb>. We call such a function a <bb>bijection</bb> from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span> (or between <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>).
+</div>
 </div>
 <div id="functions-as-relations" class="section level3" number="2.3.3">
 <h3><span class="header-section-number">2.3.3</span> Functions as Relations</h3>
 <p>A function which maps <bb>element</bb>s of <span class="math inline">\(A\)</span> to <bb>element</bb>s of <span class="math inline">\(B\)</span> obviously defines a relation between <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, namely the relation which holds between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> iff <span class="math inline">\(f(x) = y\)</span>. In fact, we might even—if we are interested in reducing the building blocks of mathematics for instance—<bb>identify</bb> the function <span class="math inline">\(f\)</span> with this relation, i.e., with a set of pairs. This then raises the question: which relations define functions in this way?</p>
-<p>{{% dtpc title=“☯定義 1.34【Graph of a function】” %}}
-Let <span class="math inline">\(f\colon A \to B\)</span> be a function. The <bb>graph</bb> of <span class="math inline">\(f\)</span> is the relation <span class="math inline">\(R_f \subseteq A \times B\)</span> defined by <span class="math display">\[R_f = \lbrace ⟨x,y⟩: f(x) = y\rbrace.\]</span>
-{{% /dtpc %}}</p>
+
+<div class="definition">
+<span id="def:defGfunction" class="definition"><strong>定义 2.35  (Graph of a function)  </strong></span>Let <span class="math inline">\(f\colon A \to B\)</span> be a function. The <bb>graph</bb> of <span class="math inline">\(f\)</span> is the relation <span class="math inline">\(R_f \subseteq A \times B\)</span> defined by <span class="math display">\[R_f = \lbrace ⟨x,y⟩: f(x) = y\rbrace.\]</span>
+</div>
 <p>The graph of a function is uniquely determined, by extensionality. Moreover, extensionality (on sets) will immediate vindicate the implicit principle of extensionality for functions, whereby if <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> share a domain and codomain then they are identical if they agree on all values.</p>
-<p>Similarly, if a relation is "functional’’, then it is the graph of a function.</p>
-<p>{{% dtpc title=“☯命題 1.6” %}}
-Let <span class="math inline">\(R \subseteq A \times B\)</span> be such that:
+<p>Similarly, if a relation is “functional,” then it is the graph of a function.</p>
+
+<div class="proposition">
+<p><span id="prp:prpGfunction" class="proposition"><strong>命题 2.7  </strong></span>Let <span class="math inline">\(R \subseteq A \times B\)</span> be such that:
 &gt; 1. If <span class="math inline">\(Rxy\)</span> and <span class="math inline">\(Rxz\)</span> then <span class="math inline">\(y = z\)</span>; and
 &gt; 1. for every <span class="math inline">\(x \in A\)</span> there is some <span class="math inline">\(y \in B\)</span> such that <span class="math inline">\(⟨x,y⟩ \in R\)</span>.</p>
-<p>Then <span class="math inline">\(R\)</span> is the graph of the function <span class="math inline">\(f\colon A \to B\)</span> defined by <span class="math inline">\(f(x) = y\)</span> iff <span class="math inline">\(Rxy\)</span>.
-{{% /dtpc %}}</p>
-<blockquote>
-<p><bb>命題 1.6 之證明</bb>
-Suppose there is a <span class="math inline">\(y\)</span> such that <span class="math inline">\(Rxy\)</span>. If there were another <span class="math inline">\(z \neq y\)</span> such that <span class="math inline">\(Rxz\)</span>, the condition on <span class="math inline">\(R\)</span> would be violated. Hence, if there is a <span class="math inline">\(y\)</span> such that <span class="math inline">\(Rxy\)</span>, this <span class="math inline">\(y\)</span> is unique, and so <span class="math inline">\(f\)</span> is well-defined. Obviously, <span class="math inline">\(R_f = R\)</span>.</p>
-</blockquote>
-<p>Every function <span class="math inline">\(f\colon A \to B\)</span> has a graph, i.e., a relation on <span class="math inline">\(A \times B\)</span> defined by <span class="math inline">\(f(x) = y\)</span>. On the other hand, every relation <span class="math inline">\(R \subseteq A \times B\)</span> with the properties given in Proposition 1.6 is the graph of a function <span class="math inline">\(f \colon A \to B\)</span>. Because of this close connection between functions and their graphs, we can think of a function simply as its graph. In other words, functions can be identified with certain relations, i.e., with certain sets of tuples. Note, though, that the spirit of this "identification’’ is as in §1.1.1（P.28）: it is not a claim about the metaphysics of functions, but an observation that it is convenient to <bb>treat</bb> functions as certain sets. One reason that this is so convenient, is that We can now consider performing similar operations on functions as we performed on relations (see §1.1.6（P.34）). In particular:</p>
-<p>{{% dtpc title=“☯定義 1.35” %}}
-Let <span class="math inline">\(f \colon A \to B\)</span> be a function with <span class="math inline">\(C\subseteq A\)</span>.
-1. The <bb>restriction</bb> of <span class="math inline">\(f\)</span> to <span class="math inline">\(C\)</span> is the function <span class="math inline">\(f\upharpoonright_{C}\colon C \to B\)</span> defined by <span class="math inline">\((f\upharpoonright_{C})(x) = f(x)\)</span> for all <span class="math inline">\(x \in C\)</span>. In other words, <span class="math inline">\(f\upharpoonright_{C} = \lbrace ⟨x, y⟩ \in R_f: x \in C\rbrace\)</span>.
-1. The <bb>application</bb> of <span class="math inline">\(f\)</span> to <span class="math inline">\(C\)</span> is <span class="math inline">\(f[C] = \lbrace f(x): x \in C\rbrace\)</span>. We also call this the <bb>image</bb> of <span class="math inline">\(C\)</span> under <span class="math inline">\(f\)</span>.
-{{% /dtpc %}}</p>
+Then <span class="math inline">\(R\)</span> is the graph of the function <span class="math inline">\(f\colon A \to B\)</span> defined by <span class="math inline">\(f(x) = y\)</span> iff <span class="math inline">\(Rxy\)</span>.
+</div>
+
+<div class="proof">
+ <span class="proof"><em>PROOF: </em></span> Suppose there is a <span class="math inline">\(y\)</span> such that <span class="math inline">\(Rxy\)</span>. If there were another <span class="math inline">\(z \neq y\)</span> such that <span class="math inline">\(Rxz\)</span>, the condition on <span class="math inline">\(R\)</span> would be violated. Hence, if there is a <span class="math inline">\(y\)</span> such that <span class="math inline">\(Rxy\)</span>, this <span class="math inline">\(y\)</span> is unique, and so <span class="math inline">\(f\)</span> is well-defined. Obviously, <span class="math inline">\(R_f = R\)</span>.
+</div>
+<p>Every function <span class="math inline">\(f\colon A \to B\)</span> has a graph, i.e., a relation on <span class="math inline">\(A \times B\)</span> defined by <span class="math inline">\(f(x) = y\)</span>. On the other hand, every relation <span class="math inline">\(R \subseteq A \times B\)</span> with the properties given in Proposition 1.6 is the graph of a function <span class="math inline">\(f \colon A \to B\)</span>. Because of this close connection between functions and their graphs, we can think of a function simply as its graph. In other words, functions can be identified with certain relations, i.e., with certain sets of tuples. Note, though, that the spirit of this “identification” is as in §1.1.1（P.28）: it is not a claim about the metaphysics of functions, but an observation that it is convenient to <bb>treat</bb> functions as certain sets. One reason that this is so convenient, is that We can now consider performing similar operations on functions as we performed on relations (see §1.1.6（P.34）). In particular:</p>
+
+<div class="definition">
+<p><span id="def:defGrestriction" class="definition"><strong>定义 2.36  </strong></span>Let <span class="math inline">\(f \colon A \to B\)</span> be a function with <span class="math inline">\(C\subseteq A\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>The <bb>restriction</bb> of <span class="math inline">\(f\)</span> to <span class="math inline">\(C\)</span> is the function <span class="math inline">\(f\upharpoonright_{C}\colon C \to B\)</span> defined by <span class="math inline">\((f\upharpoonright_{C})(x) = f(x)\)</span> for all <span class="math inline">\(x \in C\)</span>. In other words, <span class="math inline">\(f\upharpoonright_{C} = \lbrace ⟨x, y⟩ \in R_f: x \in C\rbrace\)</span>.</li>
+<li>The <bb>application</bb> of <span class="math inline">\(f\)</span> to <span class="math inline">\(C\)</span> is <span class="math inline">\(f[C] = \lbrace f(x): x \in C\rbrace\)</span>. We also call this the <bb>image</bb> of <span class="math inline">\(C\)</span> under <span class="math inline">\(f\)</span>.
+</div></li>
+</ol>
 <p>It follows from these definition that <span class="math inline">\(\text{ran}(f) = f[\text{dom}(f)]\)</span>, for any function <span class="math inline">\(f\)</span>. These notions are exactly as one would expect, given the definitions in §1.1.6（P.34）and our identification of functions with relations. But two other operations—inverses and relative products—require a little more detail. We will provide that in the §1.2.3（P.41）and §1.2.4（P.42）.</p>
 </div>
 <div id="inverses-of-functions" class="section level3" number="2.3.4">
 <h3><span class="header-section-number">2.3.4</span> Inverses of Functions</h3>
-<p>We think of functions as maps. An obvious question to ask about functions, then, is whether the mapping can be “reversed.’’ For instance, the successor function <span class="math inline">\(f(x) = x + 1\)</span> can be reversed, in the sense that the function <span class="math inline">\(g(y) = y - 1\)</span>”undoes’’ what <span class="math inline">\(f\)</span> does.</p>
+<p>We think of functions as maps. An obvious question to ask about functions, then, is whether the mapping can be “reversed.” For instance, the successor function <span class="math inline">\(f(x) = x + 1\)</span> can be reversed, in the sense that the function <span class="math inline">\(g(y) = y - 1\)</span> “undoes” what <span class="math inline">\(f\)</span> does.</p>
 <p>But we must be careful. Although the definition of <span class="math inline">\(g\)</span> defines a function <span class="math inline">\(\mathbb{Z} \to \mathbb{Z}\)</span>, it does not define a <bb>function</bb> <span class="math inline">\(\mathbb{N} \to \mathbb{N}\)</span>, since <span class="math inline">\(g(0) \notin \mathbb{N}\)</span>. So even in simple cases, it is not quite obvious whether a function can be reversed; it may depend on the domain and codomain.</p>
 <p>This is made more precise by the notion of an inverse of a function.</p>
-<p>{{% dtpc title=“☯定義 1.36【Inverses of Functions】” %}}
-A function <span class="math inline">\(g \colon B \to A\)</span> is an <bb>inverse</bb> of a function <span class="math inline">\(f \colon A \to B\)</span> if <span class="math inline">\(f(g(y)) = y\)</span> and <span class="math inline">\(g(f(x)) = x\)</span> for all <span class="math inline">\(x \in A\)</span> and <span class="math inline">\(y \in B\)</span>.
-{{% /dtpc %}}</p>
+
+<div class="definition">
+<span id="def:defInvfunction" class="definition"><strong>定义 2.37  (Inverses of Functions)  </strong></span>A function <span class="math inline">\(g \colon B \to A\)</span> is an <bb>inverse</bb> of a function <span class="math inline">\(f \colon A \to B\)</span> if <span class="math inline">\(f(g(y)) = y\)</span> and <span class="math inline">\(g(f(x)) = x\)</span> for all <span class="math inline">\(x \in A\)</span> and <span class="math inline">\(y \in B\)</span>.
+</div>
 <p>If <span class="math inline">\(f\)</span> has an inverse <span class="math inline">\(g\)</span>, we often write <span class="math inline">\(f^{-1}\)</span> instead of <span class="math inline">\(g\)</span>.</p>
-<p>Now we will determine when functions have inverses. A good candidate for an inverse of <span class="math inline">\(f\colon A \to B\)</span> is <span class="math inline">\(g\colon B \to A\)</span> “defined by’’ <span class="math display">\[g(y) = \text{&quot;the&#39;&#39; $x$ such that $f(x) = y$.}\]</span> But the scare quotes around”defined by’’ (and "the’’) suggest that this is not a definition. At least, it will not always work, with complete generality. For, in order for this definition to specify a function, there has to be one and only one <span class="math inline">\(x\)</span> such that <span class="math inline">\(f(x) = y\)</span>—the output of <span class="math inline">\(g\)</span> has to be uniquely specified. Moreover, it has to be specified for every <span class="math inline">\(y \in B\)</span>. If there are <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2 \in A\)</span> with <span class="math inline">\(x_1 \neq x_2\)</span> but <span class="math inline">\(f(x_1) = f(x_2)\)</span>, then <span class="math inline">\(g(y)\)</span> would not be uniquely specified for <span class="math inline">\(y = f(x_1) = f(x_2)\)</span>. And if there is no <span class="math inline">\(x\)</span> at all such that <span class="math inline">\(f(x) = y\)</span>, then <span class="math inline">\(g(y)\)</span> is not specified at all. In other words, for <span class="math inline">\(g\)</span> to be defined, <span class="math inline">\(f\)</span> must be both <bb>injective</bb> and <bb>surjective</bb>.</p>
-<p>{{% dtpc title=“☯命題 1.7” %}}
-Every <bb>bijection</bb> has a unique inverse.
-{{% /dtpc %}}</p>
-<blockquote>
-<p><bb>命題 1.7 之證明</bb>
-Exercise.</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.16</bb>
-Prove Proposition 1.7. That is, show that if <span class="math inline">\(f\colon A \to B\)</span> is <bb>bijective</bb>, an inverse <span class="math inline">\(g\)</span> of <span class="math inline">\(f\)</span> exists. You have to define such a <span class="math inline">\(g\)</span>, show that it is a function, and show that it is an inverse of <span class="math inline">\(f\)</span>, i.e., <span class="math inline">\(f(g(y)) = y\)</span> and <span class="math inline">\(g(f(x)) = x\)</span> for all <span class="math inline">\(x \in A\)</span> and <span class="math inline">\(y \in B\)</span>.</p>
-</blockquote>
-<p>However, there is a slightly more general way to extract inverses. We saw in §1.2.1（P.37）that every function <span class="math inline">\(f\)</span> induces a <bb>surjection</bb> <span class="math inline">\(f&#39; \colon A \to \text{ran}(f)\)</span> by letting <span class="math inline">\(f&#39;(x) = f(x)\)</span> for all <span class="math inline">\(x \in A\)</span>. Clearly, if <span class="math inline">\(f\)</span> is an <bb>injection</bb>, then <span class="math inline">\(f&#39;\)</span> is a <bb>bijection</bb>, so that it has a unique inverse by Proposition 1.7. By a very minor abuse of notation, we sometimes call the inverse of <span class="math inline">\(f&#39;\)</span> simply "the inverse of <span class="math inline">\(f\)</span>.’’</p>
-<blockquote>
-<p><bb>Problem 1.17</bb>
-Show that if <span class="math inline">\(f\colon A \to B\)</span> has an inverse <span class="math inline">\(g\)</span>, then <span class="math inline">\(f\)</span> is <bb>bijective</bb>.</p>
-</blockquote>
-<p>{{% dtpc title=“☯命題 1.8” %}}
-Every function <span class="math inline">\(f\)</span> has at most one inverse.
-{{% /dtpc %}}</p>
-<blockquote>
-<p><bb>命題 1.8 之證明</bb>
-Exercise.</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.18</bb>
-Prove Proposition 1.8. That is, show that if <span class="math inline">\(g\colon B \to A\)</span> and <span class="math inline">\(g&#39;\colon B \to A\)</span> are inverses of <span class="math inline">\(f\colon A \to B\)</span>, then <span class="math inline">\(g = g&#39;\)</span>, i.e., for all <span class="math inline">\(y \in B\)</span>, <span class="math inline">\(g(y) = g&#39;(y)\)</span>.</p>
-</blockquote>
+<p>Now we will determine when functions have inverses. A good candidate for an inverse of <span class="math inline">\(f\colon A \to B\)</span> is <span class="math inline">\(g\colon B \to A\)</span> “defined by” <span class="math display">\[g(y) = \text{&quot;the&quot; $x$ such that $f(x) = y$.}\]</span> But the scare quotes around “defined by” (and “the”) suggest that this is not a definition. At least, it will not always work, with complete generality. For, in order for this definition to specify a function, there has to be one and only one <span class="math inline">\(x\)</span> such that <span class="math inline">\(f(x) = y\)</span>—the output of <span class="math inline">\(g\)</span> has to be uniquely specified. Moreover, it has to be specified for every <span class="math inline">\(y \in B\)</span>. If there are <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2 \in A\)</span> with <span class="math inline">\(x_1 \neq x_2\)</span> but <span class="math inline">\(f(x_1) = f(x_2)\)</span>, then <span class="math inline">\(g(y)\)</span> would not be uniquely specified for <span class="math inline">\(y = f(x_1) = f(x_2)\)</span>. And if there is no <span class="math inline">\(x\)</span> at all such that <span class="math inline">\(f(x) = y\)</span>, then <span class="math inline">\(g(y)\)</span> is not specified at all. In other words, for <span class="math inline">\(g\)</span> to be defined, <span class="math inline">\(f\)</span> must be both <bb>injective</bb> and <bb>surjective</bb>.</p>
+
+<div class="proposition">
+<span id="prp:prpInvfunction" class="proposition"><strong>命题 2.8  </strong></span>Every <bb>bijection</bb> has a unique inverse.
+</div>
+
+<div class="proof">
+ <span class="proof"><em>PROOF: </em></span> Exercise.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0117" class="conjecture"><strong>问题 2.17  </strong></span>Prove Proposition <a href="prechap.html#prp:prpInvfunction">2.8</a>. That is, show that if <span class="math inline">\(f\colon A \to B\)</span> is <bb>bijective</bb>, an inverse <span class="math inline">\(g\)</span> of <span class="math inline">\(f\)</span> exists. You have to define such a <span class="math inline">\(g\)</span>, show that it is a function, and show that it is an inverse of <span class="math inline">\(f\)</span>, i.e., <span class="math inline">\(f(g(y)) = y\)</span> and <span class="math inline">\(g(f(x)) = x\)</span> for all <span class="math inline">\(x \in A\)</span> and <span class="math inline">\(y \in B\)</span>.
+</div>
+<p>However, there is a slightly more general way to extract inverses. We saw in §1.2.1（P.37）that every function <span class="math inline">\(f\)</span> induces a <bb>surjection</bb> <span class="math inline">\(f&#39; \colon A \to \text{ran}(f)\)</span> by letting <span class="math inline">\(f&#39;(x) = f(x)\)</span> for all <span class="math inline">\(x \in A\)</span>. Clearly, if <span class="math inline">\(f\)</span> is an <bb>injection</bb>, then <span class="math inline">\(f&#39;\)</span> is a <bb>bijection</bb>, so that it has a unique inverse by Proposition 1.7. By a very minor abuse of notation, we sometimes call the inverse of <span class="math inline">\(f&#39;\)</span> simply “the inverse of <span class="math inline">\(f\)</span>.”</p>
+
+<div class="conjecture">
+<span id="cnj:prob0118" class="conjecture"><strong>问题 2.18  </strong></span>Show that if <span class="math inline">\(f\colon A \to B\)</span> has an inverse <span class="math inline">\(g\)</span>, then <span class="math inline">\(f\)</span> is <bb>bijective</bb>.
+</div>
+
+<div class="proposition">
+<span id="prp:prpInvfunction01" class="proposition"><strong>命题 2.9  </strong></span>Every function <span class="math inline">\(f\)</span> has at most one inverse.
+</div>
+
+<div class="proof">
+ <span class="proof"><em>PROOF: </em></span> Exercise.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0119" class="conjecture"><strong>问题 2.19  </strong></span>Prove Proposition 1.8. That is, show that if <span class="math inline">\(g\colon B \to A\)</span> and <span class="math inline">\(g&#39;\colon B \to A\)</span> are inverses of <span class="math inline">\(f\colon A \to B\)</span>, then <span class="math inline">\(g = g&#39;\)</span>, i.e., for all <span class="math inline">\(y \in B\)</span>, <span class="math inline">\(g(y) = g&#39;(y)\)</span>.
+</div>
 </div>
 <div id="composition-of-functions" class="section level3" number="2.3.5">
 <h3><span class="header-section-number">2.3.5</span> Composition of Functions</h3>
-<p>We saw in§1.2.3（P.41）that the inverse <span class="math inline">\(f^{-1}\)</span> of a <bb>bijection</bb> <span class="math inline">\(f\)</span> is itself a function. Another operation on functions is composition: We can define a new function by composing two functions, <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span>, i.e., by first applying <span class="math inline">\(f\)</span> and then <span class="math inline">\(g\)</span>. Of course, this is only possible if the ranges and domains match, i.e., the range of <span class="math inline">\(f\)</span> must be a subset of the domain of <span class="math inline">\(g\)</span>. This operation on functions is the analogue of the operation of relative product on relations from§1.1.6（P.34）.</p>
+<p>We saw in§1.2.3（P.41）that the inverse <span class="math inline">\(f^{-1}\)</span> of a <bb>bijection</bb> <span class="math inline">\(f\)</span> is itself a function. Another operation on functions is composition: We can define a new function by composing two functions, <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span>, i.e., by first applying <span class="math inline">\(f\)</span> and then <span class="math inline">\(g\)</span>. Of course, this is only possible if the ranges and domains match, i.e., the range of <span class="math inline">\(f\)</span> must be a subset of the domain of <span class="math inline">\(g\)</span>. This operation on functions is the analogue of the operation of relative product on relations from §1.1.6（P.34）.</p>
 <p>A diagram might help to explain the idea of composition. In Figure 1.7, we depict two functions <span class="math inline">\(f \colon A \to B\)</span> and <span class="math inline">\(g \colon B \to C\)</span> and their composition <span class="math inline">\((g\circ f)\)</span>. The function <span class="math inline">\((g\circ f) \colon A \to C\)</span> pairs each <bb>element</bb> of <span class="math inline">\(A\)</span> with a <bb>element</bb> of <span class="math inline">\(C\)</span>. We specify which <bb>element</bb> of <span class="math inline">\(C\)</span> a <bb>element</bb> of <span class="math inline">\(A\)</span> is paired with as follows: given an input <span class="math inline">\(x \in A\)</span>, first apply the function <span class="math inline">\(f\)</span> to <span class="math inline">\(x\)</span>, which will output some <span class="math inline">\(f(x) = y \in B\)</span>, then apply the function <span class="math inline">\(g\)</span> to <span class="math inline">\(y\)</span>, which will output some <span class="math inline">\(g(f(x)) = g(y) = z \in C\)</span>.</p>
-<div class="figure">
-<img src="https://i.loli.net/2020/09/05/YjaWscoL5tTVUB3.png" alt="" />
-<p class="caption">compositionoffunction</p>
+<p><img src="https://i.loli.net/2020/09/05/YjaWscoL5tTVUB3.png" /></p>
+
+<div class="definition">
+<span id="def:defComfunction" class="definition"><strong>定义 2.38  (Composition)  </strong></span>Let <span class="math inline">\(f\colon A \to B\)</span> and <span class="math inline">\(g\colon B \to C\)</span> be functions. The <bb>composition</bb> of <span class="math inline">\(f\)</span> with <span class="math inline">\(g\)</span> is <span class="math inline">\(g\circ f \colon A \to C\)</span>, where <span class="math inline">\((g\circ f)(x) = g(f(x))\)</span>.
 </div>
-<p>{{% dtpc title=“☯定義 1.37【Composition】” %}}
-Let <span class="math inline">\(f\colon A \to B\)</span> and <span class="math inline">\(g\colon B \to C\)</span> be functions. The <bb>composition</bb> of <span class="math inline">\(f\)</span> with <span class="math inline">\(g\)</span> is <span class="math inline">\(g\circ f \colon A \to C\)</span>, where <span class="math inline">\((g\circ f)(x) = g(f(x))\)</span>.
-{{% /dtpc %}}</p>
-<p>{{% dtpcex title=“☯例 1.33” %}}
-Consider the functions <span class="math inline">\(f(x) = x + 1\)</span>, and <span class="math inline">\(g(x) = 2x\)</span>. Since <span class="math inline">\((g\circ f)(x) = g(f(x))\)</span>, for each input <span class="math inline">\(x\)</span> you must first take its successor, then multiply the result by two. So their composition is given by <span class="math inline">\((g\circ f)(x) = 2(x+1)\)</span>.
-{{% /dtpcex %}}</p>
-<blockquote>
-<p><bb>Problem 1.19</bb>
-Show that if <span class="math inline">\(f \colon A \to B\)</span> and <span class="math inline">\(g \colon B \to C\)</span> are both <bb>injective</bb>, then <span class="math inline">\(g\circ f\colon A \to C\)</span> is <bb>injective</bb>.</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.20</bb>
-Show that if <span class="math inline">\(f \colon A \to B\)</span> and <span class="math inline">\(g \colon B \to C\)</span> are both <bb>surjective</bb>, then <span class="math inline">\(g\circ f\colon A \to C\)</span> is <bb>surjective</bb>.</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.21</bb>
-Suppose <span class="math inline">\(f \colon A \to B\)</span> and <span class="math inline">\(g \colon B \to C\)</span>. Show that the graph of <span class="math inline">\(g\circ f\)</span> is <span class="math inline">\(R_f \mid R_g\)</span>.</p>
-</blockquote>
+
+<div class="example">
+<span id="exm:exmComp01" class="example"><strong>例 2.34  </strong></span>Consider the functions <span class="math inline">\(f(x) = x + 1\)</span>, and <span class="math inline">\(g(x) = 2x\)</span>. Since <span class="math inline">\((g\circ f)(x) = g(f(x))\)</span>, for each input <span class="math inline">\(x\)</span> you must first take its successor, then multiply the result by two. So their composition is given by <span class="math inline">\((g\circ f)(x) = 2(x+1)\)</span>.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0120" class="conjecture"><strong>问题 2.20  </strong></span>Show that if <span class="math inline">\(f \colon A \to B\)</span> and <span class="math inline">\(g \colon B \to C\)</span> are both <bb>injective</bb>, then <span class="math inline">\(g\circ f\colon A \to C\)</span> is <bb>injective</bb>.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0121" class="conjecture"><strong>问题 2.21  </strong></span>Show that if <span class="math inline">\(f \colon A \to B\)</span> and <span class="math inline">\(g \colon B \to C\)</span> are both <bb>surjective</bb>, then <span class="math inline">\(g\circ f\colon A \to C\)</span> is <bb>surjective</bb>.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0122" class="conjecture"><strong>问题 2.22  </strong></span>Suppose <span class="math inline">\(f \colon A \to B\)</span> and <span class="math inline">\(g \colon B \to C\)</span>. Show that the graph of <span class="math inline">\(g\circ f\)</span> is <span class="math inline">\(R_f \mid R_g\)</span>.
+</div>
 </div>
 <div id="partial-functions" class="section level3" number="2.3.6">
 <h3><span class="header-section-number">2.3.6</span> Partial Functions</h3>
 <p>It is sometimes useful to relax the definition of function so that it is not required that the output of the function is defined for all possible inputs. Such mappings are called <bb>partial functions</bb>.</p>
-<p>{{% dtpc title=“☯定義 1.38【Partial function】” %}}
-A <bb>partial function</bb> <span class="math inline">\(f \colon A \nrightarrow B\)</span> is a mapping which assigns to every <bb>element</bb> of <span class="math inline">\(A\)</span> at most one <bb>element</bb> of <span class="math inline">\(B\)</span>. If <span class="math inline">\(f\)</span> assigns an element of <span class="math inline">\(B\)</span> to <span class="math inline">\(x \in A\)</span>, we say <span class="math inline">\(f(x)\)</span> is <bb>defined</bb>, and otherwise <bb>undefined</bb>. If <span class="math inline">\(f(x)\)</span> is defined, we write <span class="math inline">\(f(x) \downarrow\)</span>, otherwise <span class="math inline">\(f(x) \uparrow\)</span>. The <bb>domain</bb> of a partial function <span class="math inline">\(f\)</span> is the subset of <span class="math inline">\(A\)</span> where it is defined, i.e., <span class="math inline">\(\text{dom}(f) = \lbrace x \in A: f(x) \downarrow\rbrace\)</span>.
-{{% /dtpc %}}</p>
-<p>{{% dtpcex title=“☯例 1.34” %}}
-Every function <span class="math inline">\(f\colon A \to B\)</span> is also a partial function. Partial functions that are defined everywhere on <span class="math inline">\(A\)</span>—i.e., what we so far have simply called a function—are also called <bb>total</bb> functions.
-{{% /dtpcex %}}</p>
-<p>{{% dtpcex title=“☯例 1.35” %}}
-The partial function <span class="math inline">\(f \colon \mathbb{R} \nrightarrow \mathbb{R}\)</span> given by <span class="math inline">\(f(x) = 1/x\)</span> is undefined for <span class="math inline">\(x = 0\)</span>, and defined everywhere else.
-{{% /dtpcex %}}</p>
-<blockquote>
-<p><bb>Problem 1.22</bb>
-Given <span class="math inline">\(f\colon A \nrightarrow B\)</span>, define the partial function <span class="math inline">\(g\colon B \nrightarrow A\)</span> by: for any <span class="math inline">\(y \in B\)</span>, if there is a unique <span class="math inline">\(x \in A\)</span> such that <span class="math inline">\(f(x) = y\)</span>, then <span class="math inline">\(g(y) = x\)</span>; otherwise <span class="math inline">\(g(y) \uparrow\)</span>. Show that if <span class="math inline">\(f\)</span> is injective, then <span class="math inline">\(g(f(x)) = x\)</span> for all <span class="math inline">\(x \in \text{dom}(f)\)</span>, and <span class="math inline">\(f(g(y)) = y\)</span> for all <span class="math inline">\(y \in \text{ran}(f)\)</span>.</p>
-</blockquote>
-<p>{{% dtpc title=“☯定義 1.39【Graph of a partial function】” %}}
-Let <span class="math inline">\(f\colon A \nrightarrow B\)</span> be a partial function. The <bb>graph</bb> of <span class="math inline">\(f\)</span> is the relation <span class="math inline">\(R_f \subseteq A \times B\)</span> defined by <span class="math display">\[R_f = \lbrace ⟨x,y⟩: f(x) = y\rbrace.\]</span>
-{{% /dtpc %}}</p>
-<p>{{% dtpc title=“☯命題 1.9” %}}
-Suppose <span class="math inline">\(R \subseteq A \times B\)</span> has the property that whenever <span class="math inline">\(Rxy\)</span> and <span class="math inline">\(Rxy&#39;\)</span> then <span class="math inline">\(y = y&#39;\)</span>. Then <span class="math inline">\(R\)</span> is the graph of the partial function <span class="math inline">\(f\colon X \nrightarrow Y\)</span> defined by: if there is a <span class="math inline">\(y\)</span> such that <span class="math inline">\(Rxy\)</span>, then <span class="math inline">\(f(x) = y\)</span>, otherwise <span class="math inline">\(f(x) \uparrow\)</span>. If <span class="math inline">\(R\)</span> is also <bb>serial</bb>, i.e., for each <span class="math inline">\(x \in X\)</span> there is a <span class="math inline">\(y \in Y\)</span> such that <span class="math inline">\(Rxy\)</span>, then <span class="math inline">\(f\)</span> is total.
-{{% /dtpc %}}</p>
-<blockquote>
-<p><bb>命題 1.9 之證明</bb>
-Suppose there is a <span class="math inline">\(y\)</span> such that <span class="math inline">\(Rxy\)</span>. If there were another <span class="math inline">\(y&#39; \neq y\)</span> such that <span class="math inline">\(Rxy&#39;\)</span>, the condition on <span class="math inline">\(R\)</span> would be violated. Hence, if there is a <span class="math inline">\(y\)</span> such that <span class="math inline">\(Rxy\)</span>, that <span class="math inline">\(y\)</span> is unique, and so <span class="math inline">\(f\)</span> is well-defined. Obviously, <span class="math inline">\(R_f = R\)</span> and <span class="math inline">\(f\)</span> is total if <span class="math inline">\(R\)</span> is serial.</p>
-</blockquote>
+
+<div class="definition">
+<span id="def:defPartfunction" class="definition"><strong>定义 2.39  (Partial function)  </strong></span>A <bb>partial function</bb> <span class="math inline">\(f \colon A \nrightarrow B\)</span> is a mapping which assigns to every <bb>element</bb> of <span class="math inline">\(A\)</span> at most one <bb>element</bb> of <span class="math inline">\(B\)</span>. If <span class="math inline">\(f\)</span> assigns an element of <span class="math inline">\(B\)</span> to <span class="math inline">\(x \in A\)</span>, we say <span class="math inline">\(f(x)\)</span> is <bb>defined</bb>, and otherwise <bb>undefined</bb>. If <span class="math inline">\(f(x)\)</span> is defined, we write <span class="math inline">\(f(x) \downarrow\)</span>, otherwise <span class="math inline">\(f(x) \uparrow\)</span>. The <bb>domain</bb> of a partial function <span class="math inline">\(f\)</span> is the subset of <span class="math inline">\(A\)</span> where it is defined, i.e., <span class="math inline">\(\text{dom}(f) = \lbrace x \in A: f(x) \downarrow\rbrace\)</span>.
+</div>
+
+<div class="example">
+<span id="exm:exmPartfunction01" class="example"><strong>例 2.35  </strong></span>Every function <span class="math inline">\(f\colon A \to B\)</span> is also a partial function. Partial functions that are defined everywhere on <span class="math inline">\(A\)</span>—i.e., what we so far have simply called a function—are also called <bb>total</bb> functions.
+</div>
+
+<div class="example">
+<span id="exm:exmPartfunction02" class="example"><strong>例 2.36  </strong></span>The partial function <span class="math inline">\(f \colon \mathbb{R} \nrightarrow \mathbb{R}\)</span> given by <span class="math inline">\(f(x) = 1/x\)</span> is undefined for <span class="math inline">\(x = 0\)</span>, and defined everywhere else.
+</div>
+
+<div class="conjecture">
+<span id="cnj:prob0123" class="conjecture"><strong>问题 2.23  </strong></span>Given <span class="math inline">\(f\colon A \nrightarrow B\)</span>, define the partial function <span class="math inline">\(g\colon B \nrightarrow A\)</span> by: for any <span class="math inline">\(y \in B\)</span>, if there is a unique <span class="math inline">\(x \in A\)</span> such that <span class="math inline">\(f(x) = y\)</span>, then <span class="math inline">\(g(y) = x\)</span>; otherwise <span class="math inline">\(g(y) \uparrow\)</span>. Show that if <span class="math inline">\(f\)</span> is injective, then <span class="math inline">\(g(f(x)) = x\)</span> for all <span class="math inline">\(x \in \text{dom}(f)\)</span>, and <span class="math inline">\(f(g(y)) = y\)</span> for all <span class="math inline">\(y \in \text{ran}(f)\)</span>.
+</div>
+
+<div class="definition">
+<span id="def:defGPartfunction" class="definition"><strong>定义 2.40  (Graph of a partial function)  </strong></span>Let <span class="math inline">\(f\colon A \nrightarrow B\)</span> be a partial function. The <bb>graph</bb> of <span class="math inline">\(f\)</span> is the relation <span class="math inline">\(R_f \subseteq A \times B\)</span> defined by <span class="math display">\[R_f = \lbrace ⟨x,y⟩: f(x) = y\rbrace.\]</span>
+</div>
+
+<div class="proposition">
+<span id="prp:prpGPartfunction" class="proposition"><strong>命题 2.10  </strong></span>Suppose <span class="math inline">\(R \subseteq A \times B\)</span> has the property that whenever <span class="math inline">\(Rxy\)</span> and <span class="math inline">\(Rxy&#39;\)</span> then <span class="math inline">\(y = y&#39;\)</span>. Then <span class="math inline">\(R\)</span> is the graph of the partial function <span class="math inline">\(f\colon X \nrightarrow Y\)</span> defined by: if there is a <span class="math inline">\(y\)</span> such that <span class="math inline">\(Rxy\)</span>, then <span class="math inline">\(f(x) = y\)</span>, otherwise <span class="math inline">\(f(x) \uparrow\)</span>. If <span class="math inline">\(R\)</span> is also <bb>serial</bb>, i.e., for each <span class="math inline">\(x \in X\)</span> there is a <span class="math inline">\(y \in Y\)</span> such that <span class="math inline">\(Rxy\)</span>, then <span class="math inline">\(f\)</span> is total.
+</div>
+
+<div class="proof">
+ <span class="proof"><em>PROOF: </em></span> Suppose there is a <span class="math inline">\(y\)</span> such that <span class="math inline">\(Rxy\)</span>. If there were another <span class="math inline">\(y&#39; \neq y\)</span> such that <span class="math inline">\(Rxy&#39;\)</span>, the condition on <span class="math inline">\(R\)</span> would be violated. Hence, if there is a <span class="math inline">\(y\)</span> such that <span class="math inline">\(Rxy\)</span>, that <span class="math inline">\(y\)</span> is unique, and so <span class="math inline">\(f\)</span> is well-defined. Obviously, <span class="math inline">\(R_f = R\)</span> and <span class="math inline">\(f\)</span> is total if <span class="math inline">\(R\)</span> is serial.
+</div>
 </div>
 </div>
 <div id="基数集合大小的度量" class="section level2" number="2.4">
@@ -1028,7 +1078,7 @@ Informally, an <bb>enumeration</bb> of a set <span class="math inline">\(A\)</sp
 1. We can have different enumerations of the same set <span class="math inline">\(A\)</span> which differ by the order in which the <bb>element</bb>s appear: <span class="math inline">\(4\)</span>, <span class="math inline">\(1\)</span>, <span class="math inline">\(25\)</span>, <span class="math inline">\(16\)</span>, <span class="math inline">\(9\)</span> enumerates the (set of the) first five square numbers just as well as <span class="math inline">\(1\)</span>, <span class="math inline">\(4\)</span>, <span class="math inline">\(9\)</span>, <span class="math inline">\(16\)</span>, <span class="math inline">\(25\)</span> does.
 1. Redundant enumerations are still enumerations: <span class="math inline">\(1\)</span>, <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(3\)</span>, <span class="math inline">\(3, \cdots\)</span>, enumerates the same set as <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(3, \cdots\)</span>, does.
 1. Order and redundancy <bb>do</bb> matter when we specify an enumeration: we can enumerate the positive integers beginning with <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(3\)</span>, <span class="math inline">\(1, \cdots\)</span>, but the pattern is easier to see when enumerated in the standard way as <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(3\)</span>, <span class="math inline">\(4, \cdots\)</span>.
-1. Enumerations must have a beginning: , <span class="math inline">\(3\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(1\)</span> is not an enumeration of the positive integers because it has no first <bb>element</bb>. To see how this follows from the informal definition, ask yourself, "at what position in the list does the number 76 appear?’’
+1. Enumerations must have a beginning: , <span class="math inline">\(3\)</span>, <span class="math inline">\(2\)</span>, <span class="math inline">\(1\)</span> is not an enumeration of the positive integers because it has no first <bb>element</bb>. To see how this follows from the informal definition, ask yourself, “at what position in the list does the number 76 appear?”
 1. The following is not an enumeration of the positive integers: <span class="math inline">\(1\)</span>, <span class="math inline">\(3\)</span>, <span class="math inline">\(5, \cdots, 2\)</span>, <span class="math inline">\(4\)</span>, <span class="math inline">\(6, \cdots\)</span>. The problem is that the even numbers occur at places <span class="math inline">\(\infty + 1\)</span>, <span class="math inline">\(\infty + 2\)</span>, <span class="math inline">\(\infty + 3\)</span>, rather than at finite positions.
 1. The empty set is enumerable: it is enumerated by the empty list!</p>
 <p>{{% dtpc title=“☯命題 1.10” %}}
@@ -1065,7 +1115,7 @@ The functions <span class="math inline">\(f\colon \mathbb{Z}^{+} \to \mathbb{Z}^
 Define an enumeration of the positive squares <span class="math inline">\(1\)</span>, <span class="math inline">\(4\)</span>, <span class="math inline">\(9\)</span>, <span class="math inline">\(16, \cdots\)</span></p>
 </blockquote>
 <p>{{% dtpcex title=“☯例 1.38” %}}
-The function <span class="math inline">\(f(n) = (-1)^{n} \lceil \frac{(n-1)}{2}\rceil\)</span> (where <span class="math inline">\(\lceil x \rceil\)</span> denotes the <bb>ceiling</bb> function, which rounds <span class="math inline">\(x\)</span> up to the nearest integer) enumerates the set of integers <span class="math inline">\(\mathbb{Z}\)</span>. Notice how <span class="math inline">\(f\)</span> generates the values of <span class="math inline">\(\mathbb{Z}\)</span> by "hopping’’ back and forth between positive and negative integers:</p>
+The function <span class="math inline">\(f(n) = (-1)^{n} \lceil \frac{(n-1)}{2}\rceil\)</span> (where <span class="math inline">\(\lceil x \rceil\)</span> denotes the <bb>ceiling</bb> function, which rounds <span class="math inline">\(x\)</span> up to the nearest integer) enumerates the set of integers <span class="math inline">\(\mathbb{Z}\)</span>. Notice how <span class="math inline">\(f\)</span> generates the values of <span class="math inline">\(\mathbb{Z}\)</span> by “hopping” back and forth between positive and negative integers:</p>
 <p>
 <span class="math display">\[
 \begin{array}{c c c c c c c c}
@@ -1134,7 +1184,7 @@ According to Definition1.48（P.63）, a set <span class="math inline">\(A\)</sp
 </div>
 <div id="cantors-zig-zag-method" class="section level3" number="2.4.3">
 <h3><span class="header-section-number">2.4.3</span> Cantor’s Zig-Zag Method</h3>
-<p>We’ve already considered some "easy’’ enumerations. Now we will consider something a bit harder. Consider the set of pairs of natural numbers, which we defined in§1.0.4（P.22）defined by: <span class="math display">\[\mathbb{N} \times \mathbb{N} = \lbrace ⟨n,m⟩: n,m \in \mathbb{N}\rbrace\]</span> We can organize these ordered pairs into an <bb>array</bb>, like so:</p>
+<p>We’ve already considered some “easy” enumerations. Now we will consider something a bit harder. Consider the set of pairs of natural numbers, which we defined in§1.0.4（P.22）defined by: <span class="math display">\[\mathbb{N} \times \mathbb{N} = \lbrace ⟨n,m⟩: n,m \in \mathbb{N}\rbrace\]</span> We can organize these ordered pairs into an <bb>array</bb>, like so:</p>
 <p>
 <span class="math display">\[
 \begin{array}{ c | c | c | c | c | c}
@@ -1152,7 +1202,7 @@ According to Definition1.48（P.63）, a set <span class="math inline">\(A\)</sp
 \end{array}
 \]</span>
 </p>
-<p>Clearly, every ordered pair in <span class="math inline">\(\mathbb{N} \times \mathbb{N}\)</span> will appear exactly once in the array. In particular, <span class="math inline">\(⟨n,m⟩\)</span> will appear in the <span class="math inline">\(n\)</span>th row and <span class="math inline">\(m\)</span>th column. But how do we organize the elements of such an array into a "one-dimensional’’ list? The pattern in the array below demonstrates one way to do this (although of course there are many other options):</p>
+<p>Clearly, every ordered pair in <span class="math inline">\(\mathbb{N} \times \mathbb{N}\)</span> will appear exactly once in the array. In particular, <span class="math inline">\(⟨n,m⟩\)</span> will appear in the <span class="math inline">\(n\)</span>th row and <span class="math inline">\(m\)</span>th column. But how do we organize the elements of such an array into a “one-dimensional” list? The pattern in the array below demonstrates one way to do this (although of course there are many other options):</p>
 <p>
 <span class="math display">\[
 \begin{array}{ c | c | c | c | c | c | c}
@@ -1327,7 +1377,7 @@ The function <span class="math inline">\(j\colon \mathbb{N}^2 \to \mathbb{N}^+\)
 <h3><span class="header-section-number">2.4.6</span> Nonenumerable Sets</h3>
 <p>This section proves the non-enumerability of <span class="math inline">\(\mathbb{B}^\omega\)</span> and <span class="math inline">\(\mathscr{P}({\mathbb{Z})^{+}}\)</span> using the definition in§1.3.1（P.45）. It is designed to be a little more elementary and a little more detailed than the version in §1.3.10（P.62）.</p>
 <p>Some sets, such as the set <span class="math inline">\(\mathbb{Z}^{+}\)</span> of positive integers, are infinite. So far we’ve seen examples of infinite sets which were all <bb>enumerable</bb>. However, there are also infinite sets which do not have this property. Such sets are called <bb>nonenumerable</bb>.</p>
-<p>First of all, it is perhaps already surprising that there are <bb>nonenumerable</bb> sets. For any <bb>enumerable</bb> set <span class="math inline">\(A\)</span> there is a <bb>surjective</bb> function <span class="math inline">\(f \colon \mathbb{Z}^{+} \to A\)</span>. If a set is <bb>nonenumerable</bb> there is no such function. That is, no function mapping the infinitely many <bb>element</bb>s of <span class="math inline">\(\mathbb{Z}^{+}\)</span> to <span class="math inline">\(A\)</span> can exhaust all of <span class="math inline">\(A\)</span>. So there are "more’’ <bb>element</bb>s of <span class="math inline">\(A\)</span> than the infinitely many positive integers.</p>
+<p>First of all, it is perhaps already surprising that there are <bb>nonenumerable</bb> sets. For any <bb>enumerable</bb> set <span class="math inline">\(A\)</span> there is a <bb>surjective</bb> function <span class="math inline">\(f \colon \mathbb{Z}^{+} \to A\)</span>. If a set is <bb>nonenumerable</bb> there is no such function. That is, no function mapping the infinitely many <bb>element</bb>s of <span class="math inline">\(\mathbb{Z}^{+}\)</span> to <span class="math inline">\(A\)</span> can exhaust all of <span class="math inline">\(A\)</span>. So there are “more” <bb>element</bb>s of <span class="math inline">\(A\)</span> than the infinitely many positive integers.</p>
 <p>How would one prove that a set is <bb>nonenumerable</bb>? You have to show that no such surjective function can exist. Equivalently, you have to show that the elements of <span class="math inline">\(A\)</span> cannot be enumerated in a one way infinite list. The best way to do this is to show that every list of <bb>element</bb>s of <span class="math inline">\(A\)</span> must leave at least one element out; or that no function <span class="math inline">\(f\colon \mathbb{Z}^{+} \to A\)</span> can be <bb>surjective</bb>. We can do this using Cantor’s <bb>diagonal method</bb>. Given a list of <bb>element</bb>s of <span class="math inline">\(A\)</span>, say, <span class="math inline">\(x_1\)</span>, <span class="math inline">\(x_2, \cdots\)</span>, we construct another element of <span class="math inline">\(A\)</span> which, by its construction, cannot possibly be on that list.</p>
 <p>Our first example is the set <span class="math inline">\(\mathbb{B}^\omega\)</span> of all infinite, non-gappy sequences of <span class="math inline">\(0\)</span>’s and <span class="math inline">\(1\)</span>’s.</p>
 <p>{{% dtpc title=“☯Theorem 1.1” %}}
@@ -1350,7 +1400,7 @@ Suppose, by way of contradiction, that <span class="math inline">\(\mathbb{B}^\o
 </p>
 <p>The labels down the side give the number of the sequence in the list <span class="math inline">\(s_1\)</span>, <span class="math inline">\(s_2\)</span>, ; the numbers across the top label the <bb>element</bb>s of the individual sequences. For instance, <span class="math inline">\(s_{1}(1)\)</span> is a name for whatever number, a <span class="math inline">\(0\)</span> or a <span class="math inline">\(1\)</span>, is the first <bb>element</bb> in the sequence <span class="math inline">\(s_{1}\)</span>, and so on.</p>
 <p>Now we construct an infinite sequence, <span class="math inline">\(\overline{s}\)</span>, of <span class="math inline">\(0\)</span>’s and <span class="math inline">\(1\)</span>’s which cannot possibly be on this list. The definition of <span class="math inline">\(\overline{s}\)</span> will depend on the list <span class="math inline">\(s_1\)</span>, <span class="math inline">\(s_2, \cdots\)</span>. Any infinite list of infinite sequences of <span class="math inline">\(0\)</span>’s and <span class="math inline">\(1\)</span>’s gives rise to an infinite sequence <span class="math inline">\(\overline{s}\)</span> which is guaranteed to not appear on the list.</p>
-<p>To define <span class="math inline">\(\overline{s}\)</span>, we specify what all its <bb>element</bb>s are, i.e., we specify <span class="math inline">\(\overline{s}(n)\)</span> for all <span class="math inline">\(n \in \mathbb{Z}^{+}\)</span>. We do this by reading down the diagonal of the array above (hence the name "diagonal method’’) and then changing every <span class="math inline">\(1\)</span> to a <span class="math inline">\(0\)</span> and every <span class="math inline">\(1\)</span> to a <span class="math inline">\(0\)</span>. More abstractly, we define <span class="math inline">\(\overline{s}(n)\)</span> to be <span class="math inline">\(0\)</span> or <span class="math inline">\(1\)</span> according to whether the <span class="math inline">\(n\)</span>-th <bb>element</bb> of the diagonal, <span class="math inline">\(s_n(n)\)</span>, is <span class="math inline">\(1\)</span> or <span class="math inline">\(0\)</span>.</p>
+<p>To define <span class="math inline">\(\overline{s}\)</span>, we specify what all its <bb>element</bb>s are, i.e., we specify <span class="math inline">\(\overline{s}(n)\)</span> for all <span class="math inline">\(n \in \mathbb{Z}^{+}\)</span>. We do this by reading down the diagonal of the array above (hence the name “diagonal method”) and then changing every <span class="math inline">\(1\)</span> to a <span class="math inline">\(0\)</span> and every <span class="math inline">\(1\)</span> to a <span class="math inline">\(0\)</span>. More abstractly, we define <span class="math inline">\(\overline{s}(n)\)</span> to be <span class="math inline">\(0\)</span> or <span class="math inline">\(1\)</span> according to whether the <span class="math inline">\(n\)</span>-th <bb>element</bb> of the diagonal, <span class="math inline">\(s_n(n)\)</span>, is <span class="math inline">\(1\)</span> or <span class="math inline">\(0\)</span>.</p>
 <p>
 <span class="math display">\[
 \overline{s}(n) =
@@ -1365,7 +1415,7 @@ Suppose, by way of contradiction, that <span class="math inline">\(\mathbb{B}^\o
 <p>It can’t be the first sequence in the list, <span class="math inline">\(s_1\)</span>, because it differs from <span class="math inline">\(s_1\)</span> in the first <bb>element</bb>. Whatever <span class="math inline">\(s_1(1)\)</span> is, we defined <span class="math inline">\(\overline{s}(1)\)</span> to be the opposite. It can’t be the second sequence in the list, because <span class="math inline">\(\overline{s}\)</span> differs from <span class="math inline">\(s_2\)</span> in the second element: if <span class="math inline">\(s_2(2)\)</span> is <span class="math inline">\(0\)</span>, <span class="math inline">\(\overline{s}(2)\)</span> is <span class="math inline">\(1\)</span>, and vice versa. And so on.</p>
 <p>More precisely: if <span class="math inline">\(\overline{s}\)</span> were on the list, there would be some <span class="math inline">\(k\)</span> so that <span class="math inline">\(\overline{s} = s_{k}\)</span>. Two sequences are identical iff they agree at every place, i.e., for any <span class="math inline">\(n\)</span>, <span class="math inline">\(\overline{s}(n) = s_{k}(n)\)</span>. So in particular, taking <span class="math inline">\(n = k\)</span> as a special case, <span class="math inline">\(\overline{s}(k) = s_{k}(k)\)</span> would have to hold. <span class="math inline">\(s_k(k)\)</span> is either <span class="math inline">\(0\)</span> or <span class="math inline">\(1\)</span>. If it is <span class="math inline">\(0\)</span> then <span class="math inline">\(\overline{s}(k)\)</span> must be <span class="math inline">\(1\)</span>—that’s how we defined <span class="math inline">\(\overline{s}\)</span>. But if <span class="math inline">\(s_k(k) = 1\)</span> then, again because of the way we defined <span class="math inline">\(\overline{s}\)</span>, <span class="math inline">\(\overline{s}(k) = 0\)</span>. In either case <span class="math inline">\(\overline{s}(k) \neq s_{k}(k)\)</span>.</p>
 <p>We started by assuming that there is a list of <bb>element</bb>s of <span class="math inline">\(\mathbb{B}^\omega\)</span>, <span class="math inline">\(s_1\)</span>, <span class="math inline">\(s_2, \cdots\)</span>, From this list we constructed a sequence <span class="math inline">\(\overline{s}\)</span> which we proved cannot be on the list. But it definitely is a sequence of <span class="math inline">\(0\)</span>’s and <span class="math inline">\(1\)</span>’s if all the <span class="math inline">\(s_i\)</span> are sequences of <span class="math inline">\(0\)</span>’s and <span class="math inline">\(1\)</span>’s, i.e., <span class="math inline">\(\overline{s} \in \mathbb{B}^\omega\)</span>. This shows in particular that there can be no list of <bb>all</bb> <bb>element</bb>s of <span class="math inline">\(\mathbb{B}^\omega\)</span>, since for any such list we could also construct a sequence <span class="math inline">\(\overline{s}\)</span> guaranteed to not be on the list, so the assumption that there is a list of all sequences in <span class="math inline">\(\mathbb{B}^\omega\)</span> leads to a contradiction. <span class="math inline">\(\blacksquare\)</span></p>
-<p>This proof method is called "diagonalization’’ because it uses the diagonal of the array to define <span class="math inline">\(\overline{s}\)</span>. Diagonalization need not involve the presence of an array: we can show that sets are not <bb>enumerable</bb> by using a similar idea even when no array and no actual diagonal is involved.</p>
+<p>This proof method is called “diagonalization” because it uses the diagonal of the array to define <span class="math inline">\(\overline{s}\)</span>. Diagonalization need not involve the presence of an array: we can show that sets are not <bb>enumerable</bb> by using a similar idea even when no array and no actual diagonal is involved.</p>
 <p>{{% dtpc title=“☯Theorem 1.2” %}}
 <span class="math inline">\(\mathscr{P}({\mathbb{Z})^{+}}\)</span> is not <bb>enumerable</bb>.
 {{% /dtpc %}}</p>
