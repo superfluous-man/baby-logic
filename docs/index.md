@@ -47,7 +47,7 @@ link-citations: yes
 有屁请在此处放，看看谁的屁更响。
 
 <script src="https://utteranc.es/client.js"
-        repo="gwmatthews/ethics"
+        repo="superfluous-man/baby-logic"
         issue-term="title"
         theme="github-light"
         crossorigin="anonymous"
