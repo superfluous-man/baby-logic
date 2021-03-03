@@ -149,6 +149,20 @@ font-style: normal;
     text-justify:auto;
 }
 
+div.exercise {/* 练习 */
+font-family: 'Noto Serif TC', 'Noto Serif SC', "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "Microsoft YaHei", "微软雅黑", sans-serif;
+font-style: normal;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0em;
+    margin-right: 0em;
+    padding: .3em 0.5em 0.3em .3em;
+    /*border-left: 2px solid #0effdb;
+    background-color: #d2fff8;*/
+    text-align:justify;
+    text-justify:auto;
+}
+
 div.proof {/* 证明 */
 font-family: 'Noto Serif TC', 'Noto Serif SC', "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue", "Roboto", "Arial", "PingFang SC", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", "Microsoft YaHei", "微软雅黑", sans-serif;
 font-style: normal;
