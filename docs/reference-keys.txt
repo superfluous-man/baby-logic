@@ -240,6 +240,11 @@ exm:exmvassigntaut02
 prp:prpvassigntaut01
 prp:prpvassigntaut02
 prp:prpvassigntaut03
+def:defvassignequiv
+exm:exmvassignequiv01
+exm:exmvassignequiv02
+exm:exmvassignequiv03
+prp:prpvassignequiv01
 exr:plsemexe01
 exr:plsemexe02
 exr:plsemexe03
@@ -384,3 +389,8 @@ plsematics
 真值函数在形式语言中的表达
 具有函数完全性的几组真值函数联结词
 本章习题-1
+def:defvassignsatis
+exm:exmvassignsatis01
+exm:exmvassignsatis02
+prp:prpvassignsatis01
+prp:prpvassignsatis02
