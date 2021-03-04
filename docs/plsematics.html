@@ -640,31 +640,48 @@ s^{} (q s).$</p>
 </div>
 <div id="重言式矛盾式与或然式-1" class="section level3" number="4.2.4">
 <h3><span class="header-section-number">4.2.4</span> 重言式、矛盾式与或然式</h3>
-<p>在§2.5.4（P.88）中，重言式、矛盾式与或然式曾被以真值表的方式刻画，下面从赋值角度严格刻画这组概念。</p>
-<p>{{% dtpc title=“☯定义 3.6【重言式】” %}} 对任意 <span class="math inline">\(\mathscr{L}_{0}\)</span>-公式
+<p>在 §2.5.4（P.88）中，重言式、矛盾式与或然式曾被以真值表的方式刻画，下面从赋值角度严格刻画这组概念。</p>
+
+<div class="definition">
+<span id="def:defvassigncys" class="definition"><strong>定义 4.7  (重言式)  </strong></span>对任意 <span class="math inline">\(\mathscr{L}_{0}\)</span>-公式
 <span class="math inline">\(\varphi\)</span>，<span class="math inline">\(\varphi\)</span> 是重言式当且仅当对每一个真值指派
-<span class="math inline">\(\sigma\)</span>，<span class="math inline">\(\sigma \vDash \varphi.\)</span> {{% /dtpc %}}</p>
-<p>{{% dtpc title=“☯定义 3.7【矛盾式】” %}} 对任意 <span class="math inline">\(\mathscr{L}_{0}\)</span>-公式
+<span class="math inline">\(\sigma\)</span>，<span class="math inline">\(\sigma \vDash \varphi.\)</span>
+</div>
+
+<div class="definition">
+<span id="def:defvassignmds" class="definition"><strong>定义 4.8  (矛盾式)  </strong></span>对任意 <span class="math inline">\(\mathscr{L}_{0}\)</span>-公式
 <span class="math inline">\(\varphi\)</span>，<span class="math inline">\(\varphi\)</span> 矛盾式（或不可满足式）当且仅当对每一个真值指派
-<span class="math inline">\(\sigma\)</span>，<span class="math inline">\(\sigma \nvDash \varphi.\)</span> {{% /dtpc %}}</p>
-<p>{{% dtpc title=“☯定义 3.8【或然式】” %}} 对任意 <span class="math inline">\(\mathscr{L}_{0}\)</span>-公式
+<span class="math inline">\(\sigma\)</span>，<span class="math inline">\(\sigma \nvDash \varphi.\)</span>
+</div>
+
+<div class="definition">
+<span id="def:defvassignhrs" class="definition"><strong>定义 4.9  (或然式)  </strong></span>对任意 <span class="math inline">\(\mathscr{L}_{0}\)</span>-公式
 <span class="math inline">\(\varphi\)</span>，<span class="math inline">\(\varphi\)</span> 或然式当且仅当对每一个真值指派 <span class="math inline">\(\sigma\)</span> 使得
 <span class="math inline">\(\sigma \vDash \varphi\)</span>，<span class="math inline">\(\sigma \nvDash \varphi\)</span>，并且存在一个真值指派
-<span class="math inline">\(\sigma^\prime\)</span>，使得 <span class="math inline">\(\sigma^\prime \nvDash \varphi.\)</span> {{% /dtpc %}}</p>
-<blockquote>
-<p><bb>Note 3.2</bb> 与重言蕴涵、重言等值和可满足性等概念的情况类似，定义
-3.6-3.8
-有别于§2.5.4（P.88）中对重言式等概念的真值表刻画：真值指派要对所有命题变号给出真值，并且重言式等的定义涉及的真值指派显然有无穷多个；这些概念的真值表刻画却不同，它们只考虑公式中出现的有穷多个命题变号的真假，而这些命题变号的可能取值组合也只有有穷多个。</p>
-</blockquote>
-<p><bb>例 3.6</bb> 对任意公式
+<span class="math inline">\(\sigma^\prime\)</span>，使得 <span class="math inline">\(\sigma^\prime \nvDash \varphi.\)</span>
+</div>
+<p>有别于 §2.5.4（P.88）中对重言式等概念的真值表刻画：真值指派要对所有命题变号给出真值，并且重言式等的定义涉及的真值指派显然有无穷多个；这些概念的真值表刻画却不同，它们只考虑公式中出现的有穷多个命题变号的真假，而这些命题变号的可能取值组合也只有有穷多个。</p>
+
+<div class="example">
+<span id="exm:exmvassigncys01" class="example"><strong>例 4.8  </strong></span>对任意公式
 <span class="math inline">\(\varphi\)</span>，<span class="math inline">\(\varphi \lor \varphi \rightarrow \varphi\)</span> 是重言式。
-<bb>证明：</bb>令 <span class="math inline">\(\sigma\)</span> 为任意真值指派。如果
+</div>
+
+<div class="proof">
+ <span class="proof"><em>Proof: </em></span> 令 <span class="math inline">\(\sigma\)</span> 为任意真值指派。如果
 <span class="math inline">\(\sigma \vDash \varphi \lor \varphi\)</span>，那么根据真理定义，<span class="math inline">\(\sigma \vDash \varphi\)</span>，进而
 <span class="math inline">\(\sigma \vDash \varphi \lor \varphi \rightarrow \varphi.\)</span>
-由重言式的定义知，<span class="math inline">\(\varphi \lor \varphi \rightarrow \varphi\)</span> 是重言式。▗</p>
-<p><bb>例 3.7</bb> 对任意公式
+由重言式的定义知，<span class="math inline">\(\varphi \lor \varphi \rightarrow \varphi\)</span> 是重言式。
+</div>
+
+<div class="example">
+<span id="exm:exmvassigncys02" class="example"><strong>例 4.9  </strong></span>对任意公式
 <span class="math inline">\(\varphi, \psi\)</span>，<span class="math inline">\(\neg(\varphi \rightarrow \psi) \rightarrow \varphi \land \neg \psi\)</span>
-是重言式。 <bb>证明：</bb>令 <span class="math inline">\(\sigma\)</span> 为任意真值指派。假设
+是重言式。
+</div>
+
+<div class="proof">
+ <span class="proof"><em>Proof: </em></span> 令 <span class="math inline">\(\sigma\)</span> 为任意真值指派。假设
 <span class="math inline">\(\sigma \vDash \neg(\varphi \rightarrow \psi).\)</span>
 根据真理定义，<span class="math inline">\(\sigma \nvDash \varphi \rightarrow \psi\)</span>，从而有
 <span class="math inline">\(\sigma \vDash \varphi\)</span> 且 <span class="math inline">\(\sigma \nvDash \psi.\)</span>
@@ -672,19 +689,32 @@ s^{} (q s).$</p>
 <span class="math inline">\(\sigma \vDash \varphi \land \neg \psi.\)</span> 由此得知，对任意真值指派
 <span class="math inline">\(\sigma\)</span>，<span class="math inline">\(\sigma \vDash \neg(\varphi \rightarrow \psi) \rightarrow \varphi \land \neg \psi.\)</span>
 根据重言式的定义，<span class="math inline">\(\neg(\varphi \rightarrow \psi) \rightarrow \varphi \land \neg \psi\)</span>
-是重言式。▗</p>
-<p><bb>例 3.8</bb> 对任意公式 <span class="math inline">\(\varphi\)</span> 和
+是重言式。
+</div>
+
+<div class="example">
+<span id="exm:exmvassigncys03" class="example"><strong>例 4.10  </strong></span>对任意公式 <span class="math inline">\(\varphi\)</span> 和
 <span class="math inline">\(\psi\)</span>，<span class="math inline">\(\varphi \land \neg (\varphi \lor \psi)\)</span> 是矛盾式。
-<bb>证明：</bb>令 <span class="math inline">\(\sigma\)</span> 为任意真值指派。根据真理定义，如果
+</div>
+
+<div class="proof">
+ <span class="proof"><em>Proof: </em></span> 令 <span class="math inline">\(\sigma\)</span> 为任意真值指派。根据真理定义，如果
 <span class="math inline">\(\sigma \vDash \varphi \land \neg (\varphi \lor \psi)\)</span>，那么
 <span class="math inline">\(\sigma \vDash \varphi\)</span> 且
 <span class="math inline">\(\sigma \vDash \neg (\varphi \lor \psi)\)</span>，从而 <span class="math inline">\(\sigma \vDash \varphi\)</span>
 且
 <span class="math inline">\(\sigma \nvDash \varphi\)</span>，但这是不可能的。所以，<span class="math inline">\(\sigma \nvDash \varphi \land \neg (\varphi \lor \psi).\)</span>
-根据矛盾式的定义，<span class="math inline">\(\varphi \land \neg (\varphi \lor \psi)\)</span> 是矛盾式。▗</p>
-<p><bb>例 3.9</bb> 对任意公式
+根据矛盾式的定义，<span class="math inline">\(\varphi \land \neg (\varphi \lor \psi)\)</span> 是矛盾式。
+</div>
+
+<div class="example">
+<span id="exm:exmvassigncys04" class="example"><strong>例 4.11  </strong></span>对任意公式
 <span class="math inline">\(\varphi\)</span>，<span class="math inline">\(\neg(\varphi \rightarrow \neg (\varphi \rightarrow \neg\varphi))\)</span>
-是矛盾式。 <bb>证明：</bb>令 <span class="math inline">\(\sigma\)</span> 为任意真值指派。假设
+是矛盾式。
+</div>
+
+<div class="proof">
+ <span class="proof"><em>Proof: </em></span> 令 <span class="math inline">\(\sigma\)</span> 为任意真值指派。假设
 <span class="math inline">\(\sigma \vDash \neg(\varphi \rightarrow \neg (\varphi \rightarrow \neg\varphi)).\)</span>
 根据真理定义，我们有
 <span class="math inline">\(\sigma \nvDash \varphi \rightarrow \neg (\varphi \rightarrow \neg\varphi)\)</span>，从而
@@ -695,25 +725,42 @@ s^{} (q s).$</p>
 <span class="math inline">\(\sigma \vDash \varphi\)</span> 并且
 <span class="math inline">\(\sigma \nvDash \varphi\)</span>，但这是不可能的。所以，<span class="math inline">\(\sigma \nvDash \neg(\varphi \rightarrow \neg (\varphi \rightarrow \neg\varphi)).\)</span>
 根据矛盾式的定义，<span class="math inline">\(\neg(\varphi \rightarrow \neg (\varphi \rightarrow \neg\varphi))\)</span>
-是矛盾式。▗</p>
-<p><bb>例 3.10</bb> 对所有不同的命题变号 <span class="math inline">\(p\)</span> 和 <span class="math inline">\(q\)</span>，<span class="math inline">\(p \land \neg q\)</span>
-是或然式。 <bb>证明：</bb>令 <span class="math inline">\(p\)</span> 和 <span class="math inline">\(q\)</span> 为不同的命题变号。并且令
+是矛盾式。
+</div>
+
+<div class="example">
+<span id="exm:exmvassigncys05" class="example"><strong>例 4.12  </strong></span>对所有不同的命题变号 <span class="math inline">\(p\)</span> 和 <span class="math inline">\(q\)</span>，<span class="math inline">\(p \land \neg q\)</span>
+是或然式。
+</div>
+
+<div class="proof">
+ <span class="proof"><em>Proof: </em></span> 令 <span class="math inline">\(p\)</span> 和 <span class="math inline">\(q\)</span> 为不同的命题变号。并且令
 <span class="math inline">\(\sigma\)</span> 为任意真值指派，满足 <span class="math inline">\(\sigma(p)=1\)</span> 且 <span class="math inline">\(\sigma(q)=0.\)</span>
 根据真理定义，<span class="math inline">\(\sigma \vDash p \land \neg q.\)</span> 令 <span class="math inline">\(\sigma^{\prime}\)</span>
 为任意真值指派，满足 <span class="math inline">\(\sigma^{\prime}(p)=0.\)</span> 由于
 <span class="math inline">\(\sigma^{\prime} \nvDash p\)</span>，所以根据真理定义，<span class="math inline">\(\sigma^{\prime} \nvDash p \land \neg q.\)</span>
-由或然式定义得知，<span class="math inline">\(p \land \neg q\)</span> 是或然式。 ▗</p>
-<p><bb>例 3.11</bb> 对所有不同的命题变号 <span class="math inline">\(p\)</span> 和 <span class="math inline">\(q\)</span>，<span class="math inline">\(p \rightarrow \neg q\)</span>
-是或然式。 <bb>证明：</bb>令 <span class="math inline">\(p\)</span> 和 <span class="math inline">\(q\)</span> 为不同的命题变号。并且令
+由或然式定义得知，<span class="math inline">\(p \land \neg q\)</span> 是或然式。
+</div>
+
+<div class="example">
+<span id="exm:exmvassigncys06" class="example"><strong>例 4.13  </strong></span>对所有不同的命题变号 <span class="math inline">\(p\)</span> 和 <span class="math inline">\(q\)</span>，<span class="math inline">\(p \rightarrow \neg q\)</span>
+是或然式。
+</div>
+
+<div class="proof">
+ <span class="proof"><em>Proof: </em></span> 令 <span class="math inline">\(p\)</span> 和 <span class="math inline">\(q\)</span> 为不同的命题变号。并且令
 <span class="math inline">\(\sigma\)</span> 和 <span class="math inline">\(\sigma^{\prime}\)</span> 为任意真值指派，满足 <span class="math inline">\(\sigma(p)=0\)</span> 且
 <span class="math inline">\(\sigma^{\prime}(p)=\sigma^{\prime}(q)=1.\)</span> 根据真理定义，易见
 <span class="math inline">\(\sigma \vDash p \rightarrow \neg q\)</span> 并且
 <span class="math inline">\(\sigma^{\prime} \nvDash p \rightarrow \neg q.\)</span>
-由或然式定义得知，<span class="math inline">\(p \rightarrow \neg q\)</span> 是或然式。 ▗</p>
+由或然式定义得知，<span class="math inline">\(p \rightarrow \neg q\)</span> 是或然式。
+</div>
 <p>下列命题是对上述概念的简单运用。以下仅列出部分命题的证明，剩余的命题证明留作习题。</p>
-<p>{{% dtpc title=“☯命题 3.7” %}} 令 <span class="math inline">\(\varphi\)</span> 和 <span class="math inline">\(\varphi\)</span>
-为任意公式。我们有： 1. <span class="math inline">\(\varphi \land \psi\)</span> 是重言式当且仅当 <span class="math inline">\(\varphi\)</span>
-是重言式并且 <span class="math inline">\(\varphi\)</span> 是重言式。 <bb>证明</bb>：设 <span class="math inline">\(\varphi \land \psi\)</span>
+<p>令 <span class="math inline">\(\varphi\)</span> 和 <span class="math inline">\(\varphi\)</span> 为任意公式。我们有：</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\varphi \land \psi\)</span> 是重言式当且仅当 <span class="math inline">\(\varphi\)</span>
+是重言式并且 <span class="math inline">\(\varphi\)</span> 是重言式。
+<bb>证明</bb>：设 <span class="math inline">\(\varphi \land \psi\)</span>
 是重言式。对每个真值指派 <span class="math inline">\(\sigma\)</span>，由假设和重言式的定义得知
 <span class="math inline">\(\sigma \vDash \varphi \land \psi\)</span>，进而根据真理定义，<span class="math inline">\(\sigma \vDash \varphi.\)</span>
 所以 <span class="math inline">\(\varphi\)</span> 是重言式。同理可证 <span class="math inline">\(\psi\)</span> 是重言式。另一方面，设
@@ -721,16 +768,20 @@ s^{} (q s).$</p>
 <span class="math inline">\(\sigma\)</span>，由假设和重言式定义知 <span class="math inline">\(\sigma \vDash \varphi\)</span> 且
 <span class="math inline">\(\sigma \vDash \psi\)</span>，再由真理定义知 <span class="math inline">\(\sigma \vDash \varphi \land \psi.\)</span>
 所以 <span class="math inline">\(\varphi \land \psi\)</span> 是重言式。▗<br />
-1. 如果 <span class="math inline">\(\varphi\)</span> 或 <span class="math inline">\(\psi\)</span> 是重言式，那么 <span class="math inline">\(\varphi \lor \psi\)</span>
-是重言式；但逆命题不成立。 <bb>证明</bb>： 设 <span class="math inline">\(\varphi\)</span> 或 <span class="math inline">\(\psi\)</span>
+</li>
+<li>如果 <span class="math inline">\(\varphi\)</span> 或 <span class="math inline">\(\psi\)</span> 是重言式，那么 <span class="math inline">\(\varphi \lor \psi\)</span>
+是重言式；但逆命题不成立。
+<bb>证明</bb>： 设 <span class="math inline">\(\varphi\)</span> 或 <span class="math inline">\(\psi\)</span>
 是重言式。第一种情况：<span class="math inline">\(\varphi\)</span> 是重言式。对每个真值指派 <span class="math inline">\(\sigma\)</span>，既然
 <span class="math inline">\(\varphi\)</span> 是重言式，我们有 <span class="math inline">\(\sigma \vDash \varphi\)</span>，再由真理定义知
 <span class="math inline">\(\sigma \vDash \varphi \lor \psi.\)</span> 所以 <span class="math inline">\(\varphi \lor \psi\)</span>
 是重言式。第二种情况类似。逆命题不成立：当 <span class="math inline">\(\varphi = p\)</span> 且
 <span class="math inline">\(\psi = \neg p\)</span> 时，<span class="math inline">\(\varphi \lor \psi\)</span> 是重言式，但 <span class="math inline">\(\varphi\)</span> 和 <span class="math inline">\(\psi\)</span>
 都不是重言式。▗<br />
-1. 如果 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 是重言式，那么，或者 <span class="math inline">\(\varphi\)</span>
-不是重言式或者 <span class="math inline">\(\psi\)</span> 是重言式；但逆命题不成立。 <bb>证明</bb>：设
+</li>
+<li>如果 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 是重言式，那么，或者 <span class="math inline">\(\varphi\)</span>
+不是重言式或者 <span class="math inline">\(\psi\)</span> 是重言式；但逆命题不成立。
+<bb>证明</bb>：设
 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 是重言式。如果 <span class="math inline">\(\varphi\)</span>
 是重言式，那么，对每个真值指派
 <span class="math inline">\(\sigma\)</span>，<span class="math inline">\(\sigma \vDash \varphi \rightarrow \psi\)</span> 并且
@@ -739,7 +790,8 @@ s^{} (q s).$</p>
 是重言式。逆命题不成立：令 <span class="math inline">\(\varphi = p\)</span> 且 <span class="math inline">\(\psi = \neg p\)</span>
 。显然，<span class="math inline">\(\varphi\)</span> 不是重言式，所以或者 <span class="math inline">\(\varphi\)</span> 不是重言式或者 <span class="math inline">\(\psi\)</span>
 是重言式，但 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 却不是重言式。▗<br />
-1. 如果 <span class="math inline">\(\varphi\)</span> 是矛盾式或者 <span class="math inline">\(\psi\)</span> 是重言式，那么
+</li>
+<li>如果 <span class="math inline">\(\varphi\)</span> 是矛盾式或者 <span class="math inline">\(\psi\)</span> 是重言式，那么
 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 是重言式；但逆命题不成立。
 <bb>证明</bb>：由真理定义易见，如果 <span class="math inline">\(\varphi\)</span> 是矛盾式则
 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 是重言式，并且如果 <span class="math inline">\(\psi\)</span> 是重言式则
@@ -747,9 +799,11 @@ s^{} (q s).$</p>
 <span class="math inline">\(\psi\)</span> 是重言式，那么 <span class="math inline">\(\varphi \rightarrow \psi\)</span>
 是重言式。逆命题不成立：令 <span class="math inline">\(\varphi=\psi=p.\)</span>
 显然，<span class="math inline">\(\varphi \rightarrow \psi\)</span> 是重言式，但 <span class="math inline">\(\varphi\)</span> 不是矛盾式，
-<span class="math inline">\(\psi\)</span> 也不是重言式。▗ 1. <span class="math inline">\(\varphi \leftrightarrow \psi\)</span>
+<span class="math inline">\(\psi\)</span> 也不是重言式。▗</li>
+<li><span class="math inline">\(\varphi \leftrightarrow \psi\)</span>
 是重言式当且仅当 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 和
-<span class="math inline">\(\psi \rightarrow \varphi\)</span> 都是重言式。 <bb>证明</bb>：设
+<span class="math inline">\(\psi \rightarrow \varphi\)</span> 都是重言式。
+<bb>证明</bb>：设
 <span class="math inline">\(\varphi \leftrightarrow \psi\)</span> 是重言式。对每个真值指派 <span class="math inline">\(\sigma\)</span>，如果
 <span class="math inline">\(\sigma \vDash \varphi\)</span>，那么根据假设和真理定义， <span class="math inline">\(\sigma \vDash \psi.\)</span>
 所以，<span class="math inline">\(\varphi \rightarrow \psi\)</span>
@@ -761,31 +815,38 @@ s^{} (q s).$</p>
 <span class="math inline">\(\varphi^\sigma = \psi^\sigma\)</span>，再由真理定义得到
 <span class="math inline">\(\varphi \leftrightarrow \psi.\)</span> 所以，<span class="math inline">\(\varphi \leftrightarrow \psi\)</span>
 是重言式。 ▗<br />
-1. 如果 <span class="math inline">\(\varphi \leftrightarrow \psi\)</span> 是重言式，那么，<span class="math inline">\(\varphi\)</span>
-是重言式当且仅当 <span class="math inline">\(\psi\)</span> 是重言式；但逆命题不成立。 1.
-<span class="math inline">\(\varphi \lor \psi\)</span> 是矛盾式当且仅当 <span class="math inline">\(\varphi\)</span> 是矛盾式并且 <span class="math inline">\(\psi\)</span>
-都是矛盾式。 1. 如果 <span class="math inline">\(\varphi\)</span> 或 <span class="math inline">\(\psi\)</span> 是矛盾式，那么
-<span class="math inline">\(\varphi \land \psi\)</span> 是矛盾式；但逆命题不成立。 1.
-<span class="math inline">\(\varphi \rightarrow \psi\)</span> 是矛盾式当且仅当 <span class="math inline">\(\varphi\)</span> 是重言式并且
-<span class="math inline">\(\psi\)</span> 是矛盾式。 1. 如果 <span class="math inline">\(\varphi\)</span> 和 <span class="math inline">\(\psi\)</span>
+</li>
+<li>如果 <span class="math inline">\(\varphi \leftrightarrow \psi\)</span> 是重言式，那么，<span class="math inline">\(\varphi\)</span>
+是重言式当且仅当 <span class="math inline">\(\psi\)</span> 是重言式；但逆命题不成立。</li>
+<li><span class="math inline">\(\varphi \lor \psi\)</span> 是矛盾式当且仅当 <span class="math inline">\(\varphi\)</span> 是矛盾式并且 <span class="math inline">\(\psi\)</span>
+都是矛盾式。</li>
+<li>如果 <span class="math inline">\(\varphi\)</span> 或 <span class="math inline">\(\psi\)</span> 是矛盾式，那么
+<span class="math inline">\(\varphi \land \psi\)</span> 是矛盾式；但逆命题不成立。</li>
+<li><span class="math inline">\(\varphi \rightarrow \psi\)</span> 是矛盾式当且仅当 <span class="math inline">\(\varphi\)</span> 是重言式并且
+<span class="math inline">\(\psi\)</span> 是矛盾式。</li>
+<li>如果 <span class="math inline">\(\varphi\)</span> 和 <span class="math inline">\(\psi\)</span>
 中一个是重言式另一个是矛盾式，那么 <span class="math inline">\(\varphi \leftrightarrow \psi\)</span>
-是矛盾式；但逆命题不成立。 {{% /dtpc %}}</p>
-<p>{{% dtpc title=“☯命题 3.8” %}} 令 <span class="math inline">\(\varphi, \psi\)</span> 和
-<span class="math inline">\(\varphi_0,\cdots,\varphi_n\)</span> 为任意公式。我们有： 1. <span class="math inline">\(\varphi\)</span>
+是矛盾式；但逆命题不成立。</li>
+</ol>
+<p>令 <span class="math inline">\(\varphi, \psi\)</span> 和
+<span class="math inline">\(\varphi_0,\cdots,\varphi_n\)</span> 为任意公式。我们有：</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\varphi\)</span>
 是重言式当且仅当 <span class="math inline">\(\nvDash_{0} \varphi\)</span>（即
-<span class="math inline">\(\varnothing \nvDash_{0} \varphi\)</span>）。 <bb>证明</bb>：设 <span class="math inline">\(\varphi\)</span>
+<span class="math inline">\(\varnothing \nvDash_{0} \varphi\)</span>）。
+<bb>证明</bb>：设 <span class="math inline">\(\varphi\)</span>
 是重言式。因为对所有真值指派 <span class="math inline">\(\sigma\)</span> 都有
 <span class="math inline">\(\sigma \vDash \varphi\)</span>，所以根据重言蕴涵的定义，<span class="math inline">\(\nvDash_{0} \varphi.\)</span>
 设 <span class="math inline">\(\nvDash_{0} \varphi.\)</span> 令 <span class="math inline">\(\sigma\)</span> 为任意真值指派。我们知道
 <span class="math inline">\(\sigma \nvDash_{0} \varnothing\)</span>（见定义 3.2 之解说），因而由假设
 <span class="math inline">\(\varnothing \nvDash_{0} \varphi\)</span> 和重言蕴涵定义得知
-<span class="math inline">\(\sigma \vDash \varphi.\)</span> 所以 <span class="math inline">\(\varphi\)</span> 是重言式。▗ 1.
-<span class="math inline">\(\varphi \nvDash_{0} \psi\)</span> 当且仅当 <span class="math inline">\(\varphi \rightarrow \psi\)</span>
+<span class="math inline">\(\sigma \vDash \varphi.\)</span> 所以 <span class="math inline">\(\varphi\)</span> 是重言式。▗</li>
+<li><span class="math inline">\(\varphi \nvDash_{0} \psi\)</span> 当且仅当 <span class="math inline">\(\varphi \rightarrow \psi\)</span>
 是重言式。 <bb>证明</bb>：由命题 
 可知，<span class="math inline">\(\varphi \vDash_{0} \psi\)</span> 当且仅当
 <span class="math inline">\(\vDash_{0} \varphi \rightarrow \psi\)</span>，再运用上一条结论得知，<span class="math inline">\(\varphi \vDash_{0} \psi\)</span>
-当且仅当 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 是重言式。▗ 1.
-<span class="math inline">\(\varphi_0,\cdots,\varphi_n \nvDash_{0} \psi\)</span> 当且仅当
+当且仅当 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 是重言式。▗</li>
+<li><span class="math inline">\(\varphi_0,\cdots,\varphi_n \nvDash_{0} \psi\)</span> 当且仅当
 <span class="math inline">\(\nvDash_{0} \varphi_0 \rightarrow (\cdots\rightarrow(\varphi_n \rightarrow \psi)\cdots).\)</span>
 <bb>证明</bb>：施归纳于 <span class="math inline">\(n.\)</span> 当 <span class="math inline">\(n=0\)</span> 时，由上条结论知本命题成立。假设当
 <span class="math inline">\(n=k\)</span> 时本条命题成立。由命题 3.1
@@ -796,20 +857,19 @@ s^{} (q s).$</p>
 <span class="math inline">\(\vDash_{0} \varphi_{0} \rightarrow(\cdots \rightarrow(\varphi_{k} \rightarrow(\varphi_{k+1} \rightarrow \psi)) \cdots).\)</span>
 所以，<span class="math inline">\(\varphi_{0}, \cdots, \varphi_{k}, \varphi_{k+1} \vDash_{0} \psi\)</span>
 当且仅当
-<span class="math inline">\(\vDash_{0} \varphi_{0} \rightarrow(\cdots \rightarrow(\varphi_{k} \rightarrow(\varphi_{k+1} \rightarrow \psi)) \cdots).\)</span>▗
-1. <span class="math inline">\(\varphi \leftrightarrow \psi\)</span> 是重言式当且仅当 <span class="math inline">\(\varphi\)</span> 重言等值于
+<span class="math inline">\(\vDash_{0} \varphi_{0} \rightarrow(\cdots \rightarrow(\varphi_{k} \rightarrow(\varphi_{k+1} \rightarrow \psi)) \cdots).\)</span>▗</li>
+<li><span class="math inline">\(\varphi \leftrightarrow \psi\)</span> 是重言式当且仅当 <span class="math inline">\(\varphi\)</span> 重言等值于
 <span class="math inline">\(\psi.\)</span> <bb>证明</bb>：根据命题 3.4，<span class="math inline">\(\varphi\)</span> 与 <span class="math inline">\(\psi\)</span>
 重言等值当且仅当 <span class="math inline">\(\varphi \vDash_{0} \psi\)</span> 并且
 <span class="math inline">\(\psi \vDash_{0} \varphi\)</span>，再根据上述第一条，<span class="math inline">\(\varphi\)</span> 与 <span class="math inline">\(\psi\)</span>
 重言等值当且仅当 <span class="math inline">\(\varphi \rightarrow \psi\)</span> 和
 <span class="math inline">\(\psi \rightarrow \varphi\)</span> 都是重言式。最后，根据命题 3.7
 第四条，<span class="math inline">\(\varphi\)</span> 与 <span class="math inline">\(\psi\)</span> 重言等值当且仅当
-<span class="math inline">\(\varphi \leftrightarrow \psi\)</span> 是重言式。▗ {{% /dtpc %}}</p>
-<p>命题 3.8 第二条的归纳证明中，归纳假设是：</p>
+<span class="math inline">\(\varphi \leftrightarrow \psi\)</span> 是重言式。▗</li>
+</ol>
+<p>第二条的归纳证明中，归纳假设是：</p>
 <blockquote>
-<p>对<tt>所有</tt>的 <span class="math inline">\(\varphi_{0}, \cdots, \varphi_{k}\)</span> 和
-<span class="math inline">\(\psi\)</span>，<span class="math inline">\(\varphi_{0}, \cdots, \varphi_{k} \vDash_{0} \psi\)</span> 当且仅当
-<span class="math inline">\(\vDash_{0} \varphi_{0} \rightarrow(\cdots \rightarrow(\varphi_{k} \rightarrow \psi) \cdots).\)</span></p>
+<p>对<tt>所有</tt>的 <span class="math inline">\(\varphi_{0}, \cdots, \varphi_{k}\)</span> 和 <span class="math inline">\(\psi\)</span>，<span class="math inline">\(\varphi_{0}, \cdots, \varphi_{k} \vDash_{0} \psi\)</span> 当且仅当 <span class="math inline">\(\vDash_{0} \varphi_{0} \rightarrow(\cdots \rightarrow(\varphi_{k} \rightarrow \psi) \cdots).\)</span></p>
 </blockquote>
 <p>其中「对所有的…」来自命题 3.8 的题设「令…
 为任意公式」。既然归纳假设中的 <span class="math inline">\(\psi\)</span>
