@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Fundamentals of computational biology - Seq. Analysis challenges</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chs-challenges-demos/genome-analysis-challenges.html" rel="next">
+<link href="../chs-challenges-demos/unix-challenges.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-contrib/nutshell-1.0.0/nutshell.min.js"></script>
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-QFWWJGZHLD"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-QFWWJGZHLD', { 'anonymize_ip': true});
+</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+
+<link href="../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+<script src="../site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+
+
+<meta name="citation_title" content="Seq. Analysis challenges">
+<meta name="citation_fulltext_html_url" content="https://camilogarciabotero.github.io/biocomp-book//seq-analysis-challenges.html">
+<meta name="citation_language" content="en">
+<meta name="citation_reference" content="citation_title=Literate programming;,citation_author=Donald E. Knuth;,citation_publication_date=1984-05;,citation_cover_date=1984-05;,citation_year=1984;,citation_fulltext_html_url=https://doi.org/10.1093/comjnl/27.2.97;,citation_issue=2;,citation_doi=10.1093/comjnl/27.2.97;,citation_issn=0010-4620;,citation_volume=27;,citation_journal_title=Comput. J.;,citation_publisher=Oxford University Press, Inc.;">
+<meta name="citation_reference" content="citation_title=Computing skills for biologists;,citation_author=Stefano Allesina;,citation_author=Madlen Wilmes;,citation_publication_date=2019-01-15;,citation_cover_date=2019-01-15;,citation_year=2019;,citation_fulltext_html_url=http://dx.doi.org/10.2307/j.ctvc77jrc;,citation_doi=10.2307/j.ctvc77jrc;">
+<meta name="citation_reference" content="citation_title=Genetics: Genes, genomes, and evolution;,citation_author=Philip Mark Meneely;,citation_author=Rachel Dawes Hoang;,citation_author=Iruka N Okeke;,citation_author=Katherine Heston;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;">
+<meta name="citation_reference" content="citation_title=Genomes 4;,citation_author=Terence A Brown;,citation_publication_date=2018;,citation_cover_date=2018;,citation_year=2018;">
+<meta name="citation_reference" content="citation_title=Long walk to genomics: History and current approaches to genome sequencing and assembly;,citation_author=Alice Maria Giani;,citation_author=Guido Roberto Gallo;,citation_author=Luca Gianfranceschi;,citation_author=Giulio Formenti;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_volume=18;,citation_journal_title=Computational and Structural Biotechnology Journal;,citation_publisher=Elsevier;">
+<meta name="citation_reference" content="citation_title=Genome-scale algorithm design;,citation_author=Veli Mäkinen;,citation_author=Djamal Belazzougui;,citation_author=Fabio Cunial;,citation_author=Alexandru I Tomescu;,citation_publication_date=2015;,citation_cover_date=2015;,citation_year=2015;">
+<meta name="citation_reference" content="citation_title=A quick guide for developing effective bioinformatics programming skills;,citation_author=Joel T Dudley;,citation_author=Atul J Butte;,citation_publication_date=2009;,citation_cover_date=2009;,citation_year=2009;,citation_volume=5;,citation_journal_title=PLOS computational biology;,citation_publisher=Public Library of Science San Francisco, USA;">
+<meta name="citation_reference" content="citation_title=Five reasons why researchers should learn to love the command line;,citation_author=Jeffrey M Perkel;,citation_author=others;,citation_publication_date=2021;,citation_cover_date=2021;,citation_year=2021;,citation_issue=7844;,citation_volume=590;,citation_journal_title=Nature;,citation_publisher=Nature;">
+<meta name="citation_reference" content="citation_title=Ten simple rules for getting started with command-line bioinformatics;,citation_author=Parice A Brandies;,citation_author=Carolyn J Hogg;,citation_publication_date=2021;,citation_cover_date=2021;,citation_year=2021;,citation_volume=17;,citation_journal_title=PLoS Computational Biology;,citation_publisher=Public Library of Science San Francisco, CA USA;">
+</head>
+
+<body class="nav-sidebar floating slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Seq. Analysis challenges</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Fundamentals of computational biology</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/camilogarciabotero/biocomp-book" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">The command line</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chs-command-line/welcome-to-command-line.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The command line</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chs-command-line/git-and-github.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Version control</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chs-command-line/package-managers.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Package managers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chs-command-line/hpc-notions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Notions of HPC</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Intro. to algorithms</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chs-intro-algorithms/algorithm-thinking.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Algorithm thinking</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chs-intro-algorithms/algorithm-techniques.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Algorithm techniques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chs-intro-algorithms/data-structures.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Data structures</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Sequence analysis</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chs-sequence-analysis/introduction-to-sequence-analysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Sequence analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chs-sequence-analysis/sanger-analysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Sanger analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chs-sequence-analysis/sequence-alignments.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Sequence alignments</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chs-sequence-analysis/NGS-TGS-principles.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">NGS and TGS: principles</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Phylogenetics</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chs-phylogenetics/phylogenetic-reconstructions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Phylogenetics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chs-phylogenetics/phylogenomics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Phylogenomics</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">Genomics</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chs-genomics/genome-assembly.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Genome assembly</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chs-genomics/genome-annotation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Genome annotation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chs-genomics/variant-calling-analysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Variant calling analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chs-genomics/comparative-genomics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Comparative genomics</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">Metagenomics</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chs-metagenomics/metagenomic-sequencing.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Metagenomic sequencing</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">Structural bioinformatics</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chs-bio-structural/intro-structural-bioinfo.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Structural bioinformatics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chs-bio-structural/molecular-docking.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Molecular docking</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true">Challenges</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chs-challenges-demos/unix-challenges.html" class="sidebar-item-text sidebar-link">Unix challenges</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chs-challenges-demos/seq-analysis-challenges.html" class="sidebar-item-text sidebar-link active">Seq. Analysis challenges</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chs-challenges-demos/genome-analysis-challenges.html" class="sidebar-item-text sidebar-link">Genome assembly</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="true">Appendix</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../HISTORY.html" class="sidebar-item-text sidebar-link">History</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#counting-features" id="toc-counting-features" class="nav-link active" data-scroll-target="#counting-features">Counting features</a></li>
+  <li><a href="#sanger-processing" id="toc-sanger-processing" class="nav-link" data-scroll-target="#sanger-processing">Sanger processing</a>
+  <ul class="collapse">
+  <li><a href="#processing-a-single-gene-ab1-pair" id="toc-processing-a-single-gene-ab1-pair" class="nav-link" data-scroll-target="#processing-a-single-gene-ab1-pair">Processing a single gene <code>AB1</code> pair</a></li>
+  <li><a href="#processing-a-bulk-of-ab1-pair" id="toc-processing-a-bulk-of-ab1-pair" class="nav-link" data-scroll-target="#processing-a-bulk-of-ab1-pair">Processing a bulk of <code>AB1</code> pair</a></li>
+  </ul></li>
+  <li><a href="#multiple-sequence-alignment" id="toc-multiple-sequence-alignment" class="nav-link" data-scroll-target="#multiple-sequence-alignment">Multiple sequence alignment</a>
+  <ul class="collapse">
+  <li><a href="#download-sequences" id="toc-download-sequences" class="nav-link" data-scroll-target="#download-sequences">Download sequences</a></li>
+  <li><a href="#unwrapping-fasta-records" id="toc-unwrapping-fasta-records" class="nav-link" data-scroll-target="#unwrapping-fasta-records">Unwrapping FASTA records</a></li>
+  <li><a href="#gene-searching" id="toc-gene-searching" class="nav-link" data-scroll-target="#gene-searching">Gene searching</a></li>
+  <li><a href="#sequence-alignment" id="toc-sequence-alignment" class="nav-link" data-scroll-target="#sequence-alignment">Sequence alignment</a></li>
+  <li><a href="#assessment-of-the-alignment" id="toc-assessment-of-the-alignment" class="nav-link" data-scroll-target="#assessment-of-the-alignment">Assessment of the alignment</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/camilogarciabotero/biocomp-book/edit/main/chs-challenges-demos/seq-analysis-challenges.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/camilogarciabotero/biocomp-book/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Seq. Analysis challenges</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="counting-features" class="level2">
+<h2 class="anchored" data-anchor-id="counting-features">Counting features</h2>
+<p>The first step in this journey is to download a bunch of sequences programmatically. To do so, we will use the program <a href="https://github.com/kblin/ncbi-genome-download">ncbi-genome-download</a>.</p>
+<p>You could inspect all the options it provides, now we will set our command as the following:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">ngd</span> <span class="at">--genera</span> <span class="st">"Bacillus subtilis"</span><span class="dt">\</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">-s</span> refseq<span class="dt">\</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">-l</span> complete<span class="dt">\</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">-o</span> Data<span class="dt">\</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">--flat-output</span><span class="dt">\</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">--format</span> features<span class="dt">\</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">-n</span> bacteria<span class="dt">\</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">|</span> <span class="fu">head</span> <span class="at">-n</span> 5</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>To this date this command will search for 216 complete genome information of <em>Bacillus subtilis</em> strains and download the <strong>feature-table</strong> file compressed. So the next step is to decompress all of them:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="pp">*</span>.txt<span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gzip</span> <span class="at">-d</span> <span class="va">$i</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now the the feature-table file is a is a long table containing each of the features annotated in the genome see the top of a file:</p>
+<div class="cell" data-hash="seq-analysis-challenges_cache/html/unnamed-chunk-1_39a4c5c93d185aa07675f288a7238366">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> <span class="at">-n</span> 5 data/features/GCF_000009045.1_ASM904v1_feature_table.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># feature   class   assembly    assembly_unit   seq_type    chromosome  genomic_accession   start   end strand  product_accession   non-redundant_refseq    related_accession   name    symbol  GeneID  locus_tag   feature_interval_length product_length  attributes
+gene    protein_coding  GCF_000009045.1 Primary Assembly    chromosome      NC_000964.3 410 1750    +                   dnaA    939978  BSU_00010   1341        old_locus_tag=BSU00010
+CDS with_protein    GCF_000009045.1 Primary Assembly    chromosome      NC_000964.3 410 1750    +   NP_387882.1 WP_003242674.1      chromosomal replication initiator informational ATPase  dnaA    939978  BSU_00010   1341    446 
+gene    protein_coding  GCF_000009045.1 Primary Assembly    chromosome      NC_000964.3 1939    3075    +                   dnaN    939970  BSU_00020   1137        old_locus_tag=BSU00020
+CDS with_protein    GCF_000009045.1 Primary Assembly    chromosome      NC_000964.3 1939    3075    +   NP_387883.1 WP_003242509.1      DNA polymerase III (beta subunit)   dnaN    939970  BSU_00020   1137    378 </code></pre>
+</div>
+</div>
+<p>The question now is how to count the lines corresponding to <code>features</code> which is the first line. It contains six types of features (CDS, gene, rRNA, tRNA, tmRNA, ncRNA and misc_RNA). This task could be achieved by many ways, but a general approach to count lines is the way through it. Here there three approaches to follow:</p>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Bash</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Python</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#! usr/bin/bash</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">features</span><span class="op">=</span><span class="st">"id CDS gene ncRNA rRNA tmRNA tRNA"</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="va">$features</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="va">$(</span><span class="fu">ls</span> <span class="va">$1)</span><span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="va">values</span><span class="op">=</span><span class="va">$(</span><span class="fu">awk</span> <span class="st">'/CDS/{++cnt1} /gene/{++cnt2} /ncRNA/{++cnt3} /rRNA/{++cnt4} /tmRNA/{++cnt5} /tRNA/{++cnt} END {print cnt1, cnt2, cnt3, cnt4, cnt5, cnt6}'</span> <span class="va">${1}</span>/<span class="va">${i})</span><span class="kw">;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="va">id</span><span class="op">=</span><span class="va">$(</span><span class="fu">egrep</span> <span class="at">-o</span> <span class="at">-m</span> 1 <span class="st">"GCF.{12}"</span> <span class="va">${1}</span>/<span class="va">${i})</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">"</span><span class="va">$id</span><span class="st"> </span><span class="va">$values</span><span class="st">"</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>id CDS gene ncRNA rRNA tmRNA tRNA
+GCF_000009045.1 4238 4578 4 76 2 
+GCF_000146565.1 3998 4120 6 64 2 
+GCF_000186745.1 4111 4247 6 78 2 
+GCF_000209795.2 4262 4400 6 76 2 
+GCF_000227465.1 4167 4314 6 76 2 
+GCF_000227485.1 3991 4128 6 76 2 
+GCF_000293765.1 4205 4343 6 76 2 
+GCF_000321395.1 4043 4179 6 76 2 </code></pre>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell" data-hash="seq-analysis-challenges_cache/html/file-reading_4cbe3683c12be06ca5fd8c2788b18e60">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fs)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>all_features <span class="ot">&lt;-</span> <span class="fu">dir_ls</span>(<span class="st">"data/features/"</span>) <span class="sc">|&gt;</span> <span class="co"># GCF_000186745.1_ASM18674v1_feature_table.txt is corrupted</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map_df</span>(read_tsv)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>all_features <span class="sc">|&gt;</span> </span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["# feature"],"name":[1],"type":["chr"],"align":["left"]},{"label":["class"],"name":[2],"type":["chr"],"align":["left"]},{"label":["assembly"],"name":[3],"type":["chr"],"align":["left"]},{"label":["assembly_unit"],"name":[4],"type":["chr"],"align":["left"]},{"label":["seq_type"],"name":[5],"type":["chr"],"align":["left"]},{"label":["chromosome"],"name":[6],"type":["chr"],"align":["left"]},{"label":["genomic_accession"],"name":[7],"type":["chr"],"align":["left"]},{"label":["start"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["end"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["strand"],"name":[10],"type":["chr"],"align":["left"]},{"label":["product_accession"],"name":[11],"type":["chr"],"align":["left"]},{"label":["non-redundant_refseq"],"name":[12],"type":["chr"],"align":["left"]},{"label":["related_accession"],"name":[13],"type":["lgl"],"align":["right"]},{"label":["name"],"name":[14],"type":["chr"],"align":["left"]},{"label":["symbol"],"name":[15],"type":["chr"],"align":["left"]},{"label":["GeneID"],"name":[16],"type":["dbl"],"align":["right"]},{"label":["locus_tag"],"name":[17],"type":["chr"],"align":["left"]},{"label":["feature_interval_length"],"name":[18],"type":["dbl"],"align":["right"]},{"label":["product_length"],"name":[19],"type":["dbl"],"align":["right"]},{"label":["attributes"],"name":[20],"type":["chr"],"align":["left"]}],"data":[{"1":"gene","2":"protein_coding","3":"GCF_000009045.1","4":"Primary Assembly","5":"chromosome","6":"NA","7":"NC_000964.3","8":"410","9":"1750","10":"+","11":"NA","12":"NA","13":"NA","14":"NA","15":"dnaA","16":"939978","17":"BSU_00010","18":"1341","19":"NA","20":"old_locus_tag=BSU00010"},{"1":"CDS","2":"with_protein","3":"GCF_000009045.1","4":"Primary Assembly","5":"chromosome","6":"NA","7":"NC_000964.3","8":"410","9":"1750","10":"+","11":"NP_387882.1","12":"WP_003242674.1","13":"NA","14":"chromosomal replication initiator informational ATPase","15":"dnaA","16":"939978","17":"BSU_00010","18":"1341","19":"446","20":"NA"},{"1":"gene","2":"protein_coding","3":"GCF_000009045.1","4":"Primary Assembly","5":"chromosome","6":"NA","7":"NC_000964.3","8":"1939","9":"3075","10":"+","11":"NA","12":"NA","13":"NA","14":"NA","15":"dnaN","16":"939970","17":"BSU_00020","18":"1137","19":"NA","20":"old_locus_tag=BSU00020"},{"1":"CDS","2":"with_protein","3":"GCF_000009045.1","4":"Primary Assembly","5":"chromosome","6":"NA","7":"NC_000964.3","8":"1939","9":"3075","10":"+","11":"NP_387883.1","12":"WP_003242509.1","13":"NA","14":"DNA polymerase III (beta subunit)","15":"dnaN","16":"939970","17":"BSU_00020","18":"1137","19":"378","20":"NA"},{"1":"gene","2":"protein_coding","3":"GCF_000009045.1","4":"Primary Assembly","5":"chromosome","6":"NA","7":"NC_000964.3","8":"3206","9":"3421","10":"+","11":"NA","12":"NA","13":"NA","14":"NA","15":"rlbA","16":"939444","17":"BSU_00030","18":"216","19":"NA","20":"old_locus_tag=BSU00030"},{"1":"CDS","2":"with_protein","3":"GCF_000009045.1","4":"Primary Assembly","5":"chromosome","6":"NA","7":"NC_000964.3","8":"3206","9":"3421","10":"+","11":"NP_387884.1","12":"WP_003226810.1","13":"NA","14":"RNA binding protein involved in ribosome maturation","15":"rlbA","16":"939444","17":"BSU_00030","18":"216","19":"71","20":"NA"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>Now that we read all the files into the programming environment we can operate over them with different libraries.</p>
+<div class="cell" data-hash="seq-analysis-challenges_cache/html/data-processing_a2b30cdaa81281b42c23180382da05c0">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>all_features_grouped <span class="ot">&lt;-</span> all_features <span class="sc">|&gt;</span> </span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">rename</span>(<span class="at">feature =</span> <span class="st">`</span><span class="at"># feature</span><span class="st">`</span>) <span class="sc">|&gt;</span> <span class="co"># &lt;1&gt;</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">select</span>(assembly, feature) <span class="sc">|&gt;</span> <span class="co"># &lt;2&gt;</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a>  <span class="fu">group_by</span>(assembly, feature) <span class="sc">|&gt;</span> <span class="co"># &lt;3&gt;</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a>  <span class="fu">count</span>() <span class="sc">|&gt;</span> <span class="co"># &lt;4&gt;</span></span>
+<span id="cb8-6"><a href="#cb8-6"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> feature, <span class="at">values_from =</span> n) <span class="co"># &lt;5&gt;</span></span>
+<span id="cb8-7"><a href="#cb8-7"></a></span>
+<span id="cb8-8"><a href="#cb8-8"></a>all_features_grouped</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["assembly"],"name":[1],"type":["chr"],"align":["left"]},{"label":["CDS"],"name":[2],"type":["int"],"align":["right"]},{"label":["gene"],"name":[3],"type":["int"],"align":["right"]},{"label":["misc_RNA"],"name":[4],"type":["int"],"align":["right"]},{"label":["ncRNA"],"name":[5],"type":["int"],"align":["right"]},{"label":["rRNA"],"name":[6],"type":["int"],"align":["right"]},{"label":["tRNA"],"name":[7],"type":["int"],"align":["right"]},{"label":["tmRNA"],"name":[8],"type":["int"],"align":["right"]}],"data":[{"1":"GCF_000009045.1","2":"4237","3":"4536","4":"93","5":"2","6":"30","7":"86","8":"NA"},{"1":"GCF_000146565.1","2":"3998","3":"4104","4":"NA","5":"4","6":"24","7":"77","8":"1"},{"1":"GCF_000186745.1","2":"4111","3":"4230","4":"NA","5":"4","6":"31","7":"83","8":"1"},{"1":"GCF_000209795.2","2":"4262","3":"4384","4":"NA","5":"4","6":"30","7":"87","8":"1"},{"1":"GCF_000227465.1","2":"4167","3":"4294","4":"NA","5":"4","6":"30","7":"92","8":"1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<ol type="1">
+<li>Change the <code># feature</code> name for simple <code>feature</code>.</li>
+<li>Select <code>feature</code> and <code>assembly</code> columns.</li>
+<li>Group by these two columns, enabling grouping operations.</li>
+<li>Count the numbers of rows based on the applied grouping.</li>
+<li>Generate a wide dataset sending row names as columns.</li>
+</ol>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="cell" data-hash="seq-analysis-challenges_cache/html/unnamed-chunk-4_163e6a8d341e685b1dc3cb738f11bbe0">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> glob</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>files <span class="op">=</span> glob.glob(<span class="st">"data/features/*.txt"</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.concat((pd.read_csv(f, sep<span class="op">=</span><span class="st">'</span><span class="ch">\t</span><span class="st">'</span>) <span class="cf">for</span> f <span class="kw">in</span> files))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-hash="seq-analysis-challenges_cache/html/unnamed-chunk-5_ccdfead72b0aebbb3284505beaeef7c9">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df_renamed  <span class="op">=</span> df.rename(columns<span class="op">=</span>{<span class="st">"# feature"</span> : <span class="st">"feature"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-hash="seq-analysis-challenges_cache/html/unnamed-chunk-6_1750129558b737dda4e69e3d9ebc9123">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df_filtered <span class="op">=</span> df_renamed.<span class="bu">filter</span>(items<span class="op">=</span>[<span class="st">"feature"</span>, <span class="st">"assembly"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-hash="seq-analysis-challenges_cache/html/unnamed-chunk-7_9cb2137cda3af10f17cee19d36889148">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df_filtered.groupby([<span class="st">"assembly"</span>,<span class="st">"feature"</span>])[<span class="st">"feature"</span>].count()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="sanger-processing" class="level2">
+<h2 class="anchored" data-anchor-id="sanger-processing">Sanger processing</h2>
+<p>Processing a Sanger <code>AB1</code> file is a very common task in bioinformatics, yet it is sometimes taked for grandted. Many graphical programs allow to process the sequences, yet the task are currently manual involving the trimming and reverse complement generation of the reverse reads (when pair-end sequencing). But, given the vast generation of data on the present, Sanger sequencing is used massively in parallel to generate huge amount of sequences. Therefore, processing “by-hand” becomes an unachivable task.</p>
+<p>Several programs have been developed to automate the processing of sequences, an open source library in <code>R</code> is <code>sangeranalyseR</code>.</p>
+<div class="cell" data-hash="seq-analysis-challenges_cache/html/libs-_c41d24571ea1284ff8a0780d2b58a6f8">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sangeranalyseR)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="processing-a-single-gene-ab1-pair" class="level3">
+<h3 class="anchored" data-anchor-id="processing-a-single-gene-ab1-pair">Processing a single gene <code>AB1</code> pair</h3>
+<div class="cell" data-hash="seq-analysis-challenges_cache/html/single-sanger-processing_d88f416bbeb41366c3d49aa94753b74d">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>rpoB <span class="ot">&lt;-</span> <span class="fu">SangerAlignment</span>(</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">ABIF_Directory =</span> <span class="st">"data/sanger-seqs/rpoB/"</span>,</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">REGEX_SuffixForward =</span> <span class="st">"rpoB_1_F.ab1"</span>,</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">REGEX_SuffixReverse =</span> <span class="st">"rpoB_2_R.ab1"</span>,</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">TrimmingMethod =</span> <span class="st">"M2"</span>,</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">M2CutoffQualityScore =</span> <span class="dv">33</span>,</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">M2SlidingWindowSize =</span> <span class="dv">5</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>rpoB</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>SangerAlignment S4 instance
+           Input Source :  ABIF 
+         Process Method :  REGEX 
+         ABIF Directory :  data/sanger-seqs/rpoB/ 
+   REGEX Suffix Forward :  rpoB_1_F.ab1 
+   REGEX Suffix Reverse :  rpoB_2_R.ab1 
+      Contigs Consensus :  TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTKGGGGGGGAGWACTTGAGGAGCCATCATCATGAGTGAACGTCTTGTGAAGGATGATGTTTATACATCTATCCATATTGAAGAATATGAATCAGAAGCACGTGATACGAAACTTGGACCTGAAGAAATCACTCGCGATATTCCAAACGTCGGTGAAGATGCGCTTCGCAATCTTGATGACCGCGGAATCATCCGTATTGGGGCAGAAGTAAAAGACGGAGATCTTCTTGTTGGTAAAGTAACGCCTAAAGGTGTAACCGAACTGACTGCTGAAGAACGCCTTCTTCACGCCATCTTTGGTGAAAAAGCCCGCGAGGTTCGTGATACTTCTCTTCGTGTGCCTCACGGCGGCGGCGGAATTATCCACGACGTTAAAGTCTTCAACCGTGAAGACGGAGACGAACTTCCTCCAGGTGTAAACCAGTTGGTACGCGTATATATCGTTCAGAAACGTAAGATTTCTGAAGGGGATAAAATGGCCGGTCGTCACGGTAACAAAGGTGTTATCTCTAAGATTCTTCCTGAAGAGGATATGCCTTACCTTCCTGACGGCACACCAATTGACATCATGCTTAACCCGCTGGGCGTACCATCACGTATGAACATCGGGCAGGTATTGGAGCTTCATATGGGTATGGCCGCTCGTTACCTCGGCATTCACATTGCGTCTCCTGTATTTGATGGAGCGCGAGAAGAGGATGTTTGGGAAACACTTGAAGAAGCCGGCATGTCTCGTGACGCCAAAACGGTGCTTTACGACGGACGTACTGGAGAGCCGTTTGATAACCGCGTGTCTGTCGGTATCATGTACATGATCAAACTGGCACACATGGTTGACGATAAACTTCATGCACGCTCTACAGGTCCTTACTCACTTGTTACGCAGCAGCCTCTTGGCGGTAAAGCGCAATTTGGCGGACAGCGTTTTGGTGAGATGGAGGTTTGGGCACTTGAAGCTTATGGTGCAGCTTACACTCTTCAAGAAATTCTGACTGTTAAGTCCGATAACGTGGTTGGACGTGTGAAACTACACCTCDSTGGCACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA </code></pre>
+</div>
+</div>
+<p>This produces an specialized <code>R</code> object holding different information from the Sanger processing steps. The entire object can be untangled in a thorough report displaying all the processing information and results using the</p>
+<div class="cell" data-hash="seq-analysis-challenges_cache/html/unnamed-chunk-10_b1cdb2b3de3304f3d2b2a168f93c5d63">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">generateReport</span>(rpoB, <span class="at">outputDir =</span> <span class="st">"data/sanger-processed/"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Among the data from the report ypu can see that the unaligned contigs ithere is something called a <em>Contig Consensus</em> which is the result of comparing the three consensus out of the <strong>rpoB</strong> genes of the three strains (302, 321, 455). Now, this is not really the sequence we need right away, however we need the separate consensus of each strain gene. To get theme <code>sangeranalyseR</code> provide a couple of tools.</p>
+<div class="cell" data-hash="seq-analysis-challenges_cache/html/unnamed-chunk-11_2e4b9217e4b106bfcb8750c9498b9488">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">writeFasta</span>(rpoB,</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">outputDir =</span> <span class="st">"data/sanger-processed/rpoB"</span>,</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">selection =</span> <span class="st">"contigs_unalignment"</span>,</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now, in the case of the challenge we actually got several genes per strain which is common in molecular biology projects. How do we process all the batch of sequence all at a time? To do so we can split the sequences as folder per gene, then we can use some capabilites of are to iterate an map the sanger processing function to each folder and create a list of processing instances, let’s try this out:</p>
+</section>
+<section id="processing-a-bulk-of-ab1-pair" class="level3">
+<h3 class="anchored" data-anchor-id="processing-a-bulk-of-ab1-pair">Processing a bulk of <code>AB1</code> pair</h3>
+<div class="cell" data-hash="seq-analysis-challenges_cache/html/bulk-sanger-processing_66dd304d868bf38f8d7e9e6628536830">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fs)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(purrr)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>dirs <span class="ot">&lt;-</span> fs<span class="sc">::</span><span class="fu">dir_ls</span>(<span class="st">"data/sanger-seqs/"</span>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>sanger_bulk <span class="ot">&lt;-</span> <span class="cf">function</span>(dir) {</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">SangerAlignment</span>(</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">ABIF_Directory =</span> dir,</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">REGEX_SuffixForward =</span> <span class="st">"_1_F.ab1"</span>,</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">REGEX_SuffixReverse =</span> <span class="st">"_2_R.ab1"</span>,</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">M2CutoffQualityScore =</span> <span class="dv">33</span>,</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">M2SlidingWindowSize =</span> <span class="dv">2</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>genes <span class="ot">&lt;-</span> dirs <span class="sc">|&gt;</span> </span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map</span>(sanger_bulk)</span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>genes<span class="sc">$</span></span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a>genes<span class="sc">$</span><span class="st">`</span><span class="at">data/sanger-seqs/rpoB</span><span class="st">`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>NULL</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>genes<span class="sc">$</span><span class="st">`</span><span class="at">data/sanger-seqs/spo0B</span><span class="st">`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>SangerAlignment S4 instance
+           Input Source :  ABIF 
+         Process Method :  REGEX 
+         ABIF Directory :  data/sanger-seqs/spo0B 
+   REGEX Suffix Forward :  _1_F.ab1 
+   REGEX Suffix Reverse :  _2_R.ab1 
+      Contigs Consensus :  ATCAACCATGCCAGAAAAAAGGAACATGATATTTCTGGGAAAAACMATTGTTTTTCTAACAAAGCCTTACTCTGTTATAATTCATAATACACACTTATACAGACTCCTAAATAAGAAATTAAATGATTGGGAGTGCGAAAATGAAGGATGTTTCAAAAAATCAAGAAGAAAATATAAGCGACACGGCATTAACAAACGAACTGGTTCATCTGCTGGGCCATTCCCGGCATGATTGGATGAATAAGCTGCAGCTGATTAAAGGAAACTTAAGCTTGCAGAAGTATGACCGCGTCTTTGAAATGATTGAAGAAATGGTTATAGACGCGAAGCACGAATCAAAGCTCTCAAACCTAAAAACACCGCATTTGGCGTTTGATTTTCTTACATTTAATTGGAAAACCCATTATATGACGCTTGAATATGAAGTTCTTGGAGAAATTAAGGATTTGTCGGCTTATGATCAAAAGCTGGCAAAACTGATGAGAAAGCTGTTTCATCTGTTTGATCAAGCAGTCAGCAGAGAGAGTGAAAATCATTTAACGGTTTCGCTTCAAACAGATCATCCTGACAGACAGCTGATTCTGTACCTTGATTTTCACGGCGCCTTTGCCGATCCTTCTGCTTTTGATGATATTCGGCAGAATGGATACGAGGATGTGGATATCATGCGTTTTGAGATCACAAGCCACGAATGTCTGATTGTAAATAGGGTTGGTACTAGCGGTAGTTTTTAACGGTTTAGAACGGAGGACATTATGTTTGTAGATCAGGTCAAAGTATATGTAAAAGGCGGCG </code></pre>
+</div>
+</div>
+<p>Finally to generate reports we need to call the appropriate instance with the <code>$</code> to select the gene we are interested to inspect:</p>
+<div class="cell" data-hash="seq-analysis-challenges_cache/html/unnamed-chunk-13_f8ef22f82b6133a31a92a326d9ad34cd">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">generateReport</span>(genes<span class="sc">$</span><span class="st">`</span><span class="at">data/sanger-seqs/spo0B</span><span class="st">`</span>, <span class="at">outputDir =</span><span class="st">"data/sanger-processed/spo0B"</span>)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="fu">writeFasta</span>(</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a> genes<span class="sc">$</span><span class="st">`</span><span class="at">data/sanger-seqs/rpoB</span><span class="st">`</span>,</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a> <span class="at">outputDir =</span> <span class="st">"data/sanger-processed/rpoB"</span>,</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a> <span class="at">selection =</span> <span class="st">"contigs_unalignment"</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now that we got the actual multifasta of the genes from all strain, the identification process using <code>blastn</code> from the command line will follow as:</p>
+<div class="cell" data-hash="seq-analysis-challenges_cache/html/unnamed-chunk-14_985792831eb01501d55d4c04bf1fb21e">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">blastn</span> <span class="at">-db</span> nr <span class="at">-query</span> rpoB-unaligned-contigs.mfa <span class="at">-out</span> rpoB-blastn-report.txt <span class="at">-remote</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="multiple-sequence-alignment" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="multiple-sequence-alignment">Multiple sequence alignment</h2>
+<section id="download-sequences" class="level3">
+<h3 class="anchored" data-anchor-id="download-sequences">Download sequences</h3>
+<p>Make sure to use the <code>--flat-output</code> avoiding download of multiple metadata</p>
+<div class="cell" data-hash="seq-analysis-challenges_cache/html/unnamed-chunk-15_d1c0bd15fde9e10af5576160abd06bc8">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ngd</span> <span class="at">--flat-output</span> <span class="at">-p</span> 4 <span class="at">-s</span> refseq <span class="at">-A</span> genome-accessions.txt <span class="at">-F</span> cds-fasta bacteria</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>In this case <code>cds-fasta</code> parameter will download the nucleotide sequences of the gene. Other alternatives could be useful such as blast search on a genome database or searching through the GENBANK annotation files (both files also could be downloaded using <code>ngd</code>).</p>
+</section>
+<section id="unwrapping-fasta-records" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="unwrapping-fasta-records">Unwrapping FASTA records</h3>
+<p>NCBI registries came with an undesirable wrapping around the lines of sequencing which basically is inserting a return character after some established number of characters. Then a way to get rid of them is to use a command line utility from <a href="https://github.com/AstrobioMike">AstrobioMike (Mike Lee)</a> which will give a line per sequence after the FASTA header. We can later assume the the first line after the header will be the entire sequence</p>
+<div class="cell" data-hash="seq-analysis-challenges_cache/html/unnamed-chunk-16_1a3e8d6b033468c49699760d1aac0b5e">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> GCF_<span class="pp">*</span><span class="kw">;</span> <span class="cf">do</span> </span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    <span class="va">N</span><span class="op">=</span><span class="va">$(</span><span class="fu">basename</span> <span class="va">$i</span> .fna<span class="va">)</span><span class="kw">;</span> </span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">bash</span> bit-remove-wraps.sh <span class="va">${i}</span> <span class="op">&gt;</span> <span class="va">${N}</span>_unwrapped.fasta<span class="kw">;</span> </span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="gene-searching" class="level3">
+<h3 class="anchored" data-anchor-id="gene-searching">Gene searching</h3>
+<p>A possible way to search throughout the file registries is by using the <code>grep</code> command, that recursively will search each file. Fine tuned it allow to search for the first match, but also for the “after-context” in terms of lines desired to be printed:</p>
+<div class="cell" data-hash="seq-analysis-challenges_cache/html/unnamed-chunk-17_7c870959f615518a493d03ea15b21616">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="pp">*</span>unwrapped<span class="pp">*</span><span class="kw">;</span> <span class="cf">do</span> <span class="fu">grep</span> <span class="at">-A</span> 1 <span class="st">"gyrA"</span> <span class="va">$i</span><span class="kw">;</span> <span class="cf">done</span> <span class="op">&gt;</span> all-gyrA.fasta</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>After finding the genes, we are now with an almost clean multi-sequence file, because header names are still and will be problematic. How do we programmatically change the FASTA headers? We will see in the next step.</p>
+<p>Now the the files has files names that are simply to work with. Which will enable to asses better out sequence alignment matrix.</p>
+</section>
+<section id="sequence-alignment" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="sequence-alignment">Sequence alignment</h3>
+<p>There are many programs that are suited for performed multiple sequence alignments. Perhaps the two most used are <a href="https://mafft.cbrc.jp/alignment/software/"><code>MAFFT</code></a> and <a href="https://drive5.com/muscle5/"><code>MUSCLE</code></a> both specialized in multiple sequence alignment (that is: when having two or more than two sequences). The second tends to be more accurate when having large data-sets, but the first on is more versatile, fast and accurate on different kind of data-sets.</p>
+<p>Both programs take as input a single file containing all the sequences concatenated horizontally (that is a multi-fasta file) careless of the extension but (MFA, FA, FASTA, FNA, etc). And generate a simple output (whether with the <code>-o</code> in <code>MUSCLE</code> or to the std output in <code>MAFFT</code>) &nbsp;&nbsp;&nbsp;&nbsp;</p>
+<div class="cell" data-hash="seq-analysis-challenges_cache/html/unnamed-chunk-18_4893a497855c938ba5ec38a83629a03b">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="ex">linsi</span> <span class="at">--preservecase</span> <span class="at">--reorder</span> all-gyrA-renamed.fasta <span class="op">&gt;</span> all-gyrA-renamed-linsi.fasta <span class="co"># locally </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Other alignment alternatives are:</p>
+<div class="cell" data-hash="seq-analysis-challenges_cache/html/unnamed-chunk-19_79b265d7c9d11bb8800b15ace9b42093">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">muscle</span> <span class="at">-i</span> all-gyrA-renamed.fasta <span class="at">-o</span> all-gyrA-renamed-muscle.fasta</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-hash="seq-analysis-challenges_cache/html/unnamed-chunk-20_fb1ec73d53f68fb9ca0f3c4c25beb963">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="ex">famsa</span> <span class="at">-t</span> 8 all-gyrA-renamed.fasta <span class="op">&gt;</span> all-gyrA-renamed-famsa.fasta</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-hash="seq-analysis-challenges_cache/html/unnamed-chunk-21_dec9e66f38665b9b642c6d472dc9bb95">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="ex">kalign</span> <span class="at">-i</span> all-gyrA-renamed.fasta <span class="at">-o</span> all-gyrA-renamed-kalign.fasta</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div></div></section>
+<section id="assessment-of-the-alignment" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="assessment-of-the-alignment">Assessment of the alignment</h3>
+<p>Inspection of the alignment is there very first step for assessing its quality. A CDS tends to generate a codon-like alignment starting with the methionine codon (ATG,GTG) and finishing with a stop (TAA, TAG, etc.). Therefore finding this structure when aligning a complete genes is expected. If a middle fraction of the gene is being aligned ORF might not display any stop codon. Verifying a codon-like alignment shows a biological order on the sequences other that mere artifact of the alignment, that is an evolutionary behavior of the sequence. We can do it using <a href="https://telatin.github.io/seqfu2/">seqfu</a> from the CLI <a href="#fig-fu-msa-view">Fig.&nbsp;<span>1</span></a>, or interactively with <a href="https://github.com/AliView/AliView">AliView</a></p>
+<div id="fig-fu-msa-view" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figs/fu-msa-view.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: A viusalization of the <em>gyrA</em> gene alignment using seqfu multiple sequence alignment viewer</figcaption><p></p>
+</figure>
+</div>
+<p>A second step is to find the variability of the alignment. A simple way to find that is to calculate simpl stats from the alignment (sites, variable sites, As, Ts, etc.). A powerful cli program to do so is <a href="https://github.com/evolbioinfo/goalign">goalign</a></p>
+<div class="cell" data-hash="seq-analysis-challenges_cache/html/unnamed-chunk-22_21d2fe2c5ca60f95c612822531039a3a">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="ex">goalign</span> stats <span class="at">-i</span> all-gyrA-renamed-linsi.fasta</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre><code>length  2508
+nseqs   8
+avgalleles  1.7400
+variable sites  1202
+char    nb  freq
+-   273 0.013606
+A   6418    0.319876
+C   3633    0.181071
+G   4755    0.236992
+T   4985    0.248455
+alphabet    nucleotide</code></pre>
+
+
+
+<div class="no-row-height column-margin column-container"><div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A more in depth analysis of the alignment could be done with <a href="https://github.com/KatyBrown/CIAlign">CIAlign</a>.</p>
+</div>
+</div></div></section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://giscus.app/client.js" data-repo="camilogarciabotero/biocomp-book" data-repo-id="R_kgDOHKOnSw" data-category="General" data-category-id="DIC_kwDOHKOnS84CQ7NN" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="transparent_dark" data-lang="en" crossorigin="anonymous" async="">
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chs-challenges-demos/unix-challenges.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Unix challenges</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chs-challenges-demos/genome-analysis-challenges.html" class="pagination-link">
+        <span class="nav-page-text">Genome assembly</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">Made with <a href="https://quarto.org/">Quarto</a>. Under <a href="https://github.com/camilogarciabotero/biocomp-book/blob/main/LICENSE">GNU GPL 3.0</a>. Buy me coffee <a href="https://www.paypal.com/paypalme/camilogarciabotero"><i class="fa-solid fa-mug-saucer" aria-label="mug-saucer"></i></a> and visit me at <a href="https://camilogarciabotero.github.io/"><i class="fa-solid fa-house" aria-label="house"></i></a></div>
+  </div>
+</footer>
+
+
+
+</body></html>

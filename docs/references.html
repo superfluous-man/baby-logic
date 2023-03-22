@@ -1,384 +1,704 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>References | Baby Logic</title>
-  <meta name="description" content="References | Baby Logic Textbooks" />
-  <meta name="generator" content="bookdown 0.21.4 and GitBook 2.6.7" />
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
 
-  <meta property="og:title" content="References | Baby Logic" />
-  <meta property="og:type" content="book" />
-  <meta property="og:url" content="https://duoyu.ren/" />
-  <meta property="og:image" content="https://duoyu.ren//img/cover.png" />
-  <meta property="og:description" content="References | Baby Logic Textbooks" />
-  <meta name="github-repo" content="superfluous-man/baby-logic" />
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="References | Baby Logic" />
-  
-  <meta name="twitter:description" content="References | Baby Logic Textbooks" />
-  <meta name="twitter:image" content="https://duoyu.ren//img/cover.png" />
-
-<meta name="author" content="Lǐ Èrgǒu" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<meta name="date" content="2021-03-04" />
+<title>Fundamentals of computational biology - References</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  
-<link rel="prev" href="plsematics.html"/>
 
-<script src="libs/header-attrs-2.6/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
-
-<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-<link rel="manifest" href="/img/site.webmanifest">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./HISTORY.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-QFWWJGZHLD"></script>
 
 <script type="text/javascript">
 
-// open external links in new tabs  Xi Hui
-
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
-
-
-
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-QFWWJGZHLD', { 'anonymize_ip': true});
 </script>
+<script async="" src="https://hypothes.is/embed.js"></script>
 
 
-
-
-<link rel="stylesheet" href="zlogic.css" type="text/css" />
+<meta name="citation_title" content="References">
+<meta name="citation_fulltext_html_url" content="https://camilogarciabotero.github.io/biocomp-book//references.html">
+<meta name="citation_language" content="en">
+<meta name="citation_reference" content="citation_title=Literate programming;,citation_author=Donald E. Knuth;,citation_publication_date=1984-05;,citation_cover_date=1984-05;,citation_year=1984;,citation_fulltext_html_url=https://doi.org/10.1093/comjnl/27.2.97;,citation_issue=2;,citation_doi=10.1093/comjnl/27.2.97;,citation_issn=0010-4620;,citation_volume=27;,citation_journal_title=Comput. J.;,citation_publisher=Oxford University Press, Inc.;">
+<meta name="citation_reference" content="citation_title=Computing skills for biologists;,citation_author=Stefano Allesina;,citation_author=Madlen Wilmes;,citation_publication_date=2019-01-15;,citation_cover_date=2019-01-15;,citation_year=2019;,citation_fulltext_html_url=http://dx.doi.org/10.2307/j.ctvc77jrc;,citation_doi=10.2307/j.ctvc77jrc;">
+<meta name="citation_reference" content="citation_title=Genetics: Genes, genomes, and evolution;,citation_author=Philip Mark Meneely;,citation_author=Rachel Dawes Hoang;,citation_author=Iruka N Okeke;,citation_author=Katherine Heston;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;">
+<meta name="citation_reference" content="citation_title=Genomes 4;,citation_author=Terence A Brown;,citation_publication_date=2018;,citation_cover_date=2018;,citation_year=2018;">
+<meta name="citation_reference" content="citation_title=Long walk to genomics: History and current approaches to genome sequencing and assembly;,citation_author=Alice Maria Giani;,citation_author=Guido Roberto Gallo;,citation_author=Luca Gianfranceschi;,citation_author=Giulio Formenti;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_volume=18;,citation_journal_title=Computational and Structural Biotechnology Journal;,citation_publisher=Elsevier;">
+<meta name="citation_reference" content="citation_title=Genome-scale algorithm design;,citation_author=Veli Mäkinen;,citation_author=Djamal Belazzougui;,citation_author=Fabio Cunial;,citation_author=Alexandru I Tomescu;,citation_publication_date=2015;,citation_cover_date=2015;,citation_year=2015;">
+<meta name="citation_reference" content="citation_title=A quick guide for developing effective bioinformatics programming skills;,citation_author=Joel T Dudley;,citation_author=Atul J Butte;,citation_publication_date=2009;,citation_cover_date=2009;,citation_year=2009;,citation_volume=5;,citation_journal_title=PLOS computational biology;,citation_publisher=Public Library of Science San Francisco, USA;">
+<meta name="citation_reference" content="citation_title=Five reasons why researchers should learn to love the command line;,citation_author=Jeffrey M Perkel;,citation_author=others;,citation_publication_date=2021;,citation_cover_date=2021;,citation_year=2021;,citation_issue=7844;,citation_volume=590;,citation_journal_title=Nature;,citation_publisher=Nature;">
+<meta name="citation_reference" content="citation_title=Ten simple rules for getting started with command-line bioinformatics;,citation_author=Parice A Brandies;,citation_author=Carolyn J Hogg;,citation_publication_date=2021;,citation_cover_date=2021;,citation_year=2021;,citation_volume=17;,citation_journal_title=PLoS Computational Biology;,citation_publisher=Public Library of Science San Francisco, CA USA;">
 </head>
 
-<body>
+<body class="nav-sidebar floating">
 
-
-
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li><a href="https://duoyu.ren">Baby Logic</a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
-<li class="chapter" data-level="1" data-path="bookintro.html"><a href="bookintro.html"><i class="fa fa-check"></i><b>1</b> 全书绪论</a>
-<ul>
-<li class="chapter" data-level="1.1" data-path="bookintro.html"><a href="bookintro.html#论说"><i class="fa fa-check"></i><b>1.1</b> 论说</a>
-<ul>
-<li class="chapter" data-level="1.1.1" data-path="bookintro.html"><a href="bookintro.html#论说的好坏"><i class="fa fa-check"></i><b>1.1.1</b> 论说的好坏</a></li>
-<li class="chapter" data-level="1.1.2" data-path="bookintro.html"><a href="bookintro.html#论说形式的好坏"><i class="fa fa-check"></i><b>1.1.2</b> 论说形式的好坏</a></li>
-<li class="chapter" data-level="1.1.3" data-path="bookintro.html"><a href="bookintro.html#论说好坏取决于形式的好坏"><i class="fa fa-check"></i><b>1.1.3</b> 论说好坏取决于形式的好坏</a></li>
-</ul></li>
-<li class="chapter" data-level="1.2" data-path="bookintro.html"><a href="bookintro.html#演绎"><i class="fa fa-check"></i><b>1.2</b> 演绎</a>
-<ul>
-<li class="chapter" data-level="1.2.1" data-path="bookintro.html"><a href="bookintro.html#演绎的例子一"><i class="fa fa-check"></i><b>1.2.1</b> 演绎的例子一</a></li>
-<li class="chapter" data-level="1.2.2" data-path="bookintro.html"><a href="bookintro.html#演绎的例子二"><i class="fa fa-check"></i><b>1.2.2</b> 演绎的例子二</a></li>
-<li class="chapter" data-level="1.2.3" data-path="bookintro.html"><a href="bookintro.html#可演绎性可证性和独立性"><i class="fa fa-check"></i><b>1.2.3</b> 可演绎性、可证性和独立性</a></li>
-<li class="chapter" data-level="1.2.4" data-path="bookintro.html"><a href="bookintro.html#可演绎性与论说"><i class="fa fa-check"></i><b>1.2.4</b> 可演绎性与论说</a></li>
-</ul></li>
-<li class="chapter" data-level="1.3" data-path="bookintro.html"><a href="bookintro.html#一致性"><i class="fa fa-check"></i><b>1.3</b> 一致性</a>
-<ul>
-<li class="chapter" data-level="1.3.1" data-path="bookintro.html"><a href="bookintro.html#关于一致性的基本想法"><i class="fa fa-check"></i><b>1.3.1</b> 关于一致性的基本想法</a></li>
-<li class="chapter" data-level="1.3.2" data-path="bookintro.html"><a href="bookintro.html#不一致命题集的例子"><i class="fa fa-check"></i><b>1.3.2</b> 不一致命题集的例子</a></li>
-<li class="chapter" data-level="1.3.3" data-path="bookintro.html"><a href="bookintro.html#一致性逻辑蕴涵与可演绎性"><i class="fa fa-check"></i><b>1.3.3</b> 一致性、逻辑蕴涵与可演绎性</a></li>
-</ul></li>
-<li class="chapter" data-level="1.4" data-path="bookintro.html"><a href="bookintro.html#逻辑或逻辑的若干问题"><i class="fa fa-check"></i><b>1.4</b> 逻辑或「逻辑」的若干问题</a>
-<ul>
-<li class="chapter" data-level="1.4.1" data-path="bookintro.html"><a href="bookintro.html#逻辑是什么不是逻辑问题"><i class="fa fa-check"></i><b>1.4.1</b> 「逻辑是什么」不是逻辑问题</a></li>
-<li class="chapter" data-level="1.4.2" data-path="bookintro.html"><a href="bookintro.html#逻辑与逻辑的用法"><i class="fa fa-check"></i><b>1.4.2</b> 逻辑与「逻辑」的用法</a></li>
-<li class="chapter" data-level="1.4.3" data-path="bookintro.html"><a href="bookintro.html#逻辑与习惯的说理方式"><i class="fa fa-check"></i><b>1.4.3</b> 逻辑与「习惯的说理方式」</a></li>
-<li class="chapter" data-level="1.4.4" data-path="bookintro.html"><a href="bookintro.html#当代逻辑传统逻辑和普通人需要的逻辑"><i class="fa fa-check"></i><b>1.4.4</b> 当代逻辑、传统逻辑和「普通人需要的逻辑」</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="prechap.html"><a href="prechap.html"><i class="fa fa-check"></i><b>2</b> 预备章节</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="prechap.html"><a href="prechap.html#集合属性元素外延"><i class="fa fa-check"></i><b>2.1</b> 集合：属性、元素、外延</a>
-<ul>
-<li class="chapter" data-level="2.1.1" data-path="prechap.html"><a href="prechap.html#extensionality"><i class="fa fa-check"></i><b>2.1.1</b> Extensionality</a></li>
-<li class="chapter" data-level="2.1.2" data-path="prechap.html"><a href="prechap.html#subsets-and-power-sets"><i class="fa fa-check"></i><b>2.1.2</b> Subsets and Power Sets</a></li>
-<li class="chapter" data-level="2.1.3" data-path="prechap.html"><a href="prechap.html#SomeImpSet"><i class="fa fa-check"></i><b>2.1.3</b> Some Important Sets</a></li>
-<li class="chapter" data-level="2.1.4" data-path="prechap.html"><a href="prechap.html#unions-and-intersections"><i class="fa fa-check"></i><b>2.1.4</b> Unions and Intersections</a></li>
-<li class="chapter" data-level="2.1.5" data-path="prechap.html"><a href="prechap.html#CartesianP"><i class="fa fa-check"></i><b>2.1.5</b> Pairs, Tuples, Cartesian Products</a></li>
-<li class="chapter" data-level="2.1.6" data-path="prechap.html"><a href="prechap.html#russells-paradox"><i class="fa fa-check"></i><b>2.1.6</b> Russell’s Paradox</a></li>
-</ul></li>
-<li class="chapter" data-level="2.2" data-path="prechap.html"><a href="prechap.html#关系集合上的结构"><i class="fa fa-check"></i><b>2.2</b> 关系：集合上的结构</a>
-<ul>
-<li class="chapter" data-level="2.2.1" data-path="prechap.html"><a href="prechap.html#RelationSet"><i class="fa fa-check"></i><b>2.2.1</b> Relations as Sets</a></li>
-<li class="chapter" data-level="2.2.2" data-path="prechap.html"><a href="prechap.html#philosophical-reflections"><i class="fa fa-check"></i><b>2.2.2</b> Philosophical Reflections</a></li>
-<li class="chapter" data-level="2.2.3" data-path="prechap.html"><a href="prechap.html#special-properties-of-relations"><i class="fa fa-check"></i><b>2.2.3</b> Special Properties of Relations</a></li>
-<li class="chapter" data-level="2.2.4" data-path="prechap.html"><a href="prechap.html#equivalence-relations"><i class="fa fa-check"></i><b>2.2.4</b> Equivalence Relations</a></li>
-<li class="chapter" data-level="2.2.5" data-path="prechap.html"><a href="prechap.html#orders"><i class="fa fa-check"></i><b>2.2.5</b> Orders</a></li>
-<li class="chapter" data-level="2.2.6" data-path="prechap.html"><a href="prechap.html#graphs"><i class="fa fa-check"></i><b>2.2.6</b> Graphs</a></li>
-<li class="chapter" data-level="2.2.7" data-path="prechap.html"><a href="prechap.html#operations-on-relations"><i class="fa fa-check"></i><b>2.2.7</b> Operations on Relations</a></li>
-</ul></li>
-<li class="chapter" data-level="2.3" data-path="prechap.html"><a href="prechap.html#函数关系之特例"><i class="fa fa-check"></i><b>2.3</b> 函数：关系之特例</a>
-<ul>
-<li class="chapter" data-level="2.3.1" data-path="prechap.html"><a href="prechap.html#basics"><i class="fa fa-check"></i><b>2.3.1</b> Basics</a></li>
-<li class="chapter" data-level="2.3.2" data-path="prechap.html"><a href="prechap.html#kinds-of-functions"><i class="fa fa-check"></i><b>2.3.2</b> Kinds of Functions</a></li>
-<li class="chapter" data-level="2.3.3" data-path="prechap.html"><a href="prechap.html#functions-as-relations"><i class="fa fa-check"></i><b>2.3.3</b> Functions as Relations</a></li>
-<li class="chapter" data-level="2.3.4" data-path="prechap.html"><a href="prechap.html#inverses-of-functions"><i class="fa fa-check"></i><b>2.3.4</b> Inverses of Functions</a></li>
-<li class="chapter" data-level="2.3.5" data-path="prechap.html"><a href="prechap.html#composition-of-functions"><i class="fa fa-check"></i><b>2.3.5</b> Composition of Functions</a></li>
-<li class="chapter" data-level="2.3.6" data-path="prechap.html"><a href="prechap.html#partial-functions"><i class="fa fa-check"></i><b>2.3.6</b> Partial Functions</a></li>
-</ul></li>
-<li class="chapter" data-level="2.4" data-path="prechap.html"><a href="prechap.html#基数集合大小的度量"><i class="fa fa-check"></i><b>2.4</b> 基数：集合大小的度量</a>
-<ul>
-<li class="chapter" data-level="2.4.1" data-path="prechap.html"><a href="prechap.html#introduction"><i class="fa fa-check"></i><b>2.4.1</b> Introduction</a></li>
-<li class="chapter" data-level="2.4.2" data-path="prechap.html"><a href="prechap.html#enumerations-and-enumerable-sets"><i class="fa fa-check"></i><b>2.4.2</b> Enumerations and enumerable Sets</a></li>
-<li class="chapter" data-level="2.4.3" data-path="prechap.html"><a href="prechap.html#cantors-zig-zag-method"><i class="fa fa-check"></i><b>2.4.3</b> Cantor’s Zig-Zag Method</a></li>
-<li class="chapter" data-level="2.4.4" data-path="prechap.html"><a href="prechap.html#pairing-functions-and-codes"><i class="fa fa-check"></i><b>2.4.4</b> Pairing Functions and Codes</a></li>
-<li class="chapter" data-level="2.4.5" data-path="prechap.html"><a href="prechap.html#an-alternative-pairing-function"><i class="fa fa-check"></i><b>2.4.5</b> An Alternative Pairing Function</a></li>
-<li class="chapter" data-level="2.4.6" data-path="prechap.html"><a href="prechap.html#nonenumerable-sets"><i class="fa fa-check"></i><b>2.4.6</b> Nonenumerable Sets</a></li>
-<li class="chapter" data-level="2.4.7" data-path="prechap.html"><a href="prechap.html#reduction"><i class="fa fa-check"></i><b>2.4.7</b> Reduction</a></li>
-</ul></li>
-</ul></li>
-<li class="part"><span><b>I 卷 命题逻辑</b></span></li>
-<li class="chapter" data-level="3" data-path="chap-truth-table.html"><a href="chap-truth-table.html"><i class="fa fa-check"></i><b>3</b> 联结词与真值表</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="chap-truth-table.html"><a href="chap-truth-table.html#联结词与复合句"><i class="fa fa-check"></i><b>3.1</b> 联结词与复合句</a>
-<ul>
-<li class="chapter" data-level="3.1.1" data-path="chap-truth-table.html"><a href="chap-truth-table.html#联结词"><i class="fa fa-check"></i><b>3.1.1</b> 联结词</a></li>
-<li class="chapter" data-level="3.1.2" data-path="chap-truth-table.html"><a href="chap-truth-table.html#复合句和简单句"><i class="fa fa-check"></i><b>3.1.2</b> 复合句和简单句</a></li>
-<li class="chapter" data-level="3.1.3" data-path="chap-truth-table.html"><a href="chap-truth-table.html#复合句的子句"><i class="fa fa-check"></i><b>3.1.3</b> 复合句的子句</a></li>
-<li class="chapter" data-level="3.1.4" data-path="chap-truth-table.html"><a href="chap-truth-table.html#主联结词和直接子句"><i class="fa fa-check"></i><b>3.1.4</b> 主联结词和直接子句</a></li>
-</ul></li>
-<li class="chapter" data-level="3.2" data-path="chap-truth-table.html"><a href="chap-truth-table.html#真值非真值函数联结词"><i class="fa fa-check"></i><b>3.2</b> 真值、非真值函数联结词</a>
-<ul>
-<li class="chapter" data-level="3.2.1" data-path="chap-truth-table.html"><a href="chap-truth-table.html#真值函数联结词"><i class="fa fa-check"></i><b>3.2.1</b> 真值函数联结词</a></li>
-<li class="chapter" data-level="3.2.2" data-path="chap-truth-table.html"><a href="chap-truth-table.html#非真值函数联结词"><i class="fa fa-check"></i><b>3.2.2</b> 非真值函数联结词</a></li>
-<li class="chapter" data-level="3.2.3" data-path="chap-truth-table.html"><a href="chap-truth-table.html#常用的真值函数联结词符号"><i class="fa fa-check"></i><b>3.2.3</b> 常用的真值函数联结词符号</a></li>
-</ul></li>
-<li class="chapter" data-level="3.3" data-path="chap-truth-table.html"><a href="chap-truth-table.html#符号化"><i class="fa fa-check"></i><b>3.3</b> 符号化</a>
-<ul>
-<li class="chapter" data-level="3.3.1" data-path="chap-truth-table.html"><a href="chap-truth-table.html#联结词对应符号"><i class="fa fa-check"></i><b>3.3.1</b> 联结词对应符号</a></li>
-<li class="chapter" data-level="3.3.2" data-path="chap-truth-table.html"><a href="chap-truth-table.html#符号化的基本操作过程"><i class="fa fa-check"></i><b>3.3.2</b> 符号化的基本操作过程</a></li>
-<li class="chapter" data-level="3.3.3" data-path="chap-truth-table.html"><a href="chap-truth-table.html#几种特殊情况"><i class="fa fa-check"></i><b>3.3.3</b> 几种特殊情况</a></li>
-<li class="chapter" data-level="3.3.4" data-path="chap-truth-table.html"><a href="chap-truth-table.html#论说的符号化"><i class="fa fa-check"></i><b>3.3.4</b> 论说的符号化</a></li>
-<li class="chapter" data-level="3.3.5" data-path="chap-truth-table.html"><a href="chap-truth-table.html#形式"><i class="fa fa-check"></i><b>3.3.5</b> 形式</a></li>
-<li class="chapter" data-level="3.3.6" data-path="chap-truth-table.html"><a href="chap-truth-table.html#形式化的波兰学派记法"><i class="fa fa-check"></i><b>3.3.6</b> 形式化的波兰学派记法</a></li>
-</ul></li>
-<li class="chapter" data-level="3.4" data-path="chap-truth-table.html"><a href="chap-truth-table.html#命题逻辑的基本语法"><i class="fa fa-check"></i><b>3.4</b> 命题逻辑的基本语法</a>
-<ul>
-<li class="chapter" data-level="3.4.1" data-path="chap-truth-table.html"><a href="chap-truth-table.html#形式语言-mathscrl_0"><i class="fa fa-check"></i><b>3.4.1</b> 形式语言 <span class="math inline">\(\mathscr{L_0}\)</span></a></li>
-<li class="chapter" data-level="3.4.2" data-path="chap-truth-table.html"><a href="chap-truth-table.html#对象语言和元语言"><i class="fa fa-check"></i><b>3.4.2</b> 对象语言和元语言</a></li>
-<li class="chapter" data-level="3.4.3" data-path="chap-truth-table.html"><a href="chap-truth-table.html#子公式和主联结词"><i class="fa fa-check"></i><b>3.4.3</b> 子公式和主联结词</a></li>
-<li class="chapter" data-level="3.4.4" data-path="chap-truth-table.html"><a href="chap-truth-table.html#括号的省略"><i class="fa fa-check"></i><b>3.4.4</b> 括号的省略</a></li>
-<li class="chapter" data-level="3.4.5" data-path="chap-truth-table.html"><a href="chap-truth-table.html#语法和语义"><i class="fa fa-check"></i><b>3.4.5</b> 语法和语义</a></li>
-</ul></li>
-<li class="chapter" data-level="3.5" data-path="chap-truth-table.html"><a href="chap-truth-table.html#基本真值表和真值的计算"><i class="fa fa-check"></i><b>3.5</b> 基本真值表和真值的计算</a>
-<ul>
-<li class="chapter" data-level="3.5.1" data-path="chap-truth-table.html"><a href="chap-truth-table.html#联结词的语义解释"><i class="fa fa-check"></i><b>3.5.1</b> 联结词的语义解释</a></li>
-<li class="chapter" data-level="3.5.2" data-path="chap-truth-table.html"><a href="chap-truth-table.html#公式真值的计算"><i class="fa fa-check"></i><b>3.5.2</b> 公式真值的计算</a></li>
-</ul></li>
-<li class="chapter" data-level="3.6" data-path="chap-truth-table.html"><a href="chap-truth-table.html#sec-semantics-ttable"><i class="fa fa-check"></i><b>3.6</b> 若干基本语义概念的真值表刻画</a>
-<ul>
-<li class="chapter" data-level="3.6.1" data-path="chap-truth-table.html"><a href="chap-truth-table.html#论说形式的有效性"><i class="fa fa-check"></i><b>3.6.1</b> 论说形式的有效性</a></li>
-<li class="chapter" data-level="3.6.2" data-path="chap-truth-table.html"><a href="chap-truth-table.html#重言蕴涵"><i class="fa fa-check"></i><b>3.6.2</b> 重言蕴涵</a></li>
-<li class="chapter" data-level="3.6.3" data-path="chap-truth-table.html"><a href="chap-truth-table.html#重言等值"><i class="fa fa-check"></i><b>3.6.3</b> 重言等值</a></li>
-<li class="chapter" data-level="3.6.4" data-path="chap-truth-table.html"><a href="chap-truth-table.html#可满足性"><i class="fa fa-check"></i><b>3.6.4</b> 可满足性</a></li>
-<li class="chapter" data-level="3.6.5" data-path="chap-truth-table.html"><a href="chap-truth-table.html#重言式矛盾式与或然式"><i class="fa fa-check"></i><b>3.6.5</b> 重言式、矛盾式与或然式</a></li>
-<li class="chapter" data-level="3.6.6" data-path="chap-truth-table.html"><a href="chap-truth-table.html#简化真值表方法"><i class="fa fa-check"></i><b>3.6.6</b> 简化真值表方法</a></li>
-</ul></li>
-<li class="chapter" data-level="3.7" data-path="chap-truth-table.html"><a href="chap-truth-table.html#本章习题"><i class="fa fa-check"></i><b>3.7</b> 本章习题</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="plsematics.html"><a href="plsematics.html"><i class="fa fa-check"></i><b>4</b> 语义概念的严格刻画</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="plsematics.html"><a href="plsematics.html#真值指派和公式的真值"><i class="fa fa-check"></i><b>4.1</b> 真值指派和公式的真值</a>
-<ul>
-<li class="chapter" data-level="4.1.1" data-path="plsematics.html"><a href="plsematics.html#对象语言里的符号和公式"><i class="fa fa-check"></i><b>4.1.1</b> 对象语言里的符号和公式</a></li>
-<li class="chapter" data-level="4.1.2" data-path="plsematics.html"><a href="plsematics.html#赋值真满足关系"><i class="fa fa-check"></i><b>4.1.2</b> 赋值、真、满足关系</a></li>
-</ul></li>
-<li class="chapter" data-level="4.2" data-path="plsematics.html"><a href="plsematics.html#重言蕴涵重言等值与可满足性"><i class="fa fa-check"></i><b>4.2</b> 重言蕴涵、重言等值与可满足性</a>
-<ul>
-<li class="chapter" data-level="4.2.1" data-path="plsematics.html"><a href="plsematics.html#重言蕴涵-1"><i class="fa fa-check"></i><b>4.2.1</b> 重言蕴涵</a></li>
-<li class="chapter" data-level="4.2.2" data-path="plsematics.html"><a href="plsematics.html#重言等值-1"><i class="fa fa-check"></i><b>4.2.2</b> 重言等值</a></li>
-<li class="chapter" data-level="4.2.3" data-path="plsematics.html"><a href="plsematics.html#可满足性-1"><i class="fa fa-check"></i><b>4.2.3</b> 可满足性</a></li>
-<li class="chapter" data-level="4.2.4" data-path="plsematics.html"><a href="plsematics.html#重言式矛盾式与或然式-1"><i class="fa fa-check"></i><b>4.2.4</b> 重言式、矛盾式与或然式</a></li>
-</ul></li>
-<li class="chapter" data-level="4.3" data-path="plsematics.html"><a href="plsematics.html#代入"><i class="fa fa-check"></i><b>4.3</b> 代入</a>
-<ul>
-<li class="chapter" data-level="4.3.1" data-path="plsematics.html"><a href="plsematics.html#关于代入的直观说明"><i class="fa fa-check"></i><b>4.3.1</b> 关于代入的直观说明</a></li>
-<li class="chapter" data-level="4.3.2" data-path="plsematics.html"><a href="plsematics.html#代入的定义"><i class="fa fa-check"></i><b>4.3.2</b> 代入的定义</a></li>
-<li class="chapter" data-level="4.3.3" data-path="plsematics.html"><a href="plsematics.html#代入的复合"><i class="fa fa-check"></i><b>4.3.3</b> 代入的复合</a></li>
-<li class="chapter" data-level="4.3.4" data-path="plsematics.html"><a href="plsematics.html#代入的语义性质"><i class="fa fa-check"></i><b>4.3.4</b> 代入的语义性质</a></li>
-</ul></li>
-<li class="chapter" data-level="4.4" data-path="plsematics.html"><a href="plsematics.html#真值指派与真值表"><i class="fa fa-check"></i><b>4.4</b> 真值指派与真值表</a>
-<ul>
-<li class="chapter" data-level="4.4.1" data-path="plsematics.html"><a href="plsematics.html#真值函数"><i class="fa fa-check"></i><b>4.4.1</b> 真值函数</a></li>
-<li class="chapter" data-level="4.4.2" data-path="plsematics.html"><a href="plsematics.html#对部分命题变号的赋值"><i class="fa fa-check"></i><b>4.4.2</b> 对部分命题变号的赋值</a></li>
-<li class="chapter" data-level="4.4.3" data-path="plsematics.html"><a href="plsematics.html#两种描述方式的等价性"><i class="fa fa-check"></i><b>4.4.3</b> 两种描述方式的等价性</a></li>
-</ul></li>
-<li class="chapter" data-level="4.5" data-path="plsematics.html"><a href="plsematics.html#范式"><i class="fa fa-check"></i><b>4.5</b> 范式</a>
-<ul>
-<li class="chapter" data-level="4.5.1" data-path="plsematics.html"><a href="plsematics.html#合取范式"><i class="fa fa-check"></i><b>4.5.1</b> 合取范式</a></li>
-<li class="chapter" data-level="4.5.2" data-path="plsematics.html"><a href="plsematics.html#析取范式"><i class="fa fa-check"></i><b>4.5.2</b> 析取范式</a></li>
-<li class="chapter" data-level="4.5.3" data-path="plsematics.html"><a href="plsematics.html#范式定理"><i class="fa fa-check"></i><b>4.5.3</b> 范式定理</a></li>
-</ul></li>
-<li class="chapter" data-level="4.6" data-path="plsematics.html"><a href="plsematics.html#函数完全性"><i class="fa fa-check"></i><b>4.6</b> 函数完全性</a>
-<ul>
-<li class="chapter" data-level="4.6.1" data-path="plsematics.html"><a href="plsematics.html#真值函数在形式语言中的表达"><i class="fa fa-check"></i><b>4.6.1</b> 真值函数在形式语言中的表达</a></li>
-<li class="chapter" data-level="4.6.2" data-path="plsematics.html"><a href="plsematics.html#具有函数完全性的几组真值函数联结词"><i class="fa fa-check"></i><b>4.6.2</b> 具有函数完全性的几组真值函数联结词</a></li>
-</ul></li>
-<li class="chapter" data-level="4.7" data-path="plsematics.html"><a href="plsematics.html#本章习题-1"><i class="fa fa-check"></i><b>4.7</b> 本章习题</a></li>
-</ul></li>
-<li class="part"><span><b>II 卷 附錄</b></span></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="divider"></li>
-<li><a href="https://duoyu.ren" target="_blank">Published by Duōyú Rén</a></li>
-
-</ul>
-
-      </nav>
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">References</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
     </div>
-
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Baby Logic</a>
-          </h1>
-        </div>
-
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
-
-            <section class="normal" id="section-">
-<div id="references" class="section level1 unnumbered">
-<h1>References</h1>
-
-<div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
-<div id="ref-Frege1879" class="csl-entry">
-Frege, G. (1879). Begriffsschrift, eine der arithmetischen nachgebildete <span>Formel</span> sprache des reinen <span>Denkens</span>. <em>Verlag von L. Nebert, Halle</em>, 5–82.
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Fundamentals of computational biology</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/camilogarciabotero/biocomp-book" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-<div id="ref-godel-1944-RussellMathematicalLogic" class="csl-entry">
-Gödel, K. (1944). Russell’s mathematical logic. In P. Schilpp (Ed.), <em>The philosophy of bertrand russell</em> (pp. 119–141). <span>The Philosophy of Bertrand Russell</span>.
-</div>
-<div id="ref-Henkin1967" class="csl-entry">
-Henkin, L. (1967). Systems, formal, and models of formal systems. In P. Edwards (Ed.), <em>The encyclopedia of philosophy, vol</em> (pp. 61–74). <span>Macmillan, Inc.</span>
-</div>
-<div id="ref-Hodges1977" class="csl-entry">
-Hodges, W. (1977). <em>Logic</em>. <span>Penguin Books</span>.
-</div>
-<div id="ref-Tarski1941" class="csl-entry">
-Tarski, A. (1941). <em>Introduction to <span>Logic</span> and to the <span>Methodology</span> of the <span>Deductive Sciences</span></em>. <span>Oxford University Press</span>.
-</div>
-</div>
-</div>
-
-
-<script>
-const toggleButton = document.getElementsByClassName("show-more-text");
-var i;
-//const link = document.createElement('a');
-
-
-for (i = 0; i < toggleButton.length; i++) {
-    toggleButton[i].addEventListener("click", function() {
-    this.classList.toggle("more-text-active");
-    let content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-      this.innerHTML = '<i class="fa fa-plus-square-o" ></i>';
-     } else {
-      content.style.display = "block";
-      this.innerHTML = '<i class="fa fa-minus-square-o" ></i>';
-    }
-  });
-}
-</script>
-            </section>
-
-          </div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
         </div>
       </div>
-<a href="plsematics.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
-    </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
-<script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-"sharing": false,
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": null,
-"text": null
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": null,
-"toc": {
-"collapse": "section"
-}
-});
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">The command line</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chs-command-line/welcome-to-command-line.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The command line</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chs-command-line/git-and-github.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Version control</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chs-command-line/package-managers.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Package managers</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chs-command-line/hpc-notions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Notions of HPC</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Intro. to algorithms</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chs-intro-algorithms/algorithm-thinking.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Algorithm thinking</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chs-intro-algorithms/algorithm-techniques.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Algorithm techniques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chs-intro-algorithms/data-structures.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Data structures</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Sequence analysis</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chs-sequence-analysis/introduction-to-sequence-analysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Sequence analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chs-sequence-analysis/sanger-analysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Sanger analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chs-sequence-analysis/sequence-alignments.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Sequence alignments</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chs-sequence-analysis/NGS-TGS-principles.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">NGS and TGS: principles</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Phylogenetics</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chs-phylogenetics/phylogenetic-reconstructions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Phylogenetics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chs-phylogenetics/phylogenomics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Phylogenomics</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">Genomics</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chs-genomics/genome-assembly.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Genome assembly</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chs-genomics/genome-annotation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Genome annotation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chs-genomics/variant-calling-analysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Variant calling analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chs-genomics/comparative-genomics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Comparative genomics</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">Metagenomics</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chs-metagenomics/metagenomic-sequencing.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Metagenomic sequencing</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">Structural bioinformatics</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chs-bio-structural/intro-structural-bioinfo.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Structural bioinformatics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chs-bio-structural/molecular-docking.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Molecular docking</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true">Challenges</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chs-challenges-demos/unix-challenges.html" class="sidebar-item-text sidebar-link">Unix challenges</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chs-challenges-demos/seq-analysis-challenges.html" class="sidebar-item-text sidebar-link">Seq. Analysis challenges</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chs-challenges-demos/genome-analysis-challenges.html" class="sidebar-item-text sidebar-link">Genome assembly</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="true">Appendix</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./HISTORY.html" class="sidebar-item-text sidebar-link">History</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link active">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">References</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-allesina2019" class="csl-entry" role="doc-biblioentry">
+Allesina, Stefano, and Madlen Wilmes. 2019. <span>“Computing Skills for
+Biologists,”</span> January. <a href="https://doi.org/10.2307/j.ctvc77jrc">https://doi.org/10.2307/j.ctvc77jrc</a>.
+</div>
+<div id="ref-brandies2021" class="csl-entry" role="doc-biblioentry">
+Brandies, Parice A, and Carolyn J Hogg. 2021. <span>“Ten Simple Rules
+for Getting Started with Command-Line Bioinformatics.”</span> <em>PLoS
+Computational Biology</em>. Public Library of Science San Francisco, CA
+USA.
+</div>
+<div id="ref-brown2018" class="csl-entry" role="doc-biblioentry">
+Brown, Terence A. 2018. <em>Genomes 4</em>. Garland science.
+</div>
+<div id="ref-dudley2009" class="csl-entry" role="doc-biblioentry">
+Dudley, Joel T, and Atul J Butte. 2009. <span>“A Quick Guide for
+Developing Effective Bioinformatics Programming Skills.”</span> <em>PLOS
+Computational Biology</em>. Public Library of Science San Francisco,
+USA.
+</div>
+<div id="ref-makinen2015" class="csl-entry" role="doc-biblioentry">
+Mäkinen, Veli, Djamal Belazzougui, Fabio Cunial, and Alexandru I
+Tomescu. 2015. <em>Genome-Scale Algorithm Design</em>. Cambridge
+University Press.
+</div>
+<div id="ref-meneely2017" class="csl-entry" role="doc-biblioentry">
+Meneely, Philip Mark, Rachel Dawes Hoang, Iruka N Okeke, and Katherine
+Heston. 2017. <em>Genetics: Genes, Genomes, and Evolution</em>. Oxford
+University Press.
+</div>
+<div id="ref-perkel2021" class="csl-entry" role="doc-biblioentry">
+Perkel, Jeffrey M et al. 2021. <span>“Five Reasons Why Researchers
+Should Learn to Love the Command Line.”</span> <em>Nature</em> 590
+(7844): 173–74.
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
 });
 </script>
-
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
+<script src="https://giscus.app/client.js" data-repo="camilogarciabotero/biocomp-book" data-repo-id="R_kgDOHKOnSw" data-category="General" data-category-id="DIC_kwDOHKOnS84CQ7NN" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="transparent_dark" data-lang="en" crossorigin="anonymous" async="">
 </script>
-</body>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./HISTORY.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">History</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">Made with <a href="https://quarto.org/">Quarto</a>. Under <a href="https://github.com/camilogarciabotero/biocomp-book/blob/main/LICENSE">GNU GPL 3.0</a>. Buy me coffee <a href="https://www.paypal.com/paypalme/camilogarciabotero"><i class="fa-solid fa-mug-saucer" aria-label="mug-saucer"></i></a> and visit me at <a href="https://camilogarciabotero.github.io/"><i class="fa-solid fa-house" aria-label="house"></i></a></div>
+  </div>
+</footer>
 
-</html>
+
+
+</body></html>
