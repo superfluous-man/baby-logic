@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Fundamentals of computational biology - 14&nbsp; Genome assembly</title>
+<title>Baby Logic - 4&nbsp; Notions of HPC</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,28 +23,28 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../chs-genomics/genome-annotation.html" rel="next">
-<link href="../chs-phylogenetics/phylogenomics.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../Books/chs-predicate/algorithm-thinking.html" rel="next">
+<link href="../../Books/chs-propositional/package-managers.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -64,20 +64,11 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-QFWWJGZHLD"></script>
-
-<script type="text/javascript">
-
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-QFWWJGZHLD', { 'anonymize_ip': true});
-</script>
 <script async="" src="https://hypothes.is/embed.js"></script>
 
 
-<meta name="citation_title" content="[[14]{.chapter-number}&nbsp; [Genome assembly]{.chapter-title}]{#sec-genomics .quarto-section-identifier}">
-<meta name="citation_fulltext_html_url" content="https://camilogarciabotero.github.io/biocomp-book//genome-assembly.html">
+<meta name="citation_title" content="[[4]{.chapter-number}&nbsp; [Notions of HPC]{.chapter-title}]{#sec-hpc .quarto-section-identifier}">
+<meta name="citation_fulltext_html_url" content="https://duoyu.ren/baby-logic//hpc-notions.html">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Literate programming;,citation_author=Donald E. Knuth;,citation_publication_date=1984-05;,citation_cover_date=1984-05;,citation_year=1984;,citation_fulltext_html_url=https://doi.org/10.1093/comjnl/27.2.97;,citation_issue=2;,citation_doi=10.1093/comjnl/27.2.97;,citation_issn=0010-4620;,citation_volume=27;,citation_journal_title=Comput. J.;,citation_publisher=Oxford University Press, Inc.;">
 <meta name="citation_reference" content="citation_title=Computing skills for biologists;,citation_author=Stefano Allesina;,citation_author=Madlen Wilmes;,citation_publication_date=2019-01-15;,citation_cover_date=2019-01-15;,citation_year=2019;,citation_fulltext_html_url=http://dx.doi.org/10.2307/j.ctvc77jrc;,citation_doi=10.2307/j.ctvc77jrc;">
@@ -90,13 +81,13 @@ gtag('config', 'G-QFWWJGZHLD', { 'anonymize_ip': true});
 <meta name="citation_reference" content="citation_title=Ten simple rules for getting started with command-line bioinformatics;,citation_author=Parice A Brandies;,citation_author=Carolyn J Hogg;,citation_publication_date=2021;,citation_cover_date=2021;,citation_year=2021;,citation_volume=17;,citation_journal_title=PLoS Computational Biology;,citation_publisher=Public Library of Science San Francisco, CA USA;">
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Genome assembly</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Notions of HPC</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -109,9 +100,9 @@ gtag('config', 'G-QFWWJGZHLD', { 'anonymize_ip': true});
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Fundamentals of computational biology</a> 
+      <a href="../../">Baby Logic</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/camilogarciabotero/biocomp-book" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/superfluous-man/baby-logic" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
@@ -125,17 +116,17 @@ gtag('config', 'G-QFWWJGZHLD', { 'anonymize_ip': true});
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">Preface</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../intro.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  <a href="../../intro.html" class="sidebar-item-text sidebar-link">Introduction</a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">The command line</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Propositional</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -143,29 +134,29 @@ gtag('config', 'G-QFWWJGZHLD', { 'anonymize_ip': true});
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-command-line/welcome-to-command-line.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The command line</span></a>
+  <a href="../../Books/chs-propositional/welcome-to-command-line.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The command line</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-command-line/git-and-github.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Version control</span></a>
+  <a href="../../Books/chs-propositional/git-and-github.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Version control</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-command-line/package-managers.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Package managers</span></a>
+  <a href="../../Books/chs-propositional/package-managers.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Package managers</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-command-line/hpc-notions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Notions of HPC</span></a>
+  <a href="../../Books/chs-propositional/hpc-notions.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Notions of HPC</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Intro. to algorithms</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Predicate</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -173,24 +164,24 @@ gtag('config', 'G-QFWWJGZHLD', { 'anonymize_ip': true});
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-intro-algorithms/algorithm-thinking.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Algorithm thinking</span></a>
+  <a href="../../Books/chs-predicate/algorithm-thinking.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Algorithm thinking</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-intro-algorithms/algorithm-techniques.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Algorithm techniques</span></a>
+  <a href="../../Books/chs-predicate/algorithm-techniques.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Algorithm techniques</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-intro-algorithms/data-structures.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Data structures</span></a>
+  <a href="../../Books/chs-predicate/data-structures.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Data structures</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Sequence analysis</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Modal</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -198,29 +189,29 @@ gtag('config', 'G-QFWWJGZHLD', { 'anonymize_ip': true});
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-sequence-analysis/introduction-to-sequence-analysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Sequence analysis</span></a>
+  <a href="../../Books/chs-modal/introduction-to-sequence-analysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Sequence analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-sequence-analysis/sanger-analysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Sanger analysis</span></a>
+  <a href="../../Books/chs-modal/sanger-analysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Sanger analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-sequence-analysis/sequence-alignments.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Sequence alignments</span></a>
+  <a href="../../Books/chs-modal/sequence-alignments.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Sequence alignments</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-sequence-analysis/NGS-TGS-principles.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">NGS and TGS: principles</span></a>
+  <a href="../../Books/chs-modal/NGS-TGS-principles.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">NGS and TGS: principles</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Phylogenetics</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Intuitionistic</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -228,19 +219,19 @@ gtag('config', 'G-QFWWJGZHLD', { 'anonymize_ip': true});
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-phylogenetics/phylogenetic-reconstructions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Phylogenetics</span></a>
+  <a href="../../Books/chs-intuitionistic/phylogenetic-reconstructions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Phylogenetics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-phylogenetics/phylogenomics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Phylogenomics</span></a>
+  <a href="../../Books/chs-intuitionistic/phylogenomics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Phylogenomics</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">Genomics</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">Meta</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -248,29 +239,29 @@ gtag('config', 'G-QFWWJGZHLD', { 'anonymize_ip': true});
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-genomics/genome-assembly.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Genome assembly</span></a>
+  <a href="../../Books/chs-meta/genome-assembly.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Genome assembly</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-genomics/genome-annotation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Genome annotation</span></a>
+  <a href="../../Books/chs-meta/genome-annotation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Genome annotation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-genomics/variant-calling-analysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Variant calling analysis</span></a>
+  <a href="../../Books/chs-meta/variant-calling-analysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Variant calling analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-genomics/comparative-genomics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Comparative genomics</span></a>
+  <a href="../../Books/chs-meta/comparative-genomics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Comparative genomics</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">Metagenomics</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">Application</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -278,14 +269,14 @@ gtag('config', 'G-QFWWJGZHLD', { 'anonymize_ip': true});
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-metagenomics/metagenomic-sequencing.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Metagenomic sequencing</span></a>
+  <a href="../../Books/chs-application/metagenomic-sequencing.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Metagenomic sequencing</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">Structural bioinformatics</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">Appendix</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -293,59 +284,14 @@ gtag('config', 'G-QFWWJGZHLD', { 'anonymize_ip': true});
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-bio-structural/intro-structural-bioinfo.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Structural bioinformatics</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chs-bio-structural/molecular-docking.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Molecular docking</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true">Challenges</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chs-challenges-demos/unix-challenges.html" class="sidebar-item-text sidebar-link">Unix challenges</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chs-challenges-demos/seq-analysis-challenges.html" class="sidebar-item-text sidebar-link">Seq. Analysis challenges</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chs-challenges-demos/genome-analysis-challenges.html" class="sidebar-item-text sidebar-link">Genome assembly</a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="true">Appendix</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="true">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../HISTORY.html" class="sidebar-item-text sidebar-link">History</a>
+  <a href="../../HISTORY.html" class="sidebar-item-text sidebar-link">History</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../references.html" class="sidebar-item-text sidebar-link">References</a>
+  <a href="../../references.html" class="sidebar-item-text sidebar-link">References</a>
   </div>
 </li>
     </ul>
@@ -357,32 +303,21 @@ gtag('config', 'G-QFWWJGZHLD', { 'anonymize_ip': true});
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#the-problem-of-assembling-genomes" id="toc-the-problem-of-assembling-genomes" class="nav-link active" data-scroll-target="#the-problem-of-assembling-genomes"><span class="toc-section-number">14.1</span>  The problem of assembling genomes</a></li>
-  <li><a href="#main-algorithms-for-genome-asssembly" id="toc-main-algorithms-for-genome-asssembly" class="nav-link" data-scroll-target="#main-algorithms-for-genome-asssembly"><span class="toc-section-number">14.2</span>  Main algorithms for genome asssembly</a>
-  <ul class="collapse">
-  <li><a href="#overlay-layout-consensus-ols" id="toc-overlay-layout-consensus-ols" class="nav-link" data-scroll-target="#overlay-layout-consensus-ols"><span class="toc-section-number">14.2.1</span>  Overlay, Layout, Consensus (OLS)</a></li>
-  <li><a href="#de-bruijn-graphs" id="toc-de-bruijn-graphs" class="nav-link" data-scroll-target="#de-bruijn-graphs"><span class="toc-section-number">14.2.2</span>  De Bruijn graphs</a></li>
-  </ul></li>
-  <li><a href="#main-concepts-of-an-assembly" id="toc-main-concepts-of-an-assembly" class="nav-link" data-scroll-target="#main-concepts-of-an-assembly"><span class="toc-section-number">14.3</span>  Main concepts of an assembly</a>
-  <ul class="collapse">
-  <li><a href="#contigs-unitigs-scaffolds" id="toc-contigs-unitigs-scaffolds" class="nav-link" data-scroll-target="#contigs-unitigs-scaffolds"><span class="toc-section-number">14.3.1</span>  Contigs, Unitigs, Scaffolds</a></li>
-  </ul></li>
-  <li><a href="#a-complete-workflow-for-assembling-genomes" id="toc-a-complete-workflow-for-assembling-genomes" class="nav-link" data-scroll-target="#a-complete-workflow-for-assembling-genomes"><span class="toc-section-number">14.4</span>  A complete workflow for assembling genomes</a></li>
-  <li><a href="#assessing-genomes" id="toc-assessing-genomes" class="nav-link" data-scroll-target="#assessing-genomes"><span class="toc-section-number">14.5</span>  Assessing genomes</a>
-  <ul class="collapse">
-  <li><a href="#inspecting-genome-graphs" id="toc-inspecting-genome-graphs" class="nav-link" data-scroll-target="#inspecting-genome-graphs"><span class="toc-section-number">14.5.1</span>  Inspecting genome graphs</a></li>
-  <li><a href="#genome-completeness" id="toc-genome-completeness" class="nav-link" data-scroll-target="#genome-completeness"><span class="toc-section-number">14.5.2</span>  Genome completeness</a></li>
-  </ul></li>
-  <li><a href="#understanding-genome-difficulties" id="toc-understanding-genome-difficulties" class="nav-link" data-scroll-target="#understanding-genome-difficulties"><span class="toc-section-number">14.6</span>  Understanding genome difficulties</a></li>
+  <li><a href="#monitoring-my-computer" id="toc-monitoring-my-computer" class="nav-link active" data-scroll-target="#monitoring-my-computer"><span class="toc-section-number">4.1</span>  Monitoring my computer</a></li>
+  <li><a href="#serial-computing" id="toc-serial-computing" class="nav-link" data-scroll-target="#serial-computing"><span class="toc-section-number">4.2</span>  Serial computing</a></li>
+  <li><a href="#parallel-computing" id="toc-parallel-computing" class="nav-link" data-scroll-target="#parallel-computing"><span class="toc-section-number">4.3</span>  Parallel computing</a></li>
+  <li><a href="#computer-architectures" id="toc-computer-architectures" class="nav-link" data-scroll-target="#computer-architectures"><span class="toc-section-number">4.4</span>  Computer architectures</a></li>
+  <li><a href="#using-apolo-cluster-with-slurm" id="toc-using-apolo-cluster-with-slurm" class="nav-link" data-scroll-target="#using-apolo-cluster-with-slurm"><span class="toc-section-number">4.5</span>  Using Apolo cluster with Slurm</a></li>
+  <li><a href="#the-slurm-instructions" id="toc-the-slurm-instructions" class="nav-link" data-scroll-target="#the-slurm-instructions"><span class="toc-section-number">4.6</span>  The Slurm instructions</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/camilogarciabotero/biocomp-book/edit/main/chs-genomics/genome-assembly.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/camilogarciabotero/biocomp-book/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/superfluous-man/baby-logic/edit/main/Books/chs-propositional/hpc-notions.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/superfluous-man/baby-logic/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-genomics" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Genome assembly</span></span></h1>
+<h1 class="title"><span id="sec-hpc" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Notions of HPC</span></span></h1>
 </div>
 
 
@@ -397,45 +332,53 @@ gtag('config', 'G-QFWWJGZHLD', { 'anonymize_ip': true});
 
 </header>
 
-<section id="the-problem-of-assembling-genomes" class="level2" data-number="14.1">
-<h2 data-number="14.1" class="anchored" data-anchor-id="the-problem-of-assembling-genomes"><span class="header-section-number">14.1</span> The problem of assembling genomes</h2>
+<section id="monitoring-my-computer" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="monitoring-my-computer"><span class="header-section-number">4.1</span> Monitoring my computer</h2>
+<p>What is computer doing?</p>
+<p><code>htop</code></p>
 </section>
-<section id="main-algorithms-for-genome-asssembly" class="level2" data-number="14.2">
-<h2 data-number="14.2" class="anchored" data-anchor-id="main-algorithms-for-genome-asssembly"><span class="header-section-number">14.2</span> Main algorithms for genome asssembly</h2>
-<section id="overlay-layout-consensus-ols" class="level3" data-number="14.2.1">
-<h3 data-number="14.2.1" class="anchored" data-anchor-id="overlay-layout-consensus-ols"><span class="header-section-number">14.2.1</span> Overlay, Layout, Consensus (OLS)</h3>
+<section id="serial-computing" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="serial-computing"><span class="header-section-number">4.2</span> Serial computing</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs-cli/serial-computing.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">serial computing</figcaption><p></p>
+</figure>
+</div>
 </section>
-<section id="de-bruijn-graphs" class="level3" data-number="14.2.2">
-<h3 data-number="14.2.2" class="anchored" data-anchor-id="de-bruijn-graphs"><span class="header-section-number">14.2.2</span> De Bruijn graphs</h3>
+<section id="parallel-computing" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="parallel-computing"><span class="header-section-number">4.3</span> Parallel computing</h2>
+<p><img src="imgs-cli/parallel-computing.png" class="img-fluid"></p>
 </section>
+<section id="computer-architectures" class="level2 page-columns page-full" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="computer-architectures"><span class="header-section-number">4.4</span> Computer architectures</h2>
+
+<div class="no-row-height column-margin column-container"><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs-cli/laptop-arch.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<p></p><figcaption class="figure-caption">Laptop processor architecture</figcaption><p></p>
+</figure>
+</div></div><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs-cli/partition-arch.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<p></p><figcaption class="figure-caption">HPC architecture</figcaption><p></p>
+</figure>
+</div>
 </section>
-<section id="main-concepts-of-an-assembly" class="level2" data-number="14.3">
-<h2 data-number="14.3" class="anchored" data-anchor-id="main-concepts-of-an-assembly"><span class="header-section-number">14.3</span> Main concepts of an assembly</h2>
-<section id="contigs-unitigs-scaffolds" class="level3" data-number="14.3.1">
-<h3 data-number="14.3.1" class="anchored" data-anchor-id="contigs-unitigs-scaffolds"><span class="header-section-number">14.3.1</span> Contigs, Unitigs, Scaffolds</h3>
+<section id="using-apolo-cluster-with-slurm" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="using-apolo-cluster-with-slurm"><span class="header-section-number">4.5</span> Using Apolo cluster with Slurm</h2>
+<p><img src="imgs-cli/cluster-process.png" class="img-fluid"></p>
+<p>Slurm is a job manager scheduler. It brings order to the jobs sent by users of the clusters and facilitate the process of check the state of the job in the cluster and the actual state of the cluster itself. To do so it has basically three main commands. The first one is <code>sinfo</code></p>
 </section>
-</section>
-<section id="a-complete-workflow-for-assembling-genomes" class="level2" data-number="14.4">
-<h2 data-number="14.4" class="anchored" data-anchor-id="a-complete-workflow-for-assembling-genomes"><span class="header-section-number">14.4</span> A complete workflow for assembling genomes</h2>
-</section>
-<section id="assessing-genomes" class="level2" data-number="14.5">
-<h2 data-number="14.5" class="anchored" data-anchor-id="assessing-genomes"><span class="header-section-number">14.5</span> Assessing genomes</h2>
-<section id="inspecting-genome-graphs" class="level3" data-number="14.5.1">
-<h3 data-number="14.5.1" class="anchored" data-anchor-id="inspecting-genome-graphs"><span class="header-section-number">14.5.1</span> Inspecting genome graphs</h3>
-</section>
-<section id="genome-completeness" class="level3" data-number="14.5.2">
-<h3 data-number="14.5.2" class="anchored" data-anchor-id="genome-completeness"><span class="header-section-number">14.5.2</span> Genome completeness</h3>
-</section>
-</section>
-<section id="understanding-genome-difficulties" class="level2" data-number="14.6">
-<h2 data-number="14.6" class="anchored" data-anchor-id="understanding-genome-difficulties"><span class="header-section-number">14.6</span> Understanding genome difficulties</h2>
-<ul>
-<li><p>End of chromosomes</p></li>
-<li><p>Erros</p></li>
-<li><p>Lack of coverage</p></li>
-<li><p>Heterozigozity</p></li>
-<li><p>repeats</p></li>
-</ul>
+<section id="the-slurm-instructions" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="the-slurm-instructions"><span class="header-section-number">4.6</span> The Slurm instructions</h2>
+<p>To send then a job into the computer cluster several instructions should be specified so that the appropriate scheduling take part <a href="#fig-slurm-instructions">Fig.&nbsp;<span>4.1</span></a></p>
+<div id="fig-slurm-instructions" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="imgs-cli/slurm-instructions.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4.1: Slurm specifications to send a job into the cluster service</figcaption><p></p>
+</figure>
+</div>
 
 
 </section>
@@ -689,24 +632,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<script src="https://giscus.app/client.js" data-repo="camilogarciabotero/biocomp-book" data-repo-id="R_kgDOHKOnSw" data-category="General" data-category-id="" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="transparent_dark" data-lang="en" crossorigin="anonymous" async="">
+<script src="https://giscus.app/client.js" data-repo="superfluous-man/baby-logic" data-repo-id="MDEwOlJlcG9zaXRvcnkzMzg2NTkyNTU=" data-category="General" data-category-id="DIC_kwDOFC-Ht84CUwkP" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="transparent_dark" data-lang="en" crossorigin="anonymous" async="">
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chs-phylogenetics/phylogenomics.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Phylogenomics</span></span>
+      <a href="../../Books/chs-propositional/package-managers.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Package managers</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chs-genomics/genome-annotation.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Genome annotation</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../Books/chs-predicate/algorithm-thinking.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Algorithm thinking</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-      <div class="nav-footer-center">Made with <a href="https://quarto.org/">Quarto</a>. Under <a href="https://github.com/camilogarciabotero/biocomp-book/blob/main/LICENSE">GNU GPL 3.0</a>. Buy me coffee <a href="https://www.paypal.com/paypalme/camilogarciabotero"><i class="fa-solid fa-mug-saucer" aria-label="mug-saucer"></i></a> and visit me at <a href="https://camilogarciabotero.github.io/"><i class="fa-solid fa-house" aria-label="house"></i></a></div>
+      <div class="nav-footer-center">Made with <a href="https://quarto.org/">Quarto</a>. Under <a href="https://github.com/camilogarciabotero/biocomp-book/blob/main/LICENSE">GNU GPL 3.0</a>. Buy me coffee <a href="https://www.paypal.com/paypalme/"><i class="fa-solid fa-mug-saucer" aria-label="mug-saucer"></i></a> and visit me at <a href="https://duoyu.ren/"><i class="fa-solid fa-house" aria-label="house"></i></a></div>
   </div>
 </footer>
 

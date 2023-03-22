@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.2.335">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>Fundamentals of computational biology - 9&nbsp; Sanger analysis</title>
+<title>Baby Logic - 9&nbsp; Sanger analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -41,34 +38,32 @@ div.csl-indent {
 }
 </style>
 
-
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../chs-sequence-analysis/sequence-alignments.html" rel="next">
-<link href="../chs-sequence-analysis/introduction-to-sequence-analysis.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
-<script src="../site_libs/quarto-contrib/nutshell-1.0.0/nutshell.min.js"></script>
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<script id="quarto-search-options" type="application/json">{
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../Books/chs-modal/sequence-alignments.html" rel="next">
+<link href="../../Books/chs-modal/introduction-to-sequence-analysis.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script src="../../site_libs/quarto-contrib/nutshell-1.0.0/nutshell.min.js"></script>
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -86,24 +81,10 @@ div.csl-indent {
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-QFWWJGZHLD"></script>
-
-<script type="text/javascript">
-
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-QFWWJGZHLD', { 'anonymize_ip': true});
-</script>
-<script async="" src="https://hypothes.is/embed.js"></script>
-
-<link href="../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
-<script src="../site_libs/pagedtable-1.1/js/pagedtable.js"></script>
-
-
+}</script><script async="" src="https://hypothes.is/embed.js"></script><link href="../../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+<script src="../../site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 <meta name="citation_title" content="[[9]{.chapter-number}&nbsp; [Sanger analysis]{.chapter-title}]{#sec-sanger .quarto-section-identifier}">
-<meta name="citation_fulltext_html_url" content="https://camilogarciabotero.github.io/biocomp-book//sanger-analysis.html">
+<meta name="citation_fulltext_html_url" content="https://duoyu.ren/baby-logic//sanger-analysis.html">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Literate programming;,citation_author=Donald E. Knuth;,citation_publication_date=1984-05;,citation_cover_date=1984-05;,citation_year=1984;,citation_fulltext_html_url=https://doi.org/10.1093/comjnl/27.2.97;,citation_issue=2;,citation_doi=10.1093/comjnl/27.2.97;,citation_issn=0010-4620;,citation_volume=27;,citation_journal_title=Comput. J.;,citation_publisher=Oxford University Press, Inc.;">
 <meta name="citation_reference" content="citation_title=Computing skills for biologists;,citation_author=Stefano Allesina;,citation_author=Madlen Wilmes;,citation_publication_date=2019-01-15;,citation_cover_date=2019-01-15;,citation_year=2019;,citation_fulltext_html_url=http://dx.doi.org/10.2307/j.ctvc77jrc;,citation_doi=10.2307/j.ctvc77jrc;">
@@ -115,29 +96,22 @@ gtag('config', 'G-QFWWJGZHLD', { 'anonymize_ip': true});
 <meta name="citation_reference" content="citation_title=Five reasons why researchers should learn to love the command line;,citation_author=Jeffrey M Perkel;,citation_author=others;,citation_publication_date=2021;,citation_cover_date=2021;,citation_year=2021;,citation_issue=7844;,citation_volume=590;,citation_journal_title=Nature;,citation_publisher=Nature;">
 <meta name="citation_reference" content="citation_title=Ten simple rules for getting started with command-line bioinformatics;,citation_author=Parice A Brandies;,citation_author=Carolyn J Hogg;,citation_publication_date=2021;,citation_cover_date=2021;,citation_year=2021;,citation_volume=17;,citation_journal_title=PLoS Computational Biology;,citation_publisher=Public Library of Science San Francisco, CA USA;">
 </head>
-
 <body class="nav-sidebar floating slimcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }"><div class="container-fluid d-flex justify-content-between">
       <h1 class="quarto-secondary-nav-title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Sanger analysis</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Fundamentals of computational biology</a> 
+      <a href="../../">Baby Logic</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/camilogarciabotero/biocomp-book" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/superfluous-man/baby-logic" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
@@ -149,257 +123,207 @@ gtag('config', 'G-QFWWJGZHLD', { 'anonymize_ip': true});
       </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">Preface</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../intro.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  <a href="../../intro.html" class="sidebar-item-text sidebar-link">Introduction</a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">The command line</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Propositional</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-command-line/welcome-to-command-line.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The command line</span></a>
+  <a href="../../Books/chs-propositional/welcome-to-command-line.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The command line</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-command-line/git-and-github.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Version control</span></a>
+  <a href="../../Books/chs-propositional/git-and-github.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Version control</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-command-line/package-managers.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Package managers</span></a>
+  <a href="../../Books/chs-propositional/package-managers.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Package managers</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-command-line/hpc-notions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Notions of HPC</span></a>
+  <a href="../../Books/chs-propositional/hpc-notions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Notions of HPC</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Intro. to algorithms</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Predicate</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-intro-algorithms/algorithm-thinking.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Algorithm thinking</span></a>
+  <a href="../../Books/chs-predicate/algorithm-thinking.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Algorithm thinking</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-intro-algorithms/algorithm-techniques.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Algorithm techniques</span></a>
+  <a href="../../Books/chs-predicate/algorithm-techniques.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Algorithm techniques</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-intro-algorithms/data-structures.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Data structures</span></a>
+  <a href="../../Books/chs-predicate/data-structures.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Data structures</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Sequence analysis</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Modal</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-sequence-analysis/introduction-to-sequence-analysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Sequence analysis</span></a>
+  <a href="../../Books/chs-modal/introduction-to-sequence-analysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Sequence analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-sequence-analysis/sanger-analysis.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Sanger analysis</span></a>
+  <a href="../../Books/chs-modal/sanger-analysis.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Sanger analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-sequence-analysis/sequence-alignments.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Sequence alignments</span></a>
+  <a href="../../Books/chs-modal/sequence-alignments.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Sequence alignments</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-sequence-analysis/NGS-TGS-principles.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">NGS and TGS: principles</span></a>
+  <a href="../../Books/chs-modal/NGS-TGS-principles.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">NGS and TGS: principles</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Phylogenetics</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Intuitionistic</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-phylogenetics/phylogenetic-reconstructions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Phylogenetics</span></a>
+  <a href="../../Books/chs-intuitionistic/phylogenetic-reconstructions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Phylogenetics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-phylogenetics/phylogenomics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Phylogenomics</span></a>
+  <a href="../../Books/chs-intuitionistic/phylogenomics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Phylogenomics</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">Genomics</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">Meta</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-genomics/genome-assembly.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Genome assembly</span></a>
+  <a href="../../Books/chs-meta/genome-assembly.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Genome assembly</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-genomics/genome-annotation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Genome annotation</span></a>
+  <a href="../../Books/chs-meta/genome-annotation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Genome annotation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-genomics/variant-calling-analysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Variant calling analysis</span></a>
+  <a href="../../Books/chs-meta/variant-calling-analysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Variant calling analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-genomics/comparative-genomics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Comparative genomics</span></a>
+  <a href="../../Books/chs-meta/comparative-genomics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Comparative genomics</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">Metagenomics</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">Application</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-metagenomics/metagenomic-sequencing.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Metagenomic sequencing</span></a>
+  <a href="../../Books/chs-application/metagenomic-sequencing.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Metagenomic sequencing</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">Structural bioinformatics</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">Appendix</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chs-bio-structural/intro-structural-bioinfo.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Structural bioinformatics</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chs-bio-structural/molecular-docking.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Molecular docking</span></a>
+  <a href="../../HISTORY.html" class="sidebar-item-text sidebar-link">History</a>
   </div>
 </li>
       </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true">Challenges</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chs-challenges-demos/unix-challenges.html" class="sidebar-item-text sidebar-link">Unix challenges</a>
-  </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chs-challenges-demos/seq-analysis-challenges.html" class="sidebar-item-text sidebar-link">Seq. Analysis challenges</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chs-challenges-demos/genome-analysis-challenges.html" class="sidebar-item-text sidebar-link">Genome assembly</a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="true">Appendix</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="true">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../HISTORY.html" class="sidebar-item-text sidebar-link">History</a>
-  </div>
-</li>
-      </ul>
-  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../references.html" class="sidebar-item-text sidebar-link">References</a>
+  <a href="../../references.html" class="sidebar-item-text sidebar-link">References</a>
   </div>
 </li>
     </ul>
-    </div>
-</nav>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+</div>
+</nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#the-first-sequencing-methods" id="toc-the-first-sequencing-methods" class="nav-link active" data-scroll-target="#the-first-sequencing-methods"><span class="toc-section-number">9.1</span>  The first sequencing methods</a>
+<li>
+<a href="#the-first-sequencing-methods" id="toc-the-first-sequencing-methods" class="nav-link active" data-scroll-target="#the-first-sequencing-methods"><span class="toc-section-number">9.1</span>  The first sequencing methods</a>
   <ul class="collapse">
-  <li><a href="#the-chain-termination-method" id="toc-the-chain-termination-method" class="nav-link" data-scroll-target="#the-chain-termination-method"><span class="toc-section-number">9.1.1</span>  The chain termination method</a></li>
+<li><a href="#the-chain-termination-method" id="toc-the-chain-termination-method" class="nav-link" data-scroll-target="#the-chain-termination-method"><span class="toc-section-number">9.1.1</span>  The chain termination method</a></li>
   <li><a href="#sanger-with-capillary-electrophoresis" id="toc-sanger-with-capillary-electrophoresis" class="nav-link" data-scroll-target="#sanger-with-capillary-electrophoresis"><span class="toc-section-number">9.1.2</span>  Sanger with capillary electrophoresis</a></li>
   <li><a href="#strengths-and-limitations-of-sanger-methods" id="toc-strengths-and-limitations-of-sanger-methods" class="nav-link" data-scroll-target="#strengths-and-limitations-of-sanger-methods"><span class="toc-section-number">9.1.3</span>  Strengths and limitations of Sanger methods</a></li>
-  </ul></li>
+  </ul>
+</li>
   <li><a href="#files-from-sanger-sequencing" id="toc-files-from-sanger-sequencing" class="nav-link" data-scroll-target="#files-from-sanger-sequencing"><span class="toc-section-number">9.2</span>  Files from Sanger sequencing</a></li>
   <li><a href="#sanger-processing-workflow" id="toc-sanger-processing-workflow" class="nav-link" data-scroll-target="#sanger-processing-workflow"><span class="toc-section-number">9.3</span>  Sanger processing workflow</a></li>
   <li><a href="#the-16s-rrna-and-its-relevance-for-sequencing" id="toc-the-16s-rrna-and-its-relevance-for-sequencing" class="nav-link" data-scroll-target="#the-16s-rrna-and-its-relevance-for-sequencing"><span class="toc-section-number">9.4</span>  The 16S rRNA and its relevance for sequencing</a></li>
-  </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/camilogarciabotero/biocomp-book/edit/main/chs-sequence-analysis/sanger-analysis.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/camilogarciabotero/biocomp-book/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/superfluous-man/baby-logic/edit/main/Books/chs-modal/sanger-analysis.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/superfluous-man/baby-logic/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title"><span id="sec-sanger" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Sanger analysis</span></span></h1>
 </div>
 
@@ -413,47 +337,38 @@ gtag('config', 'G-QFWWJGZHLD', { 'anonymize_ip': true});
   </div>
   
 
-</header>
-
-<blockquote class="blockquote">
+</header><blockquote class="blockquote">
 <p>This is a section about perhaps one of the first generation sequencing technology, that is Sanger sequencing and its principles and evolution, strengths and limitations</p>
 <p>This chapter will also cover the bioinformatics side of the method: what kind of files we get out Sanger, how we process them and an important paradigm that came out from this sequence method.</p>
 <p>Finally we will dive into a study case that its very common in microbiology: the use of the 16S rRNA gene for taxonomy identification</p>
 </blockquote>
-<section id="the-first-sequencing-methods" class="level2 page-columns page-full" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="the-first-sequencing-methods"><span class="header-section-number">9.1</span> The first sequencing methods</h2>
-<p>Back in 70s there two different methods aiming to determine the base sequences of DNA and they basically operated at the level of base per base reconstruction of the information. The most used during those days was so called <a href="https://en.wikipedia.org/wiki/Maxam–Gilbert_sequencing">:Maxam-Gilbert</a> method and the second one was precisely the chain termination method or dideoxy sequencing or more commonly nowadays <a href="https://en.wikipedia.org/wiki/Sanger_sequencing">:Sanger sequencing</a>. Both methods named after their creators. It was, however the Sanger method the one that gradually became the facto method and continue to be the standard for the next thirty years. In fact, assembled genomes before the 2000s were sequenced with Sanger method, which included the first draft of the Human genome and many other organism <span class="citation" data-cites="brown2018">Brown (<a href="../references.html#ref-brown2018" role="doc-biblioref">2018</a>)</span>.</p>
+<section id="the-first-sequencing-methods" class="level2 page-columns page-full" data-number="9.1"><h2 data-number="9.1" class="anchored" data-anchor-id="the-first-sequencing-methods">
+<span class="header-section-number">9.1</span> The first sequencing methods</h2>
+<p>Back in 70s there two different methods aiming to determine the base sequences of DNA and they basically operated at the level of base per base reconstruction of the information. The most used during those days was so called <a href="https://en.wikipedia.org/wiki/Maxam%E2%80%93Gilbert_sequencing">:Maxam-Gilbert</a> method and the second one was precisely the chain termination method or dideoxy sequencing or more commonly nowadays <a href="https://en.wikipedia.org/wiki/Sanger_sequencing">:Sanger sequencing</a>. Both methods named after their creators. It was, however the Sanger method the one that gradually became the facto method and continue to be the standard for the next thirty years. In fact, assembled genomes before the 2000s were sequenced with Sanger method, which included the first draft of the Human genome and many other organism <span class="citation" data-cites="brown2018">Brown (<a href="../../references.html#ref-brown2018" role="doc-biblioref">2018</a>)</span>.</p>
 
 <div class="no-row-height column-margin column-container"><div id="fig-dna-pol" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><a href="imgs-seqan/dna-pol.png" class="lightbox" title="A globular structure of a bacterial DNA polymerase" data-gallery="quarto-lightbox-gallery-1"><img src="imgs-seqan/dna-pol.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="imgs-seqan/dna-pol.png" class="lightbox" title="A globular structure of a bacterial DNA polymerase" data-gallery="quarto-lightbox-gallery-1"><img src="imgs-seqan/dna-pol.png" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">Figure&nbsp;9.1: A globular structure of a bacterial DNA polymerase</figcaption><p></p>
 </figure>
-</div></div><section id="the-chain-termination-method" class="level3 page-columns page-full" data-number="9.1.1">
-<h3 data-number="9.1.1" class="anchored" data-anchor-id="the-chain-termination-method"><span class="header-section-number">9.1.1</span> The chain termination method</h3>
+</div></div><section id="the-chain-termination-method" class="level3 page-columns page-full" data-number="9.1.1"><h3 data-number="9.1.1" class="anchored" data-anchor-id="the-chain-termination-method">
+<span class="header-section-number">9.1.1</span> The chain termination method</h3>
 <p>To under stand the chain termination method is important have a clear view of the DNA structure and chemical reaction that enable its polymerization. Whe the</p>
 <div id="fig-dideoxy-reaction" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><a href="imgs-seqan/dideoxy-reaction.png" class="lightbox" title="The deoxy-ribose and dideoxy-ribose and consequences on the polymerization of a DNA strand" data-gallery="quarto-lightbox-gallery-2"><img src="imgs-seqan/dideoxy-reaction.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="imgs-seqan/dideoxy-reaction.png" class="lightbox" title="The deoxy-ribose and dideoxy-ribose and consequences on the polymerization of a DNA strand" data-gallery="quarto-lightbox-gallery-2"><img src="imgs-seqan/dideoxy-reaction.png" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">Figure&nbsp;9.2: The deoxy-ribose and dideoxy-ribose and consequences on the polymerization of a DNA strand</figcaption><p></p>
 </figure>
 </div>
 
 <div class="no-row-height column-margin column-container"><div id="fig-yt-sanger" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<div class="quarto-video ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/Wgv9QhjLTC8" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<figure class="figure"><div class="quarto-video ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/Wgv9QhjLTC8" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <p></p><figcaption class="figure-caption">Figure&nbsp;9.3: A step-by-step of the Sanger sequencing method or the chain termination method.</figcaption><p></p>
 </figure>
-</div></div></section>
-<section id="sanger-with-capillary-electrophoresis" class="level3" data-number="9.1.2">
-<h3 data-number="9.1.2" class="anchored" data-anchor-id="sanger-with-capillary-electrophoresis"><span class="header-section-number">9.1.2</span> Sanger with capillary electrophoresis</h3>
-</section>
-<section id="strengths-and-limitations-of-sanger-methods" class="level3" data-number="9.1.3">
-<h3 data-number="9.1.3" class="anchored" data-anchor-id="strengths-and-limitations-of-sanger-methods"><span class="header-section-number">9.1.3</span> Strengths and limitations of Sanger methods</h3>
-</section>
-</section>
-<section id="files-from-sanger-sequencing" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="files-from-sanger-sequencing"><span class="header-section-number">9.2</span> Files from Sanger sequencing</h2>
+</div></div></section><section id="sanger-with-capillary-electrophoresis" class="level3" data-number="9.1.2"><h3 data-number="9.1.2" class="anchored" data-anchor-id="sanger-with-capillary-electrophoresis">
+<span class="header-section-number">9.1.2</span> Sanger with capillary electrophoresis</h3>
+</section><section id="strengths-and-limitations-of-sanger-methods" class="level3" data-number="9.1.3"><h3 data-number="9.1.3" class="anchored" data-anchor-id="strengths-and-limitations-of-sanger-methods">
+<span class="header-section-number">9.1.3</span> Strengths and limitations of Sanger methods</h3>
+</section></section><section id="files-from-sanger-sequencing" class="level2" data-number="9.2"><h2 data-number="9.2" class="anchored" data-anchor-id="files-from-sanger-sequencing">
+<span class="header-section-number">9.2</span> Files from Sanger sequencing</h2>
 <p>Several files are generated from a modern Sanger sequencing project.</p>
 <div class="callout callout callout-style-simple no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -495,14 +410,12 @@ END_SEQUENCE</code></pre>
 </div>
 <p>However the most used file is the binary version <code>AB1</code> which could be red out from different programs including <a href="">cutepeaks</a>. It displays the DNA sequence along with its quality peak in each position <a href="#fig-ab1-trace">Fig.&nbsp;<span>9.4</span></a></p>
 <div id="fig-ab1-trace" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><a href="imgs-seqan/ab1-trace.png" class="lightbox" title="A graphic of the AB1 file format from a Sanger sequencing project displayed in cutepeaks software" data-gallery="quarto-lightbox-gallery-3"><img src="imgs-seqan/ab1-trace.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="imgs-seqan/ab1-trace.png" class="lightbox" title="A graphic of the AB1 file format from a Sanger sequencing project displayed in cutepeaks software" data-gallery="quarto-lightbox-gallery-3"><img src="imgs-seqan/ab1-trace.png" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">Figure&nbsp;9.4: A graphic of the <code>AB1</code> file format from a Sanger sequencing project displayed in cutepeaks software</figcaption><p></p>
 </figure>
 </div>
-</section>
-<section id="sanger-processing-workflow" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="sanger-processing-workflow"><span class="header-section-number">9.3</span> Sanger processing workflow</h2>
+</section><section id="sanger-processing-workflow" class="level2" data-number="9.3"><h2 data-number="9.3" class="anchored" data-anchor-id="sanger-processing-workflow">
+<span class="header-section-number">9.3</span> Sanger processing workflow</h2>
 <!-- :::{.callout-tip .column-margin}
 A simple one-line to generate a reverse-complement of a linearized FASTA could be done with three commands:
 
@@ -514,14 +427,12 @@ tail -n 1 seq.fasta |
 
 [see here](https://github.com/crazyhottommy/bioinformatics-one-liners#reverse-complement-a-sequence-i-use-that-a-lot-when-i-need-to-design-primers)
 ::: -->
-<p>Despite being one of the oldest sequencing methods, Sanger sequencing has some remarkable strengths that are enable thanks to the automation era. For instance modern sequencers working in parallel can read almost 384 different sequences (of 750bp) in 1h (7Mb in 24h per machine), clearly automation introduces a second advantage and that is the low-price of sequencing small fragments <span class="citation" data-cites="brown2018">Brown (<a href="../references.html#ref-brown2018" role="doc-biblioref">2018</a>)</span>. It is important to highlight some limitations as well like the necessity of round-the-clock technical support (this also leverages a little bit from robotic operators though). The error-free Sanger sequencing requires at least 5X of sample coverage, which could be seen as disadvantage too <span class="citation" data-cites="brown2018">Brown (<a href="../references.html#ref-brown2018" role="doc-biblioref">2018</a>)</span>.</p>
-</section>
-<section id="the-16s-rrna-and-its-relevance-for-sequencing" class="level2 page-columns page-full" data-number="9.4">
-<h2 data-number="9.4" class="anchored" data-anchor-id="the-16s-rrna-and-its-relevance-for-sequencing"><span class="header-section-number">9.4</span> The 16S rRNA and its relevance for sequencing</h2>
+<p>Despite being one of the oldest sequencing methods, Sanger sequencing has some remarkable strengths that are enable thanks to the automation era. For instance modern sequencers working in parallel can read almost 384 different sequences (of 750bp) in 1h (7Mb in 24h per machine), clearly automation introduces a second advantage and that is the low-price of sequencing small fragments <span class="citation" data-cites="brown2018">Brown (<a href="../../references.html#ref-brown2018" role="doc-biblioref">2018</a>)</span>. It is important to highlight some limitations as well like the necessity of round-the-clock technical support (this also leverages a little bit from robotic operators though). The error-free Sanger sequencing requires at least 5X of sample coverage, which could be seen as disadvantage too <span class="citation" data-cites="brown2018">Brown (<a href="../../references.html#ref-brown2018" role="doc-biblioref">2018</a>)</span>.</p>
+</section><section id="the-16s-rrna-and-its-relevance-for-sequencing" class="level2 page-columns page-full" data-number="9.4"><h2 data-number="9.4" class="anchored" data-anchor-id="the-16s-rrna-and-its-relevance-for-sequencing">
+<span class="header-section-number">9.4</span> The 16S rRNA and its relevance for sequencing</h2>
 
 <div class="no-row-height column-margin column-container"><div id="fig-16-rna" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><a href="imgs-seqan/16-rRNA.png" class="lightbox" title="Bacillus subtilis subsp. subtilis str. 168 bacterial SSU 16S rRNA" data-gallery="quarto-lightbox-gallery-4"><img src="imgs-seqan/16-rRNA.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
+<figure class="figure"><p><a href="imgs-seqan/16-rRNA.png" class="lightbox" title="Bacillus subtilis subsp. subtilis str. 168 bacterial SSU 16S rRNA" data-gallery="quarto-lightbox-gallery-4"><img src="imgs-seqan/16-rRNA.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
 <p></p><figcaption class="figure-caption">Figure&nbsp;9.5: <em>Bacillus subtilis</em> subsp. <em>subtilis</em> str. 168 bacterial SSU 16S rRNA</figcaption><p></p>
 </figure>
 </div></div><div class="callout-warning callout callout-style-default callout-captioned">
@@ -535,7 +446,7 @@ Challenge
 </div>
 <div class="callout-body-container callout-body">
 <p>Professor Valeska gives you a compressed file containing two genes (spo0B and rpoB) from three different strains (302, 321, 455). These genes were sequenced using pair end Sanger method, then the compressed file has the two raw sequences per gene. She tells you to process and analyse them using the Sanger sequencing pipeline analyis. Since she doesn’t know from which species they belong, she ask you to identify the organism to whom it belongs by using the resulting consensus sequence. She finally reminds you to document each step of the process including the identification step</p>
-<p>See the solution <a href="../chs-challenges-demos/seq-analysis-challenges.html#sanger-processing">:here</a></p>
+<p>See the solution <a href="../chs-challenges-demos/seq-analysis-challenges.qmd#sanger-processing">:here</a></p>
 </div>
 </div>
 
@@ -545,10 +456,7 @@ Challenge
 Brown, Terence A. 2018. <em>Genomes 4</em>. Garland science.
 </div>
 </div>
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -795,29 +703,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<script src="https://giscus.app/client.js" data-repo="camilogarciabotero/biocomp-book" data-repo-id="R_kgDOHKOnSw" data-category="General" data-category-id="DIC_kwDOHKOnS84CQ7NN" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="transparent_dark" data-lang="en" crossorigin="anonymous" async="">
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../chs-sequence-analysis/introduction-to-sequence-analysis.html" class="pagination-link">
+</script><script src="https://giscus.app/client.js" data-repo="superfluous-man/baby-logic" data-repo-id="MDEwOlJlcG9zaXRvcnkzMzg2NTkyNTU=" data-category="General" data-category-id="DIC_kwDOFC-Ht84CUwkP" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="transparent_dark" data-lang="en" crossorigin="anonymous" async="">
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="../../Books/chs-modal/introduction-to-sequence-analysis.html" class="pagination-link">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Sequence analysis</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chs-sequence-analysis/sequence-alignments.html" class="pagination-link">
+      <a href="../../Books/chs-modal/sequence-alignments.html" class="pagination-link">
         <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Sequence alignments</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-      <div class="nav-footer-center">Made with <a href="https://quarto.org/">Quarto</a>. Under <a href="https://github.com/camilogarciabotero/biocomp-book/blob/main/LICENSE">GNU GPL 3.0</a>. Buy me coffee <a href="https://www.paypal.com/paypalme/camilogarciabotero"><i class="fa-solid fa-mug-saucer" aria-label="mug-saucer"></i></a> and visit me at <a href="https://camilogarciabotero.github.io/"><i class="fa-solid fa-house" aria-label="house"></i></a></div>
+<footer class="footer"><div class="nav-footer">
+      <div class="nav-footer-center">Made with <a href="https://quarto.org/">Quarto</a>. Under <a href="https://github.com/camilogarciabotero/biocomp-book/blob/main/LICENSE">GNU GPL 3.0</a>. Buy me coffee <a href="https://www.paypal.com/paypalme/"><i class="fa-solid fa-mug-saucer" aria-label="mug-saucer"></i></a> and visit me at <a href="https://duoyu.ren/"><i class="fa-solid fa-house" aria-label="house"></i></a></div>
   </div>
-</footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","loop":true,"closeEffect":"zoom","descPosition":"bottom"});</script>
-
+</footer><script>var lightboxQuarto = GLightbox({"loop":true,"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","closeEffect":"zoom"});</script>
 
 
 </body></html>
