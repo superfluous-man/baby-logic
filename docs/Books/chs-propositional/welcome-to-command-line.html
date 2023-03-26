@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.475">
+<meta name="generator" content="quarto-1.3.290">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Baby Logic - 1&nbsp; The command line</title>
 <style>
@@ -14,9 +14,10 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -43,48 +44,19 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -98,8 +70,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
@@ -144,10 +115,17 @@ div.csl-indent {
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script><link href="../../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+}</script><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" data-external="1">
+<style type="text/css">
+@font-face {
+font-family: 'xkcd Script';
+src: url('web-resources/xkcd-font/xkcd-script.ttf') format('truetype');
+}
+</style>
+<link href="../../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="../../site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 <meta name="citation_title" content="[[1]{.chapter-number}&nbsp; [The command line]{.chapter-title}]{#sec-cli .quarto-section-identifier}">
-<meta name="citation_fulltext_html_url" content="https://duoyu.ren/baby-logic//welcome-to-command-line.html">
+<meta name="citation_fulltext_html_url" content="https://duoyu.ren/baby-logic//Books/chs-propositional/welcome-to-command-line.html">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Literate programming;,citation_author=Donald E. Knuth;,citation_publication_date=1984-05;,citation_cover_date=1984-05;,citation_year=1984;,citation_fulltext_html_url=https://doi.org/10.1093/comjnl/27.2.97;,citation_issue=2;,citation_doi=10.1093/comjnl/27.2.97;,citation_issn=0010-4620;,citation_volume=27;,citation_journal_title=Comput. J.;,citation_publisher=Oxford University Press, Inc.;">
 <meta name="citation_reference" content="citation_title=Computing skills for biologists;,citation_author=Stefano Allesina;,citation_author=Madlen Wilmes;,citation_publication_date=2019-01-15;,citation_cover_date=2019-01-15;,citation_year=2019;,citation_fulltext_html_url=http://dx.doi.org/10.2307/j.ctvc77jrc;,citation_doi=10.2307/j.ctvc77jrc;">
@@ -162,270 +140,308 @@ div.csl-indent {
 <body class="nav-sidebar floating slimcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }"><div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The command line</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Books/chs-propositional/welcome-to-command-line.html">{{&lt; fa book &gt;}} Propositional</a></li><li class="breadcrumb-item"><a href="../../Books/chs-propositional/welcome-to-command-line.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The command line</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
       <img src="../../figs/avatar.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">Baby Logic</a> 
         <div class="sidebar-tools-main tools-wide">
-    <a href="https://duoyu.ren/" title="Homepage" class="sidebar-tool px-1"><i class="bi bi-house-heart"></i></a>
-    <a href="" title="Menu" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-menu-up"></i></a>
-    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
+    <a href="https://duoyu.ren/" title="Homepage" class="quarto-navigation-tool px-1" aria-label="Homepage"><i class="bi bi-house-heart"></i></a>
+    <div class="dropdown">
+      <a href="" title="Menu" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Menu"><i class="bi bi-menu-up"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
 <li>
-          <a class="dropdown-item sidebar-tools-main-item" href="https://duoyu.ren/">
-          Related Books
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item sidebar-tools-main-item" href="https://duoyu.ren/">
-          Related Courses
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item sidebar-tools-main-item" href="https://duoyu.ren/">
-          Course Syllabus
-          </a>
-        </li>
-    </ul>
-<a href="https://github.com/superfluous-man/baby-logic" title="GitHub organization" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
-    <a href="../../Baby-Logic.pdf" title="Download PDF" class="sidebar-tool px-1"><i class="bi bi-file-pdf"></i></a>
-  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://duoyu.ren/">
+            Related Books
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://duoyu.ren/">
+            Related Courses
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://duoyu.ren/">
+            Course Syllabus
+            </a>
+          </li>
+      </ul>
+</div>
+    <a href="https://github.com/superfluous-man/baby-logic" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
+    <a href="../../Baby-Logic.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../intro.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  <a href="../../intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Propositional</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text"><i class="fa-solid fa-book" aria-label="book"></i> Propositional</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Books/chs-propositional/welcome-to-command-line.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The command line</span></a>
+  <a href="../../Books/chs-propositional/welcome-to-command-line.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The command line</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Books/chs-propositional/git-and-github.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Version control</span></a>
+  <a href="../../Books/chs-propositional/git-and-github.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Version control</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Books/chs-propositional/package-managers.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Package managers</span></a>
+  <a href="../../Books/chs-propositional/package-managers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Package managers</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Books/chs-propositional/hpc-notions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Notions of HPC</span></a>
+  <a href="../../Books/chs-propositional/hpc-notions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Notions of HPC</span></span></a>
   </div>
 </li>
       </ul>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Predicate</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text"><i class="fa-solid fa-book" aria-label="book"></i> Predicate</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Books/chs-predicate/algorithm-thinking.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Algorithm thinking</span></a>
+  <a href="../../Books/chs-predicate/algorithm-thinking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Algorithm thinking</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Books/chs-predicate/algorithm-techniques.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Algorithm techniques</span></a>
+  <a href="../../Books/chs-predicate/algorithm-techniques.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Algorithm techniques</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Books/chs-predicate/data-structures.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Data structures</span></a>
+  <a href="../../Books/chs-predicate/data-structures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Data structures</span></span></a>
   </div>
 </li>
       </ul>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Modal</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text"><i class="fa-solid fa-book" aria-label="book"></i> Modal</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Books/chs-modal/introduction-to-sequence-analysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Sequence analysis</span></a>
+  <a href="../../Books/chs-modal/introduction-to-sequence-analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Sequence analysis</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Books/chs-modal/sanger-analysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Sanger analysis</span></a>
+  <a href="../../Books/chs-modal/sanger-analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Sanger analysis</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Books/chs-modal/sequence-alignments.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Sequence alignments</span></a>
+  <a href="../../Books/chs-modal/sequence-alignments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Sequence alignments</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Books/chs-modal/NGS-TGS-principles.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">NGS and TGS: principles</span></a>
+  <a href="../../Books/chs-modal/NGS-TGS-principles.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">NGS and TGS: principles</span></span></a>
   </div>
 </li>
       </ul>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Intuitionistic</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text"><i class="fa-solid fa-book" aria-label="book"></i> Intuitionistic</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Books/chs-intuitionistic/phylogenetic-reconstructions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Phylogenetics</span></a>
+  <a href="../../Books/chs-intuitionistic/phylogenetic-reconstructions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Phylogenetics</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Books/chs-intuitionistic/phylogenomics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Phylogenomics</span></a>
+  <a href="../../Books/chs-intuitionistic/phylogenomics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Phylogenomics</span></span></a>
   </div>
 </li>
       </ul>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">Meta</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+ <span class="menu-text"><i class="fa-solid fa-book" aria-label="book"></i> Meta</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Books/chs-meta/genome-assembly.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Genome assembly</span></a>
+  <a href="../../Books/chs-meta/genome-assembly.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Genome assembly</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Books/chs-meta/genome-annotation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Genome annotation</span></a>
+  <a href="../../Books/chs-meta/genome-annotation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Genome annotation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Books/chs-meta/variant-calling-analysis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Variant calling analysis</span></a>
+  <a href="../../Books/chs-meta/variant-calling-analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Variant calling analysis</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Books/chs-meta/comparative-genomics.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Comparative genomics</span></a>
+  <a href="../../Books/chs-meta/comparative-genomics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Comparative genomics</span></span></a>
   </div>
 </li>
       </ul>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">Application</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
+ <span class="menu-text"><i class="fa-solid fa-book" aria-label="book"></i> Application</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Books/chs-application/metagenomic-sequencing.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Metagenomic sequencing</span></a>
+  <a href="../../Books/chs-application/metagenomic-sequencing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Metagenomic sequencing</span></span></a>
   </div>
 </li>
       </ul>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">Appendix</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">
+ <span class="menu-text">Appendix</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../HISTORY.html" class="sidebar-item-text sidebar-link">History</a>
+  <a href="../../HISTORY.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">History</span></a>
   </div>
 </li>
       </ul>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../references.html" class="sidebar-item-text sidebar-link">References</a>
+  <a href="../../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
   </div>
 </li>
     </ul>
 </div>
-</nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+</nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
 <li>
-<a href="#command-line-basics" id="toc-command-line-basics" class="nav-link active" data-scroll-target="#command-line-basics"><span class="toc-section-number">1.1</span>  Command line basics</a>
+<a href="#command-line-basics" id="toc-command-line-basics" class="nav-link active" data-scroll-target="#command-line-basics"><span class="header-section-number">1.1</span> Command line basics</a>
   <ul class="collapse">
-<li><a href="#file-paths" id="toc-file-paths" class="nav-link" data-scroll-target="#file-paths"><span class="toc-section-number">1.1.1</span>  File paths</a></li>
-  <li><a href="#basic-unix-commands" id="toc-basic-unix-commands" class="nav-link" data-scroll-target="#basic-unix-commands"><span class="toc-section-number">1.1.2</span>  Basic Unix commands</a></li>
-  <li><a href="#anatomy-of-a-command" id="toc-anatomy-of-a-command" class="nav-link" data-scroll-target="#anatomy-of-a-command"><span class="toc-section-number">1.1.3</span>  Anatomy of a command</a></li>
+<li><a href="#file-paths" id="toc-file-paths" class="nav-link" data-scroll-target="#file-paths"><span class="header-section-number">1.1.1</span> File paths</a></li>
+  <li><a href="#basic-unix-commands" id="toc-basic-unix-commands" class="nav-link" data-scroll-target="#basic-unix-commands"><span class="header-section-number">1.1.2</span> Basic Unix commands</a></li>
+  <li><a href="#anatomy-of-a-command" id="toc-anatomy-of-a-command" class="nav-link" data-scroll-target="#anatomy-of-a-command"><span class="header-section-number">1.1.3</span> Anatomy of a command</a></li>
   </ul>
 </li>
-  <li><a href="#most-important-skills" id="toc-most-important-skills" class="nav-link" data-scroll-target="#most-important-skills"><span class="toc-section-number">1.2</span>  Most important skills</a></li>
+  <li><a href="#most-important-skills" id="toc-most-important-skills" class="nav-link" data-scroll-target="#most-important-skills"><span class="header-section-number">1.2</span> Most important skills</a></li>
   <li>
-<a href="#intermediate-unix" id="toc-intermediate-unix" class="nav-link" data-scroll-target="#intermediate-unix"><span class="toc-section-number">1.3</span>  Intermediate Unix</a>
+<a href="#intermediate-unix" id="toc-intermediate-unix" class="nav-link" data-scroll-target="#intermediate-unix"><span class="header-section-number">1.3</span> Intermediate Unix</a>
   <ul class="collapse">
-<li><a href="#special-operators-or-metacharacters" id="toc-special-operators-or-metacharacters" class="nav-link" data-scroll-target="#special-operators-or-metacharacters"><span class="toc-section-number">1.3.1</span>  Special operators or metacharacters</a></li>
-  <li><a href="#intermediate-commands" id="toc-intermediate-commands" class="nav-link" data-scroll-target="#intermediate-commands"><span class="toc-section-number">1.3.2</span>  Intermediate commands</a></li>
-  <li><a href="#unix-flows" id="toc-unix-flows" class="nav-link" data-scroll-target="#unix-flows"><span class="toc-section-number">1.3.3</span>  Unix flows</a></li>
-  <li><a href="#loops-conditionals-and-script-variables" id="toc-loops-conditionals-and-script-variables" class="nav-link" data-scroll-target="#loops-conditionals-and-script-variables"><span class="toc-section-number">1.3.4</span>  loops, conditionals and script variables</a></li>
+<li><a href="#special-operators-or-metacharacters" id="toc-special-operators-or-metacharacters" class="nav-link" data-scroll-target="#special-operators-or-metacharacters"><span class="header-section-number">1.3.1</span> Special operators or metacharacters</a></li>
+  <li><a href="#intermediate-commands" id="toc-intermediate-commands" class="nav-link" data-scroll-target="#intermediate-commands"><span class="header-section-number">1.3.2</span> Intermediate commands</a></li>
+  <li><a href="#unix-flows" id="toc-unix-flows" class="nav-link" data-scroll-target="#unix-flows"><span class="header-section-number">1.3.3</span> Unix flows</a></li>
+  <li><a href="#loops-conditionals-and-script-variables" id="toc-loops-conditionals-and-script-variables" class="nav-link" data-scroll-target="#loops-conditionals-and-script-variables"><span class="header-section-number">1.3.4</span> loops, conditionals and script variables</a></li>
   </ul>
 </li>
   <li>
-<a href="#advance-unix-stuff" id="toc-advance-unix-stuff" class="nav-link" data-scroll-target="#advance-unix-stuff"><span class="toc-section-number">1.4</span>  Advance Unix stuff</a>
+<a href="#advance-unix-stuff" id="toc-advance-unix-stuff" class="nav-link" data-scroll-target="#advance-unix-stuff"><span class="header-section-number">1.4</span> Advance Unix stuff</a>
   <ul class="collapse">
-<li><a href="#system-permissions" id="toc-system-permissions" class="nav-link" data-scroll-target="#system-permissions"><span class="toc-section-number">1.4.1</span>  System permissions</a></li>
-  <li><a href="#aliasing" id="toc-aliasing" class="nav-link" data-scroll-target="#aliasing"><span class="toc-section-number">1.4.2</span>  Aliasing</a></li>
-  <li><a href="#the-.bashrc" id="toc-the-.bashrc" class="nav-link" data-scroll-target="#the-.bashrc"><span class="toc-section-number">1.4.3</span>  The <code>.bashrc</code></a></li>
-  <li><a href="#awk-snippet" id="toc-awk-snippet" class="nav-link" data-scroll-target="#awk-snippet"><span class="toc-section-number">1.4.4</span>  <code>awk</code> snippet</a></li>
+<li><a href="#system-permissions" id="toc-system-permissions" class="nav-link" data-scroll-target="#system-permissions"><span class="header-section-number">1.4.1</span> System permissions</a></li>
+  <li><a href="#aliasing" id="toc-aliasing" class="nav-link" data-scroll-target="#aliasing"><span class="header-section-number">1.4.2</span> Aliasing</a></li>
+  <li><a href="#the-.bashrc" id="toc-the-.bashrc" class="nav-link" data-scroll-target="#the-.bashrc"><span class="header-section-number">1.4.3</span> The <code>.bashrc</code></a></li>
+  <li><a href="#awk-snippet" id="toc-awk-snippet" class="nav-link" data-scroll-target="#awk-snippet"><span class="header-section-number">1.4.4</span> <code>awk</code> snippet</a></li>
   </ul>
 </li>
   </ul></nav>
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title"><span id="sec-cli" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The command line</span></span></h1>
+<h1 class="title"><span id="sec-cli" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The command line</span></span></h1>
 </div>
 
 
@@ -445,7 +461,7 @@ div.csl-indent {
 <div class="cell" data-hash="welcome-to-command-line_cache/html/plot-penguins_34af18c696a118f10604ddbb885584a2">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="welcome-to-command-line_files/figure-html/plot-penguins-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="welcome-to-command-line_files/figure-html/plot-penguins-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="welcome-to-command-line_files/figure-html/plot-penguins-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="welcome-to-command-line_files/figure-html/plot-penguins-1.png" class="quarto-discovered-preview-image img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -453,27 +469,27 @@ div.csl-indent {
 <section id="command-line-basics" class="level2 page-columns page-full" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="command-line-basics">
 <span class="header-section-number">1.1</span> Command line basics</h2>
 <p>Before landing into the CLI let us consider the Unix concept. The first question that comes in this section is: what is Unix? It simply is an <a href="https://en.wikipedia.org/wiki/Operating_system">:operating system (OS)</a>. In other words, it is a set of programs that inter-operate with each other to let you communicate with the machine. A very important variant (or clone) of Unix is the very well known OS <a href="https://en.wikipedia.org/wiki/Linux">:Linux</a>, which was created by <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">:Linus Torvalds</a> from scratch. The most important idea behind Unix based systems is the idea that we can use it to access information and hardware programmatically. Other main feature from Unix-like OS systems is the fact that data is usually stored as text files and the interface by which users communicate with the machine is also text-based (TUI: text user interface as opposed to GUI, graphic user interface).</p>
-<div id="fig-terminal" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><a href="imgs-cli/terminal.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="A terminal app displaying common features of the command line interface"><img src="imgs-cli/terminal.png" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1.1: A <strong>terminal</strong> app displaying common features of the command line interface</figcaption><p></p>
+<p></p><figcaption class="figure-caption">A <strong>terminal</strong> app displaying common features of the command line interface</figcaption><p></p>
 </figure>
 </div>
-<p>Almost every computer has a way to interact with or access to the inner elements of the computer. Such interface is called the the command-line-interface <a href="#fig-terminal">Fig.&nbsp;<span>1.1</span></a>.</p>
+<p>Almost every computer has a way to interact with or access to the inner elements of the computer. Such interface is called the the command-line-interface <span class="quarto-unresolved-ref">?fig-terminal</span>.</p>
 <section id="file-paths" class="level3 page-columns page-full" data-number="1.1.1"><h3 data-number="1.1.1" class="anchored" data-anchor-id="file-paths">
 <span class="header-section-number">1.1.1</span> File paths</h3>
-<p>Programs, files and directories on every machine (with Unix-like OS) display hierarchical paths (routes), starting out from the <strong>root</strong> (represented by the back-slash character <code>/</code>). The <strong>root</strong> represents the beginning of all the software installed in the machine. And many other files are nested from there forming a tree-like structure for the paths <a href="#fig-tree">Fig.&nbsp;<span>1.2</span></a></p>
-<div id="fig-tree" class="quarto-figure quarto-figure-center anchored">
+<p>Programs, files and directories on every machine (with Unix-like OS) display hierarchical paths (routes), starting out from the <strong>root</strong> (represented by the back-slash character <code>/</code>). The <strong>root</strong> represents the beginning of all the software installed in the machine. And many other files are nested from there forming a tree-like structure for the paths <span class="quarto-unresolved-ref">?fig-tree</span></p>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><a href="imgs-cli/dir-tree.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="A terminal displaying tree-like structure of the programs in a machine with macOS"><img src="imgs-cli/dir-tree.png" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1.2: A terminal displaying tree-like structure of the programs in a machine with macOS</figcaption><p></p>
+<p></p><figcaption class="figure-caption">A terminal displaying tree-like structure of the programs in a machine with macOS</figcaption><p></p>
 </figure>
 </div>
 
-<div class="no-row-height column-margin column-container"><div class="callout-tip callout callout-style-default callout-captioned">
+<div class="no-row-height column-margin column-container"><div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Tip
 </div>
 </div>
@@ -493,12 +509,12 @@ Tip
 <span class="header-section-number">1.1.2.2</span> Change to other directory</h4>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> test-dir</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
-<div class="no-row-height column-margin column-container"><div class="callout-tip callout callout-style-default callout-captioned">
+<div class="no-row-height column-margin column-container"><div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Tip
 </div>
 </div>
@@ -513,12 +529,12 @@ Tip
 <span class="header-section-number">1.1.2.3</span> Listing files</h4>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
-<div class="no-row-height column-margin column-container"><div class="callout-tip callout callout-style-default callout-captioned">
+<div class="no-row-height column-margin column-container"><div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Tip
 </div>
 </div>
@@ -532,17 +548,15 @@ Tip
 <span class="header-section-number">1.1.2.5</span> Creating a file</h4>
 <p>A simple command to create any file inside your terminal is <code>touch</code> it just create a file, but do not allow any editing.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> new-file.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The <code>new-file.txt</code> is empty and created on your current location unless you assign another path when creating it. We suggest to take a look at <a href="https://github.com/allisonhorst/">Allison Horst</a> illustrations, especially on how to name files depending on the <em>case</em> see <a href="#fig-naming-files">Fig.&nbsp;<span>1.3</span></a></p>
-<div class="page-columns page-full">
+<p>The <code>new-file.txt</code> is empty and created on your current location unless you assign another path when creating it. We suggest to take a look at <a href="https://github.com/allisonhorst/">Allison Horst</a> illustrations, especially on how to name files depending on the <em>case</em> see <span class="quarto-unresolved-ref">?fig-naming-files</span></p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<div id="fig-naming-files" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><a href="imgs-cli/naming-files.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Different conventions for naming files or directories as a good computational practice. Such as de the kebab-case or the UpperCammelCase. Illustration by Allison Horst"><img src="imgs-cli/naming-files.png" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1.3: Different conventions for naming files or directories as a good computational practice. Such as de the kebab-case or the UpperCammelCase. Illustration by Allison Horst</figcaption><p></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="imgs-cli/naming-files.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Different conventions for naming files or directories as a good computational practice. Such as de the kebab-case or the UpperCammelCase. Illustration by Allison Horst"><img src="imgs-cli/naming-files.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">Different conventions for naming files or directories as a good computational practice. Such as de the kebab-case or the UpperCammelCase. Illustration by Allison Horst</figcaption><p></p>
 </figure>
 </div>
-</div></div></div>
-</section><section id="printing-files-or-inputs" class="level4" data-number="1.1.2.6"><h4 data-number="1.1.2.6" class="anchored" data-anchor-id="printing-files-or-inputs">
+</div></div></section><section id="printing-files-or-inputs" class="level4" data-number="1.1.2.6"><h4 data-number="1.1.2.6" class="anchored" data-anchor-id="printing-files-or-inputs">
 <span class="header-section-number">1.1.2.6</span> Printing files or inputs</h4>
 <div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> new-file.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">some</span></span>
@@ -560,12 +574,12 @@ Tip
 <span class="header-section-number">1.1.2.7</span> Removing files or directories</h4>
 <div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
-<div class="no-row-height column-margin column-container"><div class="callout-tip callout callout-style-default callout-captioned">
+<div class="no-row-height column-margin column-container"><div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Tip
 </div>
 </div>
@@ -575,29 +589,29 @@ Tip
 </div></div><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rmdir</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section></section><section id="anatomy-of-a-command" class="level3" data-number="1.1.3"><h3 data-number="1.1.3" class="anchored" data-anchor-id="anatomy-of-a-command">
 <span class="header-section-number">1.1.3</span> Anatomy of a command</h3>
-<p>There is still many conventions by which the parts of a command line might be called, yet a very standard convention is presented in <a href="#fig-command">Fig.&nbsp;<span>1.4</span></a></p>
-<div id="fig-command" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><a href="imgs-cli/command-anatomy.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="A simple command and a convention to call its main components"><img src="imgs-cli/command-anatomy.png" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1.4: A simple command and a convention to call its main components</figcaption><p></p>
+<p>There is still many conventions by which the parts of a command line might be called, yet a very standard convention is presented in <span class="quarto-unresolved-ref">?fig-command</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="imgs-cli/command-anatomy.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="A simple command and a convention to call its main components"><img src="imgs-cli/command-anatomy.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">A simple command and a convention to call its main components</figcaption><p></p>
 </figure>
 </div>
 <p>Some other for instance also tend to call the <code>option</code> as <code>flag</code>. This conventions are powerful because almost any command line interface display this structure (complex one add some other features and simple one tend to lack subcommands).</p>
-<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Challenge
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Bacterial defense mechanisms to avoid bacteriophage infections are abundant. One of these is the <a href="https://en.wikipedia.org/wiki/Restriction_modification_system">:restriction-modification system (RM-System)</a>, which works by targeting a specific sites called <em>motifs</em>, shared by the phage and bacteria, with methylations. Motifs are commonly represented as a <a href="https://en.wikipedia.org/wiki/Sequence_logo">:sequence logo</a> which is a probabilistic representation of the nucleotides at each position. The challenge consists of finding the number of times the motif from <a href="#fig-motif">Fig.&nbsp;<span>1.5</span></a> appears on <em>B. tequilensis</em> EA-CB0015 genome using a command. Assume that probabilities are equal when multiple bases appeared at one site.</p>
-<div id="fig-motif" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><a href="imgs-cli/motif.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="A RM-system motif logo"><img src="imgs-cli/motif.png" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1.5: A RM-system motif logo</figcaption><p></p>
+<p>Bacterial defense mechanisms to avoid bacteriophage infections are abundant. One of these is the <a href="https://en.wikipedia.org/wiki/Restriction_modification_system">:restriction-modification system (RM-System)</a>, which works by targeting a specific sites called <em>motifs</em>, shared by the phage and bacteria, with methylations. Motifs are commonly represented as a <a href="https://en.wikipedia.org/wiki/Sequence_logo">:sequence logo</a> which is a probabilistic representation of the nucleotides at each position. The challenge consists of finding the number of times the motif from <span class="quarto-unresolved-ref">?fig-motif</span> appears on <em>B. tequilensis</em> EA-CB0015 genome using a command. Assume that probabilities are equal when multiple bases appeared at one site.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="imgs-cli/motif.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="A RM-system motif logo"><img src="imgs-cli/motif.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">A RM-system motif logo</figcaption><p></p>
 </figure>
 </div>
 <p>Before diving into an <a href="../chs-challenges-demos/unix-challenges.qmd#motif-search-sec-motifsearch">:answer</a> take your time to think and solve it by your own.</p>
@@ -621,12 +635,12 @@ Challenge
 </section><section id="unix-flows" class="level3 page-columns page-full" data-number="1.3.3"><h3 data-number="1.3.3" class="anchored" data-anchor-id="unix-flows">
 <span class="header-section-number">1.3.3</span> Unix flows</h3>
 
-<div class="no-row-height column-margin column-container"><div class="callout-tip callout callout-style-default callout-captioned">
+<div class="no-row-height column-margin column-container"><div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Tip
 </div>
 </div>
@@ -636,24 +650,24 @@ Tip
 </div></div><section id="redirection" class="level4" data-number="1.3.3.1"><h4 data-number="1.3.3.1" class="anchored" data-anchor-id="redirection">
 <span class="header-section-number">1.3.3.1</span> Redirection</h4>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="imgs-cli/redirection.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Redirecting flow"><img src="imgs-cli/redirection.png" class="img-fluid figure-img" style="width:70.0%"></a></p>
+<figure class="figure"><p><a href="imgs-cli/redirection.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Redirecting flow"><img src="imgs-cli/redirection.png" class="img-fluid figure-img" style="width:70.0%"></a></p>
 <p></p><figcaption class="figure-caption">Redirecting flow</figcaption><p></p>
 </figure>
 </div>
 </section><section id="pipe" class="level4 page-columns page-full" data-number="1.3.3.2"><h4 data-number="1.3.3.2" class="anchored" data-anchor-id="pipe">
 <span class="header-section-number">1.3.3.2</span> Pipe</h4>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="imgs-cli/pipeflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Pipe flow"><img src="imgs-cli/pipeflow.png" class="img-fluid figure-img" style="width:70.0%"></a></p>
+<figure class="figure"><p><a href="imgs-cli/pipeflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Pipe flow"><img src="imgs-cli/pipeflow.png" class="img-fluid figure-img" style="width:70.0%"></a></p>
 <p></p><figcaption class="figure-caption">Pipe flow</figcaption><p></p>
 </figure>
 </div>
 
-<div class="no-row-height column-margin column-container"><div class="callout-tip callout callout-style-default callout-captioned">
+<div class="no-row-height column-margin column-container"><div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Tip
 </div>
 </div>
@@ -662,12 +676,12 @@ Tip
 </div>
 </div></div></section></section><section id="loops-conditionals-and-script-variables" class="level3" data-number="1.3.4"><h3 data-number="1.3.4" class="anchored" data-anchor-id="loops-conditionals-and-script-variables">
 <span class="header-section-number">1.3.4</span> loops, conditionals and script variables</h3>
-<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Challenge
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
@@ -690,12 +704,12 @@ Challenge
 </h3>
 </section><section id="awk-snippet" class="level3" data-number="1.4.4"><h3 data-number="1.4.4" class="anchored" data-anchor-id="awk-snippet">
 <span class="header-section-number">1.4.4</span> <code>awk</code> snippet</h3>
-<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Challenge
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
@@ -715,17 +729,17 @@ Challenge
 <p><span class="citation" data-cites="brandies2021">Brandies &amp; Hogg (<a href="../../references.html#ref-brandies2021" role="doc-biblioref">2021</a>)</span></p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography" style="display: none">
-<div id="ref-allesina2019" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-allesina2019" class="csl-entry" role="listitem">
 Allesina, S., &amp; Wilmes, M. (2019). <em>Computing skills for biologists</em>. <a href="https://doi.org/10.2307/j.ctvc77jrc">https://doi.org/10.2307/j.ctvc77jrc</a>
 </div>
-<div id="ref-brandies2021" class="csl-entry" role="doc-biblioentry">
+<div id="ref-brandies2021" class="csl-entry" role="listitem">
 Brandies, P. A., &amp; Hogg, C. J. (2021). Ten simple rules for getting started with command-line bioinformatics. In <em>PLoS Computational Biology</em> (No. 2; Vol. 17, p. e1008645). Public Library of Science San Francisco, CA USA.
 </div>
-<div id="ref-dudley2009" class="csl-entry" role="doc-biblioentry">
+<div id="ref-dudley2009" class="csl-entry" role="listitem">
 Dudley, J. T., &amp; Butte, A. J. (2009). A quick guide for developing effective bioinformatics programming skills. In <em>PLOS computational biology</em> (No. 12; Vol. 5, p. e1000589). Public Library of Science San Francisco, USA.
 </div>
-<div id="ref-perkel2021" class="csl-entry" role="doc-biblioentry">
+<div id="ref-perkel2021" class="csl-entry" role="listitem">
 Perkel, J. M. et al. (2021). Five reasons why researchers should learn to love the command line. <em>Nature</em>, <em>590</em>(7844), 173–174.
 </div>
 </div>
@@ -871,9 +885,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -938,6 +966,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -990,9 +1104,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </nav>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
-      <div class="nav-footer-center">Made with <a href="https://quarto.org/">Quarto</a>. Under <a href="https://github.com/camilogarciabotero/biocomp-book/blob/main/LICENSE">GNU GPL 3.0</a>. Buy me coffee <a href="https://www.paypal.com/paypalme/"><i class="fa-solid fa-mug-saucer" aria-label="mug-saucer"></i></a> and visit me at <a href="https://duoyu.ren/"><i class="fa-solid fa-house" aria-label="house"></i></a></div>
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">Made with <a href="https://quarto.org/">Quarto</a>. Under <a href="https://github.com/camilogarciabotero/biocomp-book/blob/main/LICENSE">GNU GPL 3.0</a>. Buy me coffee <a href="https://www.paypal.com/paypalme/"><i class="fa-solid fa-mug-saucer" aria-label="mug-saucer"></i></a> and visit me at <a href="https://duoyu.ren/"><i class="fa-solid fa-house" aria-label="house"></i></a></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
   </div>
-</footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","loop":true,"descPosition":"bottom"});</script>
+</footer><script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","loop":true,"openEffect":"zoom","closeEffect":"zoom"});</script>
 
 
 </body></html>
